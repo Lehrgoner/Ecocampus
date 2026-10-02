@@ -1,0 +1,156 @@
+.ranking-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ranking-header h1 {
+  color: #2e7d32;
+  margin-bottom: 30px;
+}
+
+.ranking-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.puntajes-categorias {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.puntajes-categorias h2 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+
+.categoria-item {
+  margin-bottom: 25px;
+}
+
+.categoria-item label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.categoria-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.categoria-input input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #ff9800;
+  transition: width 0.5s ease;
+}
+
+.ranking-prediccion {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ranking-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.ranking-numero {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.ranking-cambio {
+  margin: 20px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.mejora {
+  color: #4caf50;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.empeora {
+  color: #f44336;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.ranking-anterior {
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+.grafico-torta-placeholder {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.grafico-torta-placeholder h3 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+
+.ranking-actions {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-recalcular {
+  background: #2196f3;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-recalcular:hover {
+  background: #1976d2;
+}
+
+@media (max-width: 968px) {
+  .ranking-content {
+    grid-template-columns: 1fr;
+  }
+}

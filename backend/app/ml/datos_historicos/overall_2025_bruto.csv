@@ -1,0 +1,1746 @@
+year,ranking,university,country,col_0,col_1,col_2,col_3,col_4,col_5,col_6,col_7,col_8
+2025,1,Wageningen University & Research,Netherlands,1,1,9600.0,1350,1950,1800,1000.0,1750.0,1750.0
+2025,2,University College Cork,Ireland,1,2,9562.5,1325,2000,1800,1000.0,1700.0,1737.5
+2025,3,Nottingham Trent University,United Kingdom,1,3,9562.5,1400,2000,1800,950.0,1700.0,1712.5
+2025,4,Umwelt-Campus Birkenfeld (Trier University of Applied Sciences),Germany,1,4,9562.5,1275,1975,1775,987.5,1750.0,1800.0
+2025,5,Universidade de Sao Paulo USP,Brazil,1,1,9550.0,1475,1875,1800,1000.0,1700.0,1700.0
+2025,6,University of Groningen,Netherlands,2,5,9525.0,1275,2000,1800,1000.0,1750.0,1700.0
+2025,7,"University of California, Davis",USA,1,1,9512.5,1400,1925,1800,1000.0,1687.5,1700.0
+2025,8,University of Connecticut,USA,2,2,9500.0,1325,1850,1800,1000.0,1750.0,1775.0
+2025,9,Universita di Bologna,Italy,1,6,9487.5,1350,1825,1800,912.5,1800.0,1800.0
+2025,10,Universitat Bremen,Germany,2,7,9437.5,1400,1850,1800,1000.0,1750.0,1637.5
+2025,11,Universidad Autónoma de Nuevo León,Mexico,1,2,9412.5,1500,1775,1650,950.0,1750.0,1787.5
+2025,12,Luiss University,Italy,2,8,9387.5,1175,1950,1725,1000.0,1750.0,1787.5
+2025,13,University of Turin,Italy,3,9,9337.5,1200,2000,1800,950.0,1650.0,1737.5
+2025,14,University of Limerick,Ireland,2,10,9337.5,1325,1950,1725,950.0,1700.0,1687.5
+2025,15,Université de Sherbrooke,Canada,1,3,9335.0,1350,1910,1725,950.0,1700.0,1700.0
+2025,16,Dublin City University,Ireland,3,11,9280.0,1205,1950,1800,1000.0,1700.0,1625.0
+2025,17,Hame University of Applied Sciences,Finland,1,12,9275.0,1300,1925,1800,1000.0,1575.0,1675.0
+2025,18,Politecnico di Torino,Italy,4,13,9267.5,1030,1975,1750,962.5,1750.0,1800.0
+2025,19,Universitas Indonesia,Indonesia,1,1,9262.5,1300,1775,1800,1000.0,1600.0,1787.5
+2025,20,RUDN University,Russia,1,14,9175.0,1175,1850,1800,900.0,1750.0,1700.0
+2025,21,National Pingtung University of Science & Technology,Chinese Taipei,1,2,9172.5,1350,1735,1775,987.5,1675.0,1650.0
+2025,22,Kasetsart University,Thailand,1,3,9162.5,1350,1850,1575,912.5,1750.0,1725.0
+2025,23,Universitas Diponegoro,Indonesia,2,4,9112.5,1275,1975,1500,837.5,1725.0,1800.0
+2025,24,Universidad del Rosario,Colombia,1,3,9075.0,1150,1925,1775,887.5,1725.0,1612.5
+2025,25,Istanbul Technical University,Turkiye,1,15,9062.5,1175,1775,1700,987.5,1675.0,1750.0
+2025,26,Universitas Gadjah Mada,Indonesia,3,5,9050.0,1250,1900,1500,950.0,1650.0,1800.0
+2025,27,Federal University of Lavras,Brazil,2,4,9012.5,1400,1750,1700,1000.0,1437.5,1725.0
+2025,28,Universitas Negeri Semarang,Indonesia,4,6,9000.0,1400,1900,1575,925.0,1500.0,1700.0
+2025,29,University of Pécs,Hungary,1,16,9000.0,1175,1825,1775,900.0,1575.0,1750.0
+2025,30,National Chi Nan University,Chinese Taipei,2,7,8977.5,1425,1750,1625,987.5,1612.5,1577.5
+2025,31,Universiti Putra Malaysia,Malaysia,1,8,8975.0,1475,1600,1625,987.5,1612.5,1675.0
+2025,32,Universita degli Studi dell'Aquila,Italy,5,17,8950.0,1275,1800,1700,937.5,1525.0,1712.5
+2025,33,IPB University,Indonesia,5,9,8950.0,1375,1625,1725,987.5,1562.5,1675.0
+2025,34,Universiti Malaya,Malaysia,2,10,8947.5,1300,1510,1800,1000.0,1587.5,1750.0
+2025,35,Mahidol University,Thailand,2,11,8940.0,1225,1650,1775,937.5,1625.0,1727.5
+2025,36,Aalborg University,Denmark,1,18,8937.5,1175,1850,1800,1000.0,1325.0,1787.5
+2025,37,Da-Yeh University,Chinese Taipei,3,12,8937.5,1275,1725,1650,987.5,1562.5,1737.5
+2025,38,University of Sharjah,United Arab Emirates,1,13,8930.0,1450,1530,1800,1000.0,1400.0,1750.0
+2025,39,Universitas Sebelas Maret,Indonesia,6,14,8925.0,1200,1925,1700,850.0,1450.0,1800.0
+2025,40,Universiti Malaysia Pahang Al- Sultan Abdullah,Malaysia,3,15,8925.0,1350,1700,1625,937.5,1625.0,1687.5
+2025,41,University of Szeged,Hungary,2,19,8917.5,1305,1550,1775,850.0,1775.0,1662.5
+2025,42,Al-Balqa Applied University,Jordan,1,16,8912.5,1250,1950,1500,800.0,1700.0,1712.5
+2025,43,National Yunlin University of Science & Technology,Chinese Taipei,4,17,8910.0,1085,1775,1700,987.5,1675.0,1687.5
+2025,44,Universitas Airlangga,Indonesia,7,18,8900.0,1150,1775,1575,950.0,1700.0,1750.0
+2025,45,Tunghai University,Chinese Taipei,5,19,8887.5,1300,1625,1775,950.0,1600.0,1637.5
+2025,46,Universidad De Santander,Colombia,2,5,8875.0,1375,1825,1525,950.0,1525.0,1675.0
+2025,47,Weifang Institute of Technology,China,1,20,8862.5,1125,1925,1700,887.5,1775.0,1450.0
+2025,48,Yildiz Technical University,Turkiye,2,20,8850.0,1150,1875,1425,900.0,1775.0,1725.0
+2025,49,Chaoyang University of Technology,Chinese Taipei,6,21,8850.0,1275,1850,1575,1000.0,1625.0,1525.0
+2025,50,Siberian Federal University,Russia,2,21,8850.0,1375,1800,1425,937.5,1662.5,1650.0
+2025,51,Universidad Autónoma de Occidente,Colombia,3,6,8847.5,1135,1950,1700,987.5,1375.0,1700.0
+2025,52,Benemérita Universidad Autónoma de Puebla,Mexico,2,7,8837.5,1275,1825,1775,875.0,1512.5,1575.0
+2025,53,Institut Teknologi Bandung,Indonesia,8,22,8835.0,1425,1460,1650,950.0,1550.0,1800.0
+2025,54,Siam University,Thailand,3,23,8825.0,1225,1850,1475,900.0,1700.0,1675.0
+2025,55,Cyprus International University,Turkiye,3,22,8825.0,1300,1725,1575,1000.0,1612.5,1612.5
+2025,56,Universitas Padjadjaran,Indonesia,9,24,8812.5,1250,1925,1500,837.5,1562.5,1737.5
+2025,57,Riga Technical University,Latvia,1,23,8812.5,1175,1825,1650,950.0,1700.0,1512.5
+2025,58,National Taitung University,Chinese Taipei,7,25,8812.5,1325,1650,1775,987.5,1462.5,1612.5
+2025,59,Universitas Islam Negeri Raden Intan Lampung,Indonesia,10,26,8800.0,1200,1875,1425,887.5,1637.5,1775.0
+2025,60,Universidade Federal De Mato Grosso Do Sul,Brazil,3,8,8800.0,1450,1825,1400,850.0,1612.5,1662.5
+2025,61,Qassim University,Saudi Arabia,1,27,8800.0,1325,1825,1400,987.5,1625.0,1637.5
+2025,62,Telkom University,Indonesia,11,28,8800.0,1000,1750,1800,1000.0,1500.0,1750.0
+2025,63,Universidad de Granada,Spain,1,24,8787.5,1025,1975,1675,937.5,1600.0,1575.0
+2025,64,"Instituto Federal de Educacao, Ciencia e Tecnologia do Sul de Minas Gerais",Brazil,4,9,8787.5,1325,1725,1650,1000.0,1437.5,1650.0
+2025,65,Institut Teknologi Sumatera,Indonesia,12,29,8775.0,1450,1925,1225,850.0,1700.0,1625.0
+2025,66,Erciyes University,Turkiye,4,25,8775.0,1400,1800,1450,837.5,1625.0,1662.5
+2025,67,Institut Teknologi Sepuluh Nopember,Indonesia,13,30,8775.0,1350,1750,1525,987.5,1362.5,1800.0
+2025,68,Czech University of Life Sciences Prague,Czech Republic,1,26,8762.5,1150,1750,1700,987.5,1525.0,1650.0
+2025,69,King Mongkut's University of Technology Thonburi,Thailand,4,31,8762.5,1300,1750,1350,887.5,1725.0,1750.0
+2025,70,National Chin-Yi University of Technology,Chinese Taipei,8,32,8750.0,1100,1850,1800,950.0,1325.0,1725.0
+2025,71,Suranaree University of Technology,Thailand,5,33,8747.5,1350,1725,1775,887.5,1437.5,1572.5
+2025,72,National Cheng Kung University,Chinese Taipei,9,34,8742.5,1130,1925,1725,737.5,1700.0,1525.0
+2025,73,University of Eastern Finland,Finland,2,27,8735.0,910,1900,1800,987.5,1525.0,1612.5
+2025,74,Universidad Complutense De Madrid,Spain,2,28,8725.0,1100,1950,1675,962.5,1425.0,1612.5
+2025,75,Universiti Malaysia Sabah,Malaysia,4,35,8725.0,1225,1825,1500,887.5,1512.5,1775.0
+2025,76,Ton Duc Thang University,Vietnam,1,36,8725.0,1125,1775,1700,950.0,1525.0,1650.0
+2025,77,Universidad Nacional de Colombia,Colombia,4,10,8725.0,1275,1750,1575,987.5,1575.0,1562.5
+2025,78,Lincoln University,New Zealand,1,1,8725.0,1275,1725,1475,850.0,1675.0,1725.0
+2025,79,Universidad El Bosque,Colombia,5,11,8722.5,960,1800,1650,1000.0,1637.5,1675.0
+2025,80,Universidad de los Andes Colombia,Colombia,6,12,8712.5,1175,1800,1725,950.0,1475.0,1587.5
+2025,81,University of Campinas,Brazil,5,13,8712.5,1225,1575,1725,950.0,1550.0,1687.5
+2025,82,Universidad Pontificia Bolivariana,Colombia,7,14,8700.0,1200,1825,1625,937.5,1462.5,1650.0
+2025,83,Ege University,Turkiye,5,29,8700.0,1450,1650,1600,887.5,1537.5,1575.0
+2025,84,Walailak University,Thailand,6,37,8700.0,1425,1650,1425,937.5,1675.0,1587.5
+2025,85,Universitas Hasanuddin,Indonesia,14,38,8687.5,1425,1775,1275,887.5,1575.0,1750.0
+2025,86,Universidad Nacional Autónoma de México,Mexico,3,15,8687.5,1225,1625,1700,937.5,1612.5,1587.5
+2025,87,Universitas Sultan Ageng Tirtayasa,Indonesia,15,39,8675.0,1025,1950,1575,987.5,1337.5,1800.0
+2025,88,Universitas Lampung,Indonesia,16,40,8675.0,1100,1925,1650,825.0,1537.5,1637.5
+2025,89,Ozyegin University,Turkiye,6,30,8650.0,1025,1975,1775,837.5,1462.5,1575.0
+2025,90,Universitas Islam Indonesia,Indonesia,17,41,8650.0,1125,1675,1525,950.0,1637.5,1737.5
+2025,91,Yeditepe University,Turkiye,7,31,8650.0,1175,1675,1800,925.0,1587.5,1487.5
+2025,92,Politecnico Di Milano,Italy,6,32,8647.5,960,1600,1775,937.5,1725.0,1650.0
+2025,93,Mahasarakham University,Thailand,7,42,8637.5,1400,1625,1475,825.0,1600.0,1712.5
+2025,94,UiTM SHAH ALAM,Malaysia,5,43,8637.5,1150,1575,1775,987.5,1525.0,1625.0
+2025,95,Universitas Negeri Yogyakarta,Indonesia,18,44,8625.0,975,1925,1625,812.5,1550.0,1737.5
+2025,96,Universita Politecnica delle Marche,Italy,7,33,8625.0,1325,1850,1375,912.5,1412.5,1750.0
+2025,97,"California State University, Sacramento",USA,3,4,8612.5,950,1850,1800,1000.0,1350.0,1662.5
+2025,98,Universiti Pendidikan Sultan Idris,Malaysia,6,45,8612.5,1325,1725,1375,862.5,1687.5,1637.5
+2025,99,University of Sopron,Hungary,3,34,8605.0,1155,1700,1500,937.5,1650.0,1662.5
+2025,100,Ontario Tech University,Canada,2,5,8600.0,1275,1825,1550,937.5,1462.5,1550.0
+2025,101,Baskent University,Turkiye,8,46,8600.0,1425,1800,1475,800.0,1487.5,1612.5
+2025,102,Universitas Muhammadiyah Malang,Indonesia,19,47,8600.0,1300,1675,1425,937.5,1512.5,1750.0
+2025,103,Middle East Technical University,Turkiye,9,48,8600.0,1450,1450,1475,987.5,1612.5,1625.0
+2025,104,Universiti Teknikal Malaysia Melaka,Malaysia,7,49,8587.5,1375,1650,1500,900.0,1587.5,1575.0
+2025,105,National Pingtung University,Chinese Taipei,10,50,8587.5,1250,1575,1575,912.5,1650.0,1625.0
+2025,106,Universitas Brawijaya,Indonesia,20,51,8585.0,1350,1775,1600,735.0,1525.0,1600.0
+2025,107,Masaryk University,Czech Republic,2,35,8585.0,985,1750,1625,987.5,1725.0,1512.5
+2025,108,An-Najah National University,Palestine,1,52,8575.0,1225,1950,1325,887.5,1500.0,1687.5
+2025,109,University of Phayao,Thailand,8,53,8575.0,1225,1725,1425,887.5,1650.0,1662.5
+2025,110,University of Camerino,Italy,8,36,8575.0,1400,1675,1550,850.0,1562.5,1537.5
+2025,111,University of Milano-Bicocca,Italy,9,37,8575.0,1100,1525,1700,900.0,1662.5,1687.5
+2025,112,De La Salle University - Dasmarinas,Philippines,1,54,8562.5,1050,1775,1700,850.0,1625.0,1562.5
+2025,113,Universitas Teuku Umar,Indonesia,21,55,8562.5,1300,1775,1550,887.5,1450.0,1600.0
+2025,114,University of Babylon,Iraq,1,56,8562.5,1375,1700,1450,837.5,1637.5,1562.5
+2025,115,Imam Abdulrahman Bin Faisal University,Saudi Arabia,2,57,8522.5,1350,1460,1550,987.5,1512.5,1662.5
+2025,116,Jordan University of Science and Technology,Jordan,2,58,8512.5,1400,1675,1650,937.5,1462.5,1387.5
+2025,117,Manipal Academy of Higher Education,India,1,59,8500.0,1050,1625,1700,987.5,1675.0,1462.5
+2025,118,Chettinad Academy of Research and Education,India,2,60,8487.5,1225,1900,1450,812.5,1562.5,1537.5
+2025,119,American University of Beirut,Lebanon,1,61,8482.5,1425,1710,1325,950.0,1535.0,1537.5
+2025,120,Valaya Alongkorn Rajabhat University Under the Royal Patronage,Thailand,9,62,8477.5,1100,1750,1400,950.0,1700.0,1577.5
+2025,121,Universitas Medan Area,Indonesia,22,63,8475.0,1100,1850,1375,850.0,1600.0,1700.0
+2025,122,Universidad De Antioquia,Colombia,8,16,8475.0,1050,1825,1700,850.0,1425.0,1625.0
+2025,123,Izmir Institute of Technology,Turkiye,10,64,8462.5,1275,1750,1325,825.0,1662.5,1625.0
+2025,124,Sunway University,Malaysia,8,65,8462.5,1225,1650,1350,850.0,1675.0,1712.5
+2025,125,National Chiayi University,Chinese Taipei,11,66,8462.5,1275,1550,1550,937.5,1625.0,1525.0
+2025,126,Universitas Multimedia Nusantara,Indonesia,23,67,8460.0,1085,1800,1650,950.0,1337.5,1637.5
+2025,127,Mangalore University,India,3,68,8450.0,1400,1775,1400,887.5,1450.0,1537.5
+2025,128,Universidad Tecnologica ECOTEC,Ecuador,1,17,8450.0,1250,1625,1500,850.0,1612.5,1612.5
+2025,129,Universidad EAFIT,Colombia,9,18,8447.5,1010,2000,1475,1000.0,1400.0,1562.5
+2025,130,Gdańsk University of Technology,Poland,1,38,8447.5,1300,1510,1650,550.0,1650.0,1787.5
+2025,131,Ubon Ratchathani University,Thailand,10,69,8437.5,1350,1725,1450,887.5,1475.0,1550.0
+2025,132,Providence University,Chinese Taipei,12,70,8437.5,1175,1625,1725,812.5,1637.5,1462.5
+2025,133,Universitas Muhammadiyah Yogyakarta,Indonesia,24,71,8425.0,1175,1800,1400,750.0,1587.5,1712.5
+2025,134,Universidad Politécnica Estatal del Carchi,Ecuador,2,19,8425.0,1250,1775,1400,800.0,1575.0,1625.0
+2025,135,Inonu University Malatya,Turkiye,11,39,8425.0,1375,1775,1125,862.5,1650.0,1637.5
+2025,136,S R M University (Institute of Science and Technology),India,4,72,8422.5,960,1600,1775,937.5,1575.0,1575.0
+2025,137,Universitat Autònoma de Barcelona,Spain,3,40,8412.5,1050,1975,1625,887.5,1500.0,1375.0
+2025,138,Universidad Iberoamericana Puebla,Mexico,4,20,8412.5,1100,1975,1525,937.5,1362.5,1512.5
+2025,139,D. Serikbayev East Kazakhstan technical university,Kazakhstan,1,73,8412.5,1350,1850,1225,662.5,1525.0,1800.0
+2025,140,Escuela Superior Politecnica del Litoral,Ecuador,3,21,8412.5,1215,1335,1750,900.0,1625.0,1587.5
+2025,141,The University of Lahore,Pakistan,1,74,8410.0,1035,1825,1375,937.5,1625.0,1612.5
+2025,142,University Of Anbar,Iraq,2,75,8400.0,1300,1775,1175,837.5,1700.0,1612.5
+2025,143,Universidade do Vale do Taquari - UNIVATES,Brazil,6,22,8400.0,1175,1775,1525,1000.0,1550.0,1375.0
+2025,144,Khwaja Fareed University of Engineering and Information Technology,Pakistan,2,76,8400.0,1200,1750,1400,887.5,1587.5,1575.0
+2025,145,"Muhammad Nawaz Shareef University of Agriculture, Multan Pakistan",Pakistan,3,77,8400.0,1225,1675,1350,875.0,1562.5,1712.5
+2025,146,Jadara University,Jordan,3,78,8400.0,1200,1675,1350,900.0,1575.0,1700.0
+2025,147,Razi University Kermanshah,Iran,1,79,8400.0,1425,1650,1200,937.5,1662.5,1525.0
+2025,148,Universidade do Minho,Portugal,1,41,8400.0,1175,1500,1775,987.5,1300.0,1662.5
+2025,149,Universiti Sultan Zainal Abidin,Malaysia,9,80,8400.0,1375,1400,1400,987.5,1612.5,1625.0
+2025,150,Naresuan University,Thailand,11,81,8387.5,1175,1600,1475,937.5,1500.0,1700.0
+2025,151,Universiti Tun Hussein Onn Malaysia,Malaysia,10,82,8387.5,1200,1550,1500,800.0,1562.5,1775.0
+2025,152,NOVA University Lisbon,Portugal,2,42,8375.0,1150,1950,1800,750.0,1237.5,1487.5
+2025,153,Universitas Pancasila,Indonesia,25,83,8375.0,1075,1625,1600,925.0,1475.0,1675.0
+2025,154,National University of Kaohsiung,Chinese Taipei,13,84,8375.0,1250,1625,1350,987.5,1650.0,1512.5
+2025,155,Dhurakij Pundit University,Thailand,12,85,8372.5,1110,1725,1550,975.0,1437.5,1575.0
+2025,156,Instituto Politecnico De Viana Do Castelo,Portugal,3,43,8350.0,1275,1900,1300,912.5,1525.0,1437.5
+2025,157,Sakarya Üniversitesi,Turkiye,12,86,8350.0,1350,1750,1475,850.0,1562.5,1362.5
+2025,158,Bashkir State Agrarian University,Russia,3,44,8350.0,1300,1675,1275,862.5,1562.5,1675.0
+2025,159,Universitas Negeri Malang,Indonesia,26,87,8350.0,1250,1675,1200,937.5,1575.0,1712.5
+2025,160,Sabanci University,Turkiye,13,88,8337.5,1200,1750,1550,937.5,1400.0,1500.0
+2025,161,Pibulsongkram Rajabhat University,Thailand,13,89,8337.5,1175,1575,1800,900.0,1475.0,1412.5
+2025,162,Irkutsk National Research Technical University,Russia,4,90,8325.0,1300,1850,1200,700.0,1612.5,1662.5
+2025,163,Universidad Panamericana,Mexico,5,23,8325.0,1125,1775,1575,912.5,1437.5,1500.0
+2025,164,Universitas Negeri Surabaya,Indonesia,27,91,8325.0,1150,1750,1675,887.5,1262.5,1600.0
+2025,165,Tarbiat Modares University,Iran,2,92,8317.5,1030,1400,1650,887.5,1575.0,1775.0
+2025,166,Al-Mustaqbal University,Iraq,3,93,8312.5,1100,1700,1250,987.5,1625.0,1650.0
+2025,167,Princess Nourah Bint Abdulrahman University,Saudi Arabia,3,94,8310.0,1250,1470,1650,1000.0,1687.5,1252.5
+2025,168,International University of Business Agriculture and Technology,Bangladesh,1,95,8300.0,1100,1825,1275,762.5,1637.5,1700.0
+2025,169,Dokuz Eylul University,Turkiye,14,45,8300.0,1275,1825,1375,712.5,1587.5,1525.0
+2025,170,Bartin University,Turkiye,15,96,8300.0,1225,1600,1550,800.0,1587.5,1537.5
+2025,171,Alexandria University,Egypt,1,1,8287.5,1225,1800,1250,900.0,1512.5,1600.0
+2025,172,Immanuel Kant Baltic Federal University,Russia,5,46,8287.5,1375,1775,1450,612.5,1612.5,1462.5
+2025,173,Tra Vinh University,Vietnam,2,97,8287.5,1250,1575,1425,937.5,1675.0,1425.0
+2025,174,Slovak University of Agriculture in Nitra,Slovakia,1,47,8275.0,1125,1725,1675,975.0,1387.5,1387.5
+2025,175,Cukurova University,Turkiye,16,48,8275.0,1350,1525,1500,937.5,1462.5,1500.0
+2025,176,American University of the Middle East (AUM),Kuwait,1,98,8267.5,1100,1280,1575,937.5,1575.0,1800.0
+2025,177,Kutahya Dumlupinar University,Turkiye,17,99,8265.0,1250,1800,1225,937.5,1625.0,1427.5
+2025,178,Hochschule Anhalt,Germany,3,49,8262.5,1150,1625,1475,812.5,1550.0,1650.0
+2025,179,King Faisal University,Saudi Arabia,4,100,8262.5,1275,1625,1375,850.0,1562.5,1575.0
+2025,180,Atatürk Üniversitesi,Turkiye,18,101,8260.0,1425,1385,1500,887.5,1487.5,1575.0
+2025,181,Tashkent State University of Law,Uzbekistan,1,102,8250.0,1125,1775,1175,850.0,1612.5,1712.5
+2025,182,Tokat Gaziosmanpasa University,Turkiye,19,50,8247.5,1275,1510,1725,887.5,1375.0,1475.0
+2025,183,Hacettepe University,Turkiye,20,103,8235.0,1400,1475,1725,697.5,1437.5,1500.0
+2025,184,Trakya University,Turkiye,21,51,8235.0,1350,1335,1800,900.0,1462.5,1387.5
+2025,185,Düzce University,Turkiye,22,52,8225.0,1325,1725,1275,750.0,1562.5,1587.5
+2025,186,University of Peradeniya,Sri Lanka,1,104,8212.5,1275,1675,1425,737.5,1612.5,1487.5
+2025,187,Universidad Tecnologica de Pereira,Colombia,10,24,8200.0,1025,1950,1250,875.0,1550.0,1550.0
+2025,188,Universidad EIA,Colombia,11,25,8200.0,1125,1825,1400,987.5,1350.0,1512.5
+2025,189,University of Kelaniya,Sri Lanka,2,105,8200.0,850,1750,1775,937.5,1312.5,1575.0
+2025,190,Nanhua University Taiwan,Chinese Taipei,14,106,8197.5,1125,1310,1750,887.5,1537.5,1587.5
+2025,191,National Institute of Technology Silchar,India,5,107,8187.5,1200,1850,1275,737.5,1475.0,1650.0
+2025,192,Silpakorn University,Thailand,14,108,8187.5,1075,1750,1325,850.0,1625.0,1562.5
+2025,193,Universitas Halu Oleo,Indonesia,28,109,8187.5,1325,1700,1350,850.0,1350.0,1612.5
+2025,194,Thaksin University,Thailand,15,110,8187.5,1175,1650,1325,937.5,1525.0,1575.0
+2025,195,Mae Fah Luang University,Thailand,16,111,8177.5,1275,1650,1350,837.5,1575.0,1490.0
+2025,196,Senac University Center,Brazil,7,26,8175.0,1400,1750,1800,1000.0,1075.0,1150.0
+2025,197,Al-Furat Al-Awsat Technical University,Iraq,4,112,8175.0,1050,1500,1400,937.5,1737.5,1550.0
+2025,198,Universita degli Studi di Padova,Italy,10,53,8162.5,1025,1725,1775,937.5,1225.0,1475.0
+2025,199,Politeknik Merlimau Melaka,Malaysia,11,113,8162.5,1125,1475,1475,937.5,1462.5,1687.5
+2025,200,Mariano Marcos State University,Philippines,2,114,8150.0,1275,1825,1075,837.5,1550.0,1587.5
+2025,201,Hasan Kalyoncu University,Turkiye,23,115,8150.0,1325,1675,1425,750.0,1575.0,1400.0
+2025,202,Mersin University,Turkiye,24,116,8137.5,1250,1725,1475,850.0,1462.5,1375.0
+2025,203,Universitas Esa Unggul,Indonesia,29,117,8135.0,960,1700,1625,737.5,1312.5,1800.0
+2025,204,Universiti Malaysia Terengganu (UMT),Malaysia,12,118,8135.0,1075,1285,1625,837.5,1612.5,1700.0
+2025,205,Universidad Iberoamericana Torreón,Mexico,6,27,8125.0,1225,1825,1275,937.5,1400.0,1462.5
+2025,206,Saveetha Institute of Medical and Technical Sciences,India,6,119,8125.0,1125,1800,1200,850.0,1562.5,1587.5
+2025,207,CETYS University (Centro de Ensenanza Tecnica y Superior),Mexico,7,28,8125.0,1000,1575,1775,987.5,1362.5,1425.0
+2025,208,Huachiew Chalermprakiet University,Thailand,17,120,8112.5,1050,1525,1700,700.0,1350.0,1787.5
+2025,209,Alzahra University,Iran,3,121,8112.5,1000,1500,1550,837.5,1675.0,1550.0
+2025,210,Universidad de La Sabana,Colombia,12,29,8102.5,1350,1575,1400,887.5,1525.0,1365.0
+2025,211,Università degli Studi della Tuscia,Italy,11,54,8100.0,1250,1575,1400,700.0,1412.5,1762.5
+2025,212,Università degli Studi di Firenze,Italy,12,55,8097.5,1200,1460,1575,1000.0,1275.0,1587.5
+2025,213,University of Kashan,Iran,4,122,8087.5,1300,1875,1175,887.5,1325.0,1525.0
+2025,214,Firat University,Turkiye,25,56,8087.5,1200,1775,1200,937.5,1600.0,1375.0
+2025,215,Northeastern University,Thailand,18,123,8087.5,1050,1650,1425,850.0,1712.5,1400.0
+2025,216,University of Baghdad,Iraq,5,124,8087.5,1250,1650,1500,875.0,1537.5,1275.0
+2025,217,Kastamonu University,Turkiye,26,57,8087.5,1300,1385,1800,787.5,1312.5,1502.5
+2025,218,Shinshu University,Japan,1,125,8085.0,1160,1475,1675,725.0,1500.0,1550.0
+2025,219,Institución Universitaria Politecnico Grancolombiano,Colombia,13,30,8072.5,1010,1825,1650,887.5,1387.5,1312.5
+2025,220,Rajamangala University of Technology Thanyaburi (RMUTT),Thailand,19,126,8062.5,1000,1775,1375,950.0,1650.0,1312.5
+2025,221,Universiti Selangor,Malaysia,13,127,8062.5,1450,1275,1625,850.0,1437.5,1425.0
+2025,222,Centro Universitário Facens,Brazil,8,31,8050.0,1150,1875,1300,875.0,1400.0,1450.0
+2025,223,Kun Shan University,Chinese Taipei,15,128,8050.0,1075,1650,1575,800.0,1425.0,1525.0
+2025,224,Ondokuz Mayis University,Turkiye,27,58,8050.0,1425,1525,1250,900.0,1462.5,1487.5
+2025,225,Fundación Universidad del Norte Barranquilla,Colombia,14,32,8050.0,975,1485,1775,1000.0,1475.0,1340.0
+2025,226,Universita degli Studi di Milano La Statale,Italy,13,59,8037.5,1125,1475,1800,800.0,1550.0,1287.5
+2025,227,Mardin Artuklu Üniversitesi,Turkiye,28,60,8037.5,1175,1450,1475,800.0,1462.5,1675.0
+2025,228,Universidad Surcolombiana,Colombia,15,33,8025.0,1050,1550,1600,1000.0,1625.0,1200.0
+2025,229,Universiti Tunku Abdul Rahman,Malaysia,14,129,8025.0,1200,1425,1500,725.0,1562.5,1612.5
+2025,230,Pontificia Universidad Javeriana Cali,Colombia,16,34,8022.5,950,1875,1575,950.0,1185.0,1487.5
+2025,231,University of Passau,Germany,4,61,8012.5,850,1875,1550,900.0,1500.0,1337.5
+2025,232,"ITESO, Universidad Jesuita de Guadalajara",Mexico,8,35,8012.5,1075,1875,1750,987.5,1010.0,1315.0
+2025,233,Universidade de Sorocaba,Brazil,9,36,8012.5,1075,1825,1350,887.5,1425.0,1450.0
+2025,234,Kalasalingam Academy of Research and Education,India,7,130,8012.5,1200,1525,1075,887.5,1612.5,1712.5
+2025,235,Ziauddin University,Pakistan,4,131,8000.0,1100,1750,1275,887.5,1425.0,1562.5
+2025,236,University of Petra,Jordan,4,132,8000.0,950,1650,1475,875.0,1425.0,1625.0
+2025,237,Universitas Islam Negeri Raden Fatah Palembang,Indonesia,30,133,8000.0,1225,1650,1100,687.5,1550.0,1787.5
+2025,238,Universitas Islam Negeri Syarif hidayatullah Jakarta,Indonesia,31,134,8000.0,1050,1500,1575,750.0,1575.0,1550.0
+2025,239,"Batangas State University, The National Engineering University",Philippines,3,135,7995.0,870,1700,1500,737.5,1575.0,1612.5
+2025,240,Universidad Politecnica de Valencia,Spain,4,62,7987.5,925,1725,1700,587.5,1462.5,1587.5
+2025,241,Tecnologico de Monterrey,Mexico,9,37,7987.5,1100,1550,1350,950.0,1262.5,1775.0
+2025,242,Maejo University,Thailand,20,136,7975.0,1075,1775,1550,737.5,1587.5,1250.0
+2025,243,Universitas Syiah Kuala,Indonesia,32,137,7975.0,1000,1600,1525,887.5,1387.5,1575.0
+2025,244,BINUS University,Indonesia,33,138,7972.5,1085,1350,1675,937.5,1362.5,1562.5
+2025,245,Kutahya Health Sciences University,Turkiye,29,63,7960.0,1275,1335,1375,850.0,1537.5,1587.5
+2025,246,University Of Information Technology And Management In Rzeszow,Poland,2,64,7950.0,1125,1575,1650,560.0,1537.5,1502.5
+2025,247,Vytautas Magnus University,Lithuania,1,65,7950.0,1350,1475,1700,600.0,1412.5,1412.5
+2025,248,University of Kerbala,Iraq,6,139,7950.0,1125,1400,1350,887.5,1612.5,1575.0
+2025,249,Universidad de Salamanca,Spain,5,66,7942.5,930,1725,1650,787.5,1300.0,1550.0
+2025,250,Russian Biotechnological University,Russia,6,67,7937.5,1175,1625,1100,787.5,1600.0,1650.0
+2025,251,Universiti Malaysia Kelantan (UMK),Malaysia,15,140,7935.0,1350,1185,1775,687.5,1275.0,1662.5
+2025,252,"University of Central Punjab,Lahore, Pakistan",Pakistan,5,141,7925.0,1250,1750,1150,775.0,1400.0,1600.0
+2025,253,Universiti Kebangsaan Malaysia,Malaysia,16,142,7925.0,1225,1575,1400,700.0,1537.5,1487.5
+2025,254,Niğde Ömer Halisdemir University,Turkiye,30,68,7912.5,1225,1775,1350,850.0,1450.0,1262.5
+2025,255,University of AlKafeel,Iraq,7,143,7912.5,1050,1725,1350,875.0,1387.5,1525.0
+2025,256,Universidad Icesi,Colombia,17,38,7912.5,1100,1700,1275,837.5,1450.0,1550.0
+2025,257,Ghulam Ishaq Khan Institute of Engineering Sciences and Technology,Pakistan,6,144,7912.5,1200,1500,1250,700.0,1537.5,1725.0
+2025,258,M. Auezov South Kazakhstan Research University,Kazakhstan,2,145,7900.0,1175,1625,1400,737.5,1562.5,1400.0
+2025,259,Universidad de Caldas,Colombia,18,39,7897.5,1150,1600,1450,987.5,1425.0,1285.0
+2025,260,October 6 University,Egypt,2,2,7882.5,960,1900,1500,762.5,1460.0,1300.0
+2025,261,GITAM : Gandhi Institute of Technology And Management,India,8,146,7875.0,1075,1550,1650,800.0,1237.5,1562.5
+2025,262,Universidade de Vigo,Spain,6,69,7875.0,1075,1525,1800,912.5,1350.0,1212.5
+2025,263,Benha University,Egypt,3,3,7872.5,1035,1950,1200,987.5,1450.0,1250.0
+2025,264,Tashkent State University of Economics,Uzbekistan,2,147,7872.5,1210,1750,1275,837.5,1675.0,1125.0
+2025,265,Daffodil International University,Bangladesh,2,148,7870.0,1000,1660,1350,887.5,1397.5,1575.0
+2025,266,Al-Zaytoonah University of Jordan,Jordan,5,149,7862.5,1150,1550,1350,750.0,1562.5,1500.0
+2025,267,Islamic University,Iraq,8,150,7862.5,1075,1450,1525,825.0,1600.0,1387.5
+2025,268,Università Degli Studi Di Urbino Carlo Bo,Italy,14,70,7857.5,910,1875,1600,735.0,1375.0,1362.5
+2025,269,Universitas Terbuka,Indonesia,34,151,7850.0,1150,1750,1300,600.0,1412.5,1637.5
+2025,270,Istanbul Aydin University,Turkiye,31,71,7847.5,800,1725,1625,800.0,1260.0,1637.5
+2025,271,Universidad Santo Tomas,Colombia,19,40,7847.5,1025,1485,1575,775.0,1262.5,1725.0
+2025,272,Universitas Ahmad Dahlan,Indonesia,35,152,7847.5,1035,1450,1400,900.0,1525.0,1537.5
+2025,273,Università degli Studi di Genova,Italy,15,72,7835.0,885,1625,1775,750.0,1375.0,1425.0
+2025,274,Universitas Sumatera Utara,Indonesia,36,153,7827.5,1050,1600,1300,850.0,1512.5,1515.0
+2025,275,Universidad de Alcalá,Spain,7,73,7825.0,1050,1825,1550,850.0,1500.0,1050.0
+2025,276,Capital University of Science and Technology,Pakistan,7,154,7825.0,1150,1700,1425,637.5,1337.5,1575.0
+2025,277,Rajamangala University of Technology Isan,Thailand,21,155,7825.0,1250,1250,1500,837.5,1437.5,1550.0
+2025,278,Universitas Katolik Indonesia Atma Jaya,Indonesia,37,156,7822.5,1025,1310,1225,937.5,1675.0,1650.0
+2025,279,Allama Iqbal Open University,Pakistan,8,157,7812.5,1200,1875,900,800.0,1500.0,1537.5
+2025,280,University of Bahrain,Bahrain,1,158,7812.5,1300,875,1725,850.0,1312.5,1750.0
+2025,281,Pontificia Universidad Catolica De Chile,Chile,1,41,7807.5,960,1585,1800,687.5,1450.0,1325.0
+2025,282,Universitat De Girona,Spain,8,74,7800.0,850,1825,1375,850.0,1425.0,1475.0
+2025,283,"Adam Mickiewicz University, Poznan",Poland,3,75,7800.0,1200,1675,1725,562.5,1162.5,1475.0
+2025,284,Universidade de Aveiro,Portugal,4,76,7797.5,900,1585,1725,700.0,1212.5,1675.0
+2025,285,Universidad Iberoamericana Ciudad de México,Mexico,10,42,7797.5,810,1575,1750,950.0,1150.0,1562.5
+2025,286,Chang Jung Christian University,Chinese Taipei,16,159,7797.5,1150,1310,1700,950.0,1300.0,1387.5
+2025,287,Babes Bolyai University,Romania,1,77,7790.0,1075,1565,1600,775.0,1600.0,1175.0
+2025,288,Universita Degli Studi Della Basilicata,Italy,16,78,7787.5,1300,1625,1575,537.5,1287.5,1462.5
+2025,289,Università degli Studi di Salerno,Italy,17,79,7787.5,900,1575,1775,762.5,1275.0,1500.0
+2025,290,Zonguldak Bulent Ecevit University,Turkiye,32,80,7785.0,1275,1575,1550,750.0,1372.5,1262.5
+2025,291,Kocaeli University,Turkiye,33,160,7785.0,1325,1560,1450,637.5,1450.0,1362.5
+2025,292,Tzu Chi University,Chinese Taipei,17,161,7785.0,1125,1460,1550,925.0,1450.0,1275.0
+2025,293,University of Warith Al-Anbiyaa,Iraq,9,162,7775.0,900,1700,1350,800.0,1462.5,1562.5
+2025,294,King Mongkut's Institute of Technology Ladkrabang,Thailand,22,163,7775.0,1325,1550,1125,825.0,1462.5,1487.5
+2025,295,University of Northern Philippines,Philippines,4,164,7775.0,1175,1400,1350,800.0,1500.0,1550.0
+2025,296,National Taipei University of Technology,Chinese Taipei,18,165,7762.5,950,1325,1650,975.0,1300.0,1562.5
+2025,297,Sohag University,Egypt,4,4,7757.5,1325,1360,1175,975.0,1472.5,1450.0
+2025,298,Universitas Islam Negeri Jurai Siwo  Lampung,Indonesia,38,166,7737.5,825,1700,1500,862.5,1512.5,1337.5
+2025,299,Nitte (Deemed to be University),India,9,167,7737.5,1225,1275,1200,825.0,1675.0,1537.5
+2025,300,Iqra University,Pakistan,9,168,7712.5,1150,1675,1075,675.0,1412.5,1725.0
+2025,301,Hatyai University,Thailand,23,169,7712.5,1125,1600,1425,737.5,1300.0,1525.0
+2025,302,Afyon Kocatepe University,Turkiye,34,170,7707.5,1130,1515,1500,662.5,1687.5,1212.5
+2025,303,Universidade De Santiago De Compostela,Spain,9,81,7687.5,1025,1725,1675,750.0,1212.5,1300.0
+2025,304,Northern Technical University,Iraq,10,171,7687.5,1275,1600,975,812.5,1562.5,1462.5
+2025,305,Pontificia Universidad Javeriana-Bogota,Colombia,20,43,7685.0,1100,1800,1575,887.5,1285.0,1037.5
+2025,306,Oguz han Engineering and Technology University of Turkmenistan,Turkmenistan,1,172,7675.0,1200,1575,1125,850.0,1437.5,1487.5
+2025,307,Universiti Malaysia Perlis,Malaysia,17,173,7675.0,1150,1375,1325,750.0,1462.5,1612.5
+2025,308,Tarlac Agricultural University,Philippines,5,174,7662.5,1040,1685,1450,775.0,1450.0,1262.5
+2025,309,King Mongkut's University of Technology North Bangkok,Thailand,24,175,7652.5,1125,1575,1300,737.5,1600.0,1315.0
+2025,310,University of West Attica,Greece,1,82,7647.5,810,1650,1500,987.5,1525.0,1175.0
+2025,311,Universidad Autónoma del Estado de Mexico,Mexico,11,44,7637.5,1010,1775,1150,762.5,1412.5,1527.5
+2025,312,Palestine Technical University - Kadoorie,Palestine,2,176,7637.5,975,1650,1150,750.0,1625.0,1487.5
+2025,313,Open University of Sri Lanka,Sri Lanka,3,177,7635.0,985,1675,1300,675.0,1450.0,1550.0
+2025,314,Ryazan State Medical University,Russia,7,83,7635.0,1125,1410,1575,650.0,1562.5,1312.5
+2025,315,Kamphaeng Phet Rajabhat University,Thailand,25,178,7635.0,1110,1325,1700,837.5,1250.0,1412.5
+2025,316,Prince of Songkla University,Thailand,26,179,7632.5,1150,1135,1450,887.5,1435.0,1575.0
+2025,317,Universidad Catolica Andres Bello,Venezuela,1,45,7625.0,1025,1825,1475,737.5,1150.0,1412.5
+2025,318,Khon Kaen University,Thailand,27,180,7625.0,1325,1550,1150,937.5,1362.5,1300.0
+2025,319,Universidade Estadual de Maringá,Brazil,10,46,7625.0,1175,1450,1475,837.5,1425.0,1262.5
+2025,320,Ming Chi University of Technology,Chinese Taipei,19,181,7625.0,1225,1250,1425,725.0,1400.0,1600.0
+2025,321,Universidad Metropolitana Caracas,Venezuela,2,47,7622.5,1225,1725,1475,850.0,1022.5,1325.0
+2025,322,Volgograd State University,Russia,8,84,7620.0,1125,1560,1100,625.0,1610.0,1600.0
+2025,323,Hungkuang University,Chinese Taipei,20,182,7615.0,875,1575,1275,862.5,1600.0,1427.5
+2025,324,Sri Sri University,India,10,183,7615.0,1325,1500,1225,812.5,1450.0,1302.5
+2025,325,The University of Faisalabad,Pakistan,10,184,7612.5,1100,1675,1250,825.0,1375.0,1387.5
+2025,326,Universidad Catolica De Cordoba,Argentina,1,48,7607.5,1125,1710,1575,612.5,1285.0,1300.0
+2025,327,Fergana State University,Uzbekistan,3,185,7600.0,700,1925,1225,800.0,1250.0,1700.0
+2025,328,Universitas Teknokrat Indonesia,Indonesia,39,186,7600.0,1225,1800,1025,650.0,1400.0,1500.0
+2025,329,Canakkale Onsekiz Mart University,Turkiye,35,85,7600.0,1150,1475,1650,650.0,1512.5,1162.5
+2025,330,Universitas Pelita Harapan,Indonesia,40,187,7595.0,1010,1410,1525,787.5,1312.5,1550.0
+2025,331,KOLEJ KOMUNITI JERANTUT,Malaysia,18,188,7595.0,860,1385,1525,975.0,1487.5,1362.5
+2025,332,Derzhavin Tambov State University,Russia,9,86,7587.5,950,1700,1275,800.0,1450.0,1412.5
+2025,333,Yessenov University,Kazakhstan,3,189,7577.5,1030,1535,1300,800.0,1237.5,1675.0
+2025,334,Abu Dhabi University,United Arab Emirates,2,190,7570.0,1025,1310,1625,900.0,1110.0,1600.0
+2025,335,Alisher Navo'i Tashkent State University of Uzbek Language and Literature,Uzbekistan,4,191,7562.5,900,1625,925,850.0,1625.0,1637.5
+2025,336,Universidade De Passo Fundo,Brazil,11,49,7562.5,1125,1400,1600,900.0,1037.5,1500.0
+2025,337,Institución Universitaria Colegio Mayor de Antioquia,Colombia,21,50,7560.0,885,1875,1400,837.5,1300.0,1262.5
+2025,338,Universitas Sriwijaya,Indonesia,41,192,7552.5,1025,1575,1500,875.0,1250.0,1327.5
+2025,339,Bialystok University of Technology,Poland,4,87,7550.0,1225,1725,1400,637.5,1012.5,1550.0
+2025,340,Manisa Celal Bayar University,Turkiye,36,88,7550.0,1075,1625,1275,837.5,1362.5,1375.0
+2025,341,University of Gdansk,Poland,5,89,7550.0,950,1600,1500,775.0,1387.5,1337.5
+2025,342,Universitas Pembangunan Nasional Veteran Jawa Timur,Indonesia,42,193,7547.5,1075,1485,1125,687.5,1500.0,1675.0
+2025,343,Ukrainian National Forestry University,Ukraine,1,90,7547.5,1200,1135,1450,662.5,1500.0,1600.0
+2025,344,Cappadocia University,Turkiye,37,91,7537.5,860,1450,1800,612.5,1537.5,1277.5
+2025,345,The Islamia University of Bahawalpur,Pakistan,11,194,7537.5,925,1450,1300,850.0,1537.5,1475.0
+2025,346,Karunya Institute of Technology and Sciences,India,11,195,7537.5,1250,1375,975,900.0,1387.5,1650.0
+2025,347,Universidade Federal Fluminense,Brazil,12,51,7532.5,1085,1560,1225,437.5,1712.5,1512.5
+2025,348,Southern Leyte State University,Philippines,6,196,7525.0,1200,1475,1125,850.0,1525.0,1350.0
+2025,349,Juraj Dobrila University of Pula,Croatia,1,92,7517.5,855,1700,1575,650.0,1625.0,1112.5
+2025,350,Universidade Federal do Triângulo Mineiro,Brazil,13,52,7505.0,1300,1290,1725,537.5,1150.0,1502.5
+2025,351,Sukhothai Thammathirat Open University,Thailand,28,197,7495.0,860,1410,1800,850.0,1350.0,1225.0
+2025,352,University of A Coruña,Spain,10,93,7487.5,975,1325,1700,837.5,1237.5,1412.5
+2025,353,Politeknik Seberang Perai,Malaysia,19,198,7480.0,1035,1135,1475,837.5,1612.5,1385.0
+2025,354,2iE International Institute for Water and Environmental Engineering,Burkina Faso,1,5,7475.0,1250,1325,1150,775.0,1337.5,1637.5
+2025,355,Bursa Uludag University,Turkiye,38,94,7472.5,1325,1260,1450,700.0,1312.5,1425.0
+2025,356,Abai Kazakh National Pedagogical University,Kazakhstan,4,199,7462.5,1075,1575,1150,637.5,1562.5,1462.5
+2025,357,Seinäjoki University of Applied Sciences,Finland,3,95,7457.5,880,1450,1650,912.5,1275.0,1290.0
+2025,358,Bukidnon State University,Philippines,7,200,7452.5,1025,1400,1525,762.5,1500.0,1240.0
+2025,359,Universidad del Valle,Colombia,22,53,7450.0,1075,1260,1600,737.5,1400.0,1377.5
+2025,360,Universitas Budi Luhur,Indonesia,43,201,7447.5,1010,1550,1475,800.0,1275.0,1337.5
+2025,361,Samar State University,Philippines,8,202,7447.5,1250,1485,975,600.0,1462.5,1675.0
+2025,362,Urdaneta City University,Philippines,9,203,7445.0,910,1575,1425,800.0,1360.0,1375.0
+2025,363,Universidad Rey Juan Carlos,Spain,11,96,7437.5,900,1550,1575,687.5,1425.0,1300.0
+2025,364,"Chitkara University, Punjab",India,12,204,7432.5,960,1625,1125,950.0,1147.5,1625.0
+2025,365,Ain Shams University,Egypt,5,6,7430.0,1010,1585,1275,700.0,1335.0,1525.0
+2025,366,New Mansoura University,Egypt,6,7,7425.0,1175,1625,1150,737.5,1425.0,1312.5
+2025,367,Bansomdejchaopraya Rajabhat University,Thailand,29,205,7415.0,665,1475,1575,562.5,1525.0,1612.5
+2025,368,Politeknik Sultan Idris Shah,Malaysia,20,206,7412.5,1075,1450,1275,825.0,1337.5,1450.0
+2025,369,Universita degli Studi di Cagliari,Italy,18,97,7400.0,1075,1500,1700,725.0,1112.5,1287.5
+2025,370,University of Colombo,Sri Lanka,4,207,7387.5,1025,1625,1075,750.0,1412.5,1500.0
+2025,371,Instituto Tecnologico Metropolitano,Colombia,23,54,7385.0,910,1700,1550,687.5,1250.0,1287.5
+2025,372,Beni-Suef University,Egypt,7,8,7385.0,1235,1550,950,750.0,1262.5,1637.5
+2025,373,Politeknik Mukah,Malaysia,21,208,7385.0,1125,1350,1450,700.0,1322.5,1437.5
+2025,374,VSB - Technical University of Ostrava,Czech Republic,3,98,7377.5,900,1625,1475,850.0,1375.0,1152.5
+2025,375,Mangalayatan University Jabalpur,India,13,209,7375.0,1175,1525,1100,837.5,1487.5,1250.0
+2025,376,Jamia Millia Islamia,India,14,210,7375.0,1100,1450,1050,850.0,1400.0,1525.0
+2025,377,Bilkent University,Turkiye,39,211,7372.5,1325,1150,1500,347.5,1387.5,1662.5
+2025,378,Universidade Federal de Vicosa - UFV,Brazil,14,55,7362.5,1175,1350,1425,750.0,1337.5,1325.0
+2025,379,Universitas Pendidikan Indonesia,Indonesia,44,212,7362.5,1125,1250,1175,750.0,1312.5,1750.0
+2025,380,Perm National Research Polytechnic University,Russia,10,99,7340.0,1275,1750,1200,712.5,1387.5,1015.0
+2025,381,Hitit University,Turkiye,40,213,7337.5,1040,1435,1650,612.5,1362.5,1237.5
+2025,382,Sumy State University,Ukraine,2,100,7335.0,950,1560,1350,700.0,1262.5,1512.5
+2025,383,Burapha University,Thailand,30,214,7335.0,835,1400,1675,800.0,1300.0,1325.0
+2025,384,Phranakhon Si Ayutthaya Rajabhat University,Thailand,31,215,7335.0,975,1335,1450,650.0,1550.0,1375.0
+2025,385,Rajamangala University of Technology Suvarnabhumi,Thailand,32,216,7327.5,1250,1565,1225,787.5,1200.0,1300.0
+2025,386,Mugla Sitki Kocman University,Turkiye,41,101,7320.0,960,1400,1725,587.5,1022.5,1625.0
+2025,387,University of Kirkuk,Iraq,11,217,7312.5,1050,1775,1250,750.0,1287.5,1200.0
+2025,388,Osmaniye Korkut Ata University,Turkiye,42,102,7312.5,1000,1550,1225,700.0,1437.5,1400.0
+2025,389,Can Tho University of Medicine and Pharmacy,Vietnam,3,218,7312.5,1225,1550,1150,787.5,1300.0,1300.0
+2025,390,Universitas Kristen Krida Wacana,Indonesia,45,219,7310.0,835,1650,1600,737.5,1387.5,1100.0
+2025,391,Pangasinan State University,Philippines,10,220,7307.5,1110,1250,1350,737.5,1235.0,1625.0
+2025,392,"Metropolitan Autonomous University, UAM",Mexico,12,56,7300.0,900,1500,1125,1000.0,1237.5,1537.5
+2025,393,Integral University,India,15,221,7300.0,950,1300,1275,850.0,1400.0,1525.0
+2025,394,Jizzakh Polytechnic Institute,Uzbekistan,5,222,7275.0,1075,1475,1025,712.5,1625.0,1362.5
+2025,395,Universidad CES,Colombia,24,57,7262.5,1050,1975,1050,850.0,1187.5,1150.0
+2025,396,National Skills University Islamabad,Pakistan,12,223,7262.5,1075,1650,1500,512.5,1275.0,1250.0
+2025,397,Universidad de Ciencias Aplicadas y Ambientales UDCA,Colombia,25,58,7260.0,1050,1060,1575,1000.0,1262.5,1312.5
+2025,398,Universitas Aisyiyah Yogyakarta,Indonesia,46,224,7250.0,1075,1500,1050,662.5,1487.5,1475.0
+2025,399,Euromed University of Fes,Morocco,1,9,7242.5,1005,1600,1125,537.5,1400.0,1575.0
+2025,400,Eötvös Loránd University Budapest,Hungary,4,103,7240.0,1100,1165,1275,750.0,1400.0,1550.0
+2025,401,Bukhara State University,Uzbekistan,6,225,7237.5,1150,1625,1000,700.0,1350.0,1412.5
+2025,402,Universitas Katolik Parahyangan,Indonesia,47,226,7232.5,1025,1510,1575,787.5,1222.5,1112.5
+2025,403,Karshi State University,Uzbekistan,7,227,7212.5,1050,1700,825,875.0,1450.0,1312.5
+2025,404,Middle East University (MEU),Jordan,6,228,7212.5,950,1675,1500,837.5,1562.5,687.5
+2025,405,Nakhon Si Thammarat Rajabhat University,Thailand,33,229,7212.5,1150,1200,1450,625.0,1425.0,1362.5
+2025,406,Saint Mary's University,Philippines,11,230,7210.0,1050,1425,1225,725.0,1297.5,1487.5
+2025,407,Universidad de Jaén,Spain,12,104,7207.5,855,1575,1425,762.5,1300.0,1290.0
+2025,408,Corvinus University of Budapest,Hungary,5,105,7200.0,735,1800,1200,537.5,1425.0,1502.5
+2025,409,Universita degli Studi di Parma,Italy,19,106,7200.0,900,1500,1450,550.0,1275.0,1525.0
+2025,410,Loyola University,Spain,13,107,7197.5,685,1800,1475,1000.0,1237.5,1000.0
+2025,411,O.P. Jindal University,India,16,231,7187.5,1200,1425,975,750.0,1437.5,1400.0
+2025,412,Universidad de las Américas Puebla,Mexico,13,6,7172.5,1175,1160,1400,750.0,1037.5,1650.0
+2025,413,Kashan University of Medical Sciences and Health Services,Iran,5,232,7165.0,1175,1600,1400,800.0,1437.5,752.5
+2025,414,Politeknik Nilai,Malaysia,22,233,7162.5,1150,1450,975,762.5,1487.5,1337.5
+2025,415,Antalya Bilim University,Turkiye,43,234,7160.0,1075,1435,1700,475.0,1362.5,1112.5
+2025,416,Institute for Art & Culture,Pakistan,13,235,7150.0,1125,1625,1225,800.0,1100.0,1275.0
+2025,417,POLITEKNIK PORT DICKSON,Malaysia,23,236,7150.0,875,1525,1400,587.5,1250.0,1512.5
+2025,418,Al-Zahraa University for Women,Iraq,12,237,7150.0,825,1475,1050,800.0,1525.0,1475.0
+2025,419,Atilim University,Turkiye,44,238,7150.0,900,1325,1600,762.5,1225.0,1337.5
+2025,420,Mahatma Gandhi University,India,17,239,7150.0,975,1200,1125,787.5,1450.0,1612.5
+2025,421,"POLITEKNIK IBRAHIM SULTAN,JOHOR MALAYSIA",Malaysia,24,240,7142.5,1080,1625,1200,1000.0,1100.0,1137.5
+2025,422,Amman Arab University,Jordan,7,241,7137.5,1025,1500,1250,737.5,1312.5,1312.5
+2025,423,Gaziantep University,Turkiye,45,108,7135.0,1050,1315,1650,635.0,1172.5,1312.5
+2025,424,Akdeniz University,Turkiye,46,242,7135.0,1200,1210,1200,650.0,1362.5,1512.5
+2025,425,Loei Rajabhat University,Thailand,34,243,7125.0,1250,1075,1450,562.5,1512.5,1275.0
+2025,426,Dow University of Health Sciences Karachi,Pakistan,14,244,7112.5,1025,1400,1000,900.0,1387.5,1400.0
+2025,427,International Horse Breeding Academy named after Aba Annaev,Turkmenistan,2,245,7112.5,950,1360,1025,825.0,1600.0,1352.5
+2025,428,Al-Kitab University,Iraq,13,246,7110.0,1025,1575,1150,700.0,1397.5,1262.5
+2025,429,Andijan State Technical Institute,Uzbekistan,8,247,7100.0,875,1500,1125,775.0,1375.0,1450.0
+2025,430,Marmara University,Turkiye,47,109,7097.5,1175,1425,975,737.5,1297.5,1487.5
+2025,431,Universidad Tecnológica de Panamá,Panama,1,59,7095.0,1075,1260,1125,650.0,1435.0,1550.0
+2025,432,Palestine Ahliya University,Palestine,3,248,7087.5,1025,1575,900,750.0,1462.5,1375.0
+2025,433,University of Basrah,Iraq,14,249,7082.5,1025,1850,1350,887.5,1135.0,835.0
+2025,434,Recep Tayyip Erdogan University,Turkiye,48,250,7075.0,975,1475,875,650.0,1450.0,1650.0
+2025,435,Peruvian University Cayetano Heredia,Peru,1,60,7075.0,1215,1360,1400,625.0,1137.5,1337.5
+2025,436,Universitat Internacional de Catalunya,Spain,14,110,7072.5,810,1650,1650,612.5,1275.0,1075.0
+2025,437,Tashkent State Transport University,Uzbekistan,9,251,7072.5,810,1450,1000,587.5,1650.0,1575.0
+2025,438,Yuan Ze University,Chinese Taipei,21,252,7062.5,850,1425,1225,662.5,1387.5,1512.5
+2025,439,Universidad Nacional Del Litoral,Argentina,2,61,7062.5,1175,1350,1025,675.0,1412.5,1425.0
+2025,440,Kto Karatay University,Turkiye,49,111,7060.0,1125,1300,1200,950.0,1447.5,1037.5
+2025,441,Holy Spirit University of Kaslik,Lebanon,2,253,7050.0,875,1625,1525,500.0,1237.5,1287.5
+2025,442,Al-Quds University,Palestine,4,254,7050.0,850,1400,1150,800.0,1500.0,1350.0
+2025,443,National Chung Cheng University,Chinese Taipei,22,255,7050.0,1225,1000,1575,737.5,1237.5,1275.0
+2025,444,Ankara University,Turkiye,50,112,7047.5,1200,1275,1025,687.5,1297.5,1562.5
+2025,445,German Jordanian University,Jordan,8,256,7040.0,825,1500,1050,737.5,1425.0,1502.5
+2025,446,Ağrı İbrahim Çeçen Üniversitesi,Turkiye,51,257,7040.0,1325,1040,1275,810.0,1437.5,1152.5
+2025,447,Al-Ahliyya Amman University,Jordan,9,258,7037.5,1025,1450,1000,750.0,1550.0,1262.5
+2025,448,University of Oradea,Romania,2,113,7035.0,875,1675,1300,647.5,1300.0,1237.5
+2025,449,Universidad Científica Del Sur,Peru,2,62,7032.5,885,1550,1250,825.0,1185.0,1337.5
+2025,450,SSM Institute of Engineering and Technology,India,18,259,7027.5,900,1550,975,800.0,1637.5,1165.0
+2025,451,Russian State Agrarian University - Moscow Timiryazev Agricultural Academy,Russia,11,114,7025.0,1475,1350,1375,650.0,1325.0,850.0
+2025,452,Universidad Militar Nueva Granada,Colombia,26,63,7022.5,1150,1360,1350,962.5,1062.5,1137.5
+2025,453,National Chung Hsing University,Chinese Taipei,23,260,7015.0,905,1085,1475,475.0,1487.5,1587.5
+2025,454,Politeknik Negeri Malang,Indonesia,48,261,7012.5,850,1500,1175,587.5,1212.5,1687.5
+2025,455,Universitas Jember,Indonesia,49,262,7010.0,1125,1310,1175,487.5,1362.5,1550.0
+2025,456,University of Mosul,Iraq,15,263,6987.5,1175,1525,950,687.5,1375.0,1275.0
+2025,457,Universidad Tecnica Particular de Loja,Ecuador,4,64,6987.5,1050,1450,1175,487.5,1412.5,1412.5
+2025,458,Panpacific University,Philippines,12,264,6985.0,885,1700,850,737.5,1425.0,1387.5
+2025,459,Centro Universitario do Rio Grande do Norte UNI-RN,Brazil,15,65,6985.0,1050,1600,1325,950.0,1185.0,875.0
+2025,460,An Giang University - Vietnam National University Ho Chi Minh City,Vietnam,4,265,6985.0,875,1125,1700,460.0,1450.0,1375.0
+2025,461,Fo Guang University,Chinese Taipei,24,266,6985.0,1250,1110,1275,800.0,1150.0,1400.0
+2025,462,Semmelweis University,Hungary,6,115,6982.5,830,1150,1725,637.5,1675.0,965.0
+2025,463,POLITEKNIK JELI KELANTAN,Malaysia,25,267,6975.0,1200,1275,875,700.0,1487.5,1437.5
+2025,464,Universitas Islam Negeri Sultan Thaha Saifuddin Jambi,Indonesia,50,268,6970.0,1125,1410,1075,712.5,1222.5,1425.0
+2025,465,Universidad de Bogota Jorge Tadeo Lozano,Colombia,27,66,6962.5,900,1525,1400,875.0,1275.0,987.5
+2025,466,"Arab Academy for Science, Technology, and Maritime Transport",Egypt,8,10,6957.5,860,1285,1125,887.5,1462.5,1337.5
+2025,467,Omsk State Agrarian University,Russia,12,116,6957.5,995,850,1550,812.5,1100.0,1650.0
+2025,468,Bursa Technical University,Turkiye,52,269,6955.0,795,1460,1325,587.5,1350.0,1437.5
+2025,469,Universidad de Costa Rica,Costa Rica,1,67,6952.5,925,1490,1550,850.0,987.5,1150.0
+2025,470,Mendel University in Brno,Czech Republic,4,117,6950.0,1140,1100,1325,625.0,1235.0,1525.0
+2025,471,"George Emil Palade University of Medicine, Pharmacy, Science, and Technology of Targu Mures",Romania,3,118,6947.5,1000,1625,1400,312.5,1347.5,1262.5
+2025,472,Fundación Universitaria Navarra,Colombia,28,68,6947.5,735,1525,1300,737.5,1337.5,1312.5
+2025,473,University of Hradec Kralove,Czech Republic,5,119,6942.5,835,1360,1575,510.0,1475.0,1187.5
+2025,474,Università Degli Studi Gabriele D'Annunzio Chieti e Pescara,Italy,20,120,6937.5,1075,1060,1550,712.5,1400.0,1140.0
+2025,475,Balikesir University,Turkiye,53,121,6935.0,1150,1210,1200,550.0,1500.0,1325.0
+2025,476,University of Agriculture Faisalabad,Pakistan,15,270,6925.0,950,1450,1025,500.0,1512.5,1487.5
+2025,477,Catanduanes State University,Philippines,13,271,6925.0,1175,1350,1175,787.5,1300.0,1137.5
+2025,478,Pampanga State University,Philippines,14,272,6922.5,760,1525,1325,687.5,1300.0,1325.0
+2025,479,Guru Ghasidas Vishwavidyalaya,India,19,273,6912.5,975,1625,950,687.5,1262.5,1412.5
+2025,480,Karadeniz Technical University,Turkiye,54,122,6912.5,975,1425,1200,687.5,1412.5,1212.5
+2025,481,Jean Moulin University Lyon 3,France,1,123,6900.0,615,1825,1575,675.0,1185.0,1025.0
+2025,482,Usak University,Turkiye,55,124,6897.5,1125,1185,825,750.0,1487.5,1525.0
+2025,483,"Cardinal Stefan Wyszynski University in Warsaw, Poland",Poland,6,125,6892.5,930,1550,1425,700.0,1175.0,1112.5
+2025,484,The National University of Ostroh Academy,Ukraine,3,126,6890.0,1100,1675,1375,337.5,1475.0,927.5
+2025,485,Gulf University For Science & Technology,Kuwait,2,274,6890.0,1155,1650,1350,712.5,710.0,1312.5
+2025,486,Universidad Iberoamericana León,Mexico,14,69,6887.5,975,1800,1150,587.5,1250.0,1125.0
+2025,487,Kyrgyz Turkish Manas University,Kyrgyzstan,1,275,6880.0,1155,1065,1350,687.5,1612.5,1010.0
+2025,488,Biliran Province State University,Philippines,15,276,6877.5,1375,1150,1000,612.5,1525.0,1215.0
+2025,489,Palestine Polytechnic University,Palestine,5,277,6875.0,965,1600,1750,500.0,547.5,1512.5
+2025,490,"University of Southern Punjab, Multan, Pakistan",Pakistan,16,278,6875.0,900,1550,975,750.0,1475.0,1225.0
+2025,491,Polytechnic University of Coimbra (PUC),Portugal,5,127,6875.0,1175,1375,1350,335.0,1350.0,1290.0
+2025,492,Roi Et Rajabhat University,Thailand,35,279,6875.0,1150,1375,1350,587.5,1237.5,1175.0
+2025,493,Baku State University,Azerbaijan,1,128,6875.0,950,1000,1075,662.5,1625.0,1562.5
+2025,494,Wrocław University Of Environmental And Life Sciences,Poland,7,129,6870.0,1155,1400,1425,725.0,1100.0,1065.0
+2025,495,Soochow University,Chinese Taipei,25,280,6867.5,915,1350,1475,662.5,1237.5,1227.5
+2025,496,International European University,Ukraine,4,130,6862.5,1075,1425,900,737.5,1312.5,1412.5
+2025,497,Universita degli Studi di Bari Aldo Moro,Italy,21,131,6862.5,850,1275,1425,900.0,1400.0,1012.5
+2025,498,Brac University,Bangladesh,3,281,6860.0,985,1525,1000,675.0,1200.0,1475.0
+2025,499,Centro Federal de Educacao Tecnologica Celso Suckow da Fonseca - CEFET/RJ,Brazil,16,70,6860.0,785,1500,1500,812.5,875.0,1387.5
+2025,500,Universitas Pembangunan Nasional Veteran Yogyakarta,Indonesia,51,282,6860.0,1000,1435,975,575.0,1212.5,1662.5
+2025,501,Domus Academy,Italy,22,132,6855.0,730,1825,950,600.0,1650.0,1100.0
+2025,502,Istanbul Atlas University,Turkiye,56,133,6847.5,735,1700,1175,625.0,1250.0,1362.5
+2025,503,University of Medicine and Pharmacy Grigore T Popa,Romania,4,134,6845.0,935,1675,1500,775.0,747.5,1212.5
+2025,504,Ibn Tofail University,Morocco,2,11,6845.0,785,1600,775,937.5,1135.0,1612.5
+2025,505,Tashkent State Technical Universitiy Named After Islam Karimov,Uzbekistan,10,283,6837.5,925,1750,925,712.5,1450.0,1075.0
+2025,506,Management and Science University,Malaysia,26,284,6837.5,925,1010,1150,712.5,1587.5,1452.5
+2025,507,Universitas Negeri Manado,Indonesia,52,285,6835.0,1275,1550,850,675.0,897.5,1587.5
+2025,508,Universitas Muhammadiyah Prof.Dr Hamka,Indonesia,53,286,6835.0,885,1200,1250,612.5,1337.5,1550.0
+2025,509,Samarkand State University,Uzbekistan,11,287,6825.0,1150,1625,975,637.5,1062.5,1375.0
+2025,510,Toronto Metropolitan University,Canada,3,7,6825.0,590,1385,1350,597.5,1550.0,1352.5
+2025,511,University of Wah,Pakistan,17,288,6822.5,910,1450,1225,625.0,1162.5,1450.0
+2025,512,NUR International University,Pakistan,18,289,6820.0,1060,1410,1475,525.0,1225.0,1125.0
+2025,513,University of Saint Louis,Philippines,16,290,6820.0,1060,1360,1050,587.5,1337.5,1425.0
+2025,514,British Columbia Institute of Technology,Canada,4,8,6820.0,710,1285,1650,862.5,1100.0,1212.5
+2025,515,Bulacan Agricultural State College,Philippines,17,291,6812.5,1030,1410,1050,562.5,1260.0,1500.0
+2025,516,Polytechnic of Mersing Johor,Malaysia,27,292,6812.5,1125,1350,975,662.5,1187.5,1512.5
+2025,517,New valley university,Egypt,9,12,6805.0,1080,1250,1150,675.0,1275.0,1375.0
+2025,518,Cairo University,Egypt,10,13,6800.0,1075,1410,925,687.5,1325.0,1377.5
+2025,519,Egyptian Russian University,Egypt,11,14,6800.0,800,1325,1425,887.5,1287.5,1075.0
+2025,520,University of Technology Sarawak,Malaysia,28,293,6800.0,1025,1200,1225,800.0,1362.5,1187.5
+2025,521,West Visayas State University,Philippines,18,294,6792.5,1045,1010,1375,787.5,1472.5,1102.5
+2025,522,Al-Razi University,Yemen,1,295,6787.5,600,1675,975,800.0,1212.5,1525.0
+2025,523,Samarkand State Institute of Foreign Languages,Uzbekistan,12,296,6785.0,860,1575,575,750.0,1562.5,1462.5
+2025,524,Air University Islamabad,Pakistan,19,297,6785.0,825,1375,1250,800.0,1247.5,1287.5
+2025,525,The Hang Seng University of Hong Kong,Hong Kong,1,298,6777.5,665,1475,1225,662.5,1650.0,1100.0
+2025,526,FURG - Universidade Federal do Rio Grande,Brazil,17,71,6777.5,1350,1390,1500,625.0,925.0,987.5
+2025,527,Universidad Autónoma de Madrid,Spain,15,135,6772.5,975,1400,1575,487.5,1235.0,1100.0
+2025,528,University of Gujrat,Pakistan,20,299,6772.5,950,1385,700,775.0,1362.5,1600.0
+2025,529,Universitas Islam Sultan Agung,Indonesia,54,300,6762.5,900,1250,1125,650.0,1400.0,1437.5
+2025,530,"Mehran University of Engineering & Technology, Jamshoro",Pakistan,21,301,6750.0,1175,1525,875,675.0,1212.5,1287.5
+2025,531,Gazi University,Turkiye,57,302,6750.0,925,1475,975,650.0,1312.5,1412.5
+2025,532,University of the Cordilleras,Philippines,19,303,6745.0,885,1375,1075,887.5,1060.0,1462.5
+2025,533,UNIVERSIDAD DE CUNDINAMARCA,Colombia,29,72,6742.5,645,1775,950,900.0,1337.5,1135.0
+2025,534,Universidad de América,Colombia,30,73,6737.5,910,1675,1400,725.0,1050.0,977.5
+2025,535,Nakhon Pathom Rajabhat University,Thailand,36,304,6737.5,765,1360,1475,750.0,1122.5,1265.0
+2025,536,Palacky University Olomouc,Czech Republic,6,136,6735.0,765,1350,1550,725.0,1287.5,1057.5
+2025,537,Phetchaburi Rajabhat University (PBRU),Thailand,37,305,6725.0,1025,1175,1250,800.0,1297.5,1177.5
+2025,538,Shakarim University of Semey,Kazakhstan,5,306,6722.5,1200,1450,900,475.0,1097.5,1600.0
+2025,539,Universidade Federal do Oeste do Pará - Ufopa,Brazil,18,74,6720.0,1110,1175,1350,737.5,1047.5,1300.0
+2025,540,Saint Louis University,Philippines,20,307,6717.5,645,1625,1175,662.5,1235.0,1375.0
+2025,541,University of Pannonia,Hungary,7,137,6712.5,1000,1350,1100,462.5,1425.0,1375.0
+2025,542,Dicle University,Turkiye,58,308,6710.0,1250,1110,1425,637.5,1200.0,1087.5
+2025,543,Gebze Techinal University,Turkiye,59,309,6710.0,1200,985,800,487.5,1675.0,1562.5
+2025,544,Liepaja University,Latvia,2,138,6702.5,610,1365,1625,575.0,1550.0,977.5
+2025,545,"Hazara University Mansehra, Khyber Pakhtunkhwa (KP) Pakistan",Pakistan,22,310,6700.0,1000,1625,1075,750.0,1275.0,975.0
+2025,546,Western Caspian University,Azerbaijan,2,139,6700.0,750,1525,1025,587.5,1237.5,1575.0
+2025,547,Kalinga State University,Philippines,21,311,6700.0,1100,1400,825,612.5,1500.0,1262.5
+2025,548,Central Philippines State University  (CPSU),Philippines,22,312,6700.0,1275,1315,975,600.0,1185.0,1350.0
+2025,549,University of Mohaghegh Ardabili,Iran,6,313,6695.0,1125,1285,875,975.0,1235.0,1200.0
+2025,550,WCC AERONAUTICAL & TECHNOLOGICAL COLLEGE INC.,Philippines,23,314,6692.5,930,1475,900,662.5,1300.0,1425.0
+2025,551,Karakoram International University,Pakistan,23,315,6690.0,1030,1575,850,700.0,1222.5,1312.5
+2025,552,Universidad Tecnica del Norte,Ecuador,5,75,6687.5,1275,1650,825,450.0,1187.5,1300.0
+2025,553,Manipal University Jaipur,India,20,316,6685.0,950,1500,850,750.0,1222.5,1412.5
+2025,554,Universidade Federal de Itajuba,Brazil,19,76,6682.5,795,1325,1500,812.5,1150.0,1100.0
+2025,555,Northern Border University,Saudi Arabia,5,317,6682.5,900,920,850,775.0,1587.5,1650.0
+2025,556,Iscte - Instituto Universitário de Lisboa,Portugal,6,140,6675.0,600,1410,1450,625.0,1300.0,1290.0
+2025,557,Al-Karkh University of Science,Iraq,16,318,6675.0,1250,1375,825,537.5,1362.5,1325.0
+2025,558,University of Debrecen,Hungary,8,141,6675.0,1125,925,1175,512.5,1675.0,1262.5
+2025,559,Università Degli Studi di Modena e Reggio Emilia,Italy,23,142,6662.5,900,1300,1550,350.0,1400.0,1162.5
+2025,560,Selcuk University,Turkiye,60,319,6662.5,1175,1300,900,650.0,1362.5,1275.0
+2025,561,Universitat Rovira i Virgili,Spain,16,143,6660.0,810,1525,1425,587.5,1200.0,1112.5
+2025,562,Ean University,Colombia,31,77,6657.5,620,1550,975,775.0,1325.0,1412.5
+2025,563,Politeknik Banting Selangor (PBS),Malaysia,29,320,6655.0,755,750,1125,887.5,1387.5,1750.0
+2025,564,Bhagat Phool Singh Mahila Vishwavidyalaya,India,21,321,6652.5,1200,1500,1200,637.5,1375.0,740.0
+2025,565,Minia University,Egypt,12,15,6650.0,925,1550,950,687.5,1512.5,1025.0
+2025,566,Ateneo De Manila University,Philippines,24,322,6650.0,835,1415,1550,550.0,1025.0,1275.0
+2025,567,Universitas Ciputra Surabaya,Indonesia,55,323,6645.0,695,1500,1125,537.5,1075.0,1712.5
+2025,568,University of Western Macedonia,Greece,2,144,6642.5,1225,1375,1475,245.0,922.5,1400.0
+2025,569,Uzbekistan State World Languages University,Uzbekistan,13,324,6637.5,685,1140,1275,900.0,1400.0,1237.5
+2025,570,Universidad De Guadalajara,Mexico,15,78,6635.0,860,1450,800,550.0,1475.0,1500.0
+2025,571,Istanbul Okan University,Turkiye,61,325,6632.5,810,1550,975,600.0,1272.5,1425.0
+2025,572,University of Okara,Pakistan,24,326,6625.0,1175,1475,750,650.0,1125.0,1450.0
+2025,573,University of Zanjan,Iran,7,327,6625.0,1350,1325,800,637.5,1087.5,1425.0
+2025,574,University of Bengkulu,Indonesia,56,328,6622.5,900,1675,1100,787.5,1047.5,1112.5
+2025,575,Azerbaijan State University of Economics (UNEC),Azerbaijan,3,145,6612.5,900,1550,675,725.0,1312.5,1450.0
+2025,576,Government College Women University Faisalabad Pakistan,Pakistan,25,329,6602.5,905,1525,950,687.5,1347.5,1187.5
+2025,577,Universidad de Las Palmas de Gran Canaria,Spain,17,146,6602.5,1000,1375,1225,600.0,1125.0,1277.5
+2025,578,Periyar Maniammai Institute of Science & Technology,India,22,330,6597.5,785,1535,1075,862.5,1212.5,1127.5
+2025,579,Universitas Islam Negeri Sunan Kalijaga Yogyakarta,Indonesia,57,331,6597.5,1025,1110,1225,725.0,1275.0,1237.5
+2025,580,Eastern Mediterranean University,Northern Cyprus,1,147,6597.5,1035,1060,950,662.5,1412.5,1477.5
+2025,581,Termiz University of Economics and Service,Uzbekistan,14,332,6592.5,905,1625,650,750.0,1575.0,1087.5
+2025,582,Universitas Udayana,Indonesia,58,333,6590.0,1225,1450,1200,425.0,950.0,1340.0
+2025,583,"PETROLEUM-GAS UNIVERSITY OF PLOIESTI, ROMANIA",Romania,5,148,6582.5,1050,1485,975,537.5,1437.5,1097.5
+2025,584,Xavier University Ateneo De Cagayan,Philippines,25,334,6582.5,910,1300,1300,650.0,1197.5,1225.0
+2025,585,SR University,India,23,335,6575.0,1100,1525,900,687.5,1275.0,1087.5
+2025,586,Tanta University,Egypt,13,16,6575.0,915,1425,1000,637.5,1335.0,1262.5
+2025,587,Eastern Samar State University,Philippines,26,336,6575.0,1325,1125,1400,787.5,1100.0,837.5
+2025,588,Government College Women University Sialkot,Pakistan,26,337,6565.0,1125,1600,825,462.5,1350.0,1202.5
+2025,589,BENHA NATIONAL UNIVERSITY,Egypt,14,17,6565.0,975,1375,1000,587.5,1287.5,1340.0
+2025,590,University of Malakand,Pakistan,27,338,6562.5,950,1575,875,575.0,1250.0,1337.5
+2025,591,Politeknik Kota Kinabalu,Malaysia,30,339,6560.0,960,1335,1300,675.0,1175.0,1115.0
+2025,592,"Universitas Muhammadiyah Semarang, Jawa Tengah",Indonesia,59,340,6557.5,975,1295,875,587.5,1312.5,1512.5
+2025,593,Universidad Catolica De Manizales,Colombia,32,79,6557.5,910,1135,1325,800.0,1137.5,1250.0
+2025,594,POLITEKNIK TUANKU SULTANAH BAHIYAH,Malaysia,31,341,6555.0,885,985,1300,687.5,1122.5,1575.0
+2025,595,Fayoum University,Egypt,15,18,6552.5,690,1160,1350,737.5,1200.0,1415.0
+2025,596,National Institute Of Technology Warangal,India,24,342,6550.0,800,1575,1000,687.5,1350.0,1137.5
+2025,597,Universidad Autonoma De San Luis Potosi,Mexico,16,80,6550.0,800,1150,1200,650.0,1300.0,1450.0
+2025,598,World University of Bangladesh (WUB),Bangladesh,4,343,6547.5,860,1275,675,850.0,1487.5,1400.0
+2025,599,Hebrew University Of Jerusalem,Israel,1,344,6547.5,1000,1110,1375,562.5,1462.5,1037.5
+2025,600,Universidad de Alicante,Spain,18,149,6545.0,980,1240,1625,612.5,810.0,1277.5
+2025,601,Universitas Andalas,Indonesia,60,345,6545.0,1000,1060,1325,625.0,1060.0,1475.0
+2025,602,University of Rizal System,Philippines,27,346,6545.0,1100,1025,1450,585.0,1047.5,1337.5
+2025,603,University of Thi-qar,Iraq,17,347,6537.5,975,1325,950,687.5,1375.0,1225.0
+2025,604,"""Ion Ionescu de la Brad"" Iasi University of Life Sciences",Romania,6,150,6537.5,1050,1050,1500,487.5,1100.0,1350.0
+2025,605,Yazd University,Iran,8,348,6535.0,835,1350,1125,737.5,1362.5,1125.0
+2025,606,Azerbaijan University of Architecture and Construction,Azerbaijan,4,151,6527.5,765,1175,925,687.5,1487.5,1487.5
+2025,607,Isfahan University Of Technology,Iran,9,349,6522.5,1075,1075,1425,875.0,960.0,1112.5
+2025,608,Bayburt University,Turkiye,62,350,6512.5,1075,1350,850,612.5,1287.5,1337.5
+2025,609,Universidad de Valladolid,Spain,19,152,6510.0,900,1575,1500,347.5,975.0,1212.5
+2025,610,Manuel S. Enverga University Foundation,Philippines,28,351,6497.5,935,1425,875,437.5,1400.0,1425.0
+2025,611,The University Of Modern Sciences,Pakistan,28,352,6497.5,875,1360,975,962.5,1362.5,962.5
+2025,612,Cag University,Turkiye,63,153,6497.5,795,1000,1075,612.5,1587.5,1427.5
+2025,613,The Women University Multan,Pakistan,29,353,6472.5,975,1375,725,650.0,1272.5,1475.0
+2025,614,Aswan University,Egypt,16,19,6467.5,885,1310,1025,737.5,1197.5,1312.5
+2025,615,Universidade Federal Da Bahia,Brazil,20,81,6467.5,1155,1200,1000,650.0,1337.5,1125.0
+2025,616,University of Al-Qadisiyah,Iraq,18,354,6465.0,1075,1350,1125,712.5,1337.5,865.0
+2025,617,Zanjan University of Medical Sciences and Health Services,Iran,10,355,6462.5,800,1575,1400,687.5,1187.5,812.5
+2025,618,Chung Hua University,Chinese Taipei,26,356,6462.5,950,1350,1550,725.0,1075.0,812.5
+2025,619,Kayseri Üniversitesi,Turkiye,64,154,6462.5,800,1200,1200,550.0,1212.5,1500.0
+2025,620,Dr. Vishwanath Karad MIT World Peace University (MIT-WPU),India,25,357,6460.0,660,1525,1150,500.0,1175.0,1450.0
+2025,621,Universita degli Studi del Piemonte Orientale,Italy,24,155,6460.0,785,1525,1050,625.0,1212.5,1262.5
+2025,622,Azerbaijan State Oil and Industry University,Azerbaijan,5,156,6457.5,595,1400,1025,587.5,1500.0,1350.0
+2025,623,Universitas Islam Negeri Walisongo Semarang,Indonesia,61,358,6450.0,775,1410,1125,712.5,1337.5,1090.0
+2025,624,Universitas Muhammadiyah Makassar,Indonesia,62,359,6445.0,1425,1360,600,650.0,997.5,1412.5
+2025,625,Maynooth University,Ireland,4,157,6440.0,725,1300,1700,812.5,800.0,1102.5
+2025,626,Indian Institute of Management Indore,India,26,360,6437.5,850,1285,1425,912.5,1225.0,740.0
+2025,627,Université Côte d'Azur,France,2,158,6435.0,875,1600,1175,325.0,1010.0,1450.0
+2025,628,Nakhchivan State University,Azerbaijan,6,361,6435.0,950,1550,1175,462.5,1285.0,1012.5
+2025,629,Universitas Pendidikan Muhammadiyah Sorong,Indonesia,63,362,6435.0,960,1500,850,637.5,1212.5,1275.0
+2025,630,Perm State University,Russia,13,159,6435.0,810,1325,1225,625.0,1237.5,1212.5
+2025,631,Assiut University,Egypt,17,20,6435.0,810,1275,1325,737.5,1225.0,1062.5
+2025,632,Kohat University of Science & Technology,Pakistan,30,363,6435.0,1150,1250,925,637.5,1300.0,1172.5
+2025,633,Politécnico de Lisboa | Polytechnic University of Lisbon,Portugal,7,160,6435.0,675,1185,1525,500.0,1375.0,1175.0
+2025,634,Universiti Sains Islam Malaysia,Malaysia,32,364,6430.0,1110,1110,1200,585.0,1362.5,1062.5
+2025,635,Tyumen Industrial University,Russia,14,161,6430.0,660,935,1350,485.0,1450.0,1550.0
+2025,636,Mustansiriyah University,Iraq,19,365,6425.0,875,1475,1075,525.0,1337.5,1137.5
+2025,637,Suratthani Rajabhat University,Thailand,38,366,6422.5,1175,1110,1475,372.5,1325.0,965.0
+2025,638,Universidad de San Buenaventura,Colombia,33,82,6417.5,975,1415,1100,762.5,1062.5,1102.5
+2025,639,KOLEJ KOMUNITI JASIN (KKJS),Malaysia,33,367,6415.0,975,1435,900,560.0,1260.0,1285.0
+2025,640,Universitas Tanjungpura,Indonesia,64,368,6412.5,1025,1175,825,800.0,1225.0,1362.5
+2025,641,Al Aqsa University,Palestine,6,369,6410.0,735,1450,975,737.5,1337.5,1175.0
+2025,642,I. Razzakov Kyrgyz State Technical University,Kyrgyzstan,2,370,6410.0,835,1450,700,737.5,1287.5,1400.0
+2025,643,Hilla University,Iraq,20,371,6400.0,815,1250,1050,787.5,1335.0,1162.5
+2025,644,Minhaj University Lahore,Pakistan,31,372,6397.5,925,1285,800,675.0,1412.5,1300.0
+2025,645,Pontifícia Universidade Católica de Campinas,Brazil,21,83,6395.0,1010,1400,1175,787.5,847.5,1175.0
+2025,646,Institut Teknologi Nasional Bandung,Indonesia,65,373,6392.5,1010,1185,875,410.0,1375.0,1537.5
+2025,647,CENTRO,Mexico,17,84,6385.0,735,1385,1300,950.0,925.0,1090.0
+2025,648,Zagazig University,Egypt,18,21,6382.5,985,1575,700,562.5,1235.0,1325.0
+2025,649,Università degli Studi Roma Tre,Italy,25,162,6382.5,860,1300,1325,460.0,1187.5,1250.0
+2025,650,Aksaray University,Turkiye,65,374,6380.0,970,1435,1175,550.0,1175.0,1075.0
+2025,651,Bilecik Seyh Edebali University,Turkiye,66,163,6377.5,725,1625,1400,475.0,1350.0,802.5
+2025,652,Igdir Universitesi,Turkiye,67,164,6377.5,975,1340,1325,750.0,760.0,1227.5
+2025,653,Turkmen Agricultural Institute,Turkmenistan,3,375,6377.5,1180,1000,875,750.0,1337.5,1235.0
+2025,654,"Politeknik Perkeretaapian Indonesia, Madiun",Indonesia,66,376,6375.0,775,1275,975,637.5,1625.0,1087.5
+2025,655,Saudi Electronic University,Saudi Arabia,6,377,6370.0,610,1250,1100,600.0,1310.0,1500.0
+2025,656,Universitas Bangka Belitung,Indonesia,67,378,6365.0,1000,1465,1275,375.0,997.5,1252.5
+2025,657,Sri Balaji Vidyapeeth,India,27,379,6365.0,1100,1300,625,562.5,1387.5,1390.0
+2025,658,Izmir Katip Celebi University,Turkiye,68,380,6365.0,765,1225,1675,750.0,947.5,1002.5
+2025,659,KOLEJ KOMUNITI MASJID TANAH,Malaysia,34,381,6365.0,900,1200,1050,650.0,1262.5,1302.5
+2025,660,Samsun Universitesi,Turkiye,69,165,6360.0,1175,1210,600,637.5,1450.0,1287.5
+2025,661,Universitas Negeri Padang,Indonesia,68,382,6357.5,700,1400,950,397.5,1260.0,1650.0
+2025,662,Universidad Nacional Costa Rica Campus Liberia,Costa Rica,2,85,6355.0,980,1400,1425,550.0,950.0,1050.0
+2025,663,Fatima Jinnah Women University,Pakistan,32,383,6352.5,1120,1450,900,145.0,1085.0,1652.5
+2025,664,Al-Nahrain University,Iraq,21,384,6347.5,850,1385,900,675.0,1250.0,1287.5
+2025,665,Cihan University Sulaimaniya,Iraq,22,385,6347.5,960,1250,725,662.5,1512.5,1237.5
+2025,666,Universita degli Studi di Ferrara,Italy,26,166,6340.0,880,1185,1300,675.0,1175.0,1125.0
+2025,667,Eskisehir Osmangazi University,Turkiye,70,167,6335.0,1225,960,1025,487.5,1162.5,1475.0
+2025,668,Politeknik Negeri Jember,Indonesia,69,386,6332.5,710,1425,1325,550.0,772.5,1550.0
+2025,669,Istanbul Gelisim University,Turkiye,71,168,6330.0,735,1600,1125,650.0,1272.5,947.5
+2025,670,Univerity of Al Maarif,Iraq,23,387,6327.5,690,1425,1000,712.5,1125.0,1375.0
+2025,671,King Saud bin Abdulaziz University for Health Sciences,Saudi Arabia,7,388,6327.5,1030,1335,575,887.5,1187.5,1312.5
+2025,672,Istanbul Medeniyet University,Turkiye,72,169,6327.5,545,1085,1800,737.5,797.5,1362.5
+2025,673,Samarkand Institute of Economics and Service,Uzbekistan,15,389,6325.0,850,1225,750,700.0,1425.0,1375.0
+2025,674,Benguet State University,Philippines,29,390,6322.5,750,1000,975,800.0,1222.5,1575.0
+2025,675,The Law Enforcement Academy of the Republic of Uzbekistan,Uzbekistan,16,391,6317.5,830,1525,925,550.0,1287.5,1200.0
+2025,676,"University of Sargodha, Sargodha",Pakistan,33,392,6315.0,1075,1265,525,662.5,1400.0,1387.5
+2025,677,Shahrekord University,Iran,11,393,6300.0,1350,1425,550,600.0,1275.0,1100.0
+2025,678,M.Kumarasamy College of Engineering,India,28,394,6297.5,1250,1300,1200,762.5,925.0,860.0
+2025,679,Tomas Bata University,Czech Republic,7,170,6292.5,740,1425,1100,687.5,1200.0,1140.0
+2025,680,"Guru Jambheshwar University of Science and Technology,Hisar, Haryana",India,29,395,6287.5,1050,1175,1000,762.5,1312.5,987.5
+2025,681,Politeknik Tun Syed Nasir Syed Ismail,Malaysia,35,396,6287.5,1055,1085,1250,700.0,1122.5,1075.0
+2025,682,University of Education,Pakistan,34,397,6285.0,650,1135,1025,700.0,1287.5,1487.5
+2025,683,Universidade Federal do Rio Grande do Sul - UFRGS,Brazil,22,86,6280.0,980,1550,1075,535.0,1187.5,952.5
+2025,684,Istanbul Topkapi University,Turkiye,73,171,6280.0,885,1060,1500,722.5,1287.5,825.0
+2025,685,Navoi State University of Mining and Technologies,Uzbekistan,17,398,6275.0,800,1425,750,500.0,1287.5,1512.5
+2025,686,Arab American University,Palestine,7,399,6275.0,925,1425,875,637.5,1187.5,1225.0
+2025,687,Atyrau University named after Khalel Dosmukhamedov,Kazakhstan,6,400,6272.5,660,1675,1100,575.0,1037.5,1225.0
+2025,688,University of Carthage,Tunisia,1,22,6260.0,1225,1375,650,437.5,1022.5,1550.0
+2025,689,Universitas Trisakti,Indonesia,70,401,6250.0,1250,1375,800,487.5,1075.0,1262.5
+2025,690,Bukhara State Pedagogical Institute,Uzbekistan,18,402,6245.0,595,1575,725,712.5,1512.5,1125.0
+2025,691,Nevşehir Hacı Bektaş Veli Üniversitesi,Turkiye,74,403,6242.5,1075,1385,1475,485.0,710.0,1112.5
+2025,692,Amasya University,Turkiye,75,172,6237.5,1025,1600,800,412.5,1172.5,1227.5
+2025,693,Alnoor University,Iraq,24,404,6237.5,875,1450,675,562.5,1262.5,1412.5
+2025,694,University of Celaya,Mexico,18,9,6237.5,1025,1350,1200,650.0,937.5,1075.0
+2025,695,Izmir Bakircay University,Turkiye,76,173,6235.0,885,1300,950,737.5,1175.0,1187.5
+2025,696,Kirikkale University,Turkiye,77,405,6235.0,1100,1260,900,650.0,1312.5,1012.5
+2025,697,Tver State Technical University,Russia,15,174,6230.0,830,1425,725,725.0,1212.5,1312.5
+2025,698,University of Al-Ameed,Iraq,25,406,6217.5,955,1475,675,762.5,1312.5,1037.5
+2025,699,Gunadarma University,Indonesia,71,407,6212.5,1025,1200,975,562.5,1147.5,1302.5
+2025,700,Fergana Medical Institute of Public Health,Uzbekistan,19,408,6210.0,860,1400,975,562.5,1312.5,1100.0
+2025,701,Mohammed VI Polytechnic University,Morocco,3,23,6210.0,875,1320,925,612.5,1225.0,1252.5
+2025,702,Vignana Jyothi Institute of Management,India,30,409,6205.0,905,1450,900,737.5,1175.0,1037.5
+2025,703,National Polytechnic University of Armenia,Armenia,1,175,6200.0,950,1450,975,512.5,1312.5,1000.0
+2025,704,Universidad Nacional de Loja,Ecuador,6,87,6195.0,1225,1185,825,537.5,1260.0,1162.5
+2025,705,Bulacan State University,Philippines,30,410,6192.5,835,1375,1150,962.5,1272.5,597.5
+2025,706,Mindoro State University,Philippines,31,411,6185.0,1025,1200,900,260.0,1350.0,1450.0
+2025,707,"University of Engineering and Technology, Taxila",Pakistan,35,412,6177.5,980,1100,900,472.5,1650.0,1075.0
+2025,708,Eszterhazy Karoly Catholic University,Hungary,9,176,6175.0,1025,1125,1025,550.0,1212.5,1237.5
+2025,709,Kanchanaburi Rajabhat University,Thailand,39,413,6172.5,885,1275,1175,637.5,1337.5,862.5
+2025,710,Unidad Central del Valle del Cauca,Colombia,34,88,6172.5,885,1275,1325,750.0,1050.0,887.5
+2025,711,S.A.Niyazov Turkmen Agricultural University,Turkmenistan,4,414,6172.5,975,960,825,537.5,1562.5,1312.5
+2025,712,Thal University Bhakkar,Pakistan,36,415,6170.0,835,1775,975,787.5,975.0,822.5
+2025,713,Shinawatra University,Thailand,40,416,6167.5,865,1225,1275,750.0,1200.0,852.5
+2025,714,Rajamangala University Of Technology Phra Nakhon,Thailand,41,417,6165.0,740,1175,975,600.0,1350.0,1325.0
+2025,715,Al-Hadba University,Iraq,26,418,6152.5,715,1025,1025,450.0,1387.5,1550.0
+2025,716,Gorgan University Of Agricultural Sciences And Natural Resources,Iran,12,419,6150.0,1300,1375,675,700.0,962.5,1137.5
+2025,717,Institut Ilmu Kesehatan Bhakti Wiyata Kediri,Indonesia,72,420,6137.5,835,1675,1225,437.5,1000.0,965.0
+2025,718,National University of Uzbekistan named after Mirzo Ulugbek,Uzbekistan,20,421,6137.5,825,1475,875,462.5,1112.5,1387.5
+2025,719,Sukkur IBA University,Pakistan,37,422,6137.5,875,1250,750,550.0,1487.5,1225.0
+2025,720,University of South Africa,South Africa,1,24,6137.5,1015,1225,1025,300.0,1372.5,1200.0
+2025,721,Zhetysu University named after Iliyas Zhansugurov,Kazakhstan,7,423,6132.5,645,1250,900,450.0,1225.0,1662.5
+2025,722,Al-Muthanna University,Iraq,27,424,6132.5,900,1070,900,575.0,1437.5,1250.0
+2025,723,POLITEKNIK SULTAN MIZAN ZAINAL ABIDIN,Malaysia,36,425,6132.5,985,1050,975,510.0,1350.0,1262.5
+2025,724,Universitas Islam Negeri Imam Bonjol Padang,Indonesia,73,426,6130.0,710,1085,900,875.0,1035.0,1525.0
+2025,725,Bukhara State Medical Institute named after Abu Ali ibn Sino,Uzbekistan,21,427,6125.0,600,1425,775,575.0,1187.5,1562.5
+2025,726,Al-Bayan University,Iraq,28,428,6122.5,785,1525,825,675.0,1235.0,1077.5
+2025,727,Petrozavodsk State University,Russia,16,177,6122.5,1025,1425,1075,210.0,1262.5,1125.0
+2025,728,Universitas Muhammadiyah Surakarta,Indonesia,74,429,6122.5,810,1325,900,600.0,987.5,1500.0
+2025,729,University of Kut,Iraq,29,430,6122.5,760,950,925,962.5,1225.0,1300.0
+2025,730,Università Degli Studi di Bergamo,Italy,27,178,6115.0,740,1700,1225,347.5,1075.0,1027.5
+2025,731,Kırşehir Ahi Evran University,Turkiye,78,179,6112.5,1025,1475,750,350.0,1125.0,1387.5
+2025,732,Bezmialem Vakıf University,Turkiye,79,180,6112.5,975,1125,900,272.5,1425.0,1415.0
+2025,733,ALFRAGANUS UNIVERSITY,Uzbekistan,22,431,6110.0,910,1425,700,562.5,1287.5,1225.0
+2025,734,Universitas Pembangunan Nasional Veteran Jakarta,Indonesia,75,432,6110.0,735,1250,1150,462.5,1262.5,1250.0
+2025,735,Istanbul Sabahattin Zaim University,Turkiye,80,181,6107.5,785,1460,1625,387.5,1062.5,787.5
+2025,736,President University,Indonesia,76,433,6107.5,975,1185,900,712.5,1060.0,1275.0
+2025,737,Universidad Pontificia Comillas,Spain,20,182,6102.5,855,1500,1175,587.5,947.5,1037.5
+2025,738,Technical University Of Cluj Napoca,Romania,7,183,6102.5,855,1400,575,410.0,1462.5,1400.0
+2025,739,Universitas Islam Negeri Maulana Malik Ibrahim Malang,Indonesia,77,434,6102.5,975,1375,900,487.5,1187.5,1177.5
+2025,740,Kazakh National Agrarian Research University (KazNARU),Kazakhstan,8,435,6100.0,950,1300,975,662.5,1050.0,1162.5
+2025,741,NED University of Engineering & Technology,Pakistan,38,436,6097.5,850,950,1475,397.5,1087.5,1337.5
+2025,742,Universidad de las Americas,Ecuador,7,89,6087.5,710,1150,1000,812.5,1287.5,1127.5
+2025,743,Institute of Business Management,Pakistan,39,437,6085.0,760,1775,700,562.5,1475.0,812.5
+2025,744,University at Albany,USA,4,10,6085.0,1030,1105,1500,625.0,922.5,902.5
+2025,745,Universidad De Narino,Colombia,35,90,6080.0,935,1170,1050,825.0,1112.5,987.5
+2025,746,Universitas Kristen Duta Wacana,Indonesia,78,438,6062.5,765,1135,1150,737.5,1250.0,1025.0
+2025,747,Ifugao State University,Philippines,32,439,6062.5,1250,925,725,737.5,1350.0,1075.0
+2025,748,UIN Sunan Gunung Djati Bandung,Indonesia,79,440,6060.0,735,1425,825,600.0,1312.5,1162.5
+2025,749,Al Taff University College,Iraq,30,441,6057.5,695,1025,975,725.0,1500.0,1137.5
+2025,750,Gulf University,Bahrain,2,442,6055.0,730,1175,950,700.0,887.5,1612.5
+2025,751,Badr University in Cairo,Egypt,19,25,6050.0,1060,1290,1200,650.0,847.5,1002.5
+2025,752,Tashkent Institute of Management and Economics,Uzbekistan,23,443,6035.0,785,1300,775,575.0,1325.0,1275.0
+2025,753,Mountain Province State University,Philippines,33,444,6035.0,1250,1050,750,875.0,810.0,1300.0
+2025,754,Aydin Adnan Menderes University,Turkiye,81,184,6032.5,1155,985,1425,107.5,1147.5,1212.5
+2025,755,Universitas Islam Negeri Salatiga,Indonesia,80,445,6027.5,1100,1625,750,475.0,1237.5,840.0
+2025,756,Azarbaijan Shahid Madani University,Iran,13,446,6027.5,845,1160,1050,750.0,1185.0,1037.5
+2025,757,Universidad de Cuenca,Ecuador,8,91,6027.5,1075,1075,675,412.5,1650.0,1140.0
+2025,758,Kafrelsheikh University,Egypt,20,26,6022.5,785,1500,975,550.0,1137.5,1075.0
+2025,759,Chandrakasem Rajabhat University,Thailand,42,447,6022.5,690,1260,1450,297.5,1087.5,1237.5
+2025,760,Lagos State University,Nigeria,1,27,6017.5,695,1310,825,512.5,1262.5,1412.5
+2025,761,University of Cauca,Colombia,36,92,6012.5,675,1275,950,637.5,1262.5,1212.5
+2025,762,Mykolas Romeris University,Lithuania,2,185,6012.5,1000,1250,1000,537.5,1112.5,1112.5
+2025,763,Citi University,Mongolia,1,448,6012.5,1000,1000,1075,775.0,1150.0,1012.5
+2025,764,Estonian University of Life Sciences,Estonia,1,186,6012.5,1075,700,1500,462.5,912.5,1362.5
+2025,765,I-Shou University,Chinese Taipei,27,449,6010.0,650,1310,1150,725.0,1137.5,1037.5
+2025,766,Nile University,Egypt,21,28,6005.0,835,1185,975,462.5,1210.0,1337.5
+2025,767,Universitas Negeri Jakarta,Indonesia,81,450,6002.5,605,1285,925,550.0,1185.0,1452.5
+2025,768,University of Eastern Pangasinan,Philippines,34,451,6000.0,765,675,1625,837.5,860.0,1237.5
+2025,769,"Bundelkhand University, Jhansi",India,31,452,5997.5,975,1210,975,612.5,1150.0,1075.0
+2025,770,Politeknik Pariwisata Makassar,Indonesia,82,453,5992.5,805,1225,675,637.5,1275.0,1375.0
+2025,771,Satbayev University (KazNRTU),Kazakhstan,9,454,5992.5,785,770,900,700.0,1412.5,1425.0
+2025,772,Universidade Federal de Santa Maria,Brazil,23,93,5990.0,1350,975,1050,637.5,1075.0,902.5
+2025,773,Süleyman Demirel University,Turkiye,82,187,5987.5,1300,1325,1125,387.5,887.5,962.5
+2025,774,University of Sindh Jamshoro,Pakistan,40,455,5987.5,875,1300,950,762.5,1112.5,987.5
+2025,775,Fergana State Technical University,Uzbekistan,24,456,5985.0,675,1375,650,385.0,1462.5,1437.5
+2025,776,Equator University of Science and Technology,Uganda,1,29,5985.0,1175,1335,775,625.0,1025.0,1050.0
+2025,777,Yagshygeldi Kakayev International Oil and Gas University,Turkmenistan,5,457,5985.0,1025,1110,475,637.5,1412.5,1325.0
+2025,778,Burdur Mehmet Akif Ersoy University,Turkiye,83,458,5985.0,785,760,1100,862.5,1412.5,1065.0
+2025,779,Poznan University of Technology,Poland,8,188,5980.0,710,1235,1250,450.0,1110.0,1225.0
+2025,780,Songkhla Rajabhat University,Thailand,43,459,5972.5,925,1185,800,825.0,1437.5,800.0
+2025,781,Menoufia National University,Egypt,22,30,5962.5,675,1310,1200,400.0,1225.0,1152.5
+2025,782,Leyte Normal University,Philippines,35,460,5960.0,740,1210,1250,887.5,960.0,912.5
+2025,783,International Academy of Ecology and Medicine,Ukraine,5,189,5950.0,850,1400,925,550.0,1212.5,1012.5
+2025,784,Chennai Institute of Technology,India,32,461,5950.0,825,1150,575,550.0,1500.0,1350.0
+2025,785,Universidade Federal Do Ceara,Brazil,24,94,5950.0,925,1115,1425,435.0,1087.5,962.5
+2025,786,Al-Qasim Green University,Iraq,31,462,5947.5,735,1475,600,512.5,1312.5,1312.5
+2025,787,National University “Yuri Kondrautyuk Poltava Polytechnic,Ukraine,6,190,5947.5,760,1350,825,425.0,1337.5,1250.0
+2025,788,Non-profit JSC Almaty University of Power Engineering and Telecommunications named after Gumarbek Daukeyev,Kazakhstan,10,463,5942.5,695,1285,1150,475.0,1162.5,1175.0
+2025,789,SMBT College of Pharmacy,India,33,464,5942.5,805,1075,800,850.0,1300.0,1112.5
+2025,790,Termez State Pedagogical Institute,Uzbekistan,25,465,5937.5,900,1075,1025,637.5,1175.0,1125.0
+2025,791,University of Business and Technology,Saudi Arabia,8,466,5935.0,350,1300,1700,425.0,1022.5,1137.5
+2025,792,Politeknik Pariwisata NHI Bandung,Indonesia,83,467,5935.0,1225,1275,1175,450.0,785.0,1025.0
+2025,793,Gaziantep Islam Science and Technology University,Turkiye,84,468,5935.0,1150,1110,900,812.5,772.5,1190.0
+2025,794,Universidade do Vale do Itajai UNIVALI,Brazil,25,95,5927.5,900,1265,1300,612.5,722.5,1127.5
+2025,795,Politeknik Pariwisata Medan,Indonesia,84,469,5920.0,920,1550,400,350.0,1350.0,1350.0
+2025,796,Alamein International University,Egypt,23,31,5920.0,760,1160,950,575.0,1160.0,1315.0
+2025,797,University of Science and Technology of Southern Philippines,Philippines,36,470,5917.5,1125,1185,850,385.0,1197.5,1175.0
+2025,798,Lviv Polytechnic National University,Ukraine,7,191,5912.5,785,1240,625,300.0,1400.0,1562.5
+2025,799,Maritime Academy of Asia and the Pacific (MAAP),Philippines,37,471,5912.5,1175,1225,550,775.0,1035.0,1152.5
+2025,800,Meybod University,Iran,14,472,5912.5,940,1125,1050,600.0,1210.0,987.5
+2025,801,Stavropol State Agrarian University,Russia,17,192,5912.5,865,1100,875,487.5,1225.0,1360.0
+2025,802,Universidad Autónoma de Querétaro,Mexico,19,96,5912.5,1125,900,1000,510.0,1337.5,1040.0
+2025,803,Urgench State University,Uzbekistan,26,473,5910.0,1125,1450,350,285.0,1425.0,1275.0
+2025,804,University of Ibagué,Colombia,37,97,5902.5,875,1225,800,550.0,1300.0,1152.5
+2025,805,Escuela Superior Politecnica de Chimborazo,Ecuador,9,98,5900.0,1175,1100,875,562.5,1222.5,965.0
+2025,806,Karabuk University,Turkiye,85,474,5892.5,780,1325,1200,350.0,1050.0,1187.5
+2025,807,Universitas Kristen Satya Wacana,Indonesia,85,475,5887.5,775,1275,875,625.0,1262.5,1075.0
+2025,808,Sindh Madressatul Islam University,Pakistan,41,476,5887.5,950,1250,650,387.5,1187.5,1462.5
+2025,809,"JSS Science and Technology University, Mysuru",India,34,477,5885.0,1050,1290,1125,95.0,1162.5,1162.5
+2025,810,International University of Tourism and Entrepreneurship of Tajikistan,Tajikistan,1,478,5885.0,925,1235,650,512.5,1200.0,1362.5
+2025,811,Manila Central University,Philippines,38,479,5882.5,1025,1425,925,787.5,897.5,822.5
+2025,812,Universidad de Pamplona,Colombia,38,99,5882.5,1085,1325,750,450.0,1272.5,1000.0
+2025,813,Assam down town University,India,35,480,5882.5,760,1150,1000,737.5,1097.5,1137.5
+2025,814,"KOLEJ KOMUNITI SELANDAR, KEMENTERIAN PENDIDIKAN TINGGI",Malaysia,37,481,5880.0,535,1010,1675,512.5,1085.0,1062.5
+2025,815,University of Sumer,Iraq,32,482,5877.5,865,1260,800,525.0,1275.0,1152.5
+2025,816,National University of Science And Technology,Iraq,33,483,5867.5,885,1360,800,410.0,1100.0,1312.5
+2025,817,Financial University under the Government of the Russian Federation,Russia,18,193,5857.5,600,1195,1350,587.5,1085.0,1040.0
+2025,818,Pontificia Universidad Catolica Del Perú,Peru,3,100,5847.5,800,1110,1450,172.5,1075.0,1240.0
+2025,819,Amirkabir University of Technology,Iran,15,484,5845.0,420,1150,1575,612.5,1072.5,1015.0
+2025,820,UNIVERSITY OF EASTERN PHILIPPINES,Philippines,39,485,5842.5,1300,1360,750,360.0,922.5,1150.0
+2025,821,Colegio de Estudios Superiores de Administracion CESA,Colombia,39,101,5840.0,455,1360,725,887.5,1162.5,1250.0
+2025,822,Universidad Nacional De La Plata,Argentina,3,102,5840.0,910,1260,1100,650.0,1110.0,810.0
+2025,823,Universidad De Colima,Mexico,20,103,5835.0,1000,1025,1175,462.5,797.5,1375.0
+2025,824,Universidad Centroamericana José Simeón Cañas,El Salvador,1,104,5825.0,850,1475,1175,662.5,472.5,1190.0
+2025,825,Central Bicol State University of Agriculture,Philippines,40,486,5825.0,875,1325,1100,500.0,1175.0,850.0
+2025,826,South Eastern University of Sri Lanka,Sri Lanka,5,487,5825.0,975,1150,875,575.0,1150.0,1100.0
+2025,827,Universitas Bakrie,Indonesia,86,488,5822.5,750,1425,700,562.5,1285.0,1100.0
+2025,828,Virgen Milagrosa University Foundation,Philippines,41,489,5822.5,850,1260,1250,500.0,1050.0,912.5
+2025,829,IBADAT International University Islamabad,Pakistan,42,490,5820.0,860,1500,800,575.0,1035.0,1050.0
+2025,830,POLITEKNIK KUCHING SARAWAK,Malaysia,38,491,5820.0,1100,1085,825,700.0,997.5,1112.5
+2025,831,Universitas Islam Negeri Siber Syekh Nurjati Cirebon,Indonesia,87,492,5820.0,775,985,1475,587.5,560.0,1437.5
+2025,832,Agusan del Sur State College of Agriculture and Technology,Philippines,42,493,5815.0,1125,1000,725,662.5,1412.5,890.0
+2025,833,National Institute of Development Administration,Thailand,44,494,5812.5,685,1150,900,650.0,1400.0,1027.5
+2025,834,OST - Ostschweizer Fachhochschule,Switzerland,1,194,5800.0,590,1150,1350,800.0,1262.5,647.5
+2025,835,Azerbaijan Technical University,Azerbaijan,7,495,5797.5,700,1185,825,675.0,1037.5,1375.0
+2025,836,Universitat de Vic - Universitat Central de Catalunya,Spain,21,195,5795.0,545,1700,1125,500.0,1137.5,787.5
+2025,837,Nueva Ecija State University of Science and Technology,Philippines,43,496,5792.5,760,1150,1275,432.5,887.5,1287.5
+2025,838,UNIVERSIDAD PRIVADA DEL NORTE,Peru,4,105,5787.5,465,1550,900,450.0,1060.0,1362.5
+2025,839,Samarkand State Architecture And Construction University,Uzbekistan,27,497,5785.0,850,1550,500,625.0,1062.5,1197.5
+2025,840,Belarus State Economic University,Belarus,1,196,5785.0,815,985,1450,762.5,860.0,912.5
+2025,841,Altoosi University,Iraq,34,498,5780.0,545,1325,875,775.0,1410.0,850.0
+2025,842,Bahcesehir University,Turkiye,86,197,5780.0,800,1235,900,587.5,1322.5,935.0
+2025,843,Aligarh Muslim University,India,36,499,5777.5,1000,1200,850,500.0,1125.0,1102.5
+2025,844,Universidad de Vina Del Mar,Chile,2,106,5772.5,735,1090,1300,675.0,760.0,1212.5
+2025,845,University of Arkansas at Little Rock,USA,5,11,5767.5,910,1150,1475,900.0,860.0,472.5
+2025,846,Heliopolis University for Sustainable Development,Egypt,24,32,5762.5,925,1425,775,462.5,962.5,1212.5
+2025,847,Universidad Santiago de Cali,Colombia,40,107,5760.0,770,1425,1025,900.0,900.0,740.0
+2025,848,Buriram Rajabhat University,Thailand,45,500,5760.0,925,895,625,575.0,1312.5,1427.5
+2025,849,Sisaket Rajabhat University,Thailand,46,501,5757.5,1075,1250,775,422.5,1035.0,1200.0
+2025,850,ISI Bali,Indonesia,88,502,5757.5,585,1110,1275,475.0,975.0,1337.5
+2025,851,University of Hafr Al Batin,Saudi Arabia,9,503,5750.0,1250,1325,525,650.0,787.5,1212.5
+2025,852,Universidade Federal Do Rio De Janeiro,Brazil,26,108,5750.0,950,625,1425,575.0,1047.5,1127.5
+2025,853,Universitas 17 Agustus 1945 Surabaya,Indonesia,89,504,5737.5,725,1300,925,712.5,912.5,1162.5
+2025,854,Navoi State University,Uzbekistan,28,505,5737.5,950,1275,500,450.0,1250.0,1312.5
+2025,855,University Lucian Blaga of Sibiu,Romania,8,198,5735.0,1150,1035,1525,725.0,575.0,725.0
+2025,856,University of Mazandaran,Iran,16,506,5730.0,795,1360,775,612.5,1362.5,825.0
+2025,857,University of Burgos,Spain,22,199,5725.0,825,1700,650,350.0,862.5,1337.5
+2025,858,Tashkent State Medical University,Uzbekistan,29,507,5725.0,1000,1250,750,662.5,1125.0,937.5
+2025,859,Samara State Technical University,Russia,19,200,5710.0,790,925,850,347.5,1160.0,1637.5
+2025,860,Sakarya University of Applied Sciences,Turkiye,87,201,5707.5,810,1050,525,762.5,1212.5,1347.5
+2025,861,University of Navarra,Spain,23,202,5692.5,1035,1070,1475,360.0,862.5,890.0
+2025,862,Fatima Jinnah Medical University,Pakistan,43,508,5692.5,925,945,1100,400.0,1110.0,1212.5
+2025,863,Euphrosyne Polotskaya State University of Polotsk,Belarus,2,203,5690.0,705,1185,1025,637.5,950.0,1187.5
+2025,864,Baku Higher Oil School,Azerbaijan,8,204,5687.5,700,1225,900,550.0,1200.0,1112.5
+2025,865,Phuket Rajabhat University,Thailand,47,509,5685.0,800,1010,1325,512.5,837.5,1200.0
+2025,866,Anadolu University,Turkiye,88,205,5682.5,725,1225,1375,310.0,1025.0,1022.5
+2025,867,The University of Haripur,Pakistan,44,510,5680.0,735,1045,725,675.0,1062.5,1437.5
+2025,868,"University of South Asia, Lahore, Pakistan",Pakistan,45,511,5677.5,1100,1325,575,550.0,1187.5,940.0
+2025,869,Üsküdar University,Turkiye,89,206,5677.5,505,1235,700,687.5,1247.5,1302.5
+2025,870,Togliatti State University,Russia,20,207,5672.5,725,1260,800,512.5,1075.0,1300.0
+2025,871,University of Hormozgan,Iran,17,512,5667.5,1010,835,1125,675.0,897.5,1125.0
+2025,872,Southern Technical University,Iraq,35,513,5665.0,985,1185,825,637.5,1060.0,972.5
+2025,873,University of Business and Science,Uzbekistan,30,514,5665.0,800,1175,825,650.0,1287.5,927.5
+2025,874,Damietta University,Egypt,25,33,5657.5,755,1275,900,675.0,962.5,1090.0
+2025,875,Alandalus University for Science and Technology,Yemen,2,515,5650.0,750,1325,900,600.0,1000.0,1075.0
+2025,876,Koya University,Iraq,36,516,5647.5,710,1425,825,387.5,1125.0,1175.0
+2025,877,"Sindh Agriculture University Tandojam, Pakistan",Pakistan,46,517,5647.5,800,1300,850,625.0,1185.0,887.5
+2025,878,Jizzakh State Pedagogical University,Uzbekistan,31,518,5635.0,725,1250,600,550.0,1347.5,1162.5
+2025,879,Ubon Ratchathani Rajabhat University,Thailand,48,519,5627.5,900,875,950,475.0,1275.0,1152.5
+2025,880,Bomet University College,Kenya,1,34,5625.0,1125,1375,675,587.5,872.5,990.0
+2025,881,Symbiosis International University,India,37,520,5625.0,735,1150,600,500.0,1262.5,1377.5
+2025,882,Taibah University,Saudi Arabia,10,521,5625.0,840,825,675,550.0,1147.5,1587.5
+2025,883,Tashkent University of Architecture and Civil Engineering,Uzbekistan,32,522,5622.5,835,1450,900,475.0,1050.0,912.5
+2025,884,Institute for Advanced Studies in Basic Sciences,Iran,18,523,5620.0,975,1095,725,637.5,1312.5,875.0
+2025,885,Hindustan Institute of Technology & Science,India,38,524,5617.5,780,910,925,800.0,1087.5,1115.0
+2025,886,Universitas Katolik Widya Mandala Surabaya,Indonesia,90,525,5615.0,875,1190,675,487.5,1150.0,1237.5
+2025,887,University of El-Oued,Algeria,1,35,5615.0,1030,1150,300,475.0,1272.5,1387.5
+2025,888,University of Birjand,Iran,19,526,5607.5,1025,1075,825,712.5,1060.0,910.0
+2025,889,Politeknik Negeri Batam,Indonesia,91,527,5605.0,985,1260,450,562.5,947.5,1400.0
+2025,890,Universidad Autónoma Del Estado De Hidalgo,Mexico,21,109,5597.5,810,1310,1100,587.5,1087.5,702.5
+2025,891,"Vignan's Foundation for Science, Technology and Research",India,39,528,5587.5,925,1250,825,400.0,1100.0,1087.5
+2025,892,Eskisehir Technical University,Turkiye,90,208,5577.5,940,785,1625,387.5,787.5,1052.5
+2025,893,Benazir Bhutto Shaheed University of Technology & Skill Development,Pakistan,47,529,5575.0,1025,1225,550,347.5,1287.5,1140.0
+2025,894,Russian State Pedagogical University AI Herzen,Russia,21,209,5575.0,1075,950,850,400.0,1237.5,1062.5
+2025,895,Pascual Bravo University,Colombia,41,110,5572.5,810,1275,1225,537.5,825.0,900.0
+2025,896,University Of Economics Ho Chi Minh City,Vietnam,5,530,5572.5,710,1175,1075,412.5,787.5,1412.5
+2025,897,MINGACHEVIR STATE UNIVERSITY,Azerbaijan,9,210,5572.5,735,1150,725,675.0,925.0,1362.5
+2025,898,Universite De Sousse,Tunisia,2,36,5567.5,930,1225,700,600.0,825.0,1287.5
+2025,899,Universidade Estadual do Norte do Paraná - UENP,Brazil,27,111,5567.5,1010,1190,1550,257.5,697.5,862.5
+2025,900,Universidad Publica De Navarra,Spain,24,211,5565.0,760,1525,1400,650.0,622.5,607.5
+2025,901,Uzhhorod National University,Ukraine,8,212,5552.5,860,1310,900,462.5,1050.0,970.0
+2025,902,Kadir Has University,Turkiye,91,213,5552.5,865,1215,1225,475.0,1035.0,737.5
+2025,903,Universidad Autónoma De Bucaramanga,Colombia,42,112,5545.0,950,1000,950,537.5,972.5,1135.0
+2025,904,University of Kyiv,Ukraine,9,214,5542.5,655,1300,750,700.0,1112.5,1025.0
+2025,905,Dong Nai Technology University,Vietnam,6,531,5537.5,850,1275,1050,500.0,1125.0,737.5
+2025,906,Universidad Nacional Abierta y a Distancia Colombia,Colombia,43,113,5532.5,745,1200,875,612.5,872.5,1227.5
+2025,907,Universita IUAV di Venezia,Italy,28,215,5530.0,645,1225,700,725.0,1010.0,1225.0
+2025,908,Don State Technical University,Russia,22,216,5530.0,935,1110,1075,272.5,1262.5,875.0
+2025,909,University of Agriculture in Krakow,Poland,9,217,5522.5,1025,1325,950,775.0,610.0,837.5
+2025,910,Bolu Abant Izzet Baysal University (BAIBU),Turkiye,92,532,5522.5,960,1165,650,737.5,997.5,1012.5
+2025,911,WSB University,Poland,10,218,5520.0,670,1125,1000,550.0,1000.0,1175.0
+2025,912,VELS Medical College & Hospital,India,40,533,5512.5,1050,1200,675,347.5,1237.5,1002.5
+2025,913,Koneru Lakshmaiah Education Foundation (Deemed To Be University),India,41,534,5510.0,900,1325,950,700.0,622.5,1012.5
+2025,914,University of Manouba,Tunisia,3,37,5510.0,800,1075,975,425.0,960.0,1275.0
+2025,915,Universitas Riau,Indonesia,92,535,5510.0,1100,1035,900,700.0,1022.5,752.5
+2025,916,Yanka Kupala State University of Grodno,Belarus,3,219,5510.0,950,960,900,487.5,1150.0,1062.5
+2025,917,Bataan Peninsula State University,Philippines,44,536,5502.5,880,1190,600,257.5,1287.5,1287.5
+2025,918,Universidad CESMAG,Colombia,44,114,5500.0,725,1235,1075,762.5,1025.0,677.5
+2025,919,NATIONAL AVIATION ACADEMY OF THE PHILIPPINES/PHILIPPINE STATE COLLEGE OF AERONAUTICS,Philippines,45,537,5497.5,645,1375,825,550.0,1287.5,815.0
+2025,920,Adiyaman University,Turkiye,93,538,5495.0,860,1275,1025,375.0,1085.0,875.0
+2025,921,"MIT Art, Design and Technology University",India,42,539,5492.5,850,1060,925,600.0,1100.0,957.5
+2025,922,Institut Teknologi PLN,Indonesia,93,540,5485.0,610,1415,600,285.0,1350.0,1225.0
+2025,923,Irkutsk State Agrarian University named after A.A. Ezhevsky,Russia,23,220,5485.0,1150,1375,450,360.0,1087.5,1062.5
+2025,924,Pharos University In Alexandria,Egypt,26,38,5477.5,755,850,800,675.0,1010.0,1387.5
+2025,925,Centro Universitario de Joao Pessoa UNIPE,Brazil,28,115,5470.0,860,1185,1025,512.5,885.0,1002.5
+2025,926,Universidad de Oviedo,Spain,25,221,5467.5,905,1475,725,400.0,925.0,1037.5
+2025,927,University of Diyala,Iraq,37,541,5465.0,770,1110,850,662.5,1035.0,1037.5
+2025,928,Rostov State Trasport University,Russia,24,222,5462.5,650,1250,975,537.5,1297.5,752.5
+2025,929,Universal AI University,India,43,542,5460.0,810,1115,950,347.5,1010.0,1227.5
+2025,930,Politeknik Internasional Bali,Indonesia,94,543,5455.0,850,765,1275,400.0,937.5,1227.5
+2025,931,Baku Slavic University,Azerbaijan,10,544,5452.5,515,1025,1125,600.0,1000.0,1187.5
+2025,932,College of Machinery and Irrigation (VCMI),Vietnam,7,545,5450.0,875,1350,650,825.0,1050.0,700.0
+2025,933,The Uzbekistan State Institute of Arts and Culture,Uzbekistan,33,546,5450.0,825,1100,625,587.5,850.0,1462.5
+2025,934,Politeknik Melaka,Malaysia,39,547,5447.5,625,960,725,460.0,1175.0,1502.5
+2025,935,Bahria University,Pakistan,48,548,5445.0,630,1045,1150,310.0,772.5,1537.5
+2025,936,Universidad Católica Andrés Bello Extensión Guayana,Venezuela,3,116,5442.5,1025,555,1225,585.0,1050.0,1002.5
+2025,937,State University of Land Use Planning,Russia,25,223,5437.5,555,835,1100,737.5,910.0,1300.0
+2025,938,Thebes Technological University,Egypt,27,39,5432.5,810,1285,725,360.0,975.0,1277.5
+2025,939,Hebron University,Palestine,8,549,5425.0,785,1275,525,550.0,1112.5,1177.5
+2025,940,Universidade Federal Da Paraíba - UFPB,Brazil,29,117,5425.0,800,1125,875,600.0,1175.0,850.0
+2025,941,Ho Technical University,Ghana,1,40,5417.5,1275,1200,925,332.5,835.0,850.0
+2025,942,Politeknik Negeri Bandung,Indonesia,95,550,5410.0,900,1260,725,287.5,875.0,1362.5
+2025,943,Shaheed Benazir Bhutto University Shaheed Benazirabad Sindh,Pakistan,49,551,5407.5,920,1200,775,725.0,1062.5,725.0
+2025,944,Van Yuzuncu Yil University,Turkiye,94,552,5405.0,1060,1125,525,170.0,1262.5,1262.5
+2025,945,Islamic university of Lebanon,Lebanon,3,553,5402.5,975,1225,775,562.5,1012.5,852.5
+2025,946,Instituiçío Toledo de Ensino,Brazil,30,118,5395.0,675,1110,650,487.5,1235.0,1237.5
+2025,947,Cagayan State University,Philippines,46,554,5382.5,1200,1290,550,120.0,1387.5,835.0
+2025,948,The Institute of Telecommunications and Informatics of Turkmenistan,Turkmenistan,6,555,5382.5,950,1200,525,825.0,910.0,972.5
+2025,949,Andijan State University,Uzbekistan,34,556,5380.0,905,1600,450,662.5,947.5,815.0
+2025,950,Moscow State Linguistic University,Russia,26,224,5370.0,410,1235,1275,437.5,1110.0,902.5
+2025,951,Tashkent Institute of Chemical Technology,Uzbekistan,35,557,5367.5,810,1500,750,322.5,912.5,1072.5
+2025,952,Voronezh State University,Russia,27,225,5362.5,710,1275,850,487.5,1100.0,940.0
+2025,953,Universidad Austral,Argentina,4,119,5362.5,915,950,1575,550.0,522.5,850.0
+2025,954,Altinbas University,Turkiye,95,226,5360.0,605,1270,1275,410.0,872.5,927.5
+2025,955,University of Sialkot,Pakistan,50,558,5352.5,715,1015,775,637.5,935.0,1275.0
+2025,956,University for Business and Technology (UBT),Kosovo,1,227,5347.5,725,1650,450,600.0,935.0,987.5
+2025,957,Artvin Çoruh University,Turkiye,96,228,5347.5,1025,1035,725,775.0,760.0,1027.5
+2025,958,Azerbaijan University of Languages,Azerbaijan,11,559,5347.5,710,910,800,512.5,1425.0,990.0
+2025,959,Qarshi University,Pakistan,51,560,5345.0,1255,1475,500,337.5,1100.0,677.5
+2025,960,Al-Farabi University,Iraq,38,561,5335.0,710,1400,750,450.0,1075.0,950.0
+2025,961,Erzurum Technical University,Turkiye,97,229,5330.0,945,1060,1250,185.0,1175.0,715.0
+2025,962,Injibara University,Ethiopia,1,41,5317.5,1060,785,675,350.0,1097.5,1350.0
+2025,963,Universidad San Ignacio de Loyola,Peru,5,120,5312.5,615,1360,925,385.0,875.0,1152.5
+2025,964,King Khalid University,Saudi Arabia,11,562,5312.5,1075,1060,575,537.5,1175.0,890.0
+2025,965,Universitas Samudra,Indonesia,96,563,5312.5,1100,1025,1000,562.5,822.5,802.5
+2025,966,Universidade Federal do Cariri,Brazil,31,121,5310.0,770,940,1425,562.5,610.0,1002.5
+2025,967,University of Kurdistan,Iran,20,564,5297.5,1050,1375,500,450.0,972.5,950.0
+2025,968,University of Lisbon,Portugal,8,230,5297.5,780,640,1300,600.0,1200.0,777.5
+2025,969,Yala Rajabhat University,Thailand,49,565,5295.0,700,985,775,762.5,1160.0,912.5
+2025,970,Pakistan Institute of Engineering and Applied Sciences (PIEAS),Pakistan,52,566,5287.5,865,1100,525,500.0,1085.0,1212.5
+2025,971,Universita di Macerata (Universita degli Studi di Macerata),Italy,29,231,5285.0,685,1350,1000,300.0,825.0,1125.0
+2025,972,Belarusian State University of Informatics and Radioelectronics,Belarus,4,232,5285.0,625,1085,800,450.0,1250.0,1075.0
+2025,973,Indian Institute of Technology Kharagpur,India,44,567,5285.0,975,960,725,500.0,1075.0,1050.0
+2025,974,Universitas Tarumanagara,Indonesia,97,568,5285.0,1300,785,625,550.0,1300.0,725.0
+2025,975,Universitas Bina Sarana Informatika,Indonesia,98,569,5282.5,735,1410,550,387.5,1025.0,1175.0
+2025,976,Ulyanovsk State Technical University,Russia,28,233,5280.0,1025,895,950,72.5,1287.5,1050.0
+2025,977,Central Mindanao University,Philippines,47,570,5275.0,1100,600,800,425.0,1025.0,1325.0
+2025,978,National Pedagogical University of Uzbekistan,Uzbekistan,36,571,5260.0,635,1050,875,587.5,1112.5,1000.0
+2025,979,Imam AlKadhim University College,Iraq,39,572,5250.0,505,1350,925,335.0,1197.5,937.5
+2025,980,Ivan Franko National University of Lviv,Ukraine,10,234,5250.0,925,1300,525,575.0,1087.5,837.5
+2025,981,Universidad Tecnologica Empresarial de Guayaquil,Ecuador,10,122,5240.0,1125,1260,375,675.0,922.5,882.5
+2025,982,Federal University of Alfenas,Brazil,32,123,5240.0,860,1140,750,475.0,1050.0,965.0
+2025,983,KOLEJ KOMUNITI KUALA LANGAT,Malaysia,40,573,5232.5,785,1225,1350,247.5,787.5,837.5
+2025,984,Politeknik Negeri Bali,Indonesia,99,574,5230.0,680,975,1375,462.5,675.0,1062.5
+2025,985,Kakatiya University,India,45,575,5227.5,1000,900,925,550.0,987.5,865.0
+2025,986,University of Southeastern Philippines,Philippines,48,576,5207.5,1125,1225,300,247.5,1072.5,1237.5
+2025,987,International Sakharov Environmental Institute of Belarusian State University,Belarus,5,235,5207.5,735,875,850,122.5,1287.5,1337.5
+2025,988,Al-Rafidain University,Iraq,40,577,5200.0,540,1475,625,787.5,822.5,950.0
+2025,989,Institut Pendidikan Indonesia Garut,Indonesia,100,578,5200.0,765,1035,1075,312.5,1262.5,750.0
+2025,990,Jizzakh branch of the National University of Uzbekistan named after Mirzo Ulugbek,Uzbekistan,37,579,5197.5,710,1300,475,350.0,1062.5,1300.0
+2025,991,Nueva Vizcaya State University,Philippines,49,580,5190.0,935,775,950,20.0,1147.5,1362.5
+2025,992,Istanbul Gedik University,Turkiye,98,581,5185.0,825,1110,750,487.5,810.0,1202.5
+2025,993,Shatt Al-Arab  University,Iraq,41,582,5185.0,860,1075,550,550.0,975.0,1175.0
+2025,994,Al-Huda University College,Iraq,42,583,5182.5,855,825,1175,537.5,1025.0,765.0
+2025,995,Al al-Bayt University,Jordan,10,584,5180.0,730,1050,800,787.5,1100.0,712.5
+2025,996,The University of Mirpurkhas,Pakistan,53,585,5177.5,725,1450,550,450.0,1162.5,840.0
+2025,997,West Ukrainian National University,Ukraine,11,236,5177.5,815,1435,450,375.0,1037.5,1065.0
+2025,998,Universitas Pattimura,Indonesia,101,586,5177.5,925,1200,700,612.5,1012.5,727.5
+2025,999,Hakim Sabzevari University,Iran,21,587,5177.5,975,800,900,562.5,1150.0,790.0
+2025,1000,Namangan State Technical University,Uzbekistan,38,588,5175.0,975,1225,625,235.0,925.0,1190.0
+2025,1001,Batman University,Turkiye,99,237,5175.0,880,910,600,200.0,1122.5,1462.5
+2025,1002,Nuh Naci Yazgan Üniversitesi,Turkiye,100,589,5170.0,935,960,825,350.0,1350.0,750.0
+2025,1003,Atma Jaya Yogyakarta University,Indonesia,102,590,5167.5,875,1485,600,385.0,710.0,1112.5
+2025,1004,Politeknik Sultan Haji Ahmad Shah,Malaysia,41,591,5157.5,625,910,700,447.5,1237.5,1237.5
+2025,1005,Helwan University,Egypt,28,42,5155.0,870,1300,600,535.0,997.5,852.5
+2025,1006,Isparta University of Applied Sciences,Turkiye,101,238,5155.0,1200,1000,700,32.5,972.5,1250.0
+2025,1007,Alanya Alaaddin Keykubat University,Turkiye,102,239,5150.0,750,1175,675,297.5,1262.5,990.0
+2025,1008,Tambov State Technical University,Russia,29,240,5150.0,980,910,950,160.0,662.5,1487.5
+2025,1009,PHEE European University,Ukraine,12,241,5147.5,700,1175,750,637.5,1010.0,875.0
+2025,1010,Universidad de Zaragoza,Spain,26,242,5147.5,445,1000,1150,375.0,1162.5,1015.0
+2025,1011,"Dr. Yanga's Colleges, Inc.",Philippines,50,592,5145.0,685,1325,600,350.0,1172.5,1012.5
+2025,1012,Orel State University named after I.S.Turgenev,Russia,30,243,5145.0,810,1010,375,587.5,1285.0,1077.5
+2025,1013,Silk Road International University of Tourism and Cultural Heritage,Uzbekistan,39,593,5140.0,730,1375,375,562.5,1300.0,797.5
+2025,1014,Istanbul University-Cerrahpasa,Turkiye,103,594,5140.0,960,585,800,450.0,1197.5,1147.5
+2025,1015,"Laucala Campus, University of the South Pacific",Fiji,1,2,5137.5,925,1275,1000,325.0,897.5,715.0
+2025,1016,Universitas Lambung Mangkurat,Indonesia,103,595,5137.5,1000,1025,650,337.5,1200.0,925.0
+2025,1017,Universitas Muhammadiyah Sidoarjo,Indonesia,104,596,5132.5,860,1140,500,310.0,772.5,1550.0
+2025,1018,"MANGALAYATAN UNIVERSITY, ALIGARH",India,46,597,5127.5,750,1300,675,537.5,1212.5,652.5
+2025,1019,Abdul Wali Khan University Mardan,Pakistan,54,598,5125.0,975,1250,600,400.0,1062.5,837.5
+2025,1020,University of Warmia and Mazury in Olsztyn,Poland,11,244,5125.0,915,760,1100,450.0,672.5,1227.5
+2025,1021,Angren University,Uzbekistan,40,599,5122.5,685,1550,625,462.5,972.5,827.5
+2025,1022,Universidad Privada Dr. Rafael Belloso Chacin,Venezuela,4,124,5122.5,910,860,725,487.5,1025.0,1115.0
+2025,1023,Muban Chombueng Rajabhat University,Thailand,50,600,5120.0,750,1010,750,107.5,1025.0,1477.5
+2025,1024,TERMEZ STATE UNIVERSITY,Uzbekistan,41,601,5112.5,900,1000,650,537.5,1025.0,1000.0
+2025,1025,Westminster International University in Tashkent (WIUT),Uzbekistan,42,602,5110.0,660,1325,700,537.5,900.0,987.5
+2025,1026,Sivas Cumhuriyet University,Turkiye,104,603,5097.5,1075,785,825,425.0,760.0,1227.5
+2025,1027,National Institute of Technology Rourkela,India,47,604,5090.0,925,950,950,637.5,1050.0,577.5
+2025,1028,Southern New Hampshire University,USA,6,12,5090.0,835,870,1175,550.0,685.0,975.0
+2025,1029,Fundación Universitaria del Area Andina,Colombia,45,125,5087.5,565,1350,625,462.5,900.0,1185.0
+2025,1030,Arak University of Technology,Iran,22,605,5085.0,810,1150,725,412.5,1300.0,687.5
+2025,1031,North-Eastern Federal University,Russia,31,245,5082.5,1000,785,1125,262.5,360.0,1550.0
+2025,1032,Beaconhouse National University,Pakistan,55,606,5080.0,355,1575,650,247.5,1312.5,940.0
+2025,1033,Qena University,Egypt,29,43,5080.0,975,785,725,347.5,1060.0,1187.5
+2025,1034,Chung Yuan Christian University,Chinese Taipei,28,607,5075.0,590,1175,750,450.0,822.5,1287.5
+2025,1035,National University Of Science & Technology,Zimbabwe,1,44,5075.0,1005,1160,775,350.0,1097.5,687.5
+2025,1036,Central Asian University,Uzbekistan,43,608,5075.0,775,1100,600,550.0,1175.0,875.0
+2025,1037,The Institute of Engineering-technical and transport communications of Turkmenistan,Turkmenistan,7,609,5072.5,1125,885,650,287.5,1350.0,775.0
+2025,1038,Nukus State Pedagogical Institute named after Ajiniyaz,Uzbekistan,44,610,5057.5,625,1110,750,600.0,1047.5,925.0
+2025,1039,Rajamangala University of Technology Rattanakosin,Thailand,51,611,5057.5,560,985,1000,575.0,850.0,1087.5
+2025,1040,Belarusian National Technical University,Belarus,6,246,5057.5,775,875,675,497.5,1322.5,912.5
+2025,1041,Technical University  Of Zvolen,Slovakia,2,247,5055.0,910,750,1350,260.0,560.0,1225.0
+2025,1042,Franklin University Switzerland,Switzerland,2,248,5050.0,710,1350,850,325.0,725.0,1090.0
+2025,1043,Politeknik Negeri Bengkalis,Indonesia,105,612,5045.0,700,1325,525,547.5,710.0,1237.5
+2025,1044,Mapua Malayan Colleges Laguna,Philippines,51,613,5042.5,465,1290,525,437.5,862.5,1462.5
+2025,1045,Universidad Del Tolima,Colombia,46,126,5040.0,785,1010,775,257.5,1060.0,1152.5
+2025,1046,Islamic University of Kenya,Kenya,2,45,5035.0,975,1550,775,775.0,460.0,500.0
+2025,1047,Yozgat Bozok University,Turkiye,105,614,5030.0,695,1060,650,462.5,1085.0,1077.5
+2025,1048,Tashkent State University of Oriental Studies,Uzbekistan,45,615,5027.5,470,1350,1200,32.5,585.0,1390.0
+2025,1049,Dong Thap Community College,Vietnam,8,616,5022.5,760,825,550,472.5,1050.0,1365.0
+2025,1050,Philippine Normal University,Philippines,52,617,5017.5,685,1050,925,597.5,835.0,925.0
+2025,1051,Al-Turath University,Iraq,43,618,5015.0,735,1085,650,262.5,922.5,1360.0
+2025,1052,Ualikhanov University,Kazakhstan,11,619,5000.0,875,1450,675,400.0,800.0,800.0
+2025,1053,Applied Science University,Bahrain,3,620,5000.0,850,1300,625,525.0,997.5,702.5
+2025,1054,Grand Asian University Sialkot,Pakistan,56,621,5000.0,900,1025,750,587.5,950.0,787.5
+2025,1055,Kilis 7 Aralık University,Turkiye,106,249,4980.0,780,850,800,462.5,997.5,1090.0
+2025,1056,Babol Noshirvani University of Technology,Iran,23,622,4975.0,655,1260,1125,435.0,647.5,852.5
+2025,1057,Thomas Adewumi University,Nigeria,2,46,4972.5,900,635,1025,750.0,600.0,1062.5
+2025,1058,Istanbul Kültür University,Turkiye,107,250,4970.0,590,720,1425,350.0,897.5,987.5
+2025,1059,"Universitas Muhammadiyah Kalimantan Timur, Samarinda, Kalimantan Timur",Indonesia,106,623,4967.5,700,1085,725,210.0,747.5,1500.0
+2025,1060,North-Caucasus Federal University,Russia,32,251,4945.0,860,860,600,512.5,1087.5,1025.0
+2025,1061,Indus University,Pakistan,57,624,4940.0,885,1400,800,395.0,447.5,1012.5
+2025,1062,Grodno State Medical University,Belarus,7,252,4940.0,840,810,1050,675.0,800.0,765.0
+2025,1063,Madenat Alelem University College,Iraq,44,625,4935.0,665,1085,950,637.5,810.0,787.5
+2025,1064,Universidad Católica De Oriente,Colombia,47,127,4932.5,635,1100,1050,475.0,710.0,962.5
+2025,1065,Saken Seifullin Kazakh Agrotechnical Research  University,Kazakhstan,12,626,4930.0,1025,1010,525,210.0,1085.0,1075.0
+2025,1066,TIIAME National Research University,Uzbekistan,46,627,4927.5,425,675,725,675.0,1262.5,1165.0
+2025,1067,Namangan State University,Uzbekistan,47,628,4925.0,975,1200,175,712.5,697.5,1165.0
+2025,1068,Universidad de Manizales,Colombia,48,128,4920.0,625,985,1125,587.5,535.0,1062.5
+2025,1069,Universidad Politécnica de Santa Rosa Jáuregui,Mexico,22,129,4920.0,800,910,800,900.0,447.5,1062.5
+2025,1070,Ahvaz Jundishapur University of Medical Sciences,Iran,24,629,4920.0,825,720,775,637.5,1237.5,725.0
+2025,1071,Namangan State Institute of Foreign Languages,Uzbekistan,48,630,4917.5,705,1375,475,450.0,1050.0,862.5
+2025,1072,Karamanoğlu Mehmetbey Üniversity,Turkiye,108,253,4917.5,900,810,650,712.5,1222.5,622.5
+2025,1073,Iloilo Science and Technology University,Philippines,53,631,4915.0,825,1240,650,335.0,787.5,1077.5
+2025,1074,Don Mariano Marcos Memorial State University,Philippines,54,632,4910.0,640,1025,800,347.5,885.0,1212.5
+2025,1075,University of Samarra,Iraq,45,633,4907.5,840,655,1000,475.0,1137.5,800.0
+2025,1076,Sinop University,Turkiye,109,254,4905.0,785,750,1100,210.0,862.5,1197.5
+2025,1077,Ateneo de Davao University,Philippines,55,634,4902.5,960,925,525,407.5,1272.5,812.5
+2025,1078,Egyptian Chinese University,Egypt,30,47,4875.0,490,1235,600,362.5,800.0,1387.5
+2025,1079,University of Jendouba,Tunisia,4,48,4875.0,950,1025,875,350.0,735.0,940.0
+2025,1080,Ninevah University,Iraq,46,635,4870.0,485,1225,725,475.0,960.0,1000.0
+2025,1081,Persian Gulf University,Iran,25,636,4870.0,835,785,975,550.0,985.0,740.0
+2025,1082,University of Tashkent Applied Sciences,Uzbekistan,49,637,4860.0,565,1275,550,170.0,1250.0,1050.0
+2025,1083,University of Balochistan,Pakistan,58,638,4855.0,885,1185,550,537.5,1012.5,685.0
+2025,1084,Universidad Miguel Hernandez de Elche,Spain,27,255,4842.5,830,1500,600,412.5,950.0,550.0
+2025,1085,University of Technology- Iraq,Iraq,47,639,4842.5,545,1135,600,550.0,987.5,1025.0
+2025,1086,Cihan University-Erbil,Iraq,48,640,4842.5,670,900,675,450.0,960.0,1187.5
+2025,1087,Samarkand State Medical University,Uzbekistan,50,641,4835.0,735,1150,975,300.0,1137.5,537.5
+2025,1088,Kharkiv National University of Radio Electronics,Ukraine,13,256,4835.0,600,1135,700,350.0,987.5,1062.5
+2025,1089,Cordillera Career Development College,Philippines,56,642,4835.0,835,1125,450,637.5,1050.0,737.5
+2025,1090,Pamukkale University,Turkiye,110,643,4830.0,1035,550,925,550.0,860.0,910.0
+2025,1091,Tajik National University,Tajikistan,2,644,4820.0,930,1115,700,475.0,925.0,675.0
+2025,1092,Universidad Tecnologica de Bolivar,Colombia,49,130,4820.0,855,1025,1025,337.5,637.5,940.0
+2025,1093,University of Delta Agbor,Nigeria,3,49,4815.0,1055,910,875,425.0,585.0,965.0
+2025,1094,Bahir Dar University,Ethiopia,2,50,4812.5,775,1150,525,310.0,1037.5,1015.0
+2025,1095,Mountain Top University,Nigeria,4,51,4810.0,1075,1100,525,662.5,522.5,925.0
+2025,1096,Universitas Muria Kudus,Indonesia,107,645,4807.5,785,1325,650,197.5,1047.5,802.5
+2025,1097,National University of Life and Environmental Sciences of Ukraine,Ukraine,14,257,4802.5,940,890,625,460.0,1000.0,887.5
+2025,1098,KPR Institute of Engineering and Technology,India,48,646,4800.0,725,1000,525,500.0,950.0,1100.0
+2025,1099,Kasem Bundit University,Thailand,52,647,4800.0,515,860,775,537.5,935.0,1177.5
+2025,1100,Qom University of Technology,Iran,26,648,4797.5,725,1190,650,447.5,872.5,912.5
+2025,1101,Politeknik Perkapalan Negeri Surabaya,Indonesia,108,649,4797.5,760,900,775,375.0,1112.5,875.0
+2025,1102,Iloilo State University of Fisheries Science and Technology,Philippines,57,650,4797.5,1125,875,725,687.5,672.5,712.5
+2025,1103,International University of Industrialists and Entrepreneurs,Turkmenistan,8,651,4795.0,755,825,725,437.5,1287.5,765.0
+2025,1104,Al-Esraa University,Iraq,49,652,4790.0,530,975,775,662.5,985.0,862.5
+2025,1105,Universidad Nacional de San Martin Argentina,Argentina,5,131,4787.5,720,1060,925,172.5,947.5,962.5
+2025,1106,Shaqra University,Saudi Arabia,12,653,4787.5,815,1055,625,282.5,1035.0,975.0
+2025,1107,Jabir ibn Hayyan University for Medical and Pharmaceutical Sciences,Iraq,50,654,4782.5,880,920,525,450.0,897.5,1110.0
+2025,1108,Samarkand State University of Veterinary Medicine Livestock and Biotechnologies,Uzbekistan,51,655,4782.5,610,910,675,387.5,825.0,1375.0
+2025,1109,Politechnica University Timisoara,Romania,9,258,4777.5,730,1075,350,587.5,1135.0,900.0
+2025,1110,Laguna State Polytechnic University,Philippines,58,656,4775.0,1105,1115,400,170.0,925.0,1060.0
+2025,1111,Newports Institute of Communications & Economics,Pakistan,59,657,4772.5,1000,1185,375,475.0,635.0,1102.5
+2025,1112,Romblon State University,Philippines,59,658,4772.5,775,835,550,672.5,837.5,1102.5
+2025,1113,LILAMA2 International Technology College,Vietnam,9,659,4770.0,730,1150,500,387.5,1125.0,877.5
+2025,1114,Tashkent University Of Information Technologies,Uzbekistan,52,660,4767.5,1050,935,550,425.0,1047.5,760.0
+2025,1115,Nakhon Ratchasima Rajabhat University,Thailand,53,661,4757.5,535,1075,750,347.5,900.0,1150.0
+2025,1116,Dhonburi Rajabhat University,Thailand,54,662,4757.5,1000,1060,700,132.5,887.5,977.5
+2025,1117,Universitas Internasional Batam,Indonesia,109,663,4752.5,685,1110,575,347.5,697.5,1337.5
+2025,1118,Universitas Sanata Dharma,Indonesia,110,664,4745.0,785,875,425,425.0,822.5,1412.5
+2025,1119,Politeknik Negeri Banyuwangi,Indonesia,111,665,4740.0,805,950,800,700.0,610.0,875.0
+2025,1120,National Dong Hwa University,Chinese Taipei,29,666,4740.0,900,650,950,375.0,850.0,1015.0
+2025,1121,University of Mianwali,Pakistan,60,667,4730.0,585,1145,775,260.0,1087.5,877.5
+2025,1122,North Carolina Agricultural & Technical State University,USA,7,13,4730.0,785,660,550,537.5,1047.5,1150.0
+2025,1123,Women University Swabi,Pakistan,61,668,4727.5,1035,1110,550,97.5,1022.5,912.5
+2025,1124,Giresun University,Turkiye,111,259,4722.5,860,1015,800,225.0,1172.5,650.0
+2025,1125,Universidad De Castilla La Mancha,Spain,28,260,4720.0,555,1225,575,575.0,950.0,840.0
+2025,1126,Majmaah University,Saudi Arabia,13,669,4720.0,610,760,800,487.5,1175.0,887.5
+2025,1127,Universidade Positivo,Brazil,33,132,4717.5,700,890,1075,662.5,662.5,727.5
+2025,1128,Narxoz University,Kazakhstan,13,670,4712.5,640,1160,525,162.5,1037.5,1187.5
+2025,1129,Sumgayit State University,Azerbaijan,12,671,4712.5,775,1150,450,250.0,975.0,1112.5
+2025,1130,"National University of Science and Technology, Oman",Oman,1,672,4712.5,930,1075,750,297.5,622.5,1037.5
+2025,1131,Universidad La Gran Colombia,Colombia,50,133,4712.5,925,775,750,587.5,912.5,762.5
+2025,1132,Matej Bel University in Banska Bystrica,Slovakia,3,261,4705.0,590,1090,475,350.0,1037.5,1162.5
+2025,1133,Universidad Autónoma De Coahuila,Mexico,23,134,4705.0,590,1040,400,260.0,1037.5,1377.5
+2025,1134,Al-Ayen Iraqi University,Iraq,51,673,4705.0,945,985,475,462.5,735.0,1102.5
+2025,1135,Aurora State College Of Technology,Philippines,60,674,4692.5,1025,1200,475,245.0,872.5,875.0
+2025,1136,Ghazi University,Pakistan,62,675,4690.0,585,845,650,397.5,987.5,1225.0
+2025,1137,Deraya University,Egypt,31,52,4690.0,855,675,375,325.0,1047.5,1412.5
+2025,1138,Ilam university,Iran,27,676,4685.0,900,1100,650,462.5,972.5,600.0
+2025,1139,Universidad Central de Venezuela,Venezuela,5,135,4677.5,855,825,475,437.5,847.5,1237.5
+2025,1140,Tashkent State Agrarian University,Uzbekistan,53,677,4675.0,640,975,500,600.0,1172.5,787.5
+2025,1141,University of Sfax,Tunisia,5,53,4675.0,650,875,750,500.0,1100.0,800.0
+2025,1142,Western Philippines University,Philippines,61,678,4667.5,1125,825,175,195.0,1135.0,1212.5
+2025,1143,Mindanao State University Iligan Institute of Technology,Philippines,62,679,4665.0,615,1250,625,197.5,1025.0,952.5
+2025,1144,Universidad de León,Spain,29,262,4660.0,750,1010,750,400.0,800.0,950.0
+2025,1145,Lyceum-Northwestern University,Philippines,63,680,4657.5,675,1135,600,450.0,735.0,1062.5
+2025,1146,Universidad Autonoma De Tamaulipas,Mexico,24,136,4655.0,770,950,700,285.0,985.0,965.0
+2025,1147,Sakon Nakhon Rajabhat University,Thailand,55,681,4647.5,1085,815,450,760.0,587.5,950.0
+2025,1148,Maranhao State University,Brazil,34,137,4645.0,850,700,1025,260.0,410.0,1400.0
+2025,1149,Universidad Regional Amazonica Ikiam,Ecuador,11,138,4630.0,645,1075,800,310.0,1012.5,787.5
+2025,1150,"COMSATS University Islamabad, Wah Campus",Pakistan,63,682,4625.0,640,1325,425,487.5,822.5,925.0
+2025,1151,Universidade Federal de Santa Catarina (UFSC),Brazil,35,139,4622.5,685,715,1275,397.5,447.5,1102.5
+2025,1152,Public International Business College Mitrovica,Kosovo,2,263,4610.0,735,835,600,462.5,1087.5,890.0
+2025,1153,Pampanga State Agricultural University,Philippines,64,683,4602.5,860,985,475,485.0,635.0,1162.5
+2025,1154,"Institut Kemahiran MARA Lumut, Perak",Malaysia,42,684,4595.0,875,1075,600,487.5,935.0,622.5
+2025,1155,The Maria Grzegorzewska University,Poland,12,264,4590.0,515,835,900,625.0,562.5,1152.5
+2025,1156,National University of Science and Technology MISIS,Russia,33,265,4585.0,540,920,900,437.5,650.0,1137.5
+2025,1157,Karakalpak State University Named After Berdakh,Uzbekistan,54,685,4582.5,660,1275,450,170.0,600.0,1427.5
+2025,1158,Bingöl University,Turkiye,112,686,4582.5,1010,1225,1050,147.5,547.5,602.5
+2025,1159,Astana Medical University,Kazakhstan,14,687,4575.0,505,1185,600,272.5,985.0,1027.5
+2025,1160,1 Decembrie 1918 University of Alba Iulia,Romania,10,266,4575.0,390,690,1475,60.0,772.5,1187.5
+2025,1161,Instituto Tecnologico de Durango,Mexico,25,140,4570.0,470,1000,1475,235.0,750.0,640.0
+2025,1162,L.N. Gumilyov Eurasian National University,Kazakhstan,15,688,4562.5,705,885,525,210.0,900.0,1337.5
+2025,1163,Termez State University of Engineering and Agrotechnologies,Uzbekistan,55,689,4547.5,610,975,775,500.0,962.5,725.0
+2025,1164,Lebanese French University,Iraq,52,690,4545.0,840,1335,350,497.5,697.5,825.0
+2025,1165,Al Istiqlal University,Palestine,9,691,4545.0,905,650,850,525.0,900.0,715.0
+2025,1166,Imam Mohammad Ibn Saud Islamic University,Saudi Arabia,14,692,4537.5,590,835,675,400.0,1072.5,965.0
+2025,1167,Al-iraqia University,Iraq,53,693,4532.5,350,1425,925,285.0,1175.0,372.5
+2025,1168,Baba Guru Nanak University,Pakistan,64,694,4532.5,590,715,625,350.0,1225.0,1027.5
+2025,1169,Politeknik Transportasi Darat Bali,Indonesia,112,695,4530.0,830,725,450,400.0,1125.0,1000.0
+2025,1170,ILMA University,Pakistan,65,696,4527.5,615,1125,525,360.0,787.5,1115.0
+2025,1171,Middle Technical University,Iraq,54,697,4525.0,715,1200,450,385.0,1047.5,727.5
+2025,1172,Imam Jaafar Al-Sadiq University,Iraq,55,698,4522.5,685,1310,450,400.0,675.0,1002.5
+2025,1173,Phetchabun Rajabhat University,Thailand,56,699,4522.5,675,975,575,70.0,1200.0,1027.5
+2025,1174,Azerbaijan State Agricultural University,Azerbaijan,13,700,4520.0,1000,700,400,185.0,1035.0,1200.0
+2025,1175,Rizal Technology University,Philippines,65,701,4517.5,760,1110,450,350.0,1035.0,812.5
+2025,1176,Shahid Bahonar University of Kerman,Iran,28,702,4512.5,765,850,625,422.5,1225.0,625.0
+2025,1177,University of Monastir,Tunisia,6,54,4505.0,710,1325,500,185.0,972.5,812.5
+2025,1178,Southern Luzon State University,Philippines,66,703,4505.0,835,960,500,210.0,997.5,1002.5
+2025,1179,National University of Technology (NUTECH),Pakistan,66,704,4502.5,620,1200,250,385.0,897.5,1150.0
+2025,1180,University of Management and Technology,Pakistan,67,705,4502.5,885,1060,475,285.0,772.5,1025.0
+2025,1181,Andijan Institute of Agriculture and Agro-Technology,Uzbekistan,56,706,4492.5,1010,800,575,437.5,647.5,1022.5
+2025,1182,Kyiv National Economic University Named after Vadym Hetman,Ukraine,15,267,4492.5,620,650,1100,497.5,547.5,1077.5
+2025,1183,YANGIYER BRANCH OF TASHKENT CHEMICAL-TECHNOLOGY INSTITUTE,Uzbekistan,57,707,4482.5,560,875,650,285.0,1250.0,862.5
+2025,1184,University of Manara,Iraq,56,708,4475.0,515,1060,525,550.0,925.0,900.0
+2025,1185,Shahid Beheshti Univresity,Iran,29,709,4472.5,750,875,675,387.5,985.0,800.0
+2025,1186,State University of Northern Negros,Philippines,67,710,4462.5,1055,1000,875,182.5,997.5,352.5
+2025,1187,Universitas Galuh,Indonesia,113,711,4460.0,700,960,725,437.5,700.0,937.5
+2025,1188,Kemerovo State University,Russia,34,268,4460.0,795,520,1050,170.0,872.5,1052.5
+2025,1189,Albaha University,Saudi Arabia,15,712,4457.5,1075,685,400,550.0,747.5,1000.0
+2025,1190,Universidade Federal de Sao Paulo,Brazil,36,141,4450.0,835,850,825,332.5,447.5,1160.0
+2025,1191,National Defence University,Pakistan,68,713,4440.0,710,1200,150,160.0,1110.0,1110.0
+2025,1192,Universitas Jambi,Indonesia,114,714,4440.0,665,850,625,462.5,760.0,1077.5
+2025,1193,"Politeknik Maritim Negeri Indonesia, Semarang",Indonesia,115,715,4435.0,860,1025,525,537.5,1035.0,452.5
+2025,1194,Al-Nisour University,Iraq,57,716,4432.5,710,950,675,537.5,760.0,800.0
+2025,1195,Women University Mardan,Pakistan,69,717,4427.5,880,1250,550,72.5,860.0,815.0
+2025,1196,Mapúa Malayan Colleges Mindanao,Philippines,68,718,4427.5,445,1125,475,625.0,785.0,972.5
+2025,1197,Mogilev State A. Kuleshov University,Belarus,8,269,4420.0,765,810,625,85.0,1362.5,772.5
+2025,1198,Ashur University,Iraq,58,719,4415.0,430,1275,625,700.0,522.5,862.5
+2025,1199,Almaaqal University,Iraq,59,720,4412.5,580,985,725,387.5,760.0,975.0
+2025,1200,Gilgamesh University,Iraq,60,721,4410.0,560,1110,600,300.0,850.0,990.0
+2025,1201,Universitas Lancang Kuning,Indonesia,116,722,4400.0,825,1035,575,425.0,862.5,677.5
+2025,1202,Neapolis University Paphos,Republic of Cyprus,1,270,4392.5,595,1250,300,322.5,950.0,975.0
+2025,1203,Mapua University,Philippines,69,723,4385.0,335,1015,775,675.0,560.0,1025.0
+2025,1204,POLITEKNIK SULTAN ABDUL HALIM MU'ADZAM SHAH,Malaysia,43,724,4385.0,875,625,700,260.0,987.5,937.5
+2025,1205,Lithuanian University Of Health Science,Lithuania,3,271,4377.5,820,975,625,185.0,1097.5,675.0
+2025,1206,University of Ioannina,Greece,3,272,4375.0,1105,710,750,272.5,875.0,662.5
+2025,1207,Universidad Tecnologica Metropolitana,Chile,3,142,4372.5,525,975,1325,335.0,362.5,850.0
+2025,1208,POLITEKNIK SULTAN SALAHUDDIN ABDUL AZIZ SHAH,Malaysia,44,725,4372.5,810,740,650,310.0,987.5,875.0
+2025,1209,Universidad Nacional Agraria La Molina,Peru,6,143,4372.5,980,560,750,70.0,687.5,1325.0
+2025,1210,University of Phan Thiet,Vietnam,10,726,4360.0,875,1100,525,310.0,1037.5,512.5
+2025,1211,Shah Abdul Latif University,Pakistan,70,727,4360.0,810,925,500,247.5,1150.0,727.5
+2025,1212,National Taipei University of Education,Chinese Taipei,30,728,4347.5,585,1125,1100,387.5,837.5,312.5
+2025,1213,Universidad Estatal A Distancia Costa Rica,Costa Rica,3,144,4345.0,495,1160,750,550.0,675.0,715.0
+2025,1214,Pir Mehr Ali Shah Arid Agriculture University Rawalpindi,Pakistan,71,729,4345.0,950,895,300,437.5,787.5,975.0
+2025,1215,Universidad Nacional de Educación a Distancia (UNED),Spain,30,273,4342.5,535,1385,825,500.0,722.5,375.0
+2025,1216,Armenian State University of Economics,Armenia,2,730,4340.0,620,810,600,437.5,1122.5,750.0
+2025,1217,KOLEJ KOMUNITI PASIR SALAK,Malaysia,45,731,4340.0,900,750,925,245.0,535.0,985.0
+2025,1218,Indian Institute of Technology Roorkee,India,49,732,4340.0,1055,735,575,412.5,700.0,862.5
+2025,1219,Shaheed Allah Bux Soomro University Art Design and Heritages,Pakistan,72,733,4332.5,735,1175,350,487.5,810.0,775.0
+2025,1220,Namal University Mianwali,Pakistan,73,734,4332.5,1115,960,375,222.5,710.0,950.0
+2025,1221,Universal Business School,India,50,735,4332.5,585,825,725,235.0,822.5,1140.0
+2025,1222,Universidad Hemisferios,Ecuador,12,145,4332.5,1100,575,550,260.0,847.5,1000.0
+2025,1223,University of Nueva Caceres,Philippines,70,736,4330.0,740,815,425,537.5,825.0,987.5
+2025,1224,Quirino State University,Philippines,71,737,4325.0,905,825,825,297.5,497.5,975.0
+2025,1225,Azerbaijan State Pedagogical University,Azerbaijan,14,738,4320.0,710,750,500,297.5,1087.5,975.0
+2025,1226,Universidad Pegagógica y Tecnológica de Colombia,Colombia,51,146,4315.0,685,645,825,237.5,1087.5,835.0
+2025,1227,Prince Sattam bin Abdulaziz University,Saudi Arabia,16,739,4310.0,775,985,575,387.5,625.0,962.5
+2025,1228,INSTITUT KEMAHIRAN MARA SEBERANG PERAI UTARA,Malaysia,46,740,4300.0,830,800,775,550.0,597.5,747.5
+2025,1229,Lunghwa University of Science and Technology,Chinese Taipei,31,741,4295.0,710,1035,450,585.0,925.0,590.0
+2025,1230,Universidade Lusofona,Portugal,9,274,4295.0,405,940,750,412.5,600.0,1187.5
+2025,1231,Punjab Tianjin University of Technology Lahore,Pakistan,74,742,4292.5,755,1275,450,337.5,725.0,750.0
+2025,1232,KOLEJ KOMUNITI BANDAR PENAWAR,Malaysia,47,743,4290.0,760,425,750,207.5,1375.0,772.5
+2025,1233,Universitat de Valencia,Spain,31,275,4282.5,520,1125,950,312.5,622.5,752.5
+2025,1234,Ala-Too International University,Kyrgyzstan,3,744,4280.0,565,825,775,450.0,950.0,715.0
+2025,1235,"Mirpur University of Science and Technology (MUST), Mirpur AJK",Pakistan,75,745,4277.5,1005,1025,425,450.0,735.0,637.5
+2025,1236,Hatay Mustafa Kemal University,Turkiye,113,746,4270.0,1175,1060,350,250.0,772.5,662.5
+2025,1237,Navamindradhiraj University,Thailand,57,747,4265.0,630,560,1150,372.5,750.0,802.5
+2025,1238,Lorma Colleges,Philippines,72,748,4262.5,785,1310,425,110.0,935.0,697.5
+2025,1239,Universitas Sam Ratulangi,Indonesia,117,749,4260.0,775,860,675,322.5,1087.5,540.0
+2025,1240,Assam Don Bosco University,India,51,750,4257.5,625,900,625,762.5,672.5,672.5
+2025,1241,Kyiv National University of Technologies and Design,Ukraine,16,276,4250.0,615,1010,600,287.5,747.5,990.0
+2025,1242,University of Lagos,Nigeria,5,55,4247.5,785,860,725,387.5,812.5,677.5
+2025,1243,Karatina University,Kenya,3,56,4245.0,685,1075,400,325.0,785.0,975.0
+2025,1244,Centro Universitário Integrado - Integrado University,Brazil,37,147,4245.0,960,975,675,260.0,737.5,637.5
+2025,1245,KOLEJ KEMAHIRAN TINGGI MARA LEDANG,Malaysia,48,751,4242.5,835,750,750,335.0,1037.5,535.0
+2025,1246,Bacninh College of Industry,Vietnam,11,752,4232.5,570,850,500,387.5,1225.0,700.0
+2025,1247,Western Kentucky University,USA,8,14,4230.0,650,855,775,425.0,685.0,840.0
+2025,1248,Universitas Surabaya,Indonesia,118,753,4225.0,960,525,850,375.0,825.0,690.0
+2025,1249,Sarsen Amanzholov East Kazakhstan University,Kazakhstan,16,754,4222.5,975,835,725,400.0,635.0,652.5
+2025,1250,GIFT University,Pakistan,76,755,4217.5,585,1175,425,297.5,785.0,950.0
+2025,1251,Université de Tunis,Tunisia,7,57,4217.5,845,1065,525,145.0,737.5,900.0
+2025,1252,Kolej Komuniti Selayang,Malaysia,49,756,4212.5,585,835,750,295.0,1087.5,660.0
+2025,1253,City College of Cagayan de Oro,Philippines,73,757,4197.5,395,865,600,550.0,600.0,1187.5
+2025,1254,Novosibirsk State University Of Economics And Management,Russia,35,277,4197.5,590,810,625,637.5,335.0,1200.0
+2025,1255,Universidad Mariana,Colombia,52,148,4190.0,690,750,700,387.5,825.0,837.5
+2025,1256,Pontificia Universidade Catolica Do Paraná,Brazil,38,149,4180.0,740,915,700,250.0,887.5,687.5
+2025,1257,Indian Institute of Management Bangalore,India,52,758,4180.0,690,665,700,762.5,862.5,500.0
+2025,1258,Renaissance Educational University,Uzbekistan,58,759,4157.5,570,975,600,362.5,825.0,825.0
+2025,1259,Korkyt Ata Kyzylorda University,Kazakhstan,17,760,4157.5,800,840,650,220.0,760.0,887.5
+2025,1260,Ahmadu Bello University,Nigeria,6,58,4152.5,890,925,75,750.0,635.0,877.5
+2025,1261,Bharathiar University,India,53,761,4150.0,925,875,525,285.0,1025.0,515.0
+2025,1262,Interregional Academy of Personnel Management,Ukraine,17,278,4145.0,660,725,300,210.0,600.0,1650.0
+2025,1263,Ufa University of Science and Technology,Russia,36,279,4145.0,465,650,800,347.5,810.0,1072.5
+2025,1264,KOLEJ KOMUNITI BENTONG,Malaysia,50,762,4140.0,925,620,575,460.0,947.5,612.5
+2025,1265,University of Tehran,Iran,30,763,4125.0,735,825,600,300.0,875.0,790.0
+2025,1266,Universitas Pembangunan Jaya,Indonesia,119,764,4112.5,540,1085,425,400.0,735.0,927.5
+2025,1267,Politeknik Negeri Lhokseumawe,Indonesia,120,765,4110.0,590,1010,750,375.0,522.5,862.5
+2025,1268,Mizoram University,India,54,766,4105.0,865,1240,350,497.5,737.5,415.0
+2025,1269,Basra University For Oil And Gas,Iraq,61,767,4102.5,525,750,625,537.5,950.0,715.0
+2025,1270,Lutsk National Technical University,Ukraine,18,280,4097.5,705,670,450,347.5,1000.0,925.0
+2025,1271,Adamawa State University,Nigeria,7,59,4092.5,740,1090,950,487.5,387.5,437.5
+2025,1272,KOLEJ KOMUNITI SEGAMAT 2,Malaysia,51,768,4080.0,560,685,725,360.0,925.0,825.0
+2025,1273,Kokand university,Uzbekistan,59,769,4072.5,610,975,575,437.5,825.0,650.0
+2025,1274,Tekirdağ Namik Kemal University,Turkiye,114,281,4067.5,735,710,850,160.0,947.5,665.0
+2025,1275,University of Science and Culture,Iran,31,770,4065.0,645,1150,550,525.0,647.5,547.5
+2025,1276,Sapientia Hungarian University Of Transylvania,Romania,11,282,4065.0,930,815,750,20.0,850.0,700.0
+2025,1277,National University Manila,Philippines,74,771,4060.0,475,1100,550,435.0,685.0,815.0
+2025,1278,Abylkas Saginov Karaganda Technical University,Kazakhstan,18,772,4060.0,535,950,675,437.5,700.0,762.5
+2025,1279,Nukus Branch of the Uzbek State University of Physical Culture and Sports,Uzbekistan,60,773,4060.0,575,760,450,450.0,887.5,937.5
+2025,1280,Politeknik Tuanku Syed Sirajuddin,Malaysia,52,774,4055.0,585,1025,675,475.0,775.0,520.0
+2025,1281,Dulaty University,Kazakhstan,19,775,4055.0,735,735,350,397.5,750.0,1087.5
+2025,1282,Politeknik Manufaktur Negeri Bangka Belitung,Indonesia,121,776,4047.5,650,790,950,622.5,735.0,300.0
+2025,1283,Mohammad Ali Jinnah University,Pakistan,77,777,4042.5,635,875,450,210.0,460.0,1412.5
+2025,1284,Afyonkarahisar Health Sciences University,Turkiye,115,778,4035.0,775,735,750,487.5,585.0,702.5
+2025,1285,INTI International University,Malaysia,53,779,4025.0,755,835,575,32.5,1037.5,790.0
+2025,1286,Rajabhat Rajanagarindra University (RRU),Thailand,58,780,4020.0,660,890,500,157.5,1250.0,562.5
+2025,1287,Arish University,Egypt,32,60,4020.0,1075,785,575,575.0,597.5,412.5
+2025,1288,University of Swat,Pakistan,78,781,4017.5,1025,1225,325,132.5,672.5,637.5
+2025,1289,Kabardino-Balkarian State University named after H.M. Berbekov,Russia,37,283,4015.0,1000,460,425,297.5,822.5,1010.0
+2025,1290,Shaheed Benazir Bhutto Women University Peshawar Pakistan,Pakistan,79,782,4007.5,925,1125,350,57.5,960.0,590.0
+2025,1291,Universidad de los Llanos,Colombia,53,150,4005.0,650,515,825,325.0,850.0,840.0
+2025,1292,OSTIM Technical University,Turkiye,116,284,3997.5,415,950,400,460.0,997.5,775.0
+2025,1293,Instituto Politécnico Nacional,Mexico,26,151,3995.0,620,825,475,437.5,622.5,1015.0
+2025,1294,University of Maribor,Slovenia,1,285,3992.5,610,660,525,487.5,785.0,925.0
+2025,1295,UNIVERSITAS TELOGOREJO SEMARANG,Indonesia,122,783,3985.0,510,800,625,512.5,650.0,887.5
+2025,1296,Università Degli Studi Dell'Insubria Varese e Como,Italy,30,286,3980.0,875,610,250,20.0,687.5,1537.5
+2025,1297,Universidad De Cadiz,Spain,32,287,3970.0,215,1500,275,20.0,875.0,1085.0
+2025,1298,Universitas Mercu Buana,Indonesia,123,784,3967.5,605,975,525,400.0,675.0,787.5
+2025,1299,The Government Sadiq College Women University Bahawalpur,Pakistan,80,785,3965.0,410,1100,525,132.5,1250.0,547.5
+2025,1300,KOLEJ KEMAHIRAN TINGGI MARA LENGGONG,Malaysia,54,786,3957.5,850,245,650,347.5,1137.5,727.5
+2025,1301,University of Loralai,Pakistan,81,787,3955.0,985,1100,200,310.0,772.5,587.5
+2025,1302,Politeknik Caltex,Indonesia,124,788,3955.0,485,770,650,587.5,800.0,662.5
+2025,1303,Universitas Dirgantara Marsekal Suryadarma,Indonesia,125,789,3950.0,710,960,750,500.0,635.0,395.0
+2025,1304,The State Energy Institute of Turkmenistan,Turkmenistan,9,790,3950.0,780,760,350,210.0,1212.5,637.5
+2025,1305,Universitas Islam Negeri Mataram,Indonesia,126,791,3950.0,540,610,725,575.0,485.0,1015.0
+2025,1306,Baku Eurasian University,Azerbaijan,15,288,3945.0,385,660,575,387.5,687.5,1250.0
+2025,1307,Madonna University,USA,9,15,3937.5,775,1025,775,337.5,560.0,465.0
+2025,1308,Adana Alparslan Türkeş Science and Technology University,Turkiye,117,792,3937.5,610,900,600,375.0,712.5,740.0
+2025,1309,Politeknik Ilmu Pelayaran Makassar,Indonesia,127,793,3937.5,850,760,475,450.0,962.5,440.0
+2025,1310,Hofstra University,USA,10,16,3937.5,885,530,1225,160.0,737.5,400.0
+2025,1311,Brest State A.S.Pushkin University,Belarus,9,289,3922.5,900,675,550,110.0,1075.0,612.5
+2025,1312,Islamic University of Madinah,Saudi Arabia,17,794,3920.0,725,920,475,235.0,787.5,777.5
+2025,1313,Kremenchuk Mykhailo Ostrohradskyi National University,Ukraine,19,290,3910.0,515,1150,525,20.0,737.5,962.5
+2025,1314,Uttara University,Bangladesh,5,795,3907.5,650,935,325,512.5,760.0,725.0
+2025,1315,Kolej Kemahiran Tinggi MARA Kemaman,Malaysia,55,796,3895.0,835,640,775,185.0,797.5,662.5
+2025,1316,Petra Christian University,Indonesia,128,797,3880.0,470,850,700,425.0,622.5,812.5
+2025,1317,Politeknik Multimedia Nusantara,Indonesia,129,798,3880.0,805,700,400,525.0,1062.5,387.5
+2025,1318,Turkmen state institute of Finance,Turkmenistan,10,799,3880.0,470,635,650,337.5,1287.5,500.0
+2025,1319,Universidad de La Salle,Colombia,54,152,3880.0,785,535,1325,675.0,210.0,350.0
+2025,1320,University of Tripoli,Libya,1,61,3875.0,850,835,375,95.0,560.0,1160.0
+2025,1321,Platov South-Russian State Polytechnic University (NPI),Russia,38,291,3867.5,595,1125,625,225.0,585.0,712.5
+2025,1322,Universitas Pahlawan Tuanku Tambusai,Indonesia,130,800,3867.5,1050,760,575,437.5,497.5,547.5
+2025,1323,Tecnológico Universitario del Valle de Chalco,Mexico,27,153,3865.0,345,725,800,247.5,1375.0,372.5
+2025,1324,Vasyl Stefanyk Precarpathian National University,Ukraine,20,292,3862.5,570,935,400,285.0,1135.0,537.5
+2025,1325,Azerbaijan State University of Culture and Arts,Azerbaijan,16,293,3855.0,610,985,200,297.5,797.5,965.0
+2025,1326,Voronezh State Technical University,Russia,39,294,3845.0,615,860,400,20.0,887.5,1062.5
+2025,1327,"Northern University, Nowshera",Pakistan,82,801,3835.0,825,1025,200,185.0,800.0,800.0
+2025,1328,Altai State University,Russia,40,295,3835.0,625,785,650,387.5,825.0,562.5
+2025,1329,Universitas Islam Negeri Sunan Kudus,Indonesia,131,802,3835.0,685,700,425,260.0,1050.0,715.0
+2025,1330,Universidad Autónoma de Chile,Chile,4,154,3835.0,275,650,900,360.0,1087.5,562.5
+2025,1331,Sinai University,Egypt,33,62,3827.5,1055,1035,250,375.0,672.5,440.0
+2025,1332,Universidad de Panama,Panama,2,155,3827.5,640,765,625,210.0,747.5,840.0
+2025,1333,Universidad de Caribe,Mexico,28,17,3817.5,710,675,850,362.5,410.0,810.0
+2025,1334,Universitas Pendidikan Ganesha,Indonesia,132,803,3815.0,535,1225,325,245.0,760.0,725.0
+2025,1335,Universidad Libre de Colombia,Colombia,55,156,3812.5,760,1200,1000,232.5,272.5,347.5
+2025,1336,Payame Noor University,Iran,32,804,3802.5,520,1285,475,247.5,847.5,427.5
+2025,1337,Sri Padmavati Mahila Visvavidyalayam (Women's University),India,55,805,3802.5,805,975,350,322.5,725.0,625.0
+2025,1338,Knowledge University,Iraq,62,806,3777.5,925,635,600,170.0,622.5,825.0
+2025,1339,Russian-Armenian University,Armenia,3,807,3767.5,760,1035,350,287.5,672.5,662.5
+2025,1340,University of Telafer,Iraq,63,808,3765.0,805,500,475,375.0,947.5,662.5
+2025,1341,Al-Mamoun University,Iraq,64,809,3760.0,350,1200,550,450.0,812.5,397.5
+2025,1342,UIN Sultan Aji Muhammad Idris Samarinda,Indonesia,133,810,3752.5,580,950,700,410.0,922.5,190.0
+2025,1343,University of Exact and Social Sciences,Uzbekistan,61,811,3740.0,675,850,425,325.0,862.5,602.5
+2025,1344,Unime - Lauro De Freitas,Brazil,39,157,3740.0,550,825,700,250.0,450.0,965.0
+2025,1345,Mazaya University College,Iraq,65,812,3722.5,435,805,350,347.5,810.0,975.0
+2025,1346,Universitas Islam Negeri Raden Mas Said Surakarta,Indonesia,134,813,3717.5,435,850,1025,270.0,372.5,765.0
+2025,1347,Mansoura National University,Egypt,34,63,3717.5,445,800,675,322.5,422.5,1052.5
+2025,1348,Tula State University,Russia,41,296,3717.5,850,470,550,232.5,687.5,927.5
+2025,1349,Alikhan Bokeikhan University,Kazakhstan,20,814,3712.5,645,1135,350,210.0,660.0,712.5
+2025,1350,Turan International University,Uzbekistan,62,815,3710.0,765,1200,475,132.5,835.0,302.5
+2025,1351,NFC Institute of Engineering and Technology,Pakistan,83,816,3710.0,565,940,275,170.0,847.5,912.5
+2025,1352,"The University of Agriculture, Peshawar - Pakistan",Pakistan,84,817,3705.0,735,800,325,170.0,1037.5,637.5
+2025,1353,Uzbek State University of Phycical Education And Sports,Uzbekistan,63,818,3700.0,675,1025,150,435.0,512.5,902.5
+2025,1354,Otto-von-Guericke Universität Magdeburg,Germany,5,297,3692.5,545,865,325,95.0,950.0,912.5
+2025,1355,Jawaharlal Institute of Postgraduate Medical Education & Research (JIPMER),India,56,819,3690.0,760,715,1200,195.0,597.5,222.5
+2025,1356,Poltekkes Kemenkes Tanjungkarang,Indonesia,135,820,3687.5,680,710,1125,210.0,510.0,452.5
+2025,1357,Sir Syed University of Engineering and Technology,Pakistan,85,821,3685.0,565,965,575,257.5,435.0,887.5
+2025,1358,Yasouj University,Iran,33,822,3685.0,690,935,575,197.5,685.0,602.5
+2025,1359,Al Jouf University,Saudi Arabia,18,823,3682.5,845,1120,225,20.0,297.5,1175.0
+2025,1360,Bukhara State Technical University,Uzbekistan,64,824,3680.0,570,925,600,222.5,662.5,700.0
+2025,1361,Sulu State College,Philippines,75,825,3670.0,750,875,375,310.0,772.5,587.5
+2025,1362,Kinnaird College for Women,Pakistan,86,826,3667.5,420,725,650,500.0,460.0,912.5
+2025,1363,Nelson Mandela African Institution of Science & Technology,Tanzania,1,64,3667.5,1160,650,75,410.0,635.0,737.5
+2025,1364,Marikina Polytechnic College,Philippines,76,827,3667.5,455,645,700,220.0,435.0,1212.5
+2025,1365,Occidental Mindoro State College,Philippines,77,828,3665.0,580,450,550,107.5,925.0,1052.5
+2025,1366,"MY University, Islamabad",Pakistan,87,829,3635.0,875,950,475,347.5,535.0,452.5
+2025,1367,Islamic Azad University Isfahan (Khorasgan) branch,Iran,34,830,3632.5,725,695,425,337.5,772.5,677.5
+2025,1368,Malatya Turgut Ozal University,Turkiye,118,298,3632.5,910,575,500,237.5,660.0,750.0
+2025,1369,TOBB University of Economy and Technology,Turkiye,119,831,3632.5,760,535,475,385.0,850.0,627.5
+2025,1370,Universidade Do Extremo Sul Catarinense,Brazil,40,158,3627.5,620,445,500,375.0,775.0,912.5
+2025,1371,International University for Science and Technology,Syria,1,832,3622.5,800,1000,425,235.0,662.5,500.0
+2025,1372,KOLEJ KOMUNITI SEGAMAT,Malaysia,56,833,3620.0,665,810,750,400.0,110.0,885.0
+2025,1373,University of Sadat City,Egypt,35,65,3615.0,705,525,300,297.5,922.5,865.0
+2025,1374,Kazan State Medical University,Russia,42,299,3607.5,930,535,275,20.0,635.0,1212.5
+2025,1375,Lviv State University of Life Safety,Ukraine,21,300,3602.5,855,575,300,210.0,735.0,927.5
+2025,1376,Universitas Wiraraja,Indonesia,136,834,3595.0,640,870,575,297.5,547.5,665.0
+2025,1377,Universidad Biblica De Las Americas,USA,11,159,3592.5,610,745,500,337.5,1012.5,387.5
+2025,1378,Mohammed V University In Rabat,Morocco,4,66,3580.0,555,840,425,247.5,697.5,815.0
+2025,1379,KOLEJ KOMUNITI KEPALA BATAS,Malaysia,57,835,3580.0,645,560,625,612.5,862.5,275.0
+2025,1380,KOLEJ KOMUNITI SUNGAI SIPUT,Malaysia,58,836,3577.5,750,425,1125,170.0,735.0,372.5
+2025,1381,Hakkari University,Turkiye,120,301,3575.0,900,660,300,350.0,775.0,590.0
+2025,1382,University of Jeddah,Saudi Arabia,19,837,3575.0,695,375,800,157.5,935.0,612.5
+2025,1383,Valahia University of Targoviste,Romania,12,302,3567.5,610,950,500,170.0,662.5,675.0
+2025,1384,"INSTITUT KEMAHIRAN MARA TAN SRI YAHAYA AHMAD PEKAN, PAHANG",Malaysia,59,838,3562.5,875,750,475,575.0,425.0,462.5
+2025,1385,Bilad Al Rafidain University,Iraq,66,839,3560.0,790,1025,300,257.5,847.5,340.0
+2025,1386,Universitat De Les Illes Balears,Spain,33,303,3552.5,810,385,925,20.0,810.0,602.5
+2025,1387,Universidad Catolica San Antonio De Murcia,Spain,34,304,3547.5,565,660,1050,160.0,510.0,602.5
+2025,1388,Chirchik State Pedagogical University,Uzbekistan,65,840,3537.5,410,695,450,160.0,685.0,1137.5
+2025,1389,WSB Merito University in Poznan,Poland,13,305,3537.5,615,650,575,587.5,572.5,537.5
+2025,1390,TURKMEN STATE ARCHITECTURE AND CONSTRUCTION INSTITUTE,Turkmenistan,11,841,3535.0,750,710,450,337.5,762.5,525.0
+2025,1391,Associação Caruaruense de Ensino Superior e Técnico - Asces-unita,Brazil,41,160,3535.0,540,625,875,220.0,697.5,577.5
+2025,1392,Birzeit University,Palestine,10,842,3525.0,640,1025,400,235.0,635.0,590.0
+2025,1393,Universidad Tecnica de Ambato,Ecuador,13,161,3522.5,515,735,700,297.5,635.0,640.0
+2025,1394,Menoufia University,Egypt,36,67,3522.5,555,710,600,260.0,722.5,675.0
+2025,1395,Modern College of Business and Science,Oman,2,843,3515.0,420,935,500,210.0,585.0,865.0
+2025,1396,Government College University Faisalabad,Pakistan,88,844,3510.0,1025,410,75,250.0,625.0,1125.0
+2025,1397,Universidad De La Frontera,Chile,5,162,3507.5,740,410,375,20.0,1112.5,850.0
+2025,1398,Universitas Katolik Soegijapranata,Indonesia,137,845,3502.5,665,715,475,285.0,575.0,787.5
+2025,1399,Galala University,Egypt,37,68,3500.0,590,860,625,350.0,397.5,677.5
+2025,1400,Universidad De Santiago De Chile,Chile,6,163,3495.0,565,910,425,122.5,597.5,875.0
+2025,1401,Almaty Technological University,Kazakhstan,21,846,3482.5,765,710,725,20.0,697.5,565.0
+2025,1402,Dunarea de Jos University of Galati,Romania,13,306,3482.5,550,420,325,147.5,1237.5,802.5
+2025,1403,Tashkent Institute of Economics and Pedagogy,Uzbekistan,66,847,3480.0,295,925,250,247.5,975.0,787.5
+2025,1404,POLITEKNIK BAGAN DATUK,Malaysia,60,848,3472.5,555,275,500,435.0,1287.5,420.0
+2025,1405,Politeknik Ungku Omar,Malaysia,61,849,3470.0,580,935,500,247.5,347.5,860.0
+2025,1406,Institut Bisnis dan Informatika Kesatuan,Indonesia,138,850,3462.5,585,1010,575,475.0,497.5,320.0
+2025,1407,Alamo Community Colleges,USA,12,18,3462.5,600,935,775,257.5,422.5,472.5
+2025,1408,Karaganda Medical University,Kazakhstan,22,851,3460.0,475,790,375,260.0,710.0,850.0
+2025,1409,Tashkent Textile and Light Industry Institute,Uzbekistan,67,852,3457.5,570,865,150,210.0,987.5,675.0
+2025,1410,Università di Foggia,Italy,31,307,3457.5,385,815,1025,135.0,260.0,837.5
+2025,1411,Mindanao State University - Tawi-Tawi College of Technology and Oceanography,Philippines,78,853,3457.5,525,625,500,347.5,685.0,775.0
+2025,1412,Universitas Dinamika,Indonesia,139,854,3455.0,785,685,475,322.5,800.0,387.5
+2025,1413,Millersville University of Pennsylvania,USA,13,19,3452.5,790,455,650,397.5,737.5,422.5
+2025,1414,Lahore Garrison Univeristy,Pakistan,89,855,3445.0,595,975,350,222.5,525.0,777.5
+2025,1415,Apayao State College,Philippines,79,856,3432.5,700,975,450,160.0,497.5,650.0
+2025,1416,Universidade Cidade de Sao Paulo UNICID,Brazil,42,164,3430.0,475,675,1200,85.0,522.5,472.5
+2025,1417,Voronezh State University of Forestry and Technologies named after G.F. Morozov,Russia,43,308,3430.0,590,565,550,237.5,650.0,837.5
+2025,1418,University of Rawalpindi,Pakistan,90,857,3427.5,680,925,425,247.5,685.0,465.0
+2025,1419,Damascus University,Syria,2,858,3420.0,1200,800,325,195.0,447.5,452.5
+2025,1420,Universitas Islam Negeri Sumatera Utara Medan,Indonesia,140,859,3412.5,435,920,375,487.5,585.0,610.0
+2025,1421,Universitas Muhammadiyah Jakarta,Indonesia,141,860,3405.0,385,935,775,310.0,385.0,615.0
+2025,1422,University of Sistan and Baluchestan,Iran,35,861,3400.0,610,875,275,375.0,737.5,527.5
+2025,1423,Universidad Catolica Del Norte,Chile,7,165,3397.5,690,600,500,160.0,722.5,725.0
+2025,1424,Kirklareli University,Turkiye,121,309,3395.0,765,800,300,160.0,847.5,522.5
+2025,1425,Universitas Pendidikan Nasional,Indonesia,142,862,3390.0,425,565,500,350.0,572.5,977.5
+2025,1426,Taif University,Saudi Arabia,20,863,3387.5,525,835,375,20.0,897.5,735.0
+2025,1427,Khmelnytskyi National University,Ukraine,22,310,3387.5,485,710,525,260.0,485.0,922.5
+2025,1428,University of Education Winneba,Ghana,2,69,3385.0,1015,510,375,247.5,497.5,740.0
+2025,1429,Universitas Dhyana Pura,Indonesia,143,864,3380.0,350,685,500,310.0,685.0,850.0
+2025,1430,West University of Timisoara,Romania,14,311,3362.5,505,635,350,160.0,875.0,837.5
+2025,1431,Universidade Federal Do Parana,Brazil,43,166,3362.5,415,615,800,157.5,587.5,787.5
+2025,1432,KOLEJ KOMUNITI ROMPIN,Malaysia,62,865,3362.5,685,220,300,207.5,987.5,962.5
+2025,1433,University of Sahiwal,Pakistan,91,866,3357.5,390,1250,300,120.0,710.0,587.5
+2025,1434,Universidad de Flores,Argentina,6,167,3357.5,320,925,475,500.0,360.0,777.5
+2025,1435,COLEGIO DE MUNTINLUPA,Philippines,80,867,3350.0,390,990,400,472.5,1010.0,87.5
+2025,1436,Izmir University of Economics,Turkiye,122,312,3350.0,615,660,475,487.5,747.5,365.0
+2025,1437,Al-Hadi University Collage,Iraq,67,868,3347.5,565,470,450,460.0,787.5,615.0
+2025,1438,Greenwich University,Pakistan,92,869,3342.5,630,1525,475,20.0,10.0,682.5
+2025,1439,University of Chenab,Pakistan,93,870,3342.5,710,625,500,20.0,660.0,827.5
+2025,1440,POLITEKNIK MUADZAM SHAH,Malaysia,63,871,3342.5,785,185,400,120.0,950.0,902.5
+2025,1441,Yaşar University,Turkiye,123,872,3337.5,355,485,325,512.5,635.0,1025.0
+2025,1442,Maryam Abacha American University of Niger,Niger,1,70,3332.5,750,1100,250,82.5,800.0,350.0
+2025,1443,INSTITUT KEMAHIRAN MARA SUNGAI PETANI,Malaysia,64,873,3330.0,660,890,250,510.0,335.0,685.0
+2025,1444,Alsafwa University College,Iraq,68,874,3330.0,560,825,500,170.0,712.5,562.5
+2025,1445,"Maulana Abul Kalam Azad University of Technology, West Bengal",India,57,875,3330.0,520,750,425,500.0,887.5,247.5
+2025,1446,Institut Teknologi Kalimantan,Indonesia,144,876,3322.5,705,625,500,387.5,360.0,745.0
+2025,1447,Universidad Manuela Beltran,Colombia,56,168,3320.0,700,560,800,210.0,497.5,552.5
+2025,1448,UIN Kiai Ageng Muhammad Besari Ponorogo,Indonesia,145,877,3317.5,485,485,600,275.0,750.0,722.5
+2025,1449,Universidade Federal do Acre,Brazil,44,169,3315.0,675,740,450,325.0,625.0,500.0
+2025,1450,University Centre of Naama,Algeria,2,71,3312.5,480,835,575,210.0,797.5,415.0
+2025,1451,Davao del Norte State College,Philippines,81,878,3310.0,925,715,500,72.5,410.0,687.5
+2025,1452,Technical University of Košice,Slovakia,4,313,3307.5,465,875,725,170.0,572.5,500.0
+2025,1453,Uruk University,Iraq,69,879,3300.0,355,1090,475,360.0,710.0,310.0
+2025,1454,Politeknik Manufaktur Negeri Bandung,Indonesia,146,880,3295.0,465,910,575,387.5,697.5,260.0
+2025,1455,Western Mindanao State University,Philippines,82,881,3295.0,675,900,350,310.0,535.0,525.0
+2025,1456,KOLEJ KEMAHIRAN TINGGI MARA SRI GADING,Malaysia,65,882,3295.0,535,675,475,225.0,637.5,747.5
+2025,1457,Budapest University of Economics and Business,Hungary,10,314,3285.0,500,1050,275,185.0,510.0,765.0
+2025,1458,Sekolah Tinggi Ilmu Kesehatan Gunung Maria Tomohon,Indonesia,147,883,3285.0,595,745,575,387.5,647.5,335.0
+2025,1459,University of Mashreq,Iraq,70,884,3267.5,875,610,500,157.5,910.0,215.0
+2025,1460,Tarsus University,Turkiye,124,315,3267.5,485,435,500,147.5,1100.0,600.0
+2025,1461,"Instituto Federal de Educação, Ciência e Tecnologia de Minas Gerais",Brazil,45,170,3260.0,470,1185,525,210.0,672.5,197.5
+2025,1462,Metropolitan International University,Uganda,2,72,3260.0,560,760,600,270.0,385.0,685.0
+2025,1463,Universidad Andres Bello,Chile,8,171,3257.5,330,790,625,60.0,787.5,665.0
+2025,1464,Universidad de Cartagena,Colombia,57,172,3255.0,375,475,675,20.0,872.5,837.5
+2025,1465,Liwa University,United Arab Emirates,3,885,3252.5,395,700,425,400.0,610.0,722.5
+2025,1466,Universidad de Dagupan,Philippines,83,886,3250.0,415,650,275,210.0,1150.0,550.0
+2025,1467,Universidad Bernardo O'Higgins,Chile,9,173,3245.0,735,1125,200,107.5,462.5,615.0
+2025,1468,Politeknik Negeri Semarang,Indonesia,148,887,3242.5,295,1000,500,120.0,712.5,615.0
+2025,1469,UIN Sayyid Ali Rahmatullah Tulungagung,Indonesia,149,888,3242.5,505,435,775,425.0,662.5,440.0
+2025,1470,Ardakan University,Iran,36,889,3232.5,635,735,500,325.0,397.5,640.0
+2025,1471,Universitas Safin Pati,Indonesia,150,890,3230.0,975,735,425,160.0,447.5,487.5
+2025,1472,Gümüşhane University,Turkiye,125,891,3215.0,545,510,425,310.0,672.5,752.5
+2025,1473,Ishenaly Arabaev Kyrgyz State University,Kyrgyzstan,4,892,3212.5,455,625,325,97.5,735.0,975.0
+2025,1474,"University of Baltistan, Skardu",Pakistan,94,893,3212.5,745,425,200,182.5,747.5,912.5
+2025,1475,Ilocos Sur Polytechnic State College,Philippines,84,894,3202.5,475,545,500,387.5,825.0,470.0
+2025,1476,Universitas Dumoga Kotamobagu,Indonesia,151,895,3197.5,465,1075,700,107.5,372.5,477.5
+2025,1477,Shakhrisabz state pedagogical institute,Uzbekistan,68,896,3192.5,570,1000,450,160.0,337.5,675.0
+2025,1478,University of Fallujah,Iraq,71,897,3182.5,390,935,250,45.0,737.5,825.0
+2025,1479,Halic University,Turkiye,126,898,3180.0,645,650,250,387.5,947.5,300.0
+2025,1480,"Kolej Komuniti Bukit Beruang, Melaka, Malaysia",Malaysia,66,899,3177.5,450,370,700,637.5,472.5,547.5
+2025,1481,Al-Mustafa University College,Iraq,72,900,3165.0,660,535,600,220.0,697.5,452.5
+2025,1482,KOLEJ KOMUNITI GOPENG,Malaysia,67,901,3160.0,320,825,675,20.0,860.0,460.0
+2025,1483,Institute of Agriculture and Agrotechnologies of Karakalpakstan,Uzbekistan,69,902,3155.0,800,675,600,70.0,335.0,675.0
+2025,1484,Universitas Kuningan,Indonesia,152,903,3155.0,860,525,550,107.5,512.5,600.0
+2025,1485,Kuban State Agrarian University,Russia,44,316,3147.5,775,435,450,250.0,612.5,625.0
+2025,1486,Ecole polytechnique d'architecture et d'urbanisme,Algeria,3,73,3147.5,405,425,650,272.5,935.0,460.0
+2025,1487,Estonian Academy of Arts,Estonia,2,317,3140.0,250,850,425,525.0,487.5,602.5
+2025,1488,College Community Tasek Gelugor,Malaysia,68,904,3120.0,795,440,400,60.0,950.0,475.0
+2025,1489,Universitas Maritim Raja Ali Haji,Indonesia,153,905,3112.5,690,950,0,20.0,700.0,752.5
+2025,1490,Universitas Internasional Semen Indonesia,Indonesia,154,906,3102.5,750,580,525,210.0,472.5,565.0
+2025,1491,Catholic University In Ružomberku,Slovakia,5,318,3092.5,245,625,1300,100.0,297.5,525.0
+2025,1492,National University of Water And Environmental Engineering,Ukraine,23,319,3090.0,470,735,575,147.5,747.5,415.0
+2025,1493,Al-Zahrawi University College,Iraq,73,907,3077.5,615,645,450,547.5,710.0,110.0
+2025,1494,Accra Technical University,Ghana,3,74,3075.0,305,775,650,422.5,310.0,612.5
+2025,1495,Khulna University,Bangladesh,6,908,3075.0,550,455,300,107.5,962.5,700.0
+2025,1496,LSPR Institute of Communication and Business,Indonesia,155,909,3072.5,245,600,500,350.0,662.5,715.0
+2025,1497,Kings College of the Philippines,Philippines,85,910,3070.0,530,645,175,210.0,647.5,862.5
+2025,1498,Yaroslav Mudryi National Law University,Ukraine,24,320,3062.5,525,575,475,210.0,837.5,440.0
+2025,1499,Universitas Putra Bangsa,Indonesia,156,911,3055.0,425,885,375,132.5,637.5,600.0
+2025,1500,"Emerson university, Multan",Pakistan,95,912,3050.0,505,900,200,97.5,710.0,637.5
+2025,1501,UNIVERSITY OF INNOVATION TECHNOLOGIES,Uzbekistan,70,913,3032.5,355,840,375,312.5,825.0,325.0
+2025,1502,Poltava V.G. Korolenko National Pedagogical University (PNPU),Ukraine,25,321,3030.0,460,660,75,120.0,612.5,1102.5
+2025,1503,Al-Farahidi University,Iraq,74,914,3025.0,465,585,450,310.0,737.5,477.5
+2025,1504,Andijan State Medical Institute,Uzbekistan,71,915,3020.0,740,685,375,170.0,622.5,427.5
+2025,1505,Yarmouk University,Jordan,11,916,3015.0,355,875,425,185.0,472.5,702.5
+2025,1506,Kiambu National Polytechnic,Kenya,4,75,3007.5,775,700,150,307.5,547.5,527.5
+2025,1507,The Eldoret National Polytechnic,Kenya,5,76,3005.0,510,700,500,170.0,647.5,477.5
+2025,1508,Tashkent International University of Financial Management and Technologies,Uzbekistan,72,917,2997.5,425,800,300,387.5,685.0,400.0
+2025,1509,"Maryam Abacha American University of Nigeria, Kano",Nigeria,8,77,2995.0,950,660,150,297.5,485.0,452.5
+2025,1510,Universidad Autonoma De Nayarit,Mexico,29,174,2995.0,790,625,575,245.0,360.0,400.0
+2025,1511,University Of Health Sciences Lahore,Pakistan,96,918,2982.5,615,1075,350,95.0,685.0,162.5
+2025,1512,POLITEKNIK BALIK PULAU,Malaysia,69,919,2982.5,715,375,425,57.5,1000.0,410.0
+2025,1513,"National Institute of Fashion Technology, Bhubaneswar",India,58,920,2970.0,575,775,350,222.5,700.0,347.5
+2025,1514,Borys Grinchenko Kyiv Metropolitan University,Ukraine,26,322,2967.5,465,1010,200,157.5,447.5,687.5
+2025,1515,Girne American University,Turkiye,127,323,2947.5,470,610,125,120.0,997.5,625.0
+2025,1516,University of Souk Ahras,Algeria,4,78,2927.5,545,675,225,185.0,1075.0,222.5
+2025,1517,Università Telematica E-campus,Italy,32,324,2927.5,695,600,200,20.0,660.0,752.5
+2025,1518,University Centre of the Federal District - Brazil,Brazil,46,175,2925.0,395,600,575,307.5,335.0,712.5
+2025,1519,Cankaya University,Turkiye,128,325,2922.5,610,425,450,235.0,787.5,415.0
+2025,1520,Sekolah Tinggi Manajemen Ipmi,Indonesia,157,921,2907.5,655,550,350,187.5,512.5,652.5
+2025,1521,Institut Agama Islam Negeri Langsa,Indonesia,158,922,2892.5,685,650,325,282.5,647.5,302.5
+2025,1522,Dawood University of Engineering and Technology,Pakistan,97,923,2885.0,715,660,75,122.5,335.0,977.5
+2025,1523,Universidad Catolica Santo Toribio de Mogrovejo,Peru,7,176,2877.5,520,775,300,110.0,347.5,825.0
+2025,1524,Harran University,Turkiye,129,326,2872.5,635,585,200,170.0,960.0,322.5
+2025,1525,Universidade Federal de RondonÃ³polis,Brazil,47,177,2862.5,665,695,600,220.0,372.5,310.0
+2025,1526,Dogus University,Turkiye,130,924,2860.0,390,550,250,525.0,485.0,660.0
+2025,1527,"Instituto Federal de Educacao, Ciencia e Tecnologia de Sao Paulo - IFSP",Brazil,48,178,2857.5,535,625,575,247.5,435.0,440.0
+2025,1528,Institut Informatika dan Bisnis Darmajaya,Indonesia,159,925,2855.0,525,610,400,82.5,522.5,715.0
+2025,1529,National University of Skill,Iran,37,926,2847.5,340,785,475,285.0,347.5,615.0
+2025,1530,Universidad Tecnológica de México - Campus Atizapán,Mexico,30,179,2842.5,560,475,925,235.0,487.5,160.0
+2025,1531,Kazakh National Women's Teacher Training University,Kazakhstan,23,927,2835.0,760,155,225,157.5,597.5,940.0
+2025,1532,Institut Teknologi dan Bisnis Bina Sarana Global,Indonesia,160,928,2827.5,535,900,400,157.5,562.5,272.5
+2025,1533,State Conservatory of Uzbekistan,Uzbekistan,73,929,2815.0,330,625,300,310.0,662.5,587.5
+2025,1534,Tikrit University,Iraq,75,930,2802.5,630,565,450,250.0,622.5,285.0
+2025,1535,Petroleum University of Technology,Iran,38,931,2795.0,730,520,275,185.0,735.0,350.0
+2025,1536,Universidad del Magdalena,Colombia,58,180,2787.5,570,645,350,20.0,662.5,540.0
+2025,1537,Isik University,Turkiye,131,327,2787.5,715,435,275,237.5,672.5,452.5
+2025,1538,Muhammad Nawaz Sharif University Of Engineering & Technology,Pakistan,98,932,2780.0,665,660,0,20.0,710.0,725.0
+2025,1539,Politeknik Negeri Balikpapan,Indonesia,161,933,2777.5,910,625,300,120.0,560.0,262.5
+2025,1540,Budapest Metropolitan University,Hungary,11,328,2777.5,435,435,700,60.0,687.5,460.0
+2025,1541,KOLEJ KOMUNITI TEMERLOH,Malaysia,70,934,2770.0,675,200,950,235.0,285.0,425.0
+2025,1542,Wasit University,Iraq,76,935,2765.0,370,330,375,170.0,747.5,772.5
+2025,1543,Omsk State Technical University,Russia,45,329,2745.0,760,475,525,260.0,497.5,227.5
+2025,1544,Universidad Católica del Uruguay,Uruguay,1,181,2740.0,245,785,250,200.0,950.0,310.0
+2025,1545,Politeknik Negeri Padang,Indonesia,162,936,2737.5,610,795,300,120.0,547.5,365.0
+2025,1546,Politeknik Negeri Manado,Indonesia,163,937,2737.5,610,595,375,20.0,597.5,540.0
+2025,1547,Institut Agama Islam Negeri Curup,Indonesia,164,938,2727.5,625,460,425,170.0,712.5,335.0
+2025,1548,Universitas Ngurah Rai,Indonesia,165,939,2725.0,435,685,550,235.0,522.5,297.5
+2025,1549,Shupyk National Healthcare University of Ukraine,Ukraine,27,330,2725.0,355,525,675,107.5,672.5,390.0
+2025,1550,Abbottabad University of Science and Technology,Pakistan,99,940,2715.0,595,510,25,122.5,562.5,900.0
+2025,1551,University of Parakou,Benin,1,79,2710.0,630,610,375,132.5,647.5,315.0
+2025,1552,University of Miskolc,Hungary,12,331,2702.5,785,800,500,20.0,575.0,22.5
+2025,1553,Zarmed University,Uzbekistan,74,941,2700.0,590,585,300,210.0,637.5,377.5
+2025,1554,International Higher School of Medicine,Kyrgyzstan,5,942,2700.0,600,205,550,82.5,547.5,715.0
+2025,1555,National Textile University Faisalabad,Pakistan,100,943,2697.5,640,750,225,20.0,297.5,765.0
+2025,1556,Samarkand Agroinnovations and Research University,Uzbekistan,75,944,2697.5,425,650,450,297.5,450.0,425.0
+2025,1557,University of Ruhuna,Sri Lanka,6,945,2692.5,760,650,475,60.0,472.5,275.0
+2025,1558,Al-Salam University College,Iraq,77,946,2690.0,635,810,125,60.0,535.0,525.0
+2025,1559,University of Al-hamdaniya,Iraq,78,947,2677.5,550,145,150,157.5,525.0,1150.0
+2025,1560,Al Amara University College,Iraq,79,948,2667.5,380,625,500,387.5,347.5,427.5
+2025,1561,Bila Tserkva National Agrarian University,Ukraine,28,332,2662.5,530,625,375,170.0,250.0,712.5
+2025,1562,Politeknik Negeri Indramayu,Indonesia,166,949,2657.5,490,775,225,157.5,597.5,412.5
+2025,1563,Universitas Teknologi Muhammadiyah Jakarta,Indonesia,167,950,2655.0,435,610,350,235.0,260.0,765.0
+2025,1564,INSTITUT KEMAHIRAN MARA BESUT,Malaysia,71,951,2652.5,680,675,675,160.0,350.0,112.5
+2025,1565,University Of Zilina,Slovakia,6,333,2647.5,790,500,225,20.0,497.5,615.0
+2025,1566,University of Kufa,Iraq,80,952,2640.0,200,445,475,297.5,647.5,575.0
+2025,1567,Pontificia Universidad Catolica Madre y Maestra,Dominican Republic,1,182,2630.0,725,575,375,107.5,300.0,547.5
+2025,1568,Politeknik Negeri Lampung,Indonesia,168,953,2630.0,495,550,575,337.5,397.5,275.0
+2025,1569,Lupane State University,Zimbabwe,2,80,2600.0,515,660,500,337.5,297.5,290.0
+2025,1570,Politeknik Pertanian Negeri Samarinda,Indonesia,169,954,2600.0,975,495,150,70.0,322.5,587.5
+2025,1571,Belgorod State Agricultural University named after V. Y. Gorin (Belgorod SAU),Russia,46,334,2597.5,780,710,600,220.0,62.5,225.0
+2025,1572,Universidad Nacional de Chimborazo,Ecuador,14,183,2597.5,425,550,200,210.0,710.0,502.5
+2025,1573,"POLITEKNIK SULTAN AZLAN SHAH, BEHRANG, PERAK, MALAYSIA",Malaysia,72,955,2597.5,385,510,575,270.0,497.5,360.0
+2025,1574,KOLEJ KOMUNITI SEBERANG JAYA (SEBERANG JAYA COMMUNITY COLLEGE),Malaysia,73,956,2592.5,490,875,300,32.5,347.5,547.5
+2025,1575,KOLEJ KOMUNITI BAYAN BARU,Malaysia,74,957,2592.5,470,400,250,375.0,672.5,425.0
+2025,1576,AlMaarefa University,Saudi Arabia,21,958,2582.5,350,860,75,185.0,460.0,652.5
+2025,1577,Universidad Internacional de las Américas,Costa Rica,4,184,2572.5,365,525,250,160.0,760.0,512.5
+2025,1578,Paris Panthéon-Assas University,France,3,335,2560.0,310,865,175,335.0,310.0,565.0
+2025,1579,"Instituto Federal de Educação, Ciência e Tecnologia Sul-rio-grandense",Brazil,49,185,2552.5,315,650,375,237.5,422.5,552.5
+2025,1580,Ted University,Turkiye,132,959,2545.0,400,510,250,425.0,447.5,512.5
+2025,1581,Politeknik Astra,Indonesia,170,960,2542.5,430,475,500,337.5,487.5,312.5
+2025,1582,Galatasaray University,Turkiye,133,336,2540.0,370,760,300,160.0,737.5,212.5
+2025,1583,Udon Thani Rajabhat University,Thailand,59,961,2540.0,660,360,500,145.0,372.5,502.5
+2025,1584,University of Mostar,Bosnia and Herzegovina,1,337,2535.0,330,600,425,285.0,447.5,447.5
+2025,1585,Universidad Nacional De Rosario,Argentina,7,186,2527.5,975,760,300,20.0,410.0,62.5
+2025,1586,Luxor University,Egypt,38,81,2512.5,785,385,225,20.0,575.0,522.5
+2025,1587,University of Nyiregyhaza,Hungary,13,338,2507.5,335,600,475,147.5,475.0,475.0
+2025,1588,Kazakhstan Medical University KSPH,Kazakhstan,24,339,2507.5,555,335,75,120.0,647.5,775.0
+2025,1589,Turkmen State Pedagogical Institute named after Seyitnazar Seydi,Turkmenistan,12,962,2502.5,555,375,375,250.0,472.5,475.0
+2025,1590,Centro Universitário Módulo,Brazil,50,187,2495.0,505,295,125,107.5,860.0,602.5
+2025,1591,CITY COLLEGE OF SAN FERNANDO PAMPANGA,Philippines,86,963,2475.0,370,695,225,57.5,675.0,452.5
+2025,1592,Raya University,Ethiopia,3,82,2460.0,550,715,0,107.5,685.0,402.5
+2025,1593,Universitas Prima Indonesia,Indonesia,171,964,2460.0,220,710,500,160.0,572.5,297.5
+2025,1594,Francisk Skorina Gomel State University,Belarus,10,340,2460.0,565,575,150,110.0,522.5,537.5
+2025,1595,Al Hikma University College,Iraq,81,965,2455.0,335,550,400,210.0,497.5,462.5
+2025,1596,Osol AL Deen University College,Iraq,82,966,2442.5,550,625,275,222.5,485.0,285.0
+2025,1597,Amol University of Special Modern Technologies,Iran,39,967,2435.0,355,725,300,170.0,460.0,425.0
+2025,1598,Queensland University (UQ),Haiti,1,188,2435.0,450,675,425,285.0,222.5,377.5
+2025,1599,Siirt University,Turkiye,134,968,2435.0,920,235,0,20.0,887.5,372.5
+2025,1600,UNIVERSITY COLLEGE SABAH FOUNDATION,Malaysia,75,969,2422.5,410,675,300,160.0,400.0,477.5
+2025,1601,Gaza University,Palestine,11,970,2417.5,570,625,150,312.5,235.0,525.0
+2025,1602,Universidad Nacional de Huancavelica,Peru,8,189,2410.0,470,270,325,110.0,610.0,625.0
+2025,1603,"Islamic Azad University, Tehran",Iran,40,971,2402.5,560,550,275,120.0,497.5,400.0
+2025,1604,Reshetnev Siberian State University of Science and Technology,Russia,47,341,2400.0,535,700,325,57.5,460.0,322.5
+2025,1605,Cankiri Karatekin University,Turkiye,135,342,2395.0,620,435,300,147.5,622.5,270.0
+2025,1606,Alanya University,Turkiye,136,972,2395.0,565,425,400,210.0,447.5,347.5
+2025,1607,Yenepoya University,India,59,973,2390.0,435,625,375,210.0,360.0,385.0
+2025,1608,National University of Pharmacy,Ukraine,29,343,2377.5,570,550,200,107.5,547.5,402.5
+2025,1609,Woosong University - SolBridge International School of Business,South Korea,1,974,2367.5,365,410,625,85.0,410.0,472.5
+2025,1610,KOLEJ KOMUNITI HULU SELANGOR,Malaysia,76,975,2367.5,315,80,725,397.5,497.5,352.5
+2025,1611,Institut Teknologi Indonesia,Indonesia,172,976,2357.5,590,310,300,107.5,522.5,527.5
+2025,1612,Azerbaijan Sports Academy,Azerbaijan,17,977,2345.0,435,255,125,210.0,472.5,847.5
+2025,1613,Denau Institute of Entrepreneurship and Pedagogy,Uzbekistan,76,978,2342.5,780,795,75,20.0,575.0,97.5
+2025,1614,Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development,Ghana,4,83,2305.0,590,370,225,60.0,622.5,437.5
+2025,1615,Begum Nusrat Bhutto (BNB) Women University Sukkur,Pakistan,101,979,2285.0,555,650,0,110.0,472.5,497.5
+2025,1616,Lankaran State University,Azerbaijan,18,980,2285.0,475,475,450,210.0,237.5,437.5
+2025,1617,Avance International University,Uganda,3,84,2280.0,195,395,450,257.5,510.0,472.5
+2025,1618,Alte University,Georgia,1,344,2265.0,345,625,325,20.0,522.5,427.5
+2025,1619,Middle East College,Oman,3,981,2262.5,380,535,175,60.0,597.5,515.0
+2025,1620,Medical University - Sofia,Bulgaria,1,345,2260.0,230,645,375,257.5,550.0,202.5
+2025,1621,Harare Institute of Technology,Zimbabwe,3,85,2257.5,580,195,150,145.0,825.0,362.5
+2025,1622,Daneshpajoohan Pishro Higher Education Institute,Iran,41,982,2255.0,255,310,425,197.5,685.0,382.5
+2025,1623,Iran University of Medical Sciences,Iran,42,983,2240.0,355,410,500,170.0,635.0,170.0
+2025,1624,Cyprus Aydin University,Turkiye,137,346,2222.5,470,470,325,20.0,412.5,525.0
+2025,1625,FACULDADES INTEGRADAS DA AMÉRICA DO SUL,Brazil,51,190,2200.0,655,715,150,145.0,322.5,212.5
+2025,1626,"Central University Of Technology, Free State",South Africa,2,86,2200.0,220,535,200,247.5,610.0,387.5
+2025,1627,Politeknik Negeri Madiun,Indonesia,173,984,2192.5,605,400,50,225.0,635.0,277.5
+2025,1628,Larbi Tebessi University,Algeria,5,87,2190.0,495,350,100,210.0,597.5,437.5
+2025,1629,National Institute of Fine Art and Design named after Kamoliddin Behzod,Uzbekistan,77,985,2175.0,405,685,300,237.5,310.0,237.5
+2025,1630,Universidade Federal do Vale do São Francisco UNIVASF,Brazil,52,191,2172.5,570,385,400,70.0,335.0,412.5
+2025,1631,Uniderp - Campo Grande,Brazil,53,192,2170.0,335,475,250,122.5,485.0,502.5
+2025,1632,Konya Technical University,Turkiye,138,347,2155.0,590,95,325,20.0,422.5,702.5
+2025,1633,KOLEJ KOMUNITI BALING,Malaysia,77,986,2150.0,105,435,400,60.0,700.0,450.0
+2025,1634,"Islamia College Peshawar, Pakistan",Pakistan,102,987,2135.0,650,685,375,120.0,272.5,32.5
+2025,1635,UIN Syekh Ali Hasan Ahmad Addary Padangsidimpuan,Indonesia,174,988,2120.0,575,395,100,210.0,450.0,390.0
+2025,1636,İstanbul Nişantaşi University,Turkiye,139,348,2117.5,130,605,325,337.5,435.0,285.0
+2025,1637,Al-Mansour University College,Iraq,83,989,2107.5,310,750,400,185.0,122.5,340.0
+2025,1638,Institut Teknologi dan Kesehatan Bali,Indonesia,175,990,2105.0,415,295,325,20.0,172.5,877.5
+2025,1639,University of Luzon,Philippines,87,991,2102.5,295,435,125,497.5,210.0,540.0
+2025,1640,University of Information Technology and Communications,Iraq,84,992,2097.5,195,660,100,107.5,460.0,575.0
+2025,1641,Universitas Nurtanio,Indonesia,176,993,2072.5,555,385,50,70.0,575.0,437.5
+2025,1642,POLITEKNIK NEGERI MEDAN,Indonesia,177,994,2067.5,420,650,75,20.0,600.0,302.5
+2025,1643,AFYA FACULDADE DE CIÊNCIAS MÉDICAS DE ITABUNA,Brazil,54,193,2065.0,215,770,475,282.5,210.0,112.5
+2025,1644,Universidad Nacional Experimental del Tachira (UNET),Venezuela,6,194,2052.5,575,210,125,20.0,622.5,500.0
+2025,1645,Politeknik Negeri Cilacap,Indonesia,178,995,2047.5,600,375,375,247.5,222.5,227.5
+2025,1646,Universitas Widyatama,Indonesia,179,996,2045.0,535,435,200,32.5,247.5,595.0
+2025,1647,University Djillali Liabes,Algeria,6,88,2032.5,495,310,50,57.5,622.5,497.5
+2025,1648,Mir Chakar Khan Rind University of Technology,Pakistan,103,997,2027.5,535,540,150,120.0,435.0,247.5
+2025,1649,Ion Mincu University of Architecture and Urbanism,Romania,15,349,2025.0,320,270,275,210.0,210.0,740.0
+2025,1650,FSG Centro Universitario,Brazil,55,195,2022.5,420,445,300,237.5,335.0,285.0
+2025,1651,Universitas Negeri Medan,Indonesia,180,998,2015.0,540,710,200,20.0,472.5,72.5
+2025,1652,University of Palangka Raya,Indonesia,181,999,2012.5,585,295,200,20.0,372.5,540.0
+2025,1653,International University of Sarajevo,Bosnia and Herzegovina,2,350,1995.0,575,130,75,20.0,422.5,772.5
+2025,1654,Asfendiyarov Kazakh National Medical University,Kazakhstan,25,1000,1985.0,320,335,375,170.0,435.0,350.0
+2025,1655,Tashkent Institute Of Finance,Uzbekistan,78,1001,1977.5,310,775,125,147.5,472.5,147.5
+2025,1656,Al-Qalam University College,Iraq,85,1002,1975.0,560,435,0,107.5,322.5,550.0
+2025,1657,Royal University for Women,Bahrain,4,1003,1972.5,780,500,75,110.0,210.0,297.5
+2025,1658,Mus Alparslan University,Turkiye,140,1004,1967.5,620,145,325,20.0,560.0,297.5
+2025,1659,Universitas YARSI,Indonesia,182,1005,1965.0,385,235,475,20.0,10.0,840.0
+2025,1660,Joseph Sarwuan Tarka University,Nigeria,9,89,1960.0,495,435,225,20.0,410.0,375.0
+2025,1661,Politeknik Negeri Ketapang,Indonesia,183,1006,1945.0,540,410,175,250.0,422.5,147.5
+2025,1662,Institute of Rural Management Anand,India,60,1007,1937.5,610,485,125,32.5,447.5,237.5
+2025,1663,Azerbaijan Technological University,Azerbaijan,19,351,1920.0,120,435,0,20.0,535.0,810.0
+2025,1664,Universidade Katyavala Bwila,Angola,1,90,1917.5,695,320,0,410.0,347.5,145.0
+2025,1665,Politeknik Pertanian Negeri Pangkajene Kepulauan,Indonesia,184,1008,1912.5,680,140,25,32.5,397.5,637.5
+2025,1666,Vitebsk State Medical University,Belarus,11,352,1910.0,270,325,150,170.0,685.0,310.0
+2025,1667,Shaheed Mohtarma Benazir Bhutto Medical University,Pakistan,104,1009,1905.0,275,560,0,362.5,485.0,222.5
+2025,1668,Ternopil National Medical University,Ukraine,30,353,1900.0,545,375,0,20.0,397.5,562.5
+2025,1669,University of Gjakova,Kosovo,3,354,1897.5,305,485,25,32.5,647.5,402.5
+2025,1670,Universidad San Marcos,Costa Rica,5,196,1885.0,445,385,375,20.0,210.0,450.0
+2025,1671,Kolej Komuniti Batu Pahat,Malaysia,78,1010,1882.5,255,875,375,20.0,210.0,147.5
+2025,1672,University Braz Cubas,Brazil,56,197,1880.0,450,335,100,107.5,210.0,677.5
+2025,1673,KOLEJ KEMAHIRAN TINGGI MARA PETALING JAYA,Malaysia,79,1011,1860.0,210,535,525,20.0,235.0,335.0
+2025,1674,Yugra State University,Russia,48,1012,1852.5,380,355,75,20.0,485.0,537.5
+2025,1675,Institut Teknologi dan Bisnis STIKOM Bali,Indonesia,185,1013,1850.0,505,135,375,120.0,287.5,427.5
+2025,1676,Kokshetau University named after Abai Myrzakhmetov,Kazakhstan,26,1014,1845.0,490,425,100,120.0,347.5,362.5
+2025,1677,Margulan University,Kazakhstan,27,1015,1842.5,705,95,300,60.0,285.0,397.5
+2025,1678,Asia International University,Uzbekistan,79,1016,1817.5,435,715,0,20.0,310.0,337.5
+2025,1679,GUIMARAS STATE UNIVERSITY,Philippines,88,1017,1805.0,130,205,775,285.0,297.5,112.5
+2025,1680,Kherson State Maritime Academy,Ukraine,31,355,1802.5,460,475,250,20.0,422.5,175.0
+2025,1681,Politeknik Kesehatan Genesis Medicare,Indonesia,186,1018,1797.5,320,220,275,197.5,422.5,362.5
+2025,1682,Universidade de Cuiabá Unic - Beira Rio,Brazil,57,198,1765.0,365,535,300,20.0,172.5,372.5
+2025,1683,INSTITUT KEMAHIRAN MARA KUALA LUMPUR,Malaysia,80,1019,1730.0,265,510,275,185.0,110.0,385.0
+2025,1684,King Danylo University,Ukraine,32,356,1725.0,335,420,50,170.0,347.5,402.5
+2025,1685,Aqaba University of Technology,Jordan,12,1020,1725.0,740,265,75,120.0,272.5,252.5
+2025,1686,African Methodist Episcopal University,Liberia,1,91,1720.0,555,500,300,107.5,210.0,47.5
+2025,1687,Universidade do Estado do Amazonas,Brazil,58,199,1715.0,460,435,125,107.5,185.0,402.5
+2025,1688,Universitas Muhammadiyah Purwokerto,Indonesia,187,1021,1705.0,590,350,100,157.5,360.0,147.5
+2025,1689,Al-Idrisi University College,Iraq,86,1022,1687.5,145,435,150,110.0,610.0,237.5
+2025,1690,INSTITUT KEMAHIRAN MARA BESERI PERLIS,Malaysia,81,1023,1677.5,675,230,250,260.0,160.0,102.5
+2025,1691,Maaref University of Applied Sciences,Syria,3,1024,1667.5,405,270,150,107.5,447.5,287.5
+2025,1692,Universidade Cruzeiro do Sul,Brazil,59,200,1662.5,495,170,225,122.5,250.0,400.0
+2025,1693,Zh. Tashenev University,Kazakhstan,28,1025,1640.0,460,535,50,72.5,210.0,312.5
+2025,1694,Universitas Muhammadiyah Tangerang,Indonesia,188,1026,1637.5,315,245,325,57.5,310.0,385.0
+2025,1695,"Khushal Khan Khattak University, Karak",Pakistan,105,1027,1635.0,585,295,150,20.0,322.5,262.5
+2025,1696,Hazrat-e Masoumeh University (HMU),Iran,43,1028,1632.5,385,105,100,95.0,660.0,287.5
+2025,1697,Istanbul Yeni Yuzyil University,Turkiye,141,357,1630.0,345,245,200,57.5,660.0,122.5
+2025,1698,Kisii University,Kenya,6,92,1617.5,465,260,175,122.5,185.0,410.0
+2025,1699,Link Campus University,Italy,33,358,1615.0,350,485,150,57.5,235.0,337.5
+2025,1700,Termez Branch of Tashkent State Medical University,Uzbekistan,80,1029,1597.5,295,310,350,145.0,100.0,397.5
+2025,1701,Universitas Nusa Mandiri,Indonesia,189,1030,1555.0,450,450,150,20.0,110.0,375.0
+2025,1702,Universite de Diffa,Niger,2,93,1525.0,360,435,125,20.0,335.0,250.0
+2025,1703,Universidad De Valparaiso,Chile,10,201,1507.5,270,205,450,20.0,222.5,340.0
+2025,1704,Kolej Kemahiran Tinggi MARA Rembau,Malaysia,82,1031,1490.0,690,55,100,20.0,350.0,275.0
+2025,1705,KOLEJ KOMUNITI PADANG TERAP,Malaysia,83,1032,1460.0,395,170,0,425.0,447.5,22.5
+2025,1706,Ramkhamhaeng University,Thailand,60,1033,1452.5,640,425,75,20.0,222.5,70.0
+2025,1707,"Aror University Art, Architecture, Design and Heritage",Pakistan,106,1034,1450.0,365,425,25,120.0,50.0,465.0
+2025,1708,Universitas Bumigora,Indonesia,190,1035,1432.5,155,700,200,20.0,285.0,72.5
+2025,1709,Vongchavalitkul University,Thailand,61,1036,1420.0,55,460,75,110.0,372.5,347.5
+2025,1710,Kazakhstan-American Free University,Kazakhstan,29,1037,1410.0,355,440,75,70.0,222.5,247.5
+2025,1711,Arak University,Iran,44,1038,1382.5,195,535,250,220.0,10.0,172.5
+2025,1712,Politeknik Teknologi Kimia Industri - Medan,Indonesia,191,1039,1365.0,455,485,125,20.0,260.0,20.0
+2025,1713,University of Dschang,Cameroon,1,94,1352.5,235,460,0,20.0,335.0,302.5
+2025,1714,Universitas Al Azhar Indonesia,Indonesia,192,1040,1350.0,120,485,0,20.0,222.5,502.5
+2025,1715,Ahl Al Bayt University,Iraq,87,1041,1307.5,340,585,0,20.0,260.0,102.5
+2025,1716,Universidad Politecnica Salesiana,Ecuador,15,202,1300.0,350,410,175,20.0,110.0,235.0
+2025,1717,STIE Indonesia Banking School,Indonesia,193,1042,1265.0,430,170,150,32.5,247.5,235.0
+2025,1718,Universidad del Valle de Puebla,Mexico,31,203,1262.5,285,195,75,60.0,372.5,275.0
+2025,1719,KOLEJ KEMAHIRAN TINGGI MARA KUANTAN,Malaysia,84,1043,1260.0,525,55,100,70.0,260.0,250.0
+2025,1720,Institut Kemahiran MARA Kuching Sarawak,Malaysia,85,1044,1235.0,235,285,175,95.0,272.5,172.5
+2025,1721,Munzur Üniversitesi,Turkiye,142,1045,1235.0,105,120,325,150.0,147.5,387.5
+2025,1722,Centro de Estudios para la Calidad Educativa y la Investigación Científica (CECEIC),Mexico,32,20,1222.5,325,155,200,107.5,122.5,312.5
+2025,1723,Civil Aviation Academy,Kazakhstan,30,1046,1220.0,290,185,150,145.0,172.5,277.5
+2025,1724,Ibn Sina University of Medical and Pharmaceutical Sciences,Iraq,88,1047,1197.5,145,235,125,160.0,222.5,310.0
+2025,1725,Diplomatic Academy of the Ministry of Foreign Affairs of the Kyrgyz Republic named after Kazy Dikambaev,Kyrgyzstan,6,1048,1192.5,215,410,200,20.0,210.0,137.5
+2025,1726,INSTITUT KEMAHIRAN MARA JOHOR BAHRU,Malaysia,86,1049,1167.5,435,55,100,120.0,222.5,235.0
+2025,1727,Ivano-Frankivsk National Medical University,Ukraine,33,359,1145.0,345,435,0,20.0,160.0,185.0
+2025,1728,Mount Kenya University,Kenya,7,95,1112.5,115,205,175,145.0,60.0,412.5
+2025,1729,Rashid Latif Khan University,Pakistan,107,1050,1102.5,120,205,50,20.0,560.0,147.5
+2025,1730,KOLEJ KEMAHIRAN TINGGI MARA PASIR MAS,Malaysia,87,1051,1092.5,80,560,100,57.5,272.5,22.5
+2025,1731,Kolej Komuniti Hulu Langat,Malaysia,88,1052,1057.5,335,95,350,20.0,10.0,247.5
+2025,1732,KOLEJ KOMUNITI AMPANG,Malaysia,89,1053,1022.5,95,385,0,20.0,410.0,112.5
+2025,1733,Al-Zaytoonah International University,Syria,4,1054,1022.5,195,180,0,100.0,372.5,175.0
+2025,1734,INSTITUT KEMAHIRAN MARA ALOR SETAR,Malaysia,90,1055,990.0,245,55,450,20.0,10.0,210.0
+2025,1735,University of Parna Raya,Indonesia,194,1056,987.5,95,425,125,20.0,260.0,62.5
+2025,1736,Oran Graduate School of Economics,Algeria,7,96,807.5,235,145,0,20.0,160.0,247.5
+2025,1737,Centro Universitário Cesuca,Brazil,60,204,802.5,55,245,75,70.0,260.0,97.5
+2025,1738,Institut Kemahiran MARA Jasin,Malaysia,91,1057,787.5,450,210,0,20.0,10.0,97.5
+2025,1739,Universitas Bhayangkara Jakarta Raya,Indonesia,195,1058,785.0,190,55,0,20.0,260.0,260.0
+2025,1740,Bishkek State University Named After K Karasaev,Kyrgyzstan,7,1059,712.5,185,275,0,20.0,210.0,22.5
+2025,1741,Université de Kikwit UNIKIK,Democratic Republic of Congo,1,97,712.5,455,205,0,20.0,10.0,22.5
+2025,1742,Quezon City University,Philippines,89,1060,702.5,130,95,0,20.0,60.0,397.5
+2025,1743,Universidad del Istmo,Panama,3,205,642.5,245,55,50,20.0,10.0,262.5
+2025,1744,Sekolah Tinggi Pertanahan Nasional (STPN) Yogyakarta,Indonesia,196,1061,372.5,265,55,0,20.0,10.0,22.5
+2025,1745,Mari State University,Russia,49,360,362.5,55,55,0,20.0,210.0,22.5

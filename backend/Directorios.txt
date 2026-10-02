@@ -1,0 +1,51 @@
+backend/
+│
+├── app/
+│   ├── api/
+│   │   ├── v1/
+│   │   │   ├── endpoints/
+│   │   │   │   ├── campus.py            # GET/PUT datos generales del campus
+│   │   │   │   ├── zonas_verdes.py      # CRUD de zonas verdes (con GeoJSON)
+│   │   │   │   ├── indicadores.py       # GET indicadores SI 1-8 actuales
+│   │   │   │   ├── simulaciones.py      # POST simulación de intervención
+│   │   │   │   ├── ranking.py           # POST predicción de ranking (ML)
+│   │   │   │   └── recomendaciones.py   # GET recomendaciones de mejora (ML)
+│   │   │   └── __init__.py
+│   │   └── deps.py                      # Dependencias (sesión DB, etc.)
+│   │
+│   ├── core/
+│   │   ├── config.py                    # Variables de entorno, settings
+│   │   └── database.py                  # Conexión a PostgreSQL
+│   │
+│   ├── models/
+│   │   ├── campus.py                    # Modelo Campus (datos generales)
+│   │   ├── zona_verde.py               # Modelo ZonaVerde (geoespacial)
+│   │   ├── checklist.py                # Modelo Checklist (SI 5-8)
+│   │   └── simulacion.py               # Modelo Simulación (histórico)
+│   │
+│   ├── schemas/
+│   │   ├── campus.py                    # Pydantic schemas para Campus
+│   │   ├── zona_verde.py               # Pydantic schemas para ZonaVerde
+│   │   ├── checklist.py                # Pydantic schemas para Checklist
+│   │   ├── simulacion.py               # Pydantic schemas para Simulación
+│   │   └── ranking.py                  # Pydantic schemas para predicción
+│   │
+│   ├── services/
+│   │   ├── motor_reglas.py             # Cálculo determinista SI 1-8
+│   │   ├── predictor_ranking.py        # Modelo ML de predicción de ranking
+│   │   └── recomendador.py             # Sistema de recomendación de mejoras
+│   │
+│   ├── ml/
+│   │   ├── modelo_ranking.pkl          # Modelo entrenado serializado
+│   │   └── train_ranking.py            # Script de entrenamiento del modelo
+│   │
+│   └── main.py                          # Punto de entrada FastAPI
+│
+├── alembic/                             # Migraciones de base de datos
+│   └── versions/
+│
+├── docker-compose.yml                   # PostgreSQL + PostGIS
+├── Dockerfile                           # Para el backend
+├── requirements.txt
+├── .env                                 # Variables de entorno (no versionado)
+└── .gitignore

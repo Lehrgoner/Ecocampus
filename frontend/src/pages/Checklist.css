@@ -1,0 +1,110 @@
+.checklist-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.checklist-header h1 {
+  color: #2e7d32;
+  margin-bottom: 30px;
+}
+
+.checklist-seccion {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.checklist-header-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.checklist-header-seccion:hover {
+  background: #e8f5e9;
+}
+
+.checklist-header-seccion h3 {
+  margin: 0;
+  color: #2e7d32;
+}
+
+.checklist-progreso {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: white;
+}
+
+.checklist-progreso .progress-bar {
+  flex: 1;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.checklist-progreso .progress-fill {
+  height: 100%;
+  background: #4caf50;
+  transition: width 0.5s ease;
+}
+
+.checklist-items {
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checklist-item:hover {
+  background: #f5f5f5;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.checklist-item input[type="checkbox"] {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checklist-item span {
+  font-size: 1rem;
+}
+
+.checklist-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-guardar {
+  background: #4caf50;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-guardar:hover {
+  background: #45a049;
+}

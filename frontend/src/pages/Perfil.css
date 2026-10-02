@@ -1,0 +1,135 @@
+.perfil-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.perfil-page h1 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.perfil-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.perfil-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+}
+
+.perfil-avatar i {
+  font-size: 8rem;
+  color: #4CAF50;
+}
+
+.perfil-info h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.perfil-info .email {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-info .role {
+  color: #999;
+}
+
+.perfil-info .badge {
+  background: #4CAF50;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.perfil-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.btn-edit-perfil,
+.btn-change-password {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-edit-perfil {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-edit-perfil:hover {
+  background: #42A5F5;
+}
+
+.btn-change-password {
+  background: #FF9800;
+  color: white;
+}
+
+.btn-change-password:hover {
+  background: #FFA726;
+}
+
+.perfil-stats {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.perfil-stats h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.perfil-stats .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .perfil-actions {
+    flex-direction: column;
+  }
+  
+  .perfil-stats .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

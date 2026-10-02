@@ -1,0 +1,2 @@
+docker-compose up -d
+python -m uvicorn app.main:app --reload

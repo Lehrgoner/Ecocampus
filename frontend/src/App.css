@@ -1,0 +1,382 @@
+/* =========================================
+   0. RESET GLOBAL Y ESTRUCTURA BASE
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Previene el desbordamiento por padding/borders */
+}
+
+body, html {
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =========================================
+   1. HEADER DEL LOGIN
+   ========================================= */
+.login-header {
+  background-color: #4CAF50;
+  padding: 0.8rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  height: 70px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  max-width: 150px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* =========================================
+   2. MAIN CONTENT
+   ========================================= */
+.login-main {
+  flex: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+              url('https://images.unsplash.com/photo-1737044281081-9e5640e66646?q=80&w=1170&auto=format&fit=crop') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 8%;
+  gap: 2rem;
+  width: 100%;
+}
+
+.welcome-section {
+  flex: 1;
+  max-width: 550px;
+  color: white;
+}
+
+.welcome-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  line-height: 1.15;
+}
+
+.welcome-title .highlight {
+  color: #81C784;
+}
+
+.welcome-description {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0.95;
+}
+
+/* =========================================
+   3. LOGIN CARD & FORMULARIO
+   ========================================= */
+.login-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado interno de la tarjeta */
+.card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Corrección de la imagen del logo dentro del Card */
+.app-logo {
+  max-width: 180px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 0.5rem auto;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.app-title-sub {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.form-input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #81C784;
+  box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.3);
+}
+
+.form-input.error {
+  border-color: #f44336;
+  background-color: rgba(244, 67, 54, 0.15);
+}
+
+.error-text {
+  color: #ffcdd2;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.error-message {
+  background-color: rgba(244, 67, 54, 0.25);
+  color: #ffcdd2;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #f44336;
+  font-size: 0.9rem;
+}
+
+.forgot-password {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  align-self: flex-end;
+}
+
+.forgot-password:hover {
+  color: #81C784;
+  text-decoration: underline;
+}
+
+/* =========================================
+   4. BOTONES
+   ========================================= */
+.btn-login,
+.btn-register {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.btn-login {
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #4CAF50;
+}
+
+.btn-login:hover:not(:disabled) {
+  background-color: #43A047;
+  border-color: #43A047;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.btn-register {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-register:hover {
+  background-color: #ffffff;
+  color: #4CAF50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-login:disabled,
+.btn-register:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================================
+   5. FOOTER
+   ========================================= */
+.login-footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1.5rem 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-section h3 {
+  font-size: 0.95rem;
+  color: #81C784;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #4CAF50;
+}
+
+.social-media {
+  text-align: right;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+  transform: scale(1.1);
+}
+
+/* =========================================
+   6. RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 900px) {
+  .login-main {
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 5%;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .welcome-section {
+    max-width: 100%;
+  }
+
+  .welcome-title {
+    font-size: 2.3rem;
+  }
+
+  .forgot-password {
+    align-self: center;
+  }
+
+  .login-card {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-header {
+    justify-content: center;
+  }
+
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+
+  .welcome-description {
+    font-size: 1rem;
+  }
+
+  .login-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .login-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
