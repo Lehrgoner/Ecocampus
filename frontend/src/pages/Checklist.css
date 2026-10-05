@@ -1,110 +1,78 @@
 .checklist-container {
   padding: 20px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .checklist-header h1 {
   color: #2e7d32;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.checklist-header p {
+  margin-bottom: 25px;
 }
 
 .checklist-seccion {
   background: white;
   border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.checklist-seccion:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .checklist-header-seccion {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: #f5f5f5;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.checklist-header-seccion:hover {
-  background: #e8f5e9;
+  gap: 20px;
 }
 
 .checklist-header-seccion h3 {
-  margin: 0;
   color: #2e7d32;
+  font-size: 1.15rem;
 }
 
 .checklist-progreso {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px 20px;
-  background: white;
 }
 
-.checklist-progreso .progress-bar {
+.progress-bar {
   flex: 1;
-  height: 10px;
+  height: 8px;
   background: #e0e0e0;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
-.checklist-progreso .progress-fill {
+.progress-fill {
   height: 100%;
-  background: #4caf50;
-  transition: width 0.5s ease;
-}
-
-.checklist-items {
-  padding: 20px;
-  border-top: 1px solid #e0e0e0;
-}
-
-.checklist-item {
-  display: flex;
-  align-items: center;
-  padding: 12px 0;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.checklist-item:hover {
-  background: #f5f5f5;
-  padding-left: 10px;
-  border-radius: 5px;
+  transition: width 0.5s ease, background-color 0.3s;
 }
 
 .checklist-item input[type="checkbox"] {
-  margin-right: 15px;
-  width: 20px;
-  height: 20px;
   cursor: pointer;
+  accent-color: #4caf50;
 }
 
-.checklist-item span {
-  font-size: 1rem;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .checklist-container {
+    padding: 10px;
+  }
 
-.checklist-actions {
-  text-align: center;
-  margin-top: 30px;
-}
+  .checklist-header-seccion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.btn-guardar {
-  background: #4caf50;
-  color: white;
-  padding: 15px 40px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn-guardar:hover {
-  background: #45a049;
+  .checklist-items {
+    grid-template-columns: 1fr !important;
+  }
 }

@@ -51,6 +51,22 @@
   border: 2px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  color: #333;                  /* ← Texto oscuro */
+  background-color: #fff;        /* ← Fondo blanco explícito */
+  font-family: inherit;
+}
+
+.categoria-input input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.categoria-input span {
+  color: #555;                   /* ← Texto del /1100 */
+  font-weight: bold;
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .progress-bar {
@@ -129,24 +145,33 @@
 }
 
 .ranking-actions {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
   margin-top: 40px;
 }
 
-.btn-recalcular {
-  background: #2196f3;
-  color: white;
+.ranking-actions button {
   padding: 15px 40px;
   border: none;
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
+  background: #2196f3;
+  color: white;
 }
 
-.btn-recalcular:hover {
-  background: #1976d2;
+.ranking-actions button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+}
+
+.ranking-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (max-width: 968px) {

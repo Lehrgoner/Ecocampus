@@ -1,7 +1,6 @@
 """
-Sistema de Recomendación basado en áreas mínimas exactas.
-En lugar de generar combinaciones aleatorias, calcula el área exacta
-necesaria para que cada tipo de intervención mueva un indicador.
+Sistema de Recomendación basado en áreas mínimas exactas con variantes.
+Genera múltiples opciones por indicador (50%, 100%, 150%, 200% del área mínima).
 """
 
 from typing import List, Dict, Optional
@@ -40,7 +39,6 @@ RANGOS_SI = {
 MULTIPLICADORES = {0: 0.05, 1: 0.25, 2: 0.50, 3: 0.75, 4: 1.00}
 MAXIMOS = {"SI1": 200, "SI2": 100, "SI3": 200, "SI4": 200}
 
-# Mapeo: qué tipos de intervención afectan a qué indicador
 TIPOS_QUE_AFECTAN = {
     "SI1": ["cesped", "vegetacion_plantada", "bosque_academico", "jardin_lluvia"],
     "SI2": ["bosque_academico"],
@@ -127,7 +125,6 @@ def _calcular_areas_segun_tipo(
         nueva_bosque += area_intervencion
     elif tipo in ("vegetacion_plantada", "cesped"):
         nueva_plantada += area_intervencion
-    # jardin_lluvia solo suma a espacio abierto
 
     return nueva_abierta, nueva_bosque, nueva_plantada
 
@@ -152,7 +149,6 @@ def _construir_recomendacion(
     config = TIPOS_INTERVENCION[tipo]
     costo = area_intervencion * config["costo_por_m2"]
 
-    # Puntajes antes
     puntajes_antes = calcular_todos_indicadores(
         area_espacio_abierto_m2=area_actual_abierta,
         area_bosque_academico_m2=area_actual_bosque,
@@ -162,7 +158,6 @@ def _construir_recomendacion(
         checklist=checklist,
     )
 
-    # Puntajes después
     nueva_abierta, nueva_bosque, nueva_plantada = _calcular_areas_segun_tipo(
         tipo, area_intervencion, area_actual_abierta, area_actual_bosque, area_actual_plantada
     )
@@ -180,7 +175,6 @@ def _construir_recomendacion(
     if ganancia_si <= 0:
         return None
 
-    # Ranking
     try:
         ranking_nuevo = predecir_ranking({
             "SI": puntajes_despues["total"],
@@ -216,14 +210,8 @@ def generar_recomendaciones(
     **kwargs,
 ) -> List[Dict]:
     """
-    Genera recomendaciones basadas en áreas mínimas EXACTAS.
-
-    Para cada indicador (SI1-SI4) y cada tipo que lo afecta:
-    - Calcula el área mínima para subir de rango
-    - Verifica si cabe en el presupuesto
-    - Ordena por eficiencia (ganancia / costo)
+    Genera recomendaciones con múltiples variantes de área.
     """
-    # Ranking actual
     puntajes_actuales_si = calcular_todos_indicadores(
         area_espacio_abierto_m2=area_actual_abierta,
         area_bosque_academico_m2=area_actual_bosque,
@@ -240,7 +228,6 @@ def generar_recomendaciones(
     except Exception:
         return []
 
-    # Áreas actuales para cada indicador
     areas_actuales = {
         "SI1": area_actual_abierta,
         "SI2": area_actual_bosque,
@@ -248,8 +235,9 @@ def generar_recomendaciones(
         "SI4": area_actual_abierta,
     }
 
-    # Generar recomendaciones para cada combinación (indicador, tipo)
     recomendaciones = []
+
+    # Para cada indicador y tipo, generar variantes
     for indicador, tipos in TIPOS_QUE_AFECTAN.items():
         area_min_info = calcular_area_minima_para_avanzar(
             indicador=indicador,
@@ -261,24 +249,28 @@ def generar_recomendaciones(
         if not area_min_info:
             continue
 
-        area_necesaria = area_min_info["area_adicional_m2"]
+        area_base = area_min_info["area_adicional_m2"]
 
-        for tipo in tipos:
-            rec = _construir_recomendacion(
-                tipo=tipo,
-                area_intervencion=area_necesaria,
-                indicador_objetivo=indicador,
-                area_actual_abierta=area_actual_abierta,
-                area_actual_bosque=area_actual_bosque,
-                area_actual_plantada=area_actual_plantada,
-                area_total_campus=area_total_campus,
-                poblacion=poblacion,
-                checklist=checklist,
-                ranking_actual=ranking_actual,
-                puntajes_otras=puntajes_otras_categorias,
-            )
-            if rec:
-                recomendaciones.append(rec)
+        # Variantes: 50%, 100%, 150%, 200%
+        for factor in [0.5, 1.0, 1.5, 2.0]:
+            area_variante = area_base * factor
+
+            for tipo in tipos:
+                rec = _construir_recomendacion(
+                    tipo=tipo,
+                    area_intervencion=area_variante,
+                    indicador_objetivo=indicador,
+                    area_actual_abierta=area_actual_abierta,
+                    area_actual_bosque=area_actual_bosque,
+                    area_actual_plantada=area_actual_plantada,
+                    area_total_campus=area_total_campus,
+                    poblacion=poblacion,
+                    checklist=checklist,
+                    ranking_actual=ranking_actual,
+                    puntajes_otras=puntajes_otras_categorias,
+                )
+                if rec:
+                    recomendaciones.append(rec)
 
     # Filtrar por presupuesto
     if presupuesto_max:
@@ -290,16 +282,16 @@ def generar_recomendaciones(
     if not recomendaciones:
         return []
 
-    # Eliminar duplicados por (tipo, indicador)
+    # Eliminar duplicados exactos
     vistos = set()
     unicas = []
     for r in recomendaciones:
-        key = (r["tipo"], r["indicador_objetivo"])
+        key = (r["tipo"], r["indicador_objetivo"], round(r["area_m2"], 0))
         if key not in vistos:
             unicas.append(r)
             vistos.add(key)
 
-    # Calcular eficiencia (ganancia por USD)
+    # Calcular eficiencia (ganancia / costo)
     for r in unicas:
         if r["costo_estimado_usd"] > 0:
             r["eficiencia"] = r["ganancia_si"] / r["costo_estimado_usd"] * 1000
@@ -309,4 +301,27 @@ def generar_recomendaciones(
     # Ordenar por eficiencia
     unicas.sort(key=lambda x: (x["eficiencia"], x["ganancia_si"]), reverse=True)
 
-    return unicas[:top_n]
+    # Diversidad: 1 por tipo
+    por_tipo = {}
+    for r in unicas:
+        if r["tipo"] not in por_tipo:
+            por_tipo[r["tipo"]] = []
+        por_tipo[r["tipo"]].append(r)
+
+    seleccionados = []
+    for tipo in por_tipo:
+        seleccionados.append(por_tipo[tipo][0])
+
+    # Completar si sobran espacios
+    if len(seleccionados) < top_n:
+        ids_seleccionados = {(r["tipo"], round(r["area_m2"], 0)) for r in seleccionados}
+        restantes = [
+            r for r in unicas
+            if (r["tipo"], round(r["area_m2"], 0)) not in ids_seleccionados
+        ]
+        seleccionados.extend(restantes[:top_n - len(seleccionados)])
+
+    # Ordenar final por eficiencia
+    seleccionados.sort(key=lambda x: (x["eficiencia"], x["ganancia_si"]), reverse=True)
+
+    return seleccionados[:top_n]

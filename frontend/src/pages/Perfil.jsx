@@ -1,55 +1,70 @@
-import Layout from '../components/Layout';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import './Perfil.css';
 
 const Perfil = () => {
   const { user } = useAuth();
-  
+
+  const nombreCompleto = user
+    ? `${user.nombres || ''} ${user.apellidos || ''}`.trim()
+    : 'Usuario';
+
   return (
-    <Layout>
-      <div className="perfil-page">
-        <h1>Mi Perfil</h1>
-        
-        <div className="perfil-card">
-          <div className="perfil-avatar">
-            <i className="fas fa-user-circle"></i>
-          </div>
-          
-          <div className="perfil-info">
-            <h2>{user?.username}</h2>
-            <p className="email">{user?.email}</p>
-            <p className="role">Rol: <span className="badge">{user?.role}</span></p>
-          </div>
-          
-          <div className="perfil-actions">
-            <button className="btn-edit-perfil">
-              <i className="fas fa-edit"></i> Editar Perfil
-            </button>
-            <button className="btn-change-password">
-              <i className="fas fa-key"></i> Cambiar Contraseña
-            </button>
-          </div>
+    <div className="perfil-container">
+      <div className="perfil-header">
+        <h1>👤 Mi Perfil</h1>
+      </div>
+
+      <div className="perfil-card">
+        <div className="perfil-avatar">
+          <i className="fas fa-user-circle"></i>
         </div>
-        
-        <div className="perfil-stats">
-          <h2>Mi Actividad</h2>
-          <div className="stats-grid">
-            <div className="stat-item">
-              <h3>15</h3>
-              <p>Espacios Gestionados</p>
-            </div>
-            <div className="stat-item">
-              <h3>8</h3>
-              <p>Reportes Creados</p>
-            </div>
-            <div className="stat-item">
-              <h3>23</h3>
-              <p>Mantenimientos</p>
-            </div>
+
+        <h2>{nombreCompleto}</h2>
+
+        <div className="perfil-info">
+          <div className="perfil-item">
+            <label>Cédula</label>
+            <span>{user?.cedula || 'No especificada'}</span>
+          </div>
+
+          <div className="perfil-item">
+            <label>Email</label>
+            <span>{user?.email || 'No especificado'}</span>
+          </div>
+
+          <div className="perfil-item">
+            <label>Rol</label>
+            <span className="badge-rol">
+              {user?.rol ? user.rol.charAt(0).toUpperCase() + user.rol.slice(1) : 'N/A'}
+            </span>
+          </div>
+
+          <div className="perfil-item">
+            <label>Estado</label>
+            <span style={{ color: user?.activo ? '#4caf50' : '#f44336', fontWeight: 'bold' }}>
+              {user?.activo ? '✅ Activo' : '❌ Inactivo'}
+            </span>
           </div>
         </div>
       </div>
-    </Layout>
+
+      {/* Info de roles */}
+      <div className="perfil-info-card">
+        <h3>ℹ️ Sobre los roles</h3>
+        <ul>
+          <li>
+            <strong>Admin:</strong> Gestiona usuarios y ve todos los campus
+          </li>
+          <li>
+            <strong>Gestor:</strong> Administra sus campus, zonas verdes y checklist
+          </li>
+          <li>
+            <strong>Consultor:</strong> Solo lectura de sus campus
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 

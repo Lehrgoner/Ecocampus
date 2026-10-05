@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Variables de entorno (¡IMPORTANTE!)
+.env
+.env.local
+.env.*.local
+
+# Base de datos Docker
+postgres_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PDFs de prueba
+*.pdf
+!docs/*.pdf
+
+# Logs
+*.log
+logs/
+
+# Alembic (opcional, descomentar si no quieres versionar migraciones)
+# alembic/versions/*.py

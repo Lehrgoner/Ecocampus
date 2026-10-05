@@ -16,3 +16,12 @@ export const crearCampus = async (campusData) => {
   const response = await api.post('/campus/', campusData);
   return response.data;
 };
+
+export const actualizarCampus = async (campusId, campusData) => {
+  const response = await api.put(`/campus/${campusId}`, campusData);
+  return response.data;
+};
+
+export const eliminarCampus = async (campusId) => {
+  await api.delete(`/campus/${campusId}`);
+};

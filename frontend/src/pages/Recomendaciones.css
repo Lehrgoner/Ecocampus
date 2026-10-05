@@ -1,16 +1,24 @@
 .recomendaciones-container {
   padding: 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .recomendaciones-header h1 {
   color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.recomendaciones-header p {
   margin-bottom: 30px;
 }
 
 .recomendaciones-filtro {
   margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .recomendaciones-filtro label {
@@ -26,6 +34,7 @@
   border-radius: 10px;
   margin-bottom: 30px;
   border-left: 4px solid #4caf50;
+  color: #333;
 }
 
 .recomendaciones-lista {
@@ -40,6 +49,7 @@
   padding: 25px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 5px solid #4caf50;
 }
 
 .recomendacion-card:hover {
@@ -95,4 +105,37 @@
 .recomendacion-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Tabla de áreas mínimas */
+table {
+  font-size: 0.95rem;
+}
+
+table th {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+table tr:hover {
+  background: #f9f9f9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recomendaciones-container {
+    padding: 10px;
+  }
+
+  .recomendacion-card {
+    padding: 20px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  table th, table td {
+    padding: 8px !important;
+  }
 }
