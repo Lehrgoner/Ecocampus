@@ -4,7 +4,7 @@ import re
 
 class RegistroRequest(BaseModel):
     """Schema para el registro público de usuarios."""
-    cedula: str = Field(..., min_length=6, max_length=15, description="Solo números, sin puntos ni guiones")
+    cedula: str = Field(..., min_length=6, max_length=15, description="Solo números")
     nombres: str = Field(..., min_length=2, max_length=100)
     apellidos: str = Field(..., min_length=2, max_length=100)
     email: EmailStr
@@ -24,6 +24,14 @@ class RegistroRequest(BaseModel):
     def validar_password(cls, v):
         if len(v) < 8:
             raise ValueError("La contraseña debe tener al menos 8 caracteres")
+        if not re.search(r"[A-Z]", v):
+            raise ValueError("La contraseña debe contener al menos una mayúscula")
+        if not re.search(r"[a-z]", v):
+            raise ValueError("La contraseña debe contener al menos una minúscula")
+        if not re.search(r"\d", v):
+            raise ValueError("La contraseña debe contener al menos un número")
+        if not re.search(r"""[!@#$%^&*(),.?":{}|<>_\-+=\[\]\\\/~`;']""", v):
+            raise ValueError("La contraseña debe contener al menos un símbolo")
         return v
 
 

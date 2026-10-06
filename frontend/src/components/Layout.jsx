@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
 
+  // Menú base para todos
   const menuItems = [
     { path: '/dashboard', label: 'Dashboard', icon: 'fa-home' },
     { path: '/simulacion', label: 'Simulación', icon: 'fa-map-marked-alt' },
@@ -15,21 +16,28 @@ const Layout = ({ children }) => {
     { path: '/ranking', label: 'Ranking', icon: 'fa-trophy' },
     { path: '/recomendaciones', label: 'Recomendaciones', icon: 'fa-lightbulb' },
     { path: '/reportes', label: 'Reportes', icon: 'fa-chart-bar' },
-    { path: '/perfil', label: 'Perfil Sostenibilidad', icon: 'fa-leaf' },
+    { path: '/perfil', label: 'Mi Perfil', icon: 'fa-user' },
     { path: '/configuracion', label: 'Configuración', icon: 'fa-cog' },
   ];
+
+  // Ítem extra SOLO para Admin
+  if (user?.rol === 'admin') {
+    menuItems.splice(menuItems.length - 1, 0, {
+      path: '/gestion-usuarios',
+      label: 'Gestión Usuarios',
+      icon: 'fa-users',
+    });
+  }
 
   const handleLogout = () => {
     logout();
     navigate('/login');
   };
 
-  // Nombre a mostrar: nombres + apellidos, o email como fallback
   const nombreUsuario = user
     ? `${user.nombres || ''} ${user.apellidos || ''}`.trim() || user.email
     : 'Usuario';
 
-  // Rol del usuario (capitalizado)
   const rolUsuario = user?.rol
     ? user.rol.charAt(0).toUpperCase() + user.rol.slice(1)
     : '';
@@ -43,7 +51,7 @@ const Layout = ({ children }) => {
             Análisis Predictivo
           </p>
         </div>
-        
+
         <nav className="sidebar-nav">
           {menuItems.map((item) => (
             <Link
@@ -79,7 +87,7 @@ const Layout = ({ children }) => {
             </div>
           </div>
         </header>
-        
+
         <div className="page-content">
           {children}
         </div>

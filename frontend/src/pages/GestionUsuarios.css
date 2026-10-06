@@ -1,0 +1,255 @@
+.gestion-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gestion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gestion-header h1 {
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.btn-crear-usuario {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-crear-usuario:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: -2px;
+}
+
+.tab:hover {
+  color: #2e7d32;
+}
+
+.tab.active {
+  color: #2e7d32;
+  border-bottom-color: #4caf50;
+}
+
+/* Tabla */
+.tabla-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.usuarios-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usuarios-tabla thead {
+  background: #f5f5f5;
+}
+
+.usuarios-tabla th {
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.usuarios-tabla td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.usuarios-tabla tbody tr:hover {
+  background: #f9f9f9;
+}
+
+/* Botones de acciones */
+.btn-aprobar,
+.btn-rechazar,
+.btn-eliminar {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+.btn-aprobar {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-aprobar:hover {
+  background: #2e7d32;
+}
+
+.btn-rechazar {
+  background: #f44336;
+  color: white;
+}
+
+.btn-rechazar:hover {
+  background: #c62828;
+}
+
+.btn-eliminar {
+  background: #f44336;
+  color: white;
+  padding: 8px 12px;
+}
+
+.btn-eliminar:hover {
+  background: #c62828;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  color: #2e7d32;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-input,
+.modal-select {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  background: white;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modal-input:focus,
+.modal-select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.btn-cancelar,
+.btn-confirmar {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-cancelar {
+  background: #e0e0e0;
+  color: #555;
+}
+
+.btn-cancelar:hover {
+  background: #bdbdbd;
+}
+
+.btn-confirmar {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-confirmar:hover:not(:disabled) {
+  background: #2e7d32;
+}
+
+.btn-confirmar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gestion-container {
+    padding: 10px;
+  }
+
+  .usuarios-tabla th,
+  .usuarios-tabla td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .btn-aprobar,
+  .btn-rechazar {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}

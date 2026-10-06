@@ -20,13 +20,13 @@ import ZonasVerdes from './pages/ZonasVerdes';
 import Checklist from './pages/Checklist';
 import Ranking from './pages/Ranking';
 import Recomendaciones from './pages/Recomendaciones';
+import GestionUsuarios from './pages/GestionUsuarios';
 
 import './App.css';
 
-// Componente para rutas protegidas
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
-  
+
   if (!token) {
     return <Navigate to="/login" replace />;
   }
@@ -44,7 +44,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/recuperar-password" element={<ResetPassword />} />
 
-          {/* Rutas Protegidas (envueltas con Layout) */}
+          {/* Rutas Protegidas */}
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/simulacion" element={<ProtectedRoute><Simulacion /></ProtectedRoute>} />
           <Route path="/zonas-verdes" element={<ProtectedRoute><ZonasVerdes /></ProtectedRoute>} />
@@ -54,8 +54,9 @@ function App() {
           <Route path="/perfil" element={<ProtectedRoute><Perfil /></ProtectedRoute>} />
           <Route path="/reportes" element={<ProtectedRoute><Reportes /></ProtectedRoute>} />
           <Route path="/configuracion" element={<ProtectedRoute><Configuracion /></ProtectedRoute>} />
+          <Route path="/gestion-usuarios" element={<ProtectedRoute><GestionUsuarios /></ProtectedRoute>} />
 
-          {/* Redirección por defecto */}
+          {/* Redirecciones */}
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/espacios" element={<Navigate to="/zonas-verdes" replace />} />
         </Routes>
