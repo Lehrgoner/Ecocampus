@@ -34,12 +34,26 @@ def verificar_acceso_campus(
     usuario: Usuario,
     db: Session,
 ) -> Campus:
-    """Verifica que el usuario tenga acceso a ese campus."""
+    """Verifica que el usuario tenga acceso al campus según su rol."""
     campus = db.query(Campus).filter(Campus.id == campus_id).first()
     if not campus:
         raise HTTPException(status_code=404, detail="Campus no encontrado")
-    
-    if usuario.rol != "admin" and campus.usuario_id != usuario.id:
+
+    # Admin: acceso total
+    if usuario.rol == "admin":
+        return campus
+
+    # Consultor: solo su campus asignado
+    if usuario.rol == "consultor":
+        if usuario.campus_asignado_id != campus_id:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="No tienes acceso a este campus",
+            )
+        return campus
+
+    # Gestor: solo sus propios campus
+    if campus.usuario_id != usuario.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="No tienes acceso a este campus",
@@ -79,7 +93,7 @@ def obtener_zona_verde(
     zona = db.query(ZonaVerde).filter(ZonaVerde.id == zona_id).first()
     if not zona:
         raise HTTPException(status_code=404, detail="Zona verde no encontrada")
-    
+
     verificar_acceso_campus(zona.campus_id, usuario, db)
     return zona_a_geojson(zona)
 
@@ -93,12 +107,12 @@ def crear_zona_verde(
 ):
     """Crea una nueva zona verde en un campus."""
     verificar_acceso_campus(campus_id, usuario, db)
-    
+
     geojson_str = json.dumps(zona_data.geom)
-    
+
     # Solo los bosques pueden tener uso_academico
     uso_academico = zona_data.uso_academico if zona_data.tipo == "bosque_academico" else False
-    
+
     nueva_zona = ZonaVerde(
         campus_id=campus_id,
         nombre=zona_data.nombre,
@@ -107,11 +121,11 @@ def crear_zona_verde(
         uso_academico=uso_academico,
         geom=func.ST_GeomFromGeoJSON(geojson_str),
     )
-    
+
     # Calcular área automáticamente si no se proporcionó
     if nueva_zona.area_m2 is None:
         nueva_zona.area_m2 = calcular_area_m2(db, geojson_str)
-    
+
     db.add(nueva_zona)
     db.commit()
     db.refresh(nueva_zona)
@@ -129,26 +143,26 @@ def actualizar_zona_verde(
     zona = db.query(ZonaVerde).filter(ZonaVerde.id == zona_id).first()
     if not zona:
         raise HTTPException(status_code=404, detail="Zona verde no encontrada")
-    
+
     verificar_acceso_campus(zona.campus_id, usuario, db)
-    
+
     datos = zona_data.model_dump(exclude_unset=True)
-    
+
     # Si se cambia la geometría, recalcular área
     if "geom" in datos:
         geojson_str = json.dumps(datos.pop("geom"))
         zona.geom = func.ST_GeomFromGeoJSON(geojson_str)
         zona.area_m2 = calcular_area_m2(db, geojson_str)
-    
+
     # Solo los bosques pueden tener uso_academico
     if "uso_academico" in datos:
         tipo_actual = datos.get("tipo", zona.tipo)
         if tipo_actual != "bosque_academico":
             datos["uso_academico"] = False
-    
+
     for campo, valor in datos.items():
         setattr(zona, campo, valor)
-    
+
     db.commit()
     db.refresh(zona)
     return zona_a_geojson(zona)
@@ -164,9 +178,9 @@ def eliminar_zona_verde(
     zona = db.query(ZonaVerde).filter(ZonaVerde.id == zona_id).first()
     if not zona:
         raise HTTPException(status_code=404, detail="Zona verde no encontrada")
-    
+
     verificar_acceso_campus(zona.campus_id, usuario, db)
-    
+
     db.delete(zona)
     db.commit()
     return None

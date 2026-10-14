@@ -18,11 +18,26 @@ router = APIRouter(prefix="/simulaciones", tags=["Simulaciones"])
 
 
 def verificar_acceso_campus(campus_id: int, usuario: Usuario, db: Session) -> Campus:
+    """Verifica que el usuario tenga acceso al campus según su rol."""
     campus = db.query(Campus).filter(Campus.id == campus_id).first()
     if not campus:
         raise HTTPException(status_code=404, detail="Campus no encontrado")
-    
-    if usuario.rol != "admin" and campus.usuario_id != usuario.id:
+
+    # Admin: acceso total
+    if usuario.rol == "admin":
+        return campus
+
+    # Consultor: solo su campus asignado
+    if usuario.rol == "consultor":
+        if usuario.campus_asignado_id != campus_id:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="No tienes acceso a este campus",
+            )
+        return campus
+
+    # Gestor: solo sus propios campus
+    if campus.usuario_id != usuario.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="No tienes acceso a este campus",
@@ -65,16 +80,16 @@ def crear_simulacion(
     """Simula una intervención en espacios verdes de un campus."""
     campus = verificar_acceso_campus(campus_id, usuario, db)
     checklist = db.query(Checklist).filter(Checklist.campus_id == campus_id).first()
-    
+
     area_intervencion = calcular_area_geojson(db, sim_data.geom)
     if area_intervencion <= 0:
         raise HTTPException(
             status_code=400,
             detail="El polígono proporcionado tiene área inválida (0 m²).",
         )
-    
+
     area_abierta_actual, area_bosque_actual, area_plantada_actual = calcular_areas_actuales(db, campus_id)
-    
+
     puntajes_antes = calcular_todos_indicadores(
         area_espacio_abierto_m2=area_abierta_actual,
         area_bosque_academico_m2=area_bosque_actual,
@@ -83,13 +98,13 @@ def crear_simulacion(
         poblacion_total=campus.poblacion_total,
         checklist=checklist,
     )
-    
+
     area_abierta_despues = area_abierta_actual + area_intervencion
     area_bosque_despues = area_bosque_actual
     area_plantada_despues = area_plantada_actual
-    
+
     tipo = sim_data.tipo_intervencion.lower()
-    
+
     if tipo == "bosque_academico":
         # Solo suma a SI 2 si es de uso académico
         if sim_data.uso_academico:
@@ -103,7 +118,7 @@ def crear_simulacion(
             status_code=400,
             detail=f"Tipo '{sim_data.tipo_intervencion}' no válido.",
         )
-    
+
     puntajes_despues = calcular_todos_indicadores(
         area_espacio_abierto_m2=area_abierta_despues,
         area_bosque_academico_m2=area_bosque_despues,
@@ -112,7 +127,7 @@ def crear_simulacion(
         poblacion_total=campus.poblacion_total,
         checklist=checklist,
     )
-    
+
     nueva_sim = Simulacion(
         campus_id=campus_id,
         tipo_intervencion=sim_data.tipo_intervencion,
@@ -124,7 +139,7 @@ def crear_simulacion(
     db.add(nueva_sim)
     db.commit()
     db.refresh(nueva_sim)
-    
+
     return SimulacionResponse(
         id=nueva_sim.id,
         tipo_intervencion=nueva_sim.tipo_intervencion,
@@ -145,14 +160,14 @@ def listar_simulaciones(
 ):
     """Lista las simulaciones de un campus."""
     verificar_acceso_campus(campus_id, usuario, db)
-    
+
     simulaciones = (
         db.query(Simulacion)
         .filter(Simulacion.campus_id == campus_id)
         .order_by(Simulacion.creado_en.desc())
         .all()
     )
-    
+
     return [
         SimulacionResponse(
             id=sim.id,
@@ -178,9 +193,9 @@ def obtener_simulacion(
     sim = db.query(Simulacion).filter(Simulacion.id == sim_id).first()
     if not sim:
         raise HTTPException(status_code=404, detail="Simulación no encontrada")
-    
+
     verificar_acceso_campus(sim.campus_id, usuario, db)
-    
+
     return SimulacionResponse(
         id=sim.id,
         tipo_intervencion=sim.tipo_intervencion,

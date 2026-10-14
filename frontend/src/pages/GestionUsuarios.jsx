@@ -9,6 +9,7 @@ import {
   actualizarUsuario,
   eliminarUsuario,
 } from '../services/usuariosService';
+import { listarCampus } from '../services/campusService';
 import './GestionUsuarios.css';
 
 const GestionUsuarios = () => {
@@ -16,6 +17,7 @@ const GestionUsuarios = () => {
   const [tabActiva, setTabActiva] = useState('pendientes');
   const [usuarios, setUsuarios] = useState([]);
   const [pendientes, setPendientes] = useState([]);
+  const [campusList, setCampusList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [mensaje, setMensaje] = useState(null);
@@ -23,6 +25,7 @@ const GestionUsuarios = () => {
   // Modal de aprobación
   const [modalAprobar, setModalAprobar] = useState(null);
   const [rolSeleccionado, setRolSeleccionado] = useState('gestor');
+  const [campusAprobar, setCampusAprobar] = useState('');
 
   // Modal de crear usuario
   const [modalCrear, setModalCrear] = useState(false);
@@ -33,6 +36,7 @@ const GestionUsuarios = () => {
     email: '',
     password: '',
     rol: 'gestor',
+    campus_asignado_id: '',
   });
   const [creando, setCreando] = useState(false);
 
@@ -40,12 +44,14 @@ const GestionUsuarios = () => {
   const cargarDatos = async () => {
     try {
       setLoading(true);
-      const [listaUsuarios, listaPendientes] = await Promise.all([
+      const [listaUsuarios, listaPendientes, listaCampus] = await Promise.all([
         listarUsuarios(),
         listarPendientes(),
+        listarCampus(),
       ]);
       setUsuarios(listaUsuarios || []);
       setPendientes(listaPendientes || []);
+      setCampusList(listaCampus || []);
       setLoading(false);
     } catch (err) {
       console.error('Error al cargar:', err);
@@ -74,17 +80,31 @@ const GestionUsuarios = () => {
   const manejarAprobar = async () => {
     if (!modalAprobar) return;
 
+    // Validar que consultores tengan campus
+    if (rolSeleccionado === 'consultor' && !campusAprobar) {
+      setMensaje({
+        texto: '⚠️ Debes asignar un campus al consultor',
+        tipo: 'error',
+      });
+      return;
+    }
+
     try {
-      await aprobarUsuario(modalAprobar.id, rolSeleccionado);
+      await aprobarUsuario(modalAprobar.id, {
+        rol: rolSeleccionado,
+        campus_asignado_id: rolSeleccionado === 'consultor' ? parseInt(campusAprobar) : null,
+      });
       setMensaje({
         texto: `✅ Usuario ${modalAprobar.nombres} aprobado como ${rolSeleccionado}`,
         tipo: 'success',
       });
       setModalAprobar(null);
       setRolSeleccionado('gestor');
+      setCampusAprobar('');
       cargarDatos();
     } catch (err) {
-      setMensaje({ texto: '❌ Error: ' + (err.message || ''), tipo: 'error' });
+      const msg = err.response?.data?.detail || err.message || 'Error desconocido';
+      setMensaje({ texto: '❌ ' + msg, tipo: 'error' });
     }
   };
 
@@ -103,9 +123,26 @@ const GestionUsuarios = () => {
 
   // ============ CREAR USUARIO DIRECTO ============
   const manejarCrearUsuario = async () => {
+    // Validar consultor
+    if (nuevoUsuario.rol === 'consultor' && !nuevoUsuario.campus_asignado_id) {
+      setMensaje({
+        texto: '⚠️ Debes asignar un campus al consultor',
+        tipo: 'error',
+      });
+      return;
+    }
+
     try {
       setCreando(true);
-      await crearUsuarioDirecto(nuevoUsuario);
+
+      const payload = {
+        ...nuevoUsuario,
+        campus_asignado_id: nuevoUsuario.rol === 'consultor'
+          ? parseInt(nuevoUsuario.campus_asignado_id)
+          : null,
+      };
+
+      await crearUsuarioDirecto(payload);
       setMensaje({ texto: '✅ Usuario creado correctamente', tipo: 'success' });
       setModalCrear(false);
       setNuevoUsuario({
@@ -115,10 +152,12 @@ const GestionUsuarios = () => {
         email: '',
         password: '',
         rol: 'gestor',
+        campus_asignado_id: '',
       });
       cargarDatos();
     } catch (err) {
-      setMensaje({ texto: '❌ Error: ' + (err.message || ''), tipo: 'error' });
+      const msg = err.response?.data?.detail || err.message || 'Error desconocido';
+      setMensaje({ texto: '❌ ' + msg, tipo: 'error' });
     } finally {
       setCreando(false);
     }
@@ -157,6 +196,11 @@ const GestionUsuarios = () => {
       pendiente: { bg: '#fff3e0', color: '#e65100', label: '⏳ Pendiente' },
     };
     return colores[rol] || { bg: '#f5f5f5', color: '#666', label: rol };
+  };
+
+  const getNombreCampus = (campusId) => {
+    const c = campusList.find(c => c.id === campusId);
+    return c ? c.nombre : 'Sin asignar';
   };
 
   // ============ RENDER ============
@@ -210,7 +254,6 @@ const GestionUsuarios = () => {
         </div>
       )}
 
-      {/* Tabs */}
       <div className="tabs">
         <button
           className={`tab ${tabActiva === 'pendientes' ? 'active' : ''}`}
@@ -226,7 +269,6 @@ const GestionUsuarios = () => {
         </button>
       </div>
 
-      {/* Tabla de pendientes */}
       {tabActiva === 'pendientes' && (
         <div className="tabla-container">
           {pendientes.length === 0 ? (
@@ -241,7 +283,6 @@ const GestionUsuarios = () => {
                   <th>Cédula</th>
                   <th>Nombre</th>
                   <th>Email</th>
-                  <th>Fecha de registro</th>
                   <th>Acciones</th>
                 </tr>
               </thead>
@@ -251,11 +292,14 @@ const GestionUsuarios = () => {
                     <td>{u.cedula}</td>
                     <td>{u.nombres} {u.apellidos}</td>
                     <td>{u.email}</td>
-                    <td>{new Date(u.creado_en || Date.now()).toLocaleDateString()}</td>
                     <td>
                       <button
                         className="btn-aprobar"
-                        onClick={() => setModalAprobar(u)}
+                        onClick={() => {
+                          setModalAprobar(u);
+                          setRolSeleccionado('gestor');
+                          setCampusAprobar('');
+                        }}
                       >
                         ✅ Aprobar
                       </button>
@@ -274,7 +318,6 @@ const GestionUsuarios = () => {
         </div>
       )}
 
-      {/* Tabla de todos los usuarios */}
       {tabActiva === 'activos' && (
         <div className="tabla-container">
           <table className="usuarios-tabla">
@@ -284,6 +327,7 @@ const GestionUsuarios = () => {
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Rol</th>
+                <th>Campus Asignado</th>
                 <th>Estado</th>
                 <th>Acciones</th>
               </tr>
@@ -317,6 +361,15 @@ const GestionUsuarios = () => {
                         <option value="gestor">🌱 Gestor</option>
                         <option value="consultor">👁️ Consultor</option>
                       </select>
+                    </td>
+                    <td>
+                      {u.rol === 'consultor' ? (
+                        <span style={{ fontSize: '0.9rem', color: '#666' }}>
+                          {getNombreCampus(u.campus_asignado_id)}
+                        </span>
+                      ) : (
+                        <span style={{ color: '#ccc' }}>—</span>
+                      )}
                     </td>
                     <td>
                       <span style={{
@@ -364,12 +417,39 @@ const GestionUsuarios = () => {
             </label>
             <select
               value={rolSeleccionado}
-              onChange={(e) => setRolSeleccionado(e.target.value)}
+              onChange={(e) => {
+                setRolSeleccionado(e.target.value);
+                if (e.target.value !== 'consultor') setCampusAprobar('');
+              }}
               className="modal-select"
             >
               <option value="gestor">🌱 Gestor (puede crear y editar)</option>
               <option value="consultor">👁️ Consultor (solo lectura)</option>
             </select>
+
+            {/* Selector de campus solo para consultores */}
+            {rolSeleccionado === 'consultor' && (
+              <>
+                <label style={{ display: 'block', marginTop: '20px', marginBottom: '10px', fontWeight: 'bold' }}>
+                  Campus asignado: *
+                </label>
+                <select
+                  value={campusAprobar}
+                  onChange={(e) => setCampusAprobar(e.target.value)}
+                  className="modal-select"
+                >
+                  <option value="">-- Selecciona un campus --</option>
+                  {campusList.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.nombre}
+                    </option>
+                  ))}
+                </select>
+                <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '8px' }}>
+                  💡 El consultor podrá ver este campus en modo solo lectura.
+                </p>
+              </>
+            )}
 
             <div style={{ display: 'flex', gap: '10px', marginTop: '25px' }}>
               <button className="btn-cancelar" onClick={() => setModalAprobar(null)}>
@@ -433,13 +513,43 @@ const GestionUsuarios = () => {
               />
               <select
                 value={nuevoUsuario.rol}
-                onChange={(e) => setNuevoUsuario({ ...nuevoUsuario, rol: e.target.value })}
+                onChange={(e) => {
+                  setNuevoUsuario({
+                    ...nuevoUsuario,
+                    rol: e.target.value,
+                    campus_asignado_id: '',
+                  });
+                }}
                 className="modal-input"
               >
                 <option value="gestor">🌱 Gestor</option>
                 <option value="consultor">👁️ Consultor</option>
                 <option value="admin">👑 Admin</option>
               </select>
+
+              {/* Selector de campus para consultores */}
+              {nuevoUsuario.rol === 'consultor' && (
+                <>
+                  <select
+                    value={nuevoUsuario.campus_asignado_id}
+                    onChange={(e) => setNuevoUsuario({
+                      ...nuevoUsuario,
+                      campus_asignado_id: e.target.value,
+                    })}
+                    className="modal-input"
+                  >
+                    <option value="">-- Campus asignado (requerido) --</option>
+                    {campusList.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.nombre}
+                      </option>
+                    ))}
+                  </select>
+                  <p style={{ fontSize: '0.85rem', color: '#666' }}>
+                    💡 El consultor podrá ver este campus en modo solo lectura.
+                  </p>
+                </>
+              )}
             </div>
 
             <div style={{ display: 'flex', gap: '10px', marginTop: '25px' }}>

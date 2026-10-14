@@ -2,23 +2,25 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field
 from typing import List, Optional
+from datetime import datetime, timezone
 
 from app.core.database import get_db
+from app.core.security import hash_password
 from app.models.usuario import Usuario
+from app.models.campus import Campus
 from app.api.deps import get_current_admin
 from app.schemas.auth import UsuarioActualResponse
 
 router = APIRouter(prefix="/usuarios", tags=["Usuarios"])
 
 
+# ============ SCHEMAS ============
 class AprobarUsuarioRequest(BaseModel):
     rol: str = Field(..., description="Rol a asignar: gestor o consultor")
-    
-    @classmethod
-    def validar_rol(cls, v):
-        if v not in ("gestor", "consultor"):
-            raise ValueError("El rol debe ser 'gestor' o 'consultor'")
-        return v
+    campus_asignado_id: Optional[int] = Field(
+        None,
+        description="Requerido solo para consultores"
+    )
 
 
 class CrearUsuarioRequest(BaseModel):
@@ -28,8 +30,10 @@ class CrearUsuarioRequest(BaseModel):
     email: str
     password: str
     rol: str = Field(..., description="admin, gestor o consultor")
+    campus_asignado_id: Optional[int] = None
 
 
+# ============ ENDPOINTS ============
 @router.get("/", response_model=List[UsuarioActualResponse])
 def listar_usuarios(
     db: Session = Depends(get_db),
@@ -64,23 +68,33 @@ def aprobar_usuario(
     usuario = db.query(Usuario).filter(Usuario.id == usuario_id).first()
     if not usuario:
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
-    
+
     if usuario.rol != "pendiente":
         raise HTTPException(status_code=400, detail="Este usuario no está pendiente")
-    
+
     if datos.rol not in ("gestor", "consultor"):
         raise HTTPException(
-            status_code=400, 
-            detail="El rol debe ser 'gestor' o 'consultor'"
+            status_code=400,
+            detail="El rol debe ser 'gestor' o 'consultor'",
         )
-    
-    from datetime import datetime, timezone
-    
+
+    # Validar que consultores tengan campus asignado
+    if datos.rol == "consultor":
+        if not datos.campus_asignado_id:
+            raise HTTPException(
+                status_code=400,
+                detail="Debes asignar un campus al consultor",
+            )
+        campus = db.query(Campus).filter(Campus.id == datos.campus_asignado_id).first()
+        if not campus:
+            raise HTTPException(status_code=404, detail="Campus no encontrado")
+        usuario.campus_asignado_id = datos.campus_asignado_id
+
     usuario.rol = datos.rol
     usuario.activo = True
     usuario.aprobado_por = admin.id
     usuario.aprobado_en = datetime.now(timezone.utc)
-    
+
     db.commit()
     db.refresh(usuario)
     return usuario
@@ -96,10 +110,13 @@ def rechazar_usuario(
     usuario = db.query(Usuario).filter(Usuario.id == usuario_id).first()
     if not usuario:
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
-    
+
     if usuario.rol != "pendiente":
-        raise HTTPException(status_code=400, detail="Solo se pueden rechazar usuarios pendientes")
-    
+        raise HTTPException(
+            status_code=400,
+            detail="Solo se pueden rechazar usuarios pendientes",
+        )
+
     db.delete(usuario)
     db.commit()
     return None
@@ -114,20 +131,31 @@ def crear_usuario_directo(
     """
     Admin crea un usuario directamente con rol asignado y activo.
     """
-    from app.core.security import hash_password
-    
     if datos.rol not in ("admin", "gestor", "consultor"):
         raise HTTPException(
             status_code=400,
-            detail="Rol inválido. Debe ser: admin, gestor o consultor"
+            detail="Rol inválido. Debe ser: admin, gestor o consultor",
         )
-    
+
     if db.query(Usuario).filter(Usuario.email == datos.email).first():
         raise HTTPException(status_code=400, detail="Ya existe un usuario con ese email")
-    
+
     if db.query(Usuario).filter(Usuario.cedula == datos.cedula).first():
         raise HTTPException(status_code=400, detail="Ya existe un usuario con esa cédula")
-    
+
+    # Validar campus para consultores
+    campus_asignado_id = None
+    if datos.rol == "consultor":
+        if not datos.campus_asignado_id:
+            raise HTTPException(
+                status_code=400,
+                detail="Debes asignar un campus al consultor",
+            )
+        campus = db.query(Campus).filter(Campus.id == datos.campus_asignado_id).first()
+        if not campus:
+            raise HTTPException(status_code=404, detail="Campus no encontrado")
+        campus_asignado_id = datos.campus_asignado_id
+
     nuevo = Usuario(
         cedula=datos.cedula,
         nombres=datos.nombres,
@@ -136,6 +164,7 @@ def crear_usuario_directo(
         password_hash=hash_password(datos.password),
         rol=datos.rol,
         activo=True,
+        campus_asignado_id=campus_asignado_id,
     )
     db.add(nuevo)
     db.commit()
@@ -148,22 +177,32 @@ def actualizar_usuario(
     usuario_id: int,
     rol: Optional[str] = None,
     activo: Optional[bool] = None,
+    campus_asignado_id: Optional[int] = None,
     db: Session = Depends(get_db),
     admin: Usuario = Depends(get_current_admin),
 ):
-    """Actualiza el rol o el estado activo de un usuario."""
+    """Actualiza el rol, estado activo o campus asignado de un usuario."""
     usuario = db.query(Usuario).filter(Usuario.id == usuario_id).first()
     if not usuario:
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
-    
+
     if rol is not None:
         if rol not in ("admin", "gestor", "consultor"):
             raise HTTPException(status_code=400, detail="Rol inválido")
         usuario.rol = rol
-    
+
     if activo is not None:
         usuario.activo = activo
-    
+
+    if campus_asignado_id is not None:
+        if campus_asignado_id == 0:
+            usuario.campus_asignado_id = None
+        else:
+            campus = db.query(Campus).filter(Campus.id == campus_asignado_id).first()
+            if not campus:
+                raise HTTPException(status_code=404, detail="Campus no encontrado")
+            usuario.campus_asignado_id = campus_asignado_id
+
     db.commit()
     db.refresh(usuario)
     return usuario
@@ -179,10 +218,10 @@ def eliminar_usuario(
     usuario = db.query(Usuario).filter(Usuario.id == usuario_id).first()
     if not usuario:
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
-    
+
     if usuario.id == admin.id:
         raise HTTPException(status_code=400, detail="No puedes eliminarte a ti mismo")
-    
+
     db.delete(usuario)
     db.commit()
     return None

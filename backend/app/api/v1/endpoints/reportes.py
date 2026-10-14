@@ -29,14 +29,30 @@ router = APIRouter(prefix="/reportes", tags=["Reportes"])
 
 
 def verificar_acceso_campus(campus_id: int, usuario: Usuario, db: Session) -> Campus:
-    """Verifica que el usuario tenga acceso al campus."""
+    """Verifica que el usuario tenga acceso al campus según su rol."""
     campus = db.query(Campus).filter(Campus.id == campus_id).first()
     if not campus:
         raise HTTPException(status_code=404, detail="Campus no encontrado")
 
-    if usuario.rol != "admin" and campus.usuario_id != usuario.id:
-        raise HTTPException(status_code=403, detail="Sin acceso al campus")
+    # Admin: acceso total
+    if usuario.rol == "admin":
+        return campus
 
+    # Consultor: solo su campus asignado
+    if usuario.rol == "consultor":
+        if usuario.campus_asignado_id != campus_id:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="No tienes acceso a este campus",
+            )
+        return campus
+
+    # Gestor: solo sus propios campus
+    if campus.usuario_id != usuario.id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="No tienes acceso a este campus",
+        )
     return campus
 
 
@@ -75,7 +91,6 @@ def _recolectar_datos(campus_id: int, usuario: Usuario, db: Session):
         checklist=checklist,
     )
 
-    # Indicadores en formato de lista
     nombres = {
         "SI1": "Proporción de espacio abierto",
         "SI2": "Vegetación forestal académica",
@@ -103,7 +118,6 @@ def _recolectar_datos(campus_id: int, usuario: Usuario, db: Session):
             "porcentaje": (puntaje / maximo * 100) if maximo > 0 else 0,
         })
 
-    # Categorías para radar
     puntajes_categorias = {
         "SI": puntajes["total"],
         "EC": perfil.energia_clima,
@@ -113,13 +127,11 @@ def _recolectar_datos(campus_id: int, usuario: Usuario, db: Session):
         "ED": perfil.educacion_investigacion,
     }
 
-    # Zonas por tipo
     zonas_por_tipo = {}
     for z in zonas:
         tipo = z.tipo
         zonas_por_tipo[tipo] = zonas_por_tipo.get(tipo, 0) + (z.area_m2 or 0)
 
-    # Ranking estimado
     try:
         ranking = predecir_ranking({
             "SI": puntajes["total"],
@@ -132,7 +144,6 @@ def _recolectar_datos(campus_id: int, usuario: Usuario, db: Session):
     except Exception:
         ranking = None
 
-    # Recomendaciones
     puntajes_otras = {
         "EC": perfil.energia_clima,
         "WS": perfil.residuos,
@@ -153,7 +164,6 @@ def _recolectar_datos(campus_id: int, usuario: Usuario, db: Session):
         top_n=5,
     )
 
-    # Agregar porcentaje de ganancia
     for rec in recomendaciones:
         puntaje_actual = rec.get("puntaje_si_actual", 0)
         ganancia = rec.get("ganancia_si", 0)
@@ -161,11 +171,9 @@ def _recolectar_datos(campus_id: int, usuario: Usuario, db: Session):
             (ganancia / puntaje_actual * 100) if puntaje_actual > 0 else 0.0
         )
 
-    # Resumen de checklist (mejorado)
     from app.services.motor_reglas import obtener_resumen_checklist
     checklist_resumen = obtener_resumen_checklist(checklist) if checklist else {}
 
-    # Historial de simulaciones (últimas 10)
     simulaciones_db = (
         db.query(Simulacion)
         .filter(Simulacion.campus_id == campus_id)
@@ -185,7 +193,6 @@ def _recolectar_datos(campus_id: int, usuario: Usuario, db: Session):
             "creado_en": sim.creado_en.isoformat() if sim.creado_en else "",
         })
 
-    # Áreas mínimas para avanzar
     areas_minimas = []
     for ind, area_actual in [
         ("SI1", area_abierta),
@@ -221,9 +228,7 @@ def obtener_datos_graficos(
     db: Session = Depends(get_db),
     usuario: Usuario = Depends(get_current_user),
 ):
-    """
-    Devuelve todos los datos necesarios para que el frontend dibuje los gráficos.
-    """
+    """Devuelve todos los datos necesarios para que el frontend dibuje los gráficos."""
     datos = _recolectar_datos(campus_id, usuario, db)
 
     return {
@@ -249,9 +254,7 @@ def descargar_reporte_pdf(
     db: Session = Depends(get_db),
     usuario: Usuario = Depends(get_current_user),
 ):
-    """
-    Genera y descarga un reporte PDF completo del campus.
-    """
+    """Genera y descarga un reporte PDF completo del campus."""
     datos = _recolectar_datos(campus_id, usuario, db)
 
     pdf_bytes = generar_reporte_pdf(

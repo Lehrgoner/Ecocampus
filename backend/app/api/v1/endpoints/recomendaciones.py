@@ -65,35 +65,44 @@ def obtener_recomendaciones(
     campus = db.query(Campus).filter(Campus.id == campus_id).first()
     if not campus:
         raise HTTPException(status_code=404, detail="Campus no encontrado")
-    
-    if usuario.rol != "admin" and campus.usuario_id != usuario.id:
+
+    # Verificar acceso según rol
+    if usuario.rol == "admin":
+        pass  # Acceso total
+    elif usuario.rol == "consultor":
+        if usuario.campus_asignado_id != campus_id:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="No tienes acceso a este campus",
+            )
+    elif campus.usuario_id != usuario.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="No tienes acceso a este campus",
         )
-    
+
     checklist = db.query(Checklist).filter(Checklist.campus_id == campus_id).first()
     perfil = db.query(PerfilSostenibilidad).filter(
         PerfilSostenibilidad.campus_id == campus_id
     ).first()
-    
+
     if not perfil:
         perfil = PerfilSostenibilidad(campus_id=campus_id)
         db.add(perfil)
         db.commit()
         db.refresh(perfil)
-    
+
     zonas = db.query(ZonaVerde).filter(ZonaVerde.campus_id == campus_id).all()
     area_abierta = sum(z.area_m2 or 0 for z in zonas)
     area_bosque = sum(
-        z.area_m2 or 0 for z in zonas 
+        z.area_m2 or 0 for z in zonas
         if z.tipo == "bosque_academico" and z.uso_academico
     )
     area_plantada = sum(
         z.area_m2 or 0 for z in zonas
         if z.tipo in ("vegetacion_plantada", "cesped", "jardin")
     )
-    
+
     puntajes_otras = {
         "EC": perfil.energia_clima,
         "WS": perfil.residuos,
@@ -101,7 +110,7 @@ def obtener_recomendaciones(
         "TR": perfil.transporte,
         "ED": perfil.educacion_investigacion,
     }
-    
+
     puntajes_si = calcular_todos_indicadores(
         area_espacio_abierto_m2=area_abierta,
         area_bosque_academico_m2=area_bosque,
@@ -110,12 +119,12 @@ def obtener_recomendaciones(
         poblacion_total=campus.poblacion_total,
         checklist=checklist,
     )
-    
+
     try:
         ranking_actual = predecir_ranking({"SI": puntajes_si["total"], **puntajes_otras})
     except Exception as e:
         raise HTTPException(status_code=503, detail=f"Error ML: {str(e)}")
-    
+
     areas_minimas = []
     for ind, area_actual in [
         ("SI1", area_abierta), ("SI2", area_bosque),
@@ -129,7 +138,7 @@ def obtener_recomendaciones(
         )
         if resultado:
             areas_minimas.append(AreaMinimaItem(**resultado))
-    
+
     recomendaciones = generar_recomendaciones(
         area_actual_abierta=area_abierta,
         area_actual_bosque=area_bosque,
@@ -141,17 +150,17 @@ def obtener_recomendaciones(
         presupuesto_max=presupuesto_max,
         top_n=top_n,
     )
-    
+
     recomendaciones_con_porcentaje = []
     for rec in recomendaciones:
         puntaje_actual = rec["puntaje_si_actual"]
         ganancia = rec["ganancia_si"]
         porcentaje = (ganancia / puntaje_actual * 100) if puntaje_actual > 0 else 0.0
-        
+
         recomendaciones_con_porcentaje.append(
             RecomendacionItem(**rec, porcentaje_ganancia_si=round(porcentaje, 2))
         )
-    
+
     return RecomendacionesResponse(
         ranking_actual=ranking_actual,
         puntaje_si_actual=round(puntajes_si["total"], 2),

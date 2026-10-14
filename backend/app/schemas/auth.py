@@ -1,14 +1,15 @@
 from pydantic import BaseModel, EmailStr, Field, field_validator
+from typing import Optional
 import re
 
 
 class RegistroRequest(BaseModel):
     """Schema para el registro público de usuarios."""
-    cedula: str = Field(..., min_length=6, max_length=15, description="Solo números")
+    cedula: str = Field(..., min_length=6, max_length=15)
     nombres: str = Field(..., min_length=2, max_length=100)
     apellidos: str = Field(..., min_length=2, max_length=100)
     email: EmailStr
-    password: str = Field(..., min_length=8, description="Mínimo 8 caracteres")
+    password: str = Field(..., min_length=8)
 
     @field_validator("cedula")
     @classmethod
@@ -57,6 +58,7 @@ class UsuarioActualResponse(BaseModel):
     email: str
     rol: str
     activo: bool
+    campus_asignado_id: Optional[int] = None
 
     class Config:
         from_attributes = True

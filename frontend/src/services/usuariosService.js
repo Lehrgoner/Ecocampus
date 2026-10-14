@@ -12,8 +12,9 @@ export const listarPendientes = async () => {
   return response.data;
 };
 
-export const aprobarUsuario = async (usuarioId, rol) => {
-  const response = await api.post(`/usuarios/${usuarioId}/aprobar`, { rol });
+export const aprobarUsuario = async (usuarioId, datos) => {
+  // datos = { rol: 'gestor' | 'consultor', campus_asignado_id: number | null }
+  const response = await api.post(`/usuarios/${usuarioId}/aprobar`, datos);
   return response.data;
 };
 
@@ -27,9 +28,14 @@ export const crearUsuarioDirecto = async (usuarioData) => {
 };
 
 export const actualizarUsuario = async (usuarioId, datos) => {
-  const response = await api.put(`/usuarios/${usuarioId}`, null, {
-    params: datos,
-  });
+  const params = new URLSearchParams();
+  if (datos.rol) params.append('rol', datos.rol);
+  if (datos.activo !== undefined) params.append('activo', datos.activo);
+  if (datos.campus_asignado_id !== undefined) {
+    params.append('campus_asignado_id', datos.campus_asignado_id);
+  }
+
+  const response = await api.put(`/usuarios/${usuarioId}?${params.toString()}`);
   return response.data;
 };
 

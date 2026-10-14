@@ -17,13 +17,23 @@ def listar_campus(
     usuario: Usuario = Depends(get_current_user),
 ):
     """
-    Lista los campus del usuario autenticado.
-    - Admin: ve TODOS los campus del sistema
-    - Gestor/Consultor: solo ve sus campus
+    Lista los campus según el rol del usuario:
+    - Admin: todos los campus del sistema
+    - Consultor: su campus asignado
+    - Gestor: sus propios campus
     """
+    # Admin ve todos
     if usuario.rol == "admin":
         return db.query(Campus).all()
-    
+
+    # Consultor ve su campus asignado
+    if usuario.rol == "consultor":
+        if not usuario.campus_asignado_id:
+            return []
+        campus = db.query(Campus).filter(Campus.id == usuario.campus_asignado_id).first()
+        return [campus] if campus else []
+
+    # Gestor ve sus propios campus
     return db.query(Campus).filter(Campus.usuario_id == usuario.id).all()
 
 
@@ -33,20 +43,39 @@ def obtener_campus_actual(
     usuario: Usuario = Depends(get_current_user),
 ):
     """
-    Obtiene el primer campus del usuario autenticado.
+    Obtiene el campus actual del usuario autenticado.
+    - Admin: no aplica (debe especificar campus_id)
+    - Consultor: su campus asignado
+    - Gestor: su primer campus
     """
+    # Consultor: devolver su campus asignado
+    if usuario.rol == "consultor":
+        if not usuario.campus_asignado_id:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="No tienes un campus asignado. Contacta al administrador.",
+            )
+        campus = db.query(Campus).filter(Campus.id == usuario.campus_asignado_id).first()
+        if not campus:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="El campus asignado no existe.",
+            )
+        return campus
+
+    # Gestor: primer campus propio
     campus = (
         db.query(Campus)
         .filter(Campus.usuario_id == usuario.id)
         .first()
     )
-    
+
     if not campus:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="No tienes campus registrado. Crea uno con POST /campus/",
         )
-    
+
     return campus
 
 
@@ -81,21 +110,22 @@ def actualizar_campus(
     Actualiza un campus específico.
     - Admin: puede actualizar cualquier campus
     - Gestor: solo los suyos
+    - Consultor: NO puede actualizar
     """
     campus = db.query(Campus).filter(Campus.id == campus_id).first()
-    
+
     if not campus:
         raise HTTPException(status_code=404, detail="Campus no encontrado")
-    
+
     if usuario.rol != "admin" and campus.usuario_id != usuario.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="No tienes permiso para modificar este campus",
         )
-    
+
     for campo, valor in campus_data.model_dump(exclude_unset=True).items():
         setattr(campus, campo, valor)
-    
+
     db.commit()
     db.refresh(campus)
     return campus
@@ -111,18 +141,19 @@ def eliminar_campus(
     Elimina un campus específico.
     - Admin: puede eliminar cualquier campus
     - Gestor: solo los suyos
+    - Consultor: NO puede eliminar
     """
     campus = db.query(Campus).filter(Campus.id == campus_id).first()
-    
+
     if not campus:
         raise HTTPException(status_code=404, detail="Campus no encontrado")
-    
+
     if usuario.rol != "admin" and campus.usuario_id != usuario.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="No tienes permiso para eliminar este campus",
         )
-    
+
     db.delete(campus)
     db.commit()
     return None

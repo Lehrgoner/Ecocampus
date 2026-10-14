@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './Layout.css';
@@ -6,8 +7,13 @@ const Layout = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const { user, logout } = useAuth();
+  const [sidebarAbierto, setSidebarAbierto] = useState(false);
 
-  // Menú base para todos
+  // Cerrar sidebar al cambiar de ruta (móvil)
+  useEffect(() => {
+    setSidebarAbierto(false);
+  }, [location.pathname]);
+
   const menuItems = [
     { path: '/dashboard', label: 'Dashboard', icon: 'fa-home' },
     { path: '/simulacion', label: 'Simulación', icon: 'fa-map-marked-alt' },
@@ -20,7 +26,6 @@ const Layout = ({ children }) => {
     { path: '/configuracion', label: 'Configuración', icon: 'fa-cog' },
   ];
 
-  // Ítem extra SOLO para Admin
   if (user?.rol === 'admin') {
     menuItems.splice(menuItems.length - 1, 0, {
       path: '/gestion-usuarios',
@@ -42,14 +47,31 @@ const Layout = ({ children }) => {
     ? user.rol.charAt(0).toUpperCase() + user.rol.slice(1)
     : '';
 
+  const toggleSidebar = () => {
+    setSidebarAbierto(!sidebarAbierto);
+  };
+
+  const cerrarSidebar = () => {
+    setSidebarAbierto(false);
+  };
+
   return (
     <div className="layout">
-      <aside className="sidebar">
+      {/* Overlay para móvil cuando el sidebar está abierto */}
+      {sidebarAbierto && (
+        <div className="sidebar-overlay" onClick={cerrarSidebar}></div>
+      )}
+
+      <aside className={`sidebar ${sidebarAbierto ? 'abierto' : ''}`}>
         <div className="sidebar-header">
           <h2>ECOCAMPUS</h2>
           <p style={{ fontSize: '0.75rem', color: '#999', marginTop: '5px' }}>
             Análisis Predictivo
           </p>
+          {/* Botón de cerrar sidebar (solo móvil) */}
+          <button className="btn-cerrar-sidebar" onClick={cerrarSidebar}>
+            ✕
+          </button>
         </div>
 
         <nav className="sidebar-nav">
@@ -75,6 +97,11 @@ const Layout = ({ children }) => {
 
       <main className="main-content-layout">
         <header className="top-header">
+          {/* Botón hamburguesa (solo móvil) */}
+          <button className="btn-menu" onClick={toggleSidebar}>
+            <i className="fas fa-bars"></i>
+          </button>
+
           <div className="user-info">
             <i className="fas fa-user-circle"></i>
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.2 }}>

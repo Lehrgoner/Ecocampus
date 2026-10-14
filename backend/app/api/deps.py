@@ -83,25 +83,42 @@ def get_current_consultor(
 def get_current_campus(
     usuario: Usuario = Depends(get_current_user),
     db: Session = Depends(get_db),
-) -> "Campus":
+):
     """
-    Obtiene el primer campus del usuario autenticado.
+    Obtiene el campus del usuario autenticado.
     
-    - Admin: puede especificar campus_id por query param (o None para ver todos)
-    - Gestor/Consultor: siempre su campus
+    - Admin: no se usa esta dependencia (usa campus_id directamente)
+    - Gestor: primer campus que le pertenece
+    - Consultor: campus asignado por el Admin
     """
     from app.models.campus import Campus
-    
+
+    # Si es consultor, devolver el campus asignado
+    if usuario.rol == "consultor":
+        if not usuario.campus_asignado_id:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="No tienes un campus asignado. Contacta al administrador.",
+            )
+        campus = db.query(Campus).filter(Campus.id == usuario.campus_asignado_id).first()
+        if not campus:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="El campus asignado no existe.",
+            )
+        return campus
+
+    # Para gestores, devolver su primer campus
     campus = (
         db.query(Campus)
         .filter(Campus.usuario_id == usuario.id)
         .first()
     )
-    
+
     if not campus:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="No tienes un campus registrado. Crea uno primero con POST /campus/",
+            detail="No tienes un campus registrado. Crea uno primero.",
         )
-    
+
     return campus

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, DateTime
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
 from sqlalchemy.sql import func
 from app.core.database import Base
 
@@ -10,7 +10,7 @@ class Usuario(Base):
     Roles:
     - admin: Gestiona usuarios, ve todos los campus
     - gestor: Administra sus campus y sus zonas verdes
-    - consultor: Solo lectura de sus campus
+    - consultor: Solo lectura del campus asignado
     - pendiente: Registrado pero no aprobado aún
     """
     __tablename__ = "usuarios"
@@ -26,3 +26,9 @@ class Usuario(Base):
     creado_en = Column(DateTime(timezone=True), server_default=func.now())
     aprobado_por = Column(Integer, nullable=True)
     aprobado_en = Column(DateTime(timezone=True), nullable=True)
+    # NUEVO: campus asignado para consultores
+    campus_asignado_id = Column(
+        Integer,
+        ForeignKey("campus.id", ondelete="SET NULL"),
+        nullable=True,
+    )
