@@ -18,7 +18,6 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Validar sesión al cargar la app
   useEffect(() => {
     const validarSesion = async () => {
       const token = localStorage.getItem('token');
@@ -30,14 +29,11 @@ export const AuthProvider = ({ children }) => {
       }
 
       try {
-        // Verificar con el backend que el token siga válido
         const usuarioActual = await getCurrentUser();
         setUser(usuarioActual);
         setIsAuthenticated(true);
-        // Actualizar localStorage con los datos frescos
         localStorage.setItem('user', JSON.stringify(usuarioActual));
       } catch (error) {
-        // Token inválido o expirado
         localStorage.removeItem('token');
         localStorage.removeItem('user');
         setUser(null);
@@ -62,6 +58,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
+    localStorage.removeItem('campus_actual_id'); // ← Limpiar también
     setUser(null);
     setIsAuthenticated(false);
   };

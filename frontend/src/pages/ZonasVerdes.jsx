@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet-draw';
-import { listarCampus } from '../services/campusService';
+import { useCampus } from '../context/CampusContext';
 import { listarZonas, crearZona, eliminarZona } from '../services/zonasService';
 import './ZonasVerdes.css';
 
-// Colores por tipo de zona
 const COLORES_TIPO = {
   bosque_academico: '#1B5E20',
   vegetacion_plantada: '#4CAF50',
@@ -14,7 +13,6 @@ const COLORES_TIPO = {
   jardin_lluvia: '#00897B',
 };
 
-// Nombres en español
 const NOMBRES_TIPO = {
   bosque_academico: 'Bosque Académico',
   vegetacion_plantada: 'Vegetación Plantada',
@@ -24,7 +22,7 @@ const NOMBRES_TIPO = {
 };
 
 const ZonasVerdes = () => {
-  const [campus, setCampus] = useState(null);
+  const { campusActual, loading: loadingCampus } = useCampus();
   const [zonas, setZonas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -37,25 +35,20 @@ const ZonasVerdes = () => {
   const drawnItemsRef = useRef(null);
   const zonasLayerRef = useRef(null);
 
-  // ============ CARGAR DATOS INICIALES ============
   useEffect(() => {
     const cargarDatos = async () => {
+      if (loadingCampus) return;
+
+      if (!campusActual) {
+        setError('No tienes un campus registrado.');
+        setLoading(false);
+        return;
+      }
+
       try {
         setLoading(true);
-
-        const campusList = await listarCampus();
-        if (!campusList || campusList.length === 0) {
-          setError('No tienes un campus registrado. Crea uno en Configuración.');
-          setLoading(false);
-          return;
-        }
-
-        const miCampus = campusList[0];
-        setCampus(miCampus);
-
-        const zonasList = await listarZonas(miCampus.id);
+        const zonasList = await listarZonas(campusActual.id);
         setZonas(zonasList || []);
-
         setLoading(false);
       } catch (err) {
         console.error('Error al cargar:', err);
@@ -65,18 +58,14 @@ const ZonasVerdes = () => {
     };
 
     cargarDatos();
-  }, []);
+  }, [campusActual, loadingCampus]);
 
-  // ============ INICIALIZAR MAPA ============
   useEffect(() => {
-    if (!mapRef.current || mapInstanceRef.current) return;
-    if (loading) return;
+    if (!mapRef.current || mapInstanceRef.current || loading) return;
 
-    // Centro por defecto: Venezuela
     let centro = [8.0, -66.0];
     let zoom = 6;
 
-    // Si hay zonas, calcular el centroide
     if (zonas.length > 0) {
       let latSum = 0, lngSum = 0, count = 0;
       zonas.forEach(z => {
@@ -95,38 +84,26 @@ const ZonasVerdes = () => {
       }
     }
 
-    // Crear mapa
     const map = L.map(mapRef.current).setView(centro, zoom);
     mapInstanceRef.current = map;
 
-    // Capa base
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap',
       maxZoom: 19,
     }).addTo(map);
 
-    // Capa para zonas existentes
     zonasLayerRef.current = L.featureGroup().addTo(map);
-
-    // Capa para dibujo
     drawnItemsRef.current = L.featureGroup().addTo(map);
 
-    // Control de dibujo
     const drawControl = new L.Control.Draw({
       edit: false,
       draw: {
         polygon: {
           allowIntersection: false,
-          shapeOptions: {
-            color: '#4CAF50',
-            fillOpacity: 0.4,
-          },
+          shapeOptions: { color: '#4CAF50', fillOpacity: 0.4 },
         },
         rectangle: {
-          shapeOptions: {
-            color: '#4CAF50',
-            fillOpacity: 0.4,
-          },
+          shapeOptions: { color: '#4CAF50', fillOpacity: 0.4 },
         },
         circle: false,
         marker: false,
@@ -136,16 +113,13 @@ const ZonasVerdes = () => {
     });
     map.addControl(drawControl);
 
-    // Evento: polígono dibujado
     map.on(L.Draw.Event.CREATED, async (e) => {
       const layer = e.layer;
       drawnItemsRef.current.addLayer(layer);
       const geojson = layer.toGeoJSON();
-
       await manejarNuevaZona(geojson.geometry);
     });
 
-    // Cleanup
     return () => {
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
@@ -154,11 +128,9 @@ const ZonasVerdes = () => {
     };
   }, [loading, zonas.length]);
 
-  // ============ DIBUJAR ZONAS EXISTENTES ============
   useEffect(() => {
     if (!zonasLayerRef.current || !mapInstanceRef.current) return;
 
-    // Limpiar capa
     zonasLayerRef.current.clearLayers();
 
     zonas.forEach((zona) => {
@@ -188,9 +160,8 @@ const ZonasVerdes = () => {
     });
   }, [zonas]);
 
-  // ============ MANEJAR NUEVA ZONA ============
   const manejarNuevaZona = async (geom) => {
-    if (!campus) return;
+    if (!campusActual) return;
 
     try {
       const nuevaZona = {
@@ -200,11 +171,10 @@ const ZonasVerdes = () => {
         geom: geom,
       };
 
-      const zonaCreada = await crearZona(campus.id, nuevaZona);
+      const zonaCreada = await crearZona(campusActual.id, nuevaZona);
       setZonas((prev) => [...prev, zonaCreada]);
       mostrarMensaje(`✅ Zona "${zonaCreada.nombre}" creada (${zonaCreada.area_m2?.toFixed(2)} m²)`, 'success');
 
-      // Limpiar capa de dibujo
       if (drawnItemsRef.current) {
         drawnItemsRef.current.clearLayers();
       }
@@ -214,7 +184,6 @@ const ZonasVerdes = () => {
     }
   };
 
-  // ============ ELIMINAR ZONA ============
   const manejarEliminar = async (zonaId) => {
     if (!window.confirm('¿Estás seguro de eliminar esta zona?')) return;
 
@@ -228,14 +197,12 @@ const ZonasVerdes = () => {
     }
   };
 
-  // ============ MENSAJES TEMPORALES ============
   const mostrarMensaje = (texto, tipo) => {
     setMensaje({ texto, tipo });
     setTimeout(() => setMensaje(null), 4000);
   };
 
-  // ============ RENDER ============
-  if (loading) {
+  if (loading || loadingCampus) {
     return (
       <div className="zonas-container">
         <div style={{ textAlign: 'center', padding: '60px' }}>
@@ -258,10 +225,9 @@ const ZonasVerdes = () => {
   return (
     <div className="zonas-container">
       <div className="zonas-header">
-        <h1>🌳 Zonas Verdes - {campus?.nombre}</h1>
+        <h1>🌳 Zonas Verdes - {campusActual?.nombre}</h1>
       </div>
 
-      {/* Mensaje temporal */}
       {mensaje && (
         <div style={{
           padding: '12px 20px',
@@ -275,7 +241,6 @@ const ZonasVerdes = () => {
         </div>
       )}
 
-      {/* Toolbar */}
       <div className="zonas-toolbar">
         <div>
           <label style={{ marginRight: '10px', fontWeight: 'bold' }}>Tipo de zona:</label>
@@ -308,7 +273,6 @@ const ZonasVerdes = () => {
         </div>
       </div>
 
-      {/* Instrucciones */}
       <div style={{
         padding: '12px 20px',
         marginBottom: '20px',
@@ -321,9 +285,7 @@ const ZonasVerdes = () => {
         para crear una nueva zona. El tipo se selecciona arriba.
       </div>
 
-      {/* Contenido: Mapa + Tabla */}
       <div className="zonas-content">
-        {/* Mapa */}
         <div className="zonas-mapa" style={{ position: 'relative' }}>
           <div
             ref={mapRef}
@@ -336,7 +298,6 @@ const ZonasVerdes = () => {
           />
         </div>
 
-        {/* Tabla */}
         <div className="zonas-tabla">
           <h3 style={{ marginTop: 0, color: '#2e7d32' }}>📋 Zonas registradas</h3>
           {zonas.length === 0 ? (

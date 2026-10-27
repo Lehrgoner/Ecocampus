@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useCampus } from '../context/CampusContext';
 import './Layout.css';
 
 const Layout = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const { user, logout } = useAuth();
+  const { campusList, campusActual, cambiarCampus } = useCampus();
   const [sidebarAbierto, setSidebarAbierto] = useState(false);
 
-  // Cerrar sidebar al cambiar de ruta (móvil)
   useEffect(() => {
     setSidebarAbierto(false);
   }, [location.pathname]);
@@ -47,19 +48,13 @@ const Layout = ({ children }) => {
     ? user.rol.charAt(0).toUpperCase() + user.rol.slice(1)
     : '';
 
-  const toggleSidebar = () => {
-    setSidebarAbierto(!sidebarAbierto);
-  };
-
-  const cerrarSidebar = () => {
-    setSidebarAbierto(false);
-  };
+  // Mostrar selector si hay más de 1 campus (Admin)
+  const mostrarSelectorCampus = campusList.length > 1;
 
   return (
     <div className="layout">
-      {/* Overlay para móvil cuando el sidebar está abierto */}
       {sidebarAbierto && (
-        <div className="sidebar-overlay" onClick={cerrarSidebar}></div>
+        <div className="sidebar-overlay" onClick={() => setSidebarAbierto(false)}></div>
       )}
 
       <aside className={`sidebar ${sidebarAbierto ? 'abierto' : ''}`}>
@@ -68,8 +63,7 @@ const Layout = ({ children }) => {
           <p style={{ fontSize: '0.75rem', color: '#999', marginTop: '5px' }}>
             Análisis Predictivo
           </p>
-          {/* Botón de cerrar sidebar (solo móvil) */}
-          <button className="btn-cerrar-sidebar" onClick={cerrarSidebar}>
+          <button className="btn-cerrar-sidebar" onClick={() => setSidebarAbierto(false)}>
             ✕
           </button>
         </div>
@@ -97,10 +91,26 @@ const Layout = ({ children }) => {
 
       <main className="main-content-layout">
         <header className="top-header">
-          {/* Botón hamburguesa (solo móvil) */}
-          <button className="btn-menu" onClick={toggleSidebar}>
+          <button className="btn-menu" onClick={() => setSidebarAbierto(true)}>
             <i className="fas fa-bars"></i>
           </button>
+
+          {/* Selector de campus (solo si hay más de 1) */}
+          {mostrarSelectorCampus && (
+            <div className="campus-selector">
+              <i className="fas fa-university"></i>
+              <select
+                value={campusActual?.id || ''}
+                onChange={(e) => cambiarCampus(e.target.value)}
+              >
+                {campusList.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.nombre}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
 
           <div className="user-info">
             <i className="fas fa-user-circle"></i>

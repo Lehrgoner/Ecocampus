@@ -313,3 +313,64 @@ html,
   scrollbar-width: thin;
   scrollbar-color: #4CAF50 #f0f0f0;
 }
+
+/* ============ SELECTOR DE CAMPUS ============ */
+.campus-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e8f5e9;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.campus-selector i {
+  color: #2e7d32;
+  font-size: 1rem;
+}
+
+.campus-selector select {
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #2e7d32;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 8px;
+  font-family: inherit;
+  max-width: 250px;
+}
+
+.campus-selector select:hover {
+  background: #c8e6c9;
+  border-radius: 4px;
+}
+
+@media (max-width: 968px) {
+  .campus-selector {
+    padding: 6px 10px;
+  }
+
+  .campus-selector select {
+    max-width: 150px;
+    font-size: 0.85rem;
+  }
+
+  .campus-selector i {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .campus-selector {
+    padding: 4px 8px;
+    margin-right: 8px;
+  }
+
+  .campus-selector select {
+    max-width: 120px;
+    font-size: 0.8rem;
+  }
+}

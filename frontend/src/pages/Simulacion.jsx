@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet-draw';
-import { listarCampus } from '../services/campusService';
+import { useCampus } from '../context/CampusContext';
 import { listarZonas } from '../services/zonasService';
 import { obtenerIndicadores } from '../services/indicadoresService';
 import { crearSimulacion } from '../services/simulacionService';
@@ -9,7 +9,6 @@ import { obtenerPerfil } from '../services/perfilService';
 import { predecirRanking } from '../services/rankingService';
 import './Simulacion.css';
 
-// Colores y nombres por tipo
 const COLORES_TIPO = {
   bosque_academico: '#1B5E20',
   vegetacion_plantada: '#4CAF50',
@@ -27,7 +26,7 @@ const NOMBRES_TIPO = {
 };
 
 const Simulacion = () => {
-  const [campus, setCampus] = useState(null);
+  const { campusActual, loading: loadingCampus } = useCampus();
   const [zonas, setZonas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,29 +43,25 @@ const Simulacion = () => {
   const mapInstanceRef = useRef(null);
   const drawnItemsRef = useRef(null);
 
-  // ============ CARGAR DATOS INICIALES ============
   useEffect(() => {
     const cargarDatos = async () => {
+      if (loadingCampus) return;
+
+      if (!campusActual) {
+        setError('No tienes un campus registrado.');
+        setLoading(false);
+        return;
+      }
+
       try {
         setLoading(true);
 
-        const campusList = await listarCampus();
-        if (!campusList || campusList.length === 0) {
-          setError('No tienes un campus registrado. Crea uno en Configuración.');
-          setLoading(false);
-          return;
-        }
-
-        const miCampus = campusList[0];
-        setCampus(miCampus);
-
-        const zonasList = await listarZonas(miCampus.id);
+        const zonasList = await listarZonas(campusActual.id);
         setZonas(zonasList || []);
 
-        // Calcular ranking actual
         try {
-          const indicadores = await obtenerIndicadores(miCampus.id);
-          const perfil = await obtenerPerfil(miCampus.id);
+          const indicadores = await obtenerIndicadores(campusActual.id);
+          const perfil = await obtenerPerfil(campusActual.id);
 
           const puntajesML = {
             SI: indicadores.puntaje_total_si,
@@ -92,13 +87,11 @@ const Simulacion = () => {
     };
 
     cargarDatos();
-  }, []);
+  }, [campusActual, loadingCampus]);
 
-  // ============ INICIALIZAR MAPA ============
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current || loading) return;
 
-    // Centro dinámico basado en zonas existentes
     let centro = [8.0, -66.0];
     let zoom = 6;
 
@@ -127,43 +120,27 @@ const Simulacion = () => {
       maxZoom: 19,
     }).addTo(map);
 
-    // Mostrar zonas existentes (fondo)
     zonas.forEach((zona) => {
       if (!zona.geom) return;
       const color = COLORES_TIPO[zona.tipo] || '#4CAF50';
       L.geoJSON(zona.geom, {
-        style: {
-          color: color,
-          fillColor: color,
-          fillOpacity: 0.4,
-          weight: 2,
-        },
+        style: { color, fillColor: color, fillOpacity: 0.4, weight: 2 },
       })
         .bindPopup(`<strong>${zona.nombre}</strong><br/>${zona.area_m2?.toFixed(0)} m²`)
         .addTo(map);
     });
 
-    // Capa para el polígono de simulación
     drawnItemsRef.current = L.featureGroup().addTo(map);
 
-    // Control de dibujo
     const drawControl = new L.Control.Draw({
       edit: false,
       draw: {
         polygon: {
           allowIntersection: false,
-          shapeOptions: {
-            color: '#667eea',
-            fillColor: '#667eea',
-            fillOpacity: 0.4,
-          },
+          shapeOptions: { color: '#667eea', fillColor: '#667eea', fillOpacity: 0.4 },
         },
         rectangle: {
-          shapeOptions: {
-            color: '#667eea',
-            fillColor: '#667eea',
-            fillOpacity: 0.4,
-          },
+          shapeOptions: { color: '#667eea', fillColor: '#667eea', fillOpacity: 0.4 },
         },
         circle: false,
         marker: false,
@@ -173,7 +150,6 @@ const Simulacion = () => {
     });
     map.addControl(drawControl);
 
-    // Evento: polígono dibujado
     map.on(L.Draw.Event.CREATED, (e) => {
       drawnItemsRef.current.clearLayers();
       const layer = e.layer;
@@ -181,7 +157,7 @@ const Simulacion = () => {
       const geojson = layer.toGeoJSON();
       setPoligonoDibujado(geojson.geometry);
       setResultado(null);
-      mostrarMensaje('📐 Polígono dibujado. Ahora presiona "Simular Impacto".', 'info');
+      mostrarMensaje('📐 Polígono dibujado. Presiona "Simular Impacto".', 'info');
     });
 
     return () => {
@@ -192,14 +168,13 @@ const Simulacion = () => {
     };
   }, [loading, zonas.length]);
 
-  // ============ SIMULAR ============
   const manejarSimular = async () => {
     if (!poligonoDibujado) {
       mostrarMensaje('⚠️ Primero dibuja un polígono en el mapa.', 'error');
       return;
     }
 
-    if (!campus) return;
+    if (!campusActual) return;
 
     try {
       setSimulando(true);
@@ -211,7 +186,7 @@ const Simulacion = () => {
         uso_academico: tipoIntervencion === 'bosque_academico' ? usoAcademico : false,
       };
 
-      const respuesta = await crearSimulacion(campus.id, payload);
+      const respuesta = await crearSimulacion(campusActual.id, payload);
       setResultado(respuesta);
       mostrarMensaje('✅ Simulación completada', 'success');
     } catch (err) {
@@ -222,7 +197,6 @@ const Simulacion = () => {
     }
   };
 
-  // ============ LIMPIAR ============
   const manejarLimpiar = () => {
     if (drawnItemsRef.current) {
       drawnItemsRef.current.clearLayers();
@@ -231,14 +205,12 @@ const Simulacion = () => {
     setResultado(null);
   };
 
-  // ============ MENSAJES ============
   const mostrarMensaje = (texto, tipo) => {
     setMensaje({ texto, tipo });
     setTimeout(() => setMensaje(null), 4000);
   };
 
-  // ============ RENDER ============
-  if (loading) {
+  if (loading || loadingCampus) {
     return (
       <div className="simulacion-container">
         <div style={{ textAlign: 'center', padding: '60px' }}>
@@ -261,13 +233,12 @@ const Simulacion = () => {
   return (
     <div className="simulacion-container">
       <div className="simulacion-header">
-        <h1>🧪 Simulación de Intervención</h1>
+        <h1>🧪 Simulación de Intervención - {campusActual?.nombre}</h1>
         <p style={{ color: '#666' }}>
           Dibuja un polígono en el mapa, selecciona el tipo de intervención y presiona "Simular Impacto".
         </p>
       </div>
 
-      {/* Mensaje */}
       {mensaje && (
         <div style={{
           padding: '12px 20px',
@@ -284,7 +255,6 @@ const Simulacion = () => {
       )}
 
       <div className="simulacion-content">
-        {/* Mapa */}
         <div className="mapa-section">
           <div
             ref={mapRef}
@@ -322,9 +292,7 @@ const Simulacion = () => {
           </div>
         </div>
 
-        {/* Controles */}
         <div className="controles-section">
-          {/* Selector de tipo */}
           <div className="form-group">
             <label>Tipo de Intervención:</label>
             <select
@@ -341,7 +309,6 @@ const Simulacion = () => {
             </select>
           </div>
 
-          {/* Checkbox de uso académico (solo para bosques) */}
           {tipoIntervencion === 'bosque_academico' && (
             <div className="form-group" style={{
               padding: '12px',
@@ -368,14 +335,13 @@ const Simulacion = () => {
                 <span>
                   🎓 <strong>Uso académico</strong><br/>
                   <small style={{ color: '#666' }}>
-                    Marca si el bosque se usará para investigación, docencia o vinculación (requisito SI 2)
+                    Marca si el bosque se usará para investigación, docencia o vinculación (SI 2)
                   </small>
                 </span>
               </label>
             </div>
           )}
 
-          {/* Ranking actual */}
           {rankingActual && (
             <div style={{
               padding: '15px',
@@ -391,7 +357,6 @@ const Simulacion = () => {
             </div>
           )}
 
-          {/* Botón simular */}
           <div className="simulacion-actions">
             <button
               className="btn-primary"
@@ -406,7 +371,6 @@ const Simulacion = () => {
             </button>
           </div>
 
-          {/* Resultados */}
           {resultado && (
             <div className="indicadores-table" style={{ marginTop: '20px' }}>
               <h3>📊 Impacto en Indicadores</h3>
@@ -453,7 +417,6 @@ const Simulacion = () => {
                 </tbody>
               </table>
 
-              {/* Total */}
               <div style={{
                 marginTop: '15px',
                 padding: '15px',

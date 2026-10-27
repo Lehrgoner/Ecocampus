@@ -5,13 +5,13 @@ import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar,
 } from 'recharts';
 import { obtenerDatosGraficos } from '../services/reportesService';
-import { listarCampus } from '../services/campusService';
+import { useCampus } from '../context/CampusContext';
 import './Dashboard.css';
 
 const Dashboard = () => {
+  const { campusActual, loading: loadingCampus } = useCampus();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [campus, setCampus] = useState(null);
   const [indicadores, setIndicadores] = useState([]);
   const [radarData, setRadarData] = useState([]);
   const [rankingEstimado, setRankingEstimado] = useState(null);
@@ -19,27 +19,21 @@ const Dashboard = () => {
 
   useEffect(() => {
     const cargarDatos = async () => {
+      if (loadingCampus) return;
+
+      if (!campusActual) {
+        setError('No tienes un campus registrado. Crea uno en Configuración.');
+        setLoading(false);
+        return;
+      }
+
       try {
         setLoading(true);
-        // 1. Obtener el campus del usuario
-        const campusList = await listarCampus();
-        
-        if (!campusList || campusList.length === 0) {
-          setError('No tienes un campus registrado. Crea uno primero.');
-          setLoading(false);
-          return;
-        }
+        const datos = await obtenerDatosGraficos(campusActual.id);
 
-        const miCampus = campusList[0];
-        setCampus(miCampus);
-
-        // 2. Obtener datos para gráficos
-        const datos = await obtenerDatosGraficos(miCampus.id);
-        
         setIndicadores(datos.indicadores || []);
         setRankingEstimado(datos.ranking_estimado);
-        
-        // Transformar radar categorias a formato Recharts
+
         if (datos.radar_categorias) {
           const radar = Object.entries(datos.radar_categorias).map(([key, value]) => ({
             categoria: key,
@@ -48,10 +42,9 @@ const Dashboard = () => {
           setRadarData(radar);
         }
 
-        // Calcular puntaje total
         const total = (datos.indicadores || []).reduce((sum, ind) => sum + ind.puntaje, 0);
         setPuntajeTotal(total);
-
+        setError(null);
       } catch (err) {
         console.error('Error al cargar dashboard:', err);
         setError(err.message || 'Error al cargar los datos');
@@ -61,7 +54,7 @@ const Dashboard = () => {
     };
 
     cargarDatos();
-  }, []);
+  }, [campusActual, loadingCampus]);
 
   const getColorSemaforo = (porcentaje) => {
     if (porcentaje >= 70) return '#4caf50';
@@ -69,7 +62,7 @@ const Dashboard = () => {
     return '#f44336';
   };
 
-  if (loading) {
+  if (loading || loadingCampus) {
     return (
       <div className="dashboard-container">
         <div style={{ textAlign: 'center', padding: '60px' }}>
@@ -95,13 +88,12 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        <h1>🏛️ Dashboard - {campus?.nombre || 'Campus'}</h1>
+        <h1>🏛️ Dashboard - {campusActual?.nombre}</h1>
         <p style={{ color: '#666', fontSize: '1.1rem' }}>
           Puntaje total SI: <strong>{puntajeTotal.toFixed(1)} / 1100 pts</strong>
         </p>
       </div>
 
-      {/* Tarjetas de Puntajes SI */}
       <div className="puntajes-grid">
         {indicadores.map((ind) => {
           const porcentaje = ind.porcentaje || 0;
@@ -124,9 +116,7 @@ const Dashboard = () => {
         })}
       </div>
 
-      {/* Sección inferior */}
       <div className="dashboard-content">
-        {/* Gráfico de Barras SI */}
         <div className="radar-section">
           <h2>📊 Indicadores SI 1-8</h2>
           <ResponsiveContainer width="100%" height={300}>
@@ -146,7 +136,6 @@ const Dashboard = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* Gráfico de Radar */}
         <div className="radar-section">
           <h2>📊 Categorías GreenMetric</h2>
           <ResponsiveContainer width="100%" height={300}>
@@ -161,7 +150,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Ranking */}
       <div className="ranking-section" style={{ marginTop: '30px' }}>
         <h2>🏆 Ranking Global</h2>
         <div className="ranking-display">
@@ -170,7 +158,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Botones de acción */}
       <div className="dashboard-actions">
         <Link to="/simulacion" className="btn-nueva-simulacion">
           🚀 Nueva Simulación

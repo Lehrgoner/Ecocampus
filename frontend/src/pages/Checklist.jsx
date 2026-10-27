@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { listarCampus } from '../services/campusService';
+import { useCampus } from '../context/CampusContext';
 import { obtenerChecklist, actualizarChecklist } from '../services/checklistService';
 import './Checklist.css';
 
@@ -83,7 +83,6 @@ const SECCIONES = {
 
 const calcularNivel = (seccion, cumplidos) => {
   if (cumplidos === 0) return 1;
-
   if (seccion === 'SI5') {
     if (cumplidos <= 2) return 2;
     if (cumplidos <= 5) return 3;
@@ -117,87 +116,49 @@ const calcularPuntajePorNivel = (nivel) => {
 };
 
 const Checklist = () => {
-  const [campus, setCampus] = useState(null);
+  const { campusActual, loading: loadingCampus } = useCampus();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [mensaje, setMensaje] = useState(null);
   const [guardando, setGuardando] = useState(false);
   const [guardadoExitoso, setGuardadoExitoso] = useState(false);
-
   const [seccionAbierta, setSeccionAbierta] = useState('SI5');
   const [estado, setEstado] = useState({
-    si5_rampas: false,
-    si5_banos_accesibles: false,
-    si5_pasamanos: false,
-    si5_ascensores: false,
-    si5_senializacion: false,
-    si5_rutas_accesibles: false,
-    si5_estacionamiento: false,
-    si5_sala_lactancia: false,
-    si5_cambiadores: false,
+    si5_rampas: false, si5_banos_accesibles: false, si5_pasamanos: false,
+    si5_ascensores: false, si5_senializacion: false, si5_rutas_accesibles: false,
+    si5_estacionamiento: false, si5_sala_lactancia: false, si5_cambiadores: false,
     si5_apoyos_visuales: false,
-    si6_extintores: false,
-    si6_alarmas: false,
-    si6_cctv: false,
-    si6_personal_seguridad: false,
-    si6_botones_panico: false,
-    si6_app_emergencia: false,
-    si6_salidas_emergencia: false,
-    si6_sistema_contra_incendios: false,
-    si6_refugios: false,
-    si6_primeros_auxilios: false,
-    si6_iluminacion_emergencia: false,
-    si6_simulacros: false,
+    si6_extintores: false, si6_alarmas: false, si6_cctv: false,
+    si6_personal_seguridad: false, si6_botones_panico: false, si6_app_emergencia: false,
+    si6_salidas_emergencia: false, si6_sistema_contra_incendios: false, si6_refugios: false,
+    si6_primeros_auxilios: false, si6_iluminacion_emergencia: false, si6_simulacros: false,
     si6_control_acceso: false,
-    si7_servicio_medico: false,
-    si7_ambulancia: false,
-    si7_consultorio_dental: false,
-    si7_apoyo_psicologico: false,
-    si7_gimnasio: false,
-    si7_cancha_deportiva: false,
-    si7_agua_potable: false,
-    si7_comedor: false,
-    si7_lactario: false,
-    si7_guarderia: false,
-    si8_jardin_botanico: false,
-    si8_banco_semillas: false,
-    si8_invernadero: false,
-    si8_area_conservacion: false,
-    si8_programa_reforestacion: false,
-    si8_inventario_flora: false,
-    si8_inventario_fauna: false,
-    si8_especies_amenazadas: false,
-    si8_programa_reintroduccion: false,
-    si8_corredor_biologico: false,
-    si8_compostaje: false,
-    si8_agricultura_organica: false,
-    si8_investigacion_biodiversidad: false,
-    si8_educacion_ambiental: false,
+    si7_servicio_medico: false, si7_ambulancia: false, si7_consultorio_dental: false,
+    si7_apoyo_psicologico: false, si7_gimnasio: false, si7_cancha_deportiva: false,
+    si7_agua_potable: false, si7_comedor: false, si7_lactario: false, si7_guarderia: false,
+    si8_jardin_botanico: false, si8_banco_semillas: false, si8_invernadero: false,
+    si8_area_conservacion: false, si8_programa_reforestacion: false, si8_inventario_flora: false,
+    si8_inventario_fauna: false, si8_especies_amenazadas: false, si8_programa_reintroduccion: false,
+    si8_corredor_biologico: false, si8_compostaje: false, si8_agricultura_organica: false,
+    si8_investigacion_biodiversidad: false, si8_educacion_ambiental: false,
   });
 
-  // ============ CARGAR DATOS ============
   useEffect(() => {
     const cargarDatos = async () => {
+      if (loadingCampus) return;
+      if (!campusActual) {
+        setError('No tienes un campus registrado.');
+        setLoading(false);
+        return;
+      }
+
       try {
         setLoading(true);
-
-        const campusList = await listarCampus();
-        if (!campusList || campusList.length === 0) {
-          setError('No tienes un campus registrado. Crea uno en Configuración.');
-          setLoading(false);
-          return;
-        }
-
-        const miCampus = campusList[0];
-        setCampus(miCampus);
-
-        const checklist = await obtenerChecklist(miCampus.id);
-
+        const checklist = await obtenerChecklist(campusActual.id);
         const nuevoEstado = {};
         Object.keys(estado).forEach(key => {
           nuevoEstado[key] = checklist[key] || false;
         });
-
         setEstado(nuevoEstado);
         setLoading(false);
       } catch (err) {
@@ -206,59 +167,40 @@ const Checklist = () => {
         setLoading(false);
       }
     };
-
     cargarDatos();
-  }, []);
+  }, [campusActual, loadingCampus]);
 
-  // ============ TOGGLE CHECKBOX ============
   const toggleItem = (key) => {
-    setEstado(prev => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+    setEstado(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
-  // ============ GUARDAR ============
   const manejarGuardar = async () => {
-    if (!campus) return;
-
+    if (!campusActual) return;
     try {
       setGuardando(true);
       setMensaje(null);
       setGuardadoExitoso(false);
-
-      await actualizarChecklist(campus.id, estado);
-
-      setMensaje({
-        texto: '✅ Checklist guardado correctamente',
-        tipo: 'success',
-      });
-
+      await actualizarChecklist(campusActual.id, estado);
+      setMensaje({ texto: '✅ Checklist guardado correctamente', tipo: 'success' });
       setGuardadoExitoso(true);
       setTimeout(() => setGuardadoExitoso(false), 3000);
     } catch (err) {
       console.error('Error al guardar:', err);
-      setMensaje({
-        texto: '❌ Error al guardar: ' + (err.message || 'Desconocido'),
-        tipo: 'error',
-      });
+      setMensaje({ texto: '❌ Error al guardar: ' + (err.message || ''), tipo: 'error' });
     } finally {
       setGuardando(false);
     }
   };
 
-  // ============ HELPERS ============
   const contarCumplidos = (seccion) => {
     return SECCIONES[seccion].items.filter(item => estado[item.key]).length;
   };
 
   const totalCumplidos = Object.keys(SECCIONES).reduce(
-    (sum, seccion) => sum + contarCumplidos(seccion),
-    0
+    (sum, seccion) => sum + contarCumplidos(seccion), 0
   );
 
-  // ============ RENDER ============
-  if (loading) {
+  if (loading || loadingCampus) {
     return (
       <div className="checklist-container">
         <div style={{ textAlign: 'center', padding: '60px' }}>
@@ -281,7 +223,7 @@ const Checklist = () => {
   return (
     <div className="checklist-container">
       <div className="checklist-header">
-        <h1>✅ Checklist - {campus?.nombre}</h1>
+        <h1>✅ Checklist - {campusActual?.nombre}</h1>
         <p style={{ color: '#666' }}>
           Marca los ítems que tiene tu campus. Los indicadores SI 5-8 se calculan
           automáticamente según los niveles alcanzados.
@@ -290,9 +232,7 @@ const Checklist = () => {
 
       {mensaje && (
         <div style={{
-          padding: '12px 20px',
-          marginBottom: '20px',
-          borderRadius: '6px',
+          padding: '12px 20px', marginBottom: '20px', borderRadius: '6px',
           background: mensaje.tipo === 'success' ? '#e8f5e9' : '#ffebee',
           color: mensaje.tipo === 'success' ? '#2e7d32' : '#c62828',
           fontWeight: 'bold',
@@ -302,21 +242,12 @@ const Checklist = () => {
       )}
 
       <div style={{
-        background: '#e8f5e9',
-        padding: '20px',
-        borderRadius: '10px',
-        marginBottom: '25px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        gap: '15px',
+        background: '#e8f5e9', padding: '20px', borderRadius: '10px',
+        marginBottom: '25px', display: 'flex', justifyContent: 'space-between',
+        flexWrap: 'wrap', gap: '15px',
       }}>
-        <div>
-          <strong>Total de ítems cumplidos:</strong> {totalCumplidos} / 47
-        </div>
-        <div>
-          <strong>Progreso general:</strong> {Math.round((totalCumplidos / 47) * 100)}%
-        </div>
+        <div><strong>Total de ítems cumplidos:</strong> {totalCumplidos} / 47</div>
+        <div><strong>Progreso general:</strong> {Math.round((totalCumplidos / 47) * 100)}%</div>
       </div>
 
       {Object.entries(SECCIONES).map(([key, seccion]) => {
@@ -344,8 +275,7 @@ const Checklist = () => {
               </div>
               <div style={{ textAlign: 'right' }}>
                 <div style={{
-                  fontSize: '1.3rem',
-                  fontWeight: 'bold',
+                  fontSize: '1.3rem', fontWeight: 'bold',
                   color: puntaje >= 50 ? '#4caf50' : puntaje >= 25 ? '#ff9800' : '#f44336',
                 }}>
                   Nivel {nivel}/5
@@ -375,26 +305,19 @@ const Checklist = () => {
               <div className="checklist-items" style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                gap: '10px',
-                marginTop: '15px',
-                padding: '15px',
-                background: '#f9f9f9',
-                borderRadius: '8px',
+                gap: '10px', marginTop: '15px', padding: '15px',
+                background: '#f9f9f9', borderRadius: '8px',
               }}>
                 {seccion.items.map((item) => (
                   <label
                     key={item.key}
                     className="checklist-item"
                     style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
+                      display: 'flex', alignItems: 'center', gap: '10px',
                       padding: '8px 12px',
                       background: estado[item.key] ? '#e8f5e9' : 'white',
                       border: estado[item.key] ? '2px solid #4caf50' : '1px solid #ddd',
-                      borderRadius: '6px',
-                      cursor: 'pointer',
-                      transition: 'all 0.2s',
+                      borderRadius: '6px', cursor: 'pointer',
                     }}
                   >
                     <input
@@ -423,27 +346,16 @@ const Checklist = () => {
           onClick={manejarGuardar}
           disabled={guardando}
           style={{
-            padding: '15px 50px',
-            fontSize: '1.1rem',
-            fontWeight: 'bold',
+            padding: '15px 50px', fontSize: '1.1rem', fontWeight: 'bold',
             background: guardadoExitoso
               ? 'linear-gradient(135deg, #4caf50 0%, #1B5E20 100%)'
-              : guardando
-              ? '#ccc'
-              : 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
-            color: 'white',
-            border: 'none',
-            borderRadius: '10px',
+              : guardando ? '#ccc' : 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
+            color: 'white', border: 'none', borderRadius: '10px',
             cursor: guardando ? 'not-allowed' : 'pointer',
             boxShadow: '0 4px 15px rgba(76, 175, 80, 0.3)',
-            transition: 'all 0.3s',
           }}
         >
-          {guardando
-            ? '⏳ Guardando...'
-            : guardadoExitoso
-            ? '✅ ¡Guardado exitosamente!'
-            : '💾 Guardar cambios'}
+          {guardando ? '⏳ Guardando...' : guardadoExitoso ? '✅ ¡Guardado exitosamente!' : '💾 Guardar cambios'}
         </button>
       </div>
     </div>

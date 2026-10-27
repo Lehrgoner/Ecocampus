@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+import { CampusProvider } from './context/CampusContext';
 
 // Layout
 import Layout from './components/Layout';
@@ -37,30 +38,32 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <AuthProvider>
-      <Router>
-        <Routes>
-          {/* Rutas Públicas */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/recuperar-password" element={<ResetPassword />} />
+      <CampusProvider>
+        <Router>
+          <Routes>
+            {/* Rutas Públicas */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/recuperar-password" element={<ResetPassword />} />
 
-          {/* Rutas Protegidas */}
-          <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-          <Route path="/simulacion" element={<ProtectedRoute><Simulacion /></ProtectedRoute>} />
-          <Route path="/zonas-verdes" element={<ProtectedRoute><ZonasVerdes /></ProtectedRoute>} />
-          <Route path="/checklist" element={<ProtectedRoute><Checklist /></ProtectedRoute>} />
-          <Route path="/ranking" element={<ProtectedRoute><Ranking /></ProtectedRoute>} />
-          <Route path="/recomendaciones" element={<ProtectedRoute><Recomendaciones /></ProtectedRoute>} />
-          <Route path="/perfil" element={<ProtectedRoute><Perfil /></ProtectedRoute>} />
-          <Route path="/reportes" element={<ProtectedRoute><Reportes /></ProtectedRoute>} />
-          <Route path="/configuracion" element={<ProtectedRoute><Configuracion /></ProtectedRoute>} />
-          <Route path="/gestion-usuarios" element={<ProtectedRoute><GestionUsuarios /></ProtectedRoute>} />
+            {/* Rutas Protegidas */}
+            <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path="/simulacion" element={<ProtectedRoute><Simulacion /></ProtectedRoute>} />
+            <Route path="/zonas-verdes" element={<ProtectedRoute><ZonasVerdes /></ProtectedRoute>} />
+            <Route path="/checklist" element={<ProtectedRoute><Checklist /></ProtectedRoute>} />
+            <Route path="/ranking" element={<ProtectedRoute><Ranking /></ProtectedRoute>} />
+            <Route path="/recomendaciones" element={<ProtectedRoute><Recomendaciones /></ProtectedRoute>} />
+            <Route path="/perfil" element={<ProtectedRoute><Perfil /></ProtectedRoute>} />
+            <Route path="/reportes" element={<ProtectedRoute><Reportes /></ProtectedRoute>} />
+            <Route path="/configuracion" element={<ProtectedRoute><Configuracion /></ProtectedRoute>} />
+            <Route path="/gestion-usuarios" element={<ProtectedRoute><GestionUsuarios /></ProtectedRoute>} />
 
-          {/* Redirecciones */}
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/espacios" element={<Navigate to="/zonas-verdes" replace />} />
-        </Routes>
-      </Router>
+            {/* Redirecciones */}
+            <Route path="/" element={<Navigate to="/dashboard" replace />} />
+            <Route path="/espacios" element={<Navigate to="/zonas-verdes" replace />} />
+          </Routes>
+        </Router>
+      </CampusProvider>
     </AuthProvider>
   );
 }

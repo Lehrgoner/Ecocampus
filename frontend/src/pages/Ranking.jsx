@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {
-  PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer,
-} from 'recharts';
-import { listarCampus } from '../services/campusService';
+import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { useCampus } from '../context/CampusContext';
 import { obtenerIndicadores } from '../services/indicadoresService';
 import { obtenerPerfil, actualizarPerfil } from '../services/perfilService';
 import { predecirRanking } from '../services/rankingService';
 import './Ranking.css';
 
-// Máximos oficiales GreenMetric 2026
 const CATEGORIAS = [
   { key: 'SI', nombre: 'Setting & Infrastructure', maximo: 1100, color: '#4CAF50' },
   { key: 'EC', nombre: 'Energy & Climate Change', maximo: 2000, color: '#2196F3' },
@@ -18,20 +15,15 @@ const CATEGORIAS = [
   { key: 'ED', nombre: 'Education & Research', maximo: 1300, color: '#F44336' },
 ];
 
-// Tooltip personalizado para el gráfico de torta
 const CustomTooltip = ({ active, payload, datosTorta }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     const total = datosTorta.reduce((sum, d) => sum + d.value, 0);
     const porcentaje = total > 0 ? ((data.value / total) * 100).toFixed(1) : 0;
-
     return (
       <div style={{
-        background: 'white',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        padding: '8px 12px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+        background: 'white', border: '1px solid #ccc', borderRadius: '4px',
+        padding: '8px 12px', boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
       }}>
         <strong style={{ color: data.color }}>{data.name}</strong><br />
         Puntaje: <strong>{data.value}</strong><br />
@@ -43,44 +35,30 @@ const CustomTooltip = ({ active, payload, datosTorta }) => {
 };
 
 const Ranking = () => {
-  const [campus, setCampus] = useState(null);
+  const { campusActual, loading: loadingCampus } = useCampus();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [mensaje, setMensaje] = useState(null);
-
   const [puntajes, setPuntajes] = useState({
-    SI: 0,
-    EC: 0,
-    WS: 0,
-    WR: 0,
-    TR: 0,
-    ED: 0,
+    SI: 0, EC: 0, WS: 0, WR: 0, TR: 0, ED: 0,
   });
-
   const [resultado, setResultado] = useState(null);
   const [prediciendo, setPrediciendo] = useState(false);
-
-  // Refs para los inputs (para forzar actualización manual)
   const inputsRef = useRef({});
 
-  // ============ CARGAR DATOS ============
   useEffect(() => {
     const cargarDatos = async () => {
+      if (loadingCampus) return;
+      if (!campusActual) {
+        setError('No tienes un campus registrado.');
+        setLoading(false);
+        return;
+      }
+
       try {
         setLoading(true);
-
-        const campusList = await listarCampus();
-        if (!campusList || campusList.length === 0) {
-          setError('No tienes un campus registrado. Crea uno en Configuración.');
-          setLoading(false);
-          return;
-        }
-
-        const miCampus = campusList[0];
-        setCampus(miCampus);
-
-        const indicadores = await obtenerIndicadores(miCampus.id);
-        const perfil = await obtenerPerfil(miCampus.id);
+        const indicadores = await obtenerIndicadores(campusActual.id);
+        const perfil = await obtenerPerfil(campusActual.id);
 
         const nuevosPuntajes = {
           SI: Number(indicadores.puntaje_total_si) || 0,
@@ -90,10 +68,7 @@ const Ranking = () => {
           TR: Number(perfil.transporte) || 0,
           ED: Number(perfil.educacion_investigacion) || 0,
         };
-
-        console.log('✅ Datos cargados:', nuevosPuntajes);
         setPuntajes(nuevosPuntajes);
-
         setLoading(false);
       } catch (err) {
         console.error('Error al cargar:', err);
@@ -101,13 +76,10 @@ const Ranking = () => {
         setLoading(false);
       }
     };
-
     cargarDatos();
-  }, []);
+  }, [campusActual, loadingCampus]);
 
-  // ============ ACTUALIZAR INPUTS CUANDO CAMBIAN LOS PUNTAJES ============
   useEffect(() => {
-    // Sincronizar el valor de los inputs con el estado de React
     Object.keys(puntajes).forEach((key) => {
       const input = inputsRef.current[key];
       if (input && input.value !== String(puntajes[key])) {
@@ -116,57 +88,45 @@ const Ranking = () => {
     });
   }, [puntajes]);
 
-  // ============ CAMBIAR PUNTAJE ============
   const handleCambioPuntaje = (categoria, valor) => {
-    const numero = parseInt(valor) || 0;
+    const valorLimpio = String(valor).replace(/^0+/, '') || '0';
+    const numero = parseInt(valorLimpio, 10) || 0;
     const cat = CATEGORIAS.find(c => c.key === categoria);
     const maximo = cat?.maximo || 1000;
     const acotado = Math.max(0, Math.min(maximo, numero));
-
-    setPuntajes(prev => ({
-      ...prev,
-      [categoria]: acotado,
-    }));
+    setPuntajes(prev => ({ ...prev, [categoria]: acotado }));
     setResultado(null);
   };
 
-  // ============ PREDECIR RANKING ============
   const manejarPredecir = async () => {
     try {
       setPrediciendo(true);
       setResultado(null);
-
       const respuesta = await predecirRanking(puntajes);
       setResultado(respuesta);
-      mostrarMensaje('✅ Predicción completada', 'success');
+      setMensaje({ texto: '✅ Predicción completada', tipo: 'success' });
     } catch (err) {
       console.error('Error al predecir:', err);
-      mostrarMensaje('❌ Error: ' + (err.message || 'Desconocido'), 'error');
+      setMensaje({ texto: '❌ Error: ' + (err.message || ''), tipo: 'error' });
     } finally {
       setPrediciendo(false);
     }
   };
 
-  // ============ GUARDAR PUNTAJES ============
   const manejarGuardarPerfil = async () => {
-    if (!campus) return;
+    if (!campusActual) return;
     try {
-      await actualizarPerfil(campus.id, {
+      await actualizarPerfil(campusActual.id, {
         energia_clima: puntajes.EC,
         residuos: puntajes.WS,
         agua: puntajes.WR,
         transporte: puntajes.TR,
         educacion_investigacion: puntajes.ED,
       });
-      mostrarMensaje('💾 Puntajes guardados en el perfil', 'success');
+      setMensaje({ texto: '💾 Puntajes guardados en el perfil', tipo: 'success' });
     } catch (err) {
-      mostrarMensaje('❌ Error al guardar: ' + (err.message || ''), 'error');
+      setMensaje({ texto: '❌ Error al guardar: ' + (err.message || ''), tipo: 'error' });
     }
-  };
-
-  const mostrarMensaje = (texto, tipo) => {
-    setMensaje({ texto, tipo });
-    setTimeout(() => setMensaje(null), 4000);
   };
 
   const calcularProgreso = (categoria) => {
@@ -184,8 +144,7 @@ const Ranking = () => {
     color: cat.color,
   }));
 
-  // ============ RENDER ============
-  if (loading) {
+  if (loading || loadingCampus) {
     return (
       <div className="ranking-container">
         <div style={{ textAlign: 'center', padding: '60px' }}>
@@ -208,7 +167,7 @@ const Ranking = () => {
   return (
     <div className="ranking-container">
       <div className="ranking-header">
-        <h1>🏆 Predicción de Ranking Global</h1>
+        <h1>🏆 Predicción de Ranking Global - {campusActual?.nombre}</h1>
         <p style={{ color: '#666' }}>
           Ajusta los puntajes de cada categoría y presiona "Predecir Ranking".
         </p>
@@ -216,9 +175,7 @@ const Ranking = () => {
 
       {mensaje && (
         <div style={{
-          padding: '12px 20px',
-          marginBottom: '20px',
-          borderRadius: '6px',
+          padding: '12px 20px', marginBottom: '20px', borderRadius: '6px',
           background: mensaje.tipo === 'success' ? '#e8f5e9' : '#ffebee',
           color: mensaje.tipo === 'success' ? '#2e7d32' : '#c62828',
           fontWeight: 'bold',
@@ -228,7 +185,6 @@ const Ranking = () => {
       )}
 
       <div className="ranking-content">
-        {/* Formulario de puntajes */}
         <div className="puntajes-categorias">
           <h2>Puntajes por Categoría:</h2>
           {CATEGORIAS.map((cat) => (
@@ -244,6 +200,7 @@ const Ranking = () => {
                   type="number"
                   defaultValue={puntajes[cat.key] || 0}
                   onChange={(e) => handleCambioPuntaje(cat.key, e.target.value)}
+                  onFocus={(e) => e.target.select()}
                   className="form-input"
                   min="0"
                   max={cat.maximo}
@@ -262,13 +219,9 @@ const Ranking = () => {
             </div>
           ))}
 
-          {/* Total */}
           <div style={{
-            marginTop: '20px',
-            padding: '15px',
-            background: '#f5f5f5',
-            borderRadius: '8px',
-            textAlign: 'center',
+            marginTop: '20px', padding: '15px', background: '#f5f5f5',
+            borderRadius: '8px', textAlign: 'center',
           }}>
             <div style={{ fontSize: '0.9rem', color: '#666' }}>Puntaje total</div>
             <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2e7d32' }}>
@@ -277,7 +230,6 @@ const Ranking = () => {
           </div>
         </div>
 
-        {/* Predicción */}
         <div className="ranking-prediccion">
           <div className="ranking-box">
             <div style={{ fontSize: '1rem', opacity: 0.9 }}>Posición estimada</div>
@@ -292,7 +244,6 @@ const Ranking = () => {
             )}
           </div>
 
-          {/* Gráfico de torta */}
           <div className="grafico-torta-placeholder">
             <h3>Contribución por categoría</h3>
             <ResponsiveContainer width="100%" height={300}>
@@ -319,25 +270,16 @@ const Ranking = () => {
         </div>
       </div>
 
-      {/* Acciones */}
       <div className="ranking-actions">
         <button
           className="btn-recalcular"
           onClick={manejarPredecir}
           disabled={prediciendo}
-          style={{
-            opacity: prediciendo ? 0.5 : 1,
-            cursor: prediciendo ? 'not-allowed' : 'pointer',
-          }}
+          style={{ opacity: prediciendo ? 0.5 : 1, cursor: prediciendo ? 'not-allowed' : 'pointer' }}
         >
           {prediciendo ? '⏳ Prediciendo...' : '🔮 Predecir Ranking'}
         </button>
-
-        <button
-          className="btn-recalcular"
-          onClick={manejarGuardarPerfil}
-          style={{ background: '#4caf50' }}
-        >
+        <button className="btn-recalcular" onClick={manejarGuardarPerfil} style={{ background: '#4caf50' }}>
           💾 Guardar puntajes
         </button>
       </div>
