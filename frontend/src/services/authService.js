@@ -19,7 +19,6 @@ export const loginUser = async (credentials) => {
     const response = await api.post('/auth/login', credentials);
     const data = response.data;
 
-    // Guardar token y usuario (OJO: backend devuelve "usuario", no "user")
     localStorage.setItem('token', data.access_token);
     localStorage.setItem('user', JSON.stringify(data.usuario));
 
@@ -44,17 +43,33 @@ export const getCurrentUser = async () => {
 export const logoutUser = () => {
   localStorage.removeItem('token');
   localStorage.removeItem('user');
+  localStorage.removeItem('campus_actual_id');
 };
 
 // ============================================
-// Funciones de recuperación de contraseña
-// NO IMPLEMENTADAS (para evitar errores de import)
+// Recuperación de contraseña
 // ============================================
 
 export const requestPasswordReset = async (email) => {
-  throw new Error('La recuperación de contraseña aún no está disponible. Contacta al administrador.');
+  try {
+    const response = await api.post('/auth/forgot-password', { email });
+    return response.data;
+  } catch (error) {
+    const mensaje = error.response?.data?.detail || 'Error al solicitar el código';
+    throw new Error(mensaje);
+  }
 };
 
 export const resetPassword = async (email, code, username, newPassword) => {
-  throw new Error('La recuperación de contraseña aún no está disponible. Contacta al administrador.');
+  try {
+    const response = await api.post('/auth/reset-password', {
+      email: email,
+      code: code,
+      new_password: newPassword,
+    });
+    return response.data;
+  } catch (error) {
+    const mensaje = error.response?.data?.detail || 'Error al restablecer la contraseña';
+    throw new Error(mensaje);
+  }
 };

@@ -124,7 +124,7 @@ const Register = () => {
     setErrors({});
 
     try {
-      const data = await registerUser({
+      await registerUser({
         cedula: formData.cedula,
         nombres: formData.nombres,
         apellidos: formData.apellidos,
@@ -409,10 +409,26 @@ const Register = () => {
         <div className="footer-section">
           <h3>Conoce más:</h3>
           <ul className="footer-links">
-            <li><a href="#avisos">Avisos Legales.</a></li>
-            <li><a href="#privacidad">Políticas de Privacidad.</a></li>
-            <li><a href="#contacto">Contacto.</a></li>
-            <li><a href="#faq">Preguntas Frecuentes.</a></li>
+            <li>
+              <a href="/legal.html#aviso-legal" target="_blank" rel="noopener noreferrer">
+                Avisos Legales.
+              </a>
+            </li>
+            <li>
+              <a href="/legal.html#privacidad" target="_blank" rel="noopener noreferrer">
+                Políticas de Privacidad.
+              </a>
+            </li>
+            <li>
+              <a href="/contacto.html" target="_blank" rel="noopener noreferrer">
+                Contacto.
+              </a>
+            </li>
+            <li>
+              <a href="/faq.html" target="_blank" rel="noopener noreferrer">
+                Preguntas Frecuentes.
+              </a>
+            </li>
           </ul>
         </div>
 

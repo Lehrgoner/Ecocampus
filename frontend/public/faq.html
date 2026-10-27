@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | EcoCampus</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #1b4332;
+            --primary-light: #2d6a4f;
+            --accent: #52b788;
+            --accent-bg: #d8f3dc;
+            --bg-body: #f8faf9;
+            --bg-card: #ffffff;
+            --text-main: #2b2d42;
+            --text-muted: #6c757d;
+            --border: #e9ecef;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: rgba(255, 255, 255, 0.60);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .header-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .brand {
+            display: block;
+            text-decoration: none;
+            line-height: 0;
+            cursor: pointer;
+        }
+
+        .brand img {
+            max-width: 140px;
+            height: auto;
+            display: block;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1.5rem 5rem 1.5rem;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--accent-bg);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Tabs Navigation */
+        .tabs-container {
+            max-width: 900px;
+            margin: -2.5rem auto 2rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .tabs {
+            display: flex;
+            background: var(--bg-card);
+            padding: 6px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            gap: 6px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary);
+            background: var(--accent-bg);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2);
+        }
+
+        /* Main Content Area */
+        main {
+            max-width: 900px;
+            margin: 0 auto 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .content-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography & Document Formatting */
+        .doc-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .doc-section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid var(--accent-bg);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+
+        .meta-info {
+            background-color: var(--accent-bg);
+            border-left: 4px solid var(--accent);
+            padding: 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        /* Estilo para el Acordeón de Preguntas Frecuentes */
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: #ffffff;
+            border: none;
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background-color: var(--bg-body);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--accent);
+            font-weight: 400;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: #ffffff;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 250px; /* Ajustable si la respuesta es más larga */
+            padding: 0 1.5rem 1.2rem 1.5rem;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .content-card { padding: 1.8rem; }
+            .tabs { flex-direction: column; }
+            .tab-btn { text-align: left; }
+            
+            .brand img {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="brand" title="Volver al inicio">
+                <img src="https://i.ibb.co/fVgv7Gj2/logo-ecocampus-2.png" alt="EcoCampus">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Preguntas Frecuentes (FAQ)</h1>
+        <p>Encuentra respuestas rápidas sobre nuestras iniciativas de sostenibilidad, uso de la plataforma y servicios digitales.</p>
+    </section>
+
+    <!-- Tab Buttons (Opcional por si deseas mantener la misma barra de navegación de pestañas) -->
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'general')">General</button>
+            <button class="tab-btn" onclick="switchTab(event, 'cuenta')">Cuenta y Acceso</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sostenibilidad')">Sostenibilidad</button>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main>
+        <div class="content-card">
+            
+            <!-- META INFO -->
+            <div class="meta-info">
+                🌱 <strong>Centro de Ayuda:</strong> ¿No encuentras lo que buscas? Escríbenos a <a href="mailto:ecocampus2026@gmail.com" style="color: var(--primary); font-weight: 500;">ecocampus2026@gmail.com</a>.
+            </div>
+
+            <!-- TAB 1: GENERAL -->
+            <article id="general" class="tab-content active">
+                <section class="doc-section">
+                    <h2>Preguntas Generales</h2>
+                    <div class="faq-accordion">
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">¿Qué es EcoCampus?</button>
+                            <div class="faq-answer">
+                                <p>Ecocampus es una iniciativa diseñada para fomentar la sostenibilidad de espacios verdes universitarios, su gestión responsable de espacios y la optimización de procesos mediante tecnología de bajo impacto ambiental.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">¿Cómo puedo participar en los proyectos?</button>
+                            <div class="faq-answer">
+                                <p>Puedes unirte completando los formularios de registro disponibles en la plataforma principal o contactando directamente con nuestro equipo de coordinación a través del correo institucional.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">¿Tiene algún costo utilizar las herramientas de la plataforma?</button>
+                            <div class="faq-answer">
+                                <p>No, todos los recursos informativos y herramientas digitales orientadas a la comunidad académica son completamente gratuitos y de acceso abierto.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </article>
+
+            <!-- TAB 2: CUENTA Y ACCESO -->
+            <article id="cuenta" class="tab-content">
+                <section class="doc-section">
+                    <h2>Cuenta y Acceso</h2>
+                    <div class="faq-accordion">
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">¿Cómo recupero mi contraseña?</button>
+                            <div class="faq-answer">
+                                <p>Dirígete a la sección de inicio de sesión y haz clic en "¿Olvidaste tu contraseña?". Recibirás un enlace seguro en tu correo electrónico registrado para restablecerla.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">¿Cómo puedo actualizar mis datos personales?</button>
+                            <div class="faq-answer">
+                                <p>Una vez que inicies sesión en tu perfil, puedes acceder al panel de configuración de usuario para modificar tu nombre, correo o preferencias de notificación de forma segura.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </article>
+
+            <!-- TAB 3: SOSTENIBILIDAD -->
+            <article id="sostenibilidad" class="tab-content">
+                <section class="doc-section">
+                    <h2>Sostenibilidad y Privacidad</h2>
+                    <div class="faq-accordion">
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">¿Cómo se aplica la sustentabilidad digital?</button>
+                            <div class="faq-answer">
+                                <p>Optimizamos nuestro código, reducimos el peso de los recursos multimedia y utilizamos servidores alineados con prácticas de eficiencia energética para disminuir la huella de carbono digital.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">¿Qué hacen con mis datos personales?</button>
+                            <div class="faq-answer">
+                                <p>Tus datos son tratados bajo estrictas normativas de privacidad y transparencia. Solo recopilamos lo mínimo indispensable para el funcionamiento de los servicios acordes a nuestra política de privacidad.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p style="color: #dae4df;">&copy; 2026 <strong>EcoCampus</strong>. Todos los derechos reservados.</p>
+        <p style="margin-top: 5px; color: #f3fff5; opacity: 0.8; font-size: 0.85rem;">Comprometidos con el desarrollo tecnológico sostenible y la transparencia de datos.</p>
+    </footer>
+
+    <!-- Script para manejo de Pestañas (Tabs) y Acordeón FAQ -->
+    <script>
+        // Función para cambiar de pestaña
+        function switchTab(event, tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Función para abrir/cerrar las preguntas del acordeón
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            
+            // Opcional: si deseas que solo uno esté abierto a la vez, descomenta las siguientes líneas:
+            /*
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
+            */
+
+            item.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

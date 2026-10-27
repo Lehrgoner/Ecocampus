@@ -5,11 +5,11 @@ import re
 
 class RegistroRequest(BaseModel):
     """Schema para el registro público de usuarios."""
-    cedula: str = Field(..., min_length=6, max_length=15)
+    cedula: str = Field(..., min_length=6, max_length=15, description="Solo números")
     nombres: str = Field(..., min_length=2, max_length=100)
     apellidos: str = Field(..., min_length=2, max_length=100)
     email: EmailStr
-    password: str = Field(..., min_length=8)
+    password: str = Field(..., min_length=8, description="Mínimo 8 caracteres")
 
     @field_validator("cedula")
     @classmethod
@@ -62,3 +62,40 @@ class UsuarioActualResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class ForgotPasswordRequest(BaseModel):
+    """Schema para solicitar recuperación de contraseña."""
+    email: EmailStr
+
+
+class ForgotPasswordResponse(BaseModel):
+    """Respuesta al solicitar recuperación."""
+    mensaje: str
+
+
+class ResetPasswordRequest(BaseModel):
+    """Schema para restablecer contraseña."""
+    email: EmailStr
+    code: str = Field(..., min_length=6, max_length=6)
+    new_password: str = Field(..., min_length=8)
+
+    @field_validator("new_password")
+    @classmethod
+    def validar_password(cls, v):
+        if len(v) < 8:
+            raise ValueError("La contraseña debe tener al menos 8 caracteres")
+        if not re.search(r"[A-Z]", v):
+            raise ValueError("La contraseña debe contener al menos una mayúscula")
+        if not re.search(r"[a-z]", v):
+            raise ValueError("La contraseña debe contener al menos una minúscula")
+        if not re.search(r"\d", v):
+            raise ValueError("La contraseña debe contener al menos un número")
+        if not re.search(r"""[!@#$%^&*(),.?":{}|<>_\-+=\[\]\\\/~`;']""", v):
+            raise ValueError("La contraseña debe contener al menos un símbolo")
+        return v
+
+
+class ResetPasswordResponse(BaseModel):
+    """Respuesta al restablecer contraseña."""
+    mensaje: str

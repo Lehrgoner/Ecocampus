@@ -40,6 +40,10 @@ const GestionUsuarios = () => {
   });
   const [creando, setCreando] = useState(false);
 
+  // Modal de asignar campus
+  const [modalAsignarCampus, setModalAsignarCampus] = useState(null);
+  const [campusSeleccionado, setCampusSeleccionado] = useState('');
+
   // ============ CARGAR DATOS ============
   const cargarDatos = async () => {
     try {
@@ -80,7 +84,6 @@ const GestionUsuarios = () => {
   const manejarAprobar = async () => {
     if (!modalAprobar) return;
 
-    // Validar que consultores tengan campus
     if (rolSeleccionado === 'consultor' && !campusAprobar) {
       setMensaje({
         texto: '⚠️ Debes asignar un campus al consultor',
@@ -123,7 +126,6 @@ const GestionUsuarios = () => {
 
   // ============ CREAR USUARIO DIRECTO ============
   const manejarCrearUsuario = async () => {
-    // Validar consultor
     if (nuevoUsuario.rol === 'consultor' && !nuevoUsuario.campus_asignado_id) {
       setMensaje({
         texto: '⚠️ Debes asignar un campus al consultor',
@@ -184,6 +186,39 @@ const GestionUsuarios = () => {
       cargarDatos();
     } catch (err) {
       setMensaje({ texto: '❌ Error: ' + (err.message || ''), tipo: 'error' });
+    }
+  };
+
+  // ============ ABRIR MODAL DE ASIGNAR CAMPUS ============
+  const manejarAsignarCampus = (usuario) => {
+    setModalAsignarCampus(usuario);
+    setCampusSeleccionado(usuario.campus_asignado_id || '');
+  };
+
+  // ============ CONFIRMAR ASIGNACIÓN ============
+  const manejarConfirmarAsignacion = async () => {
+    if (!modalAsignarCampus) return;
+
+    if (!campusSeleccionado) {
+      setMensaje({ texto: '⚠️ Debes seleccionar un campus', tipo: 'error' });
+      return;
+    }
+
+    try {
+      await actualizarUsuario(modalAsignarCampus.id, {
+        campus_asignado_id: parseInt(campusSeleccionado),
+      });
+
+      setMensaje({
+        texto: `✅ Campus asignado a ${modalAsignarCampus.nombres}`,
+        tipo: 'success',
+      });
+      setModalAsignarCampus(null);
+      setCampusSeleccionado('');
+      cargarDatos();
+    } catch (err) {
+      const msg = err.response?.data?.detail || err.message || 'Error';
+      setMensaje({ texto: '❌ ' + msg, tipo: 'error' });
     }
   };
 
@@ -364,9 +399,26 @@ const GestionUsuarios = () => {
                     </td>
                     <td>
                       {u.rol === 'consultor' ? (
-                        <span style={{ fontSize: '0.9rem', color: '#666' }}>
-                          {getNombreCampus(u.campus_asignado_id)}
-                        </span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <span style={{ fontSize: '0.9rem', color: '#666' }}>
+                            {getNombreCampus(u.campus_asignado_id)}
+                          </span>
+                          <button
+                            onClick={() => manejarAsignarCampus(u)}
+                            style={{
+                              padding: '4px 10px',
+                              background: '#2196f3',
+                              color: 'white',
+                              border: 'none',
+                              borderRadius: '4px',
+                              fontSize: '0.75rem',
+                              cursor: 'pointer',
+                            }}
+                            title="Asignar campus"
+                          >
+                            🏛️ Cambiar
+                          </button>
+                        </div>
                       ) : (
                         <span style={{ color: '#ccc' }}>—</span>
                       )}
@@ -427,7 +479,6 @@ const GestionUsuarios = () => {
               <option value="consultor">👁️ Consultor (solo lectura)</option>
             </select>
 
-            {/* Selector de campus solo para consultores */}
             {rolSeleccionado === 'consultor' && (
               <>
                 <label style={{ display: 'block', marginTop: '20px', marginBottom: '10px', fontWeight: 'bold' }}>
@@ -527,7 +578,6 @@ const GestionUsuarios = () => {
                 <option value="admin">👑 Admin</option>
               </select>
 
-              {/* Selector de campus para consultores */}
               {nuevoUsuario.rol === 'consultor' && (
                 <>
                   <select
@@ -562,6 +612,61 @@ const GestionUsuarios = () => {
                 disabled={creando}
               >
                 {creando ? '⏳ Creando...' : '➕ Crear Usuario'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal de asignar campus */}
+      {modalAsignarCampus && (
+        <div className="modal-overlay" onClick={() => setModalAsignarCampus(null)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h2>🏛️ Asignar Campus</h2>
+            <p>
+              <strong>{modalAsignarCampus.nombres} {modalAsignarCampus.apellidos}</strong>
+            </p>
+            <p style={{ color: '#666', fontSize: '0.9rem' }}>
+              {modalAsignarCampus.email}
+            </p>
+
+            <label style={{
+              display: 'block',
+              marginTop: '20px',
+              marginBottom: '10px',
+              fontWeight: 'bold',
+            }}>
+              Campus asignado: *
+            </label>
+            <select
+              value={campusSeleccionado}
+              onChange={(e) => setCampusSeleccionado(e.target.value)}
+              className="modal-select"
+            >
+              <option value="">-- Selecciona un campus --</option>
+              {campusList.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.nombre}
+                </option>
+              ))}
+            </select>
+
+            <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '8px' }}>
+              💡 El consultor podrá ver este campus en modo solo lectura.
+            </p>
+
+            <div style={{ display: 'flex', gap: '10px', marginTop: '25px' }}>
+              <button
+                className="btn-cancelar"
+                onClick={() => setModalAsignarCampus(null)}
+              >
+                Cancelar
+              </button>
+              <button
+                className="btn-confirmar"
+                onClick={manejarConfirmarAsignacion}
+              >
+                ✅ Asignar
               </button>
             </div>
           </div>

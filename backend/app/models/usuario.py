@@ -26,9 +26,14 @@ class Usuario(Base):
     creado_en = Column(DateTime(timezone=True), server_default=func.now())
     aprobado_por = Column(Integer, nullable=True)
     aprobado_en = Column(DateTime(timezone=True), nullable=True)
-    # NUEVO: campus asignado para consultores
+
+    # Campus asignado para consultores
     campus_asignado_id = Column(
         Integer,
         ForeignKey("campus.id", ondelete="SET NULL"),
         nullable=True,
     )
+
+    # Recuperación de contraseña
+    reset_code = Column(String(6), nullable=True)
+    reset_code_expires = Column(DateTime(timezone=True), nullable=True)
