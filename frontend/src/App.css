@@ -4,7 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Previene el desbordamiento por padding/borders */
+  box-sizing: border-box;
 }
 
 body, html {
@@ -31,6 +31,7 @@ body, html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 10;
   height: 70px;
+  position: relative;
 }
 
 .logo-container {
@@ -53,7 +54,7 @@ body, html {
 .login-main {
   flex: 1;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-              url('https://images.unsplash.com/photo-1737044281081-9e5640e66646?q=80&w=1170&auto=format&fit=crop') center/cover no-repeat;
+              url('/images/fondo-login.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,7 +105,6 @@ body, html {
   flex-direction: column;
 }
 
-/* Encabezado interno de la tarjeta */
 .card-header {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -112,7 +112,6 @@ body, html {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Corrección de la imagen del logo dentro del Card */
 .app-logo {
   max-width: 180px;
   max-height: 70px;
@@ -385,7 +384,6 @@ body, html {
    ESTILOS GLOBALES CON MODO OSCURO
    ============================================ */
 
-/* El body ya usa variables por theme.css */
 #root {
   min-height: 100vh;
 }
@@ -439,12 +437,4 @@ p {
 .panel {
   background: var(--bg-card);
   color: var(--text-primary);
-}
-
-.app {
-  min-height: 100vh;
-  background-image: url('/images/tu-imagen.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }

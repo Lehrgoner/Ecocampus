@@ -5,12 +5,10 @@
 }
 
 .login-main {
-  background: var(--bg-primary);
   transition: background-color 0.3s;
 }
 
 .login-card {
-  background: var(--bg-card);
   transition: background-color 0.3s;
 }
 
