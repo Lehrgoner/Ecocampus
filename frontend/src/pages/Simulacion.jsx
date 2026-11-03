@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet-draw';
 import { useCampus } from '../context/CampusContext';
+import { usePermissions } from '../hooks/usePermissions';
 import { listarZonas } from '../services/zonasService';
 import { obtenerIndicadores } from '../services/indicadoresService';
 import { crearSimulacion } from '../services/simulacionService';
@@ -27,6 +28,7 @@ const NOMBRES_TIPO = {
 
 const Simulacion = () => {
   const { campusActual, loading: loadingCampus } = useCampus();
+  const { puedeEscribir } = usePermissions();
   const [zonas, setZonas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -132,33 +134,34 @@ const Simulacion = () => {
 
     drawnItemsRef.current = L.featureGroup().addTo(map);
 
-    const drawControl = new L.Control.Draw({
-      edit: false,
-      draw: {
-        polygon: {
-          allowIntersection: false,
-          shapeOptions: { color: '#667eea', fillColor: '#667eea', fillOpacity: 0.4 },
+    // Solo agregar control de dibujo si puede escribir
+    if (puedeEscribir) {
+      const drawControl = new L.Control.Draw({
+        edit: false,
+        draw: {
+          polygon: {
+            allowIntersection: false,
+            shapeOptions: { color: '#667eea', fillColor: '#667eea', fillOpacity: 0.4 },
+          },
+          rectangle: false,
+          circle: false,
+          marker: false,
+          polyline: false,
+          circlemarker: false,
         },
-        rectangle: {
-          shapeOptions: { color: '#667eea', fillColor: '#667eea', fillOpacity: 0.4 },
-        },
-        circle: false,
-        marker: false,
-        polyline: false,
-        circlemarker: false,
-      },
-    });
-    map.addControl(drawControl);
+      });
+      map.addControl(drawControl);
 
-    map.on(L.Draw.Event.CREATED, (e) => {
-      drawnItemsRef.current.clearLayers();
-      const layer = e.layer;
-      drawnItemsRef.current.addLayer(layer);
-      const geojson = layer.toGeoJSON();
-      setPoligonoDibujado(geojson.geometry);
-      setResultado(null);
-      mostrarMensaje('📐 Polígono dibujado. Presiona "Simular Impacto".', 'info');
-    });
+      map.on(L.Draw.Event.CREATED, (e) => {
+        drawnItemsRef.current.clearLayers();
+        const layer = e.layer;
+        drawnItemsRef.current.addLayer(layer);
+        const geojson = layer.toGeoJSON();
+        setPoligonoDibujado(geojson.geometry);
+        setResultado(null);
+        mostrarMensaje('📐 Polígono dibujado. Presiona "Simular Impacto".', 'info');
+      });
+    }
 
     return () => {
       if (mapInstanceRef.current) {
@@ -166,9 +169,11 @@ const Simulacion = () => {
         mapInstanceRef.current = null;
       }
     };
-  }, [loading, zonas.length]);
+  }, [loading, zonas.length, puedeEscribir]);
 
   const manejarSimular = async () => {
+    if (!puedeEscribir) return;
+
     if (!poligonoDibujado) {
       mostrarMensaje('⚠️ Primero dibuja un polígono en el mapa.', 'error');
       return;
@@ -239,6 +244,20 @@ const Simulacion = () => {
         </p>
       </div>
 
+      {/* Aviso para consultor */}
+      {!puedeEscribir && (
+        <div style={{
+          padding: '12px 20px',
+          marginBottom: '20px',
+          borderRadius: '6px',
+          background: 'var(--accent-bg)',
+          color: 'var(--primary)',
+          borderLeft: '4px solid var(--primary)',
+        }}>
+          👁️ <strong>Modo consulta:</strong> Puedes ver el mapa, pero no puedes realizar simulaciones.
+        </div>
+      )}
+
       {mensaje && (
         <div style={{
           padding: '12px 20px',
@@ -265,178 +284,183 @@ const Simulacion = () => {
               boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
             }}
           />
-          <div style={{
-            display: 'flex',
-            gap: '10px',
-            marginTop: '15px',
-            justifyContent: 'space-between',
-          }}>
-            <div style={{ color: '#666', fontSize: '0.9rem' }}>
-              {poligonoDibujado ? '✅ Polígono listo para simular' : '💡 Dibuja un polígono con las herramientas del mapa'}
+          {puedeEscribir && (
+            <div style={{
+              display: 'flex',
+              gap: '10px',
+              marginTop: '15px',
+              justifyContent: 'space-between',
+            }}>
+              <div style={{ color: '#666', fontSize: '0.9rem' }}>
+                {poligonoDibujado ? '✅ Polígono listo para simular' : '💡 Dibuja un polígono con las herramientas del mapa'}
+              </div>
+              {poligonoDibujado && (
+                <button
+                  onClick={manejarLimpiar}
+                  style={{
+                    padding: '8px 16px',
+                    background: '#f44336',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  🗑️ Limpiar
+                </button>
+              )}
             </div>
-            {poligonoDibujado && (
-              <button
-                onClick={manejarLimpiar}
-                style={{
-                  padding: '8px 16px',
-                  background: '#f44336',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                }}
-              >
-                🗑️ Limpiar
-              </button>
-            )}
-          </div>
+          )}
         </div>
 
-        <div className="controles-section">
-          <div className="form-group">
-            <label>Tipo de Intervención:</label>
-            <select
-              value={tipoIntervencion}
-              onChange={(e) => {
-                setTipoIntervencion(e.target.value);
-                setResultado(null);
-              }}
-              className="form-select"
-            >
-              {Object.entries(NOMBRES_TIPO).map(([value, label]) => (
-                <option key={value} value={value}>{label}</option>
-              ))}
-            </select>
-          </div>
-
-          {tipoIntervencion === 'bosque_academico' && (
-            <div className="form-group" style={{
-              padding: '12px',
-              background: '#e8f5e9',
-              borderRadius: '6px',
-              borderLeft: '4px solid #1B5E20',
-            }}>
-              <label style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                cursor: 'pointer',
-                marginBottom: 0,
-              }}>
-                <input
-                  type="checkbox"
-                  checked={usoAcademico}
-                  onChange={(e) => {
-                    setUsoAcademico(e.target.checked);
-                    setResultado(null);
-                  }}
-                  style={{ width: '18px', height: '18px' }}
-                />
-                <span>
-                  🎓 <strong>Uso académico</strong><br/>
-                  <small style={{ color: '#666' }}>
-                    Marca si el bosque se usará para investigación, docencia o vinculación (SI 2)
-                  </small>
-                </span>
-              </label>
+        {/* Controles - Solo Admin y Gestor */}
+        {puedeEscribir && (
+          <div className="controles-section">
+            <div className="form-group">
+              <label>Tipo de Intervención:</label>
+              <select
+                value={tipoIntervencion}
+                onChange={(e) => {
+                  setTipoIntervencion(e.target.value);
+                  setResultado(null);
+                }}
+                className="form-select"
+              >
+                {Object.entries(NOMBRES_TIPO).map(([value, label]) => (
+                  <option key={value} value={value}>{label}</option>
+                ))}
+              </select>
             </div>
-          )}
 
-          {rankingActual && (
-            <div style={{
-              padding: '15px',
-              background: '#fff3e0',
-              borderRadius: '8px',
-              marginBottom: '20px',
-              textAlign: 'center',
-            }}>
-              <div style={{ fontSize: '0.85rem', color: '#666' }}>Ranking actual</div>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#ff9800' }}>
-                #{rankingActual.ranking_estimado}
-              </div>
-            </div>
-          )}
-
-          <div className="simulacion-actions">
-            <button
-              className="btn-primary"
-              onClick={manejarSimular}
-              disabled={!poligonoDibujado || simulando}
-              style={{
-                opacity: (!poligonoDibujado || simulando) ? 0.5 : 1,
-                cursor: (!poligonoDibujado || simulando) ? 'not-allowed' : 'pointer',
-              }}
-            >
-              {simulando ? '⏳ Simulando...' : '🧮 Simular Impacto'}
-            </button>
-          </div>
-
-          {resultado && (
-            <div className="indicadores-table" style={{ marginTop: '20px' }}>
-              <h3>📊 Impacto en Indicadores</h3>
-              <div style={{
-                padding: '10px',
-                background: '#f5f5f5',
-                borderRadius: '6px',
-                marginBottom: '10px',
-                fontSize: '0.9rem',
-              }}>
-                Área de la intervención: <strong>{resultado.area_m2?.toFixed(2)} m²</strong>
-              </div>
-
-              <table>
-                <thead>
-                  <tr>
-                    <th>Indicador</th>
-                    <th>Antes</th>
-                    <th>Después</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {['SI1', 'SI2', 'SI3', 'SI4'].map((codigo) => {
-                    const antes = resultado.puntajes_antes[codigo] || 0;
-                    const despues = resultado.puntajes_despues[codigo] || 0;
-                    const cambio = despues - antes;
-
-                    return (
-                      <tr key={codigo}>
-                        <td><strong>{codigo}</strong></td>
-                        <td>{antes.toFixed(1)}</td>
-                        <td>
-                          {despues.toFixed(1)}
-                          {cambio > 0 && (
-                            <span className="cambio-positivo">▲ +{cambio.toFixed(1)}</span>
-                          )}
-                          {cambio === 0 && (
-                            <span className="cambio-neutro">=</span>
-                          )}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-
-              <div style={{
-                marginTop: '15px',
-                padding: '15px',
+            {tipoIntervencion === 'bosque_academico' && (
+              <div className="form-group" style={{
+                padding: '12px',
                 background: '#e8f5e9',
+                borderRadius: '6px',
+                borderLeft: '4px solid #1B5E20',
+              }}>
+                <label style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  cursor: 'pointer',
+                  marginBottom: 0,
+                }}>
+                  <input
+                    type="checkbox"
+                    checked={usoAcademico}
+                    onChange={(e) => {
+                      setUsoAcademico(e.target.checked);
+                      setResultado(null);
+                    }}
+                    style={{ width: '18px', height: '18px' }}
+                  />
+                  <span>
+                    🎓 <strong>Uso académico</strong><br/>
+                    <small style={{ color: '#666' }}>
+                      Marca si el bosque se usará para investigación, docencia o vinculación (SI 2)
+                    </small>
+                  </span>
+                </label>
+              </div>
+            )}
+
+            {rankingActual && (
+              <div style={{
+                padding: '15px',
+                background: '#fff3e0',
                 borderRadius: '8px',
+                marginBottom: '20px',
                 textAlign: 'center',
               }}>
-                <div style={{ fontSize: '0.9rem', color: '#666' }}>Puntaje SI Total</div>
-                <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2e7d32' }}>
-                  {resultado.puntajes_antes.total?.toFixed(1)} → {resultado.puntajes_despues.total?.toFixed(1)}
-                  {resultado.puntajes_despues.total - resultado.puntajes_antes.total > 0 && (
-                    <span style={{ color: '#4caf50', marginLeft: '10px' }}>
-                      (+{(resultado.puntajes_despues.total - resultado.puntajes_antes.total).toFixed(1)})
-                    </span>
-                  )}
+                <div style={{ fontSize: '0.85rem', color: '#666' }}>Ranking actual</div>
+                <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#ff9800' }}>
+                  #{rankingActual.ranking_estimado}
                 </div>
               </div>
+            )}
+
+            <div className="simulacion-actions">
+              <button
+                className="btn-primary"
+                onClick={manejarSimular}
+                disabled={!poligonoDibujado || simulando}
+                style={{
+                  opacity: (!poligonoDibujado || simulando) ? 0.5 : 1,
+                  cursor: (!poligonoDibujado || simulando) ? 'not-allowed' : 'pointer',
+                }}
+              >
+                {simulando ? '⏳ Simulando...' : '🧮 Simular Impacto'}
+              </button>
             </div>
-          )}
-        </div>
+
+            {resultado && (
+              <div className="indicadores-table" style={{ marginTop: '20px' }}>
+                <h3>📊 Impacto en Indicadores</h3>
+                <div style={{
+                  padding: '10px',
+                  background: '#f5f5f5',
+                  borderRadius: '6px',
+                  marginBottom: '10px',
+                  fontSize: '0.9rem',
+                }}>
+                  Área de la intervención: <strong>{resultado.area_m2?.toFixed(2)} m²</strong>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Indicador</th>
+                      <th>Antes</th>
+                      <th>Después</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {['SI1', 'SI2', 'SI3', 'SI4'].map((codigo) => {
+                      const antes = resultado.puntajes_antes[codigo] || 0;
+                      const despues = resultado.puntajes_despues[codigo] || 0;
+                      const cambio = despues - antes;
+
+                      return (
+                        <tr key={codigo}>
+                          <td><strong>{codigo}</strong></td>
+                          <td>{antes.toFixed(1)}</td>
+                          <td>
+                            {despues.toFixed(1)}
+                            {cambio > 0 && (
+                              <span className="cambio-positivo">▲ +{cambio.toFixed(1)}</span>
+                            )}
+                            {cambio === 0 && (
+                              <span className="cambio-neutro">=</span>
+                            )}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+
+                <div style={{
+                  marginTop: '15px',
+                  padding: '15px',
+                  background: '#e8f5e9',
+                  borderRadius: '8px',
+                  textAlign: 'center',
+                }}>
+                  <div style={{ fontSize: '0.9rem', color: '#666' }}>Puntaje SI Total</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2e7d32' }}>
+                    {resultado.puntajes_antes.total?.toFixed(1)} → {resultado.puntajes_despues.total?.toFixed(1)}
+                    {resultado.puntajes_despues.total - resultado.puntajes_antes.total > 0 && (
+                      <span style={{ color: '#4caf50', marginLeft: '10px' }}>
+                        (+{(resultado.puntajes_despues.total - resultado.puntajes_antes.total).toFixed(1)})
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet-draw';
 import { useCampus } from '../context/CampusContext';
+import { usePermissions } from '../hooks/usePermissions';
 import { listarZonas, crearZona, eliminarZona } from '../services/zonasService';
 import './ZonasVerdes.css';
 
@@ -23,6 +24,7 @@ const NOMBRES_TIPO = {
 
 const ZonasVerdes = () => {
   const { campusActual, loading: loadingCampus } = useCampus();
+  const { puedeEscribir } = usePermissions();
   const [zonas, setZonas] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -95,30 +97,31 @@ const ZonasVerdes = () => {
     zonasLayerRef.current = L.featureGroup().addTo(map);
     drawnItemsRef.current = L.featureGroup().addTo(map);
 
-    const drawControl = new L.Control.Draw({
-      edit: false,
-      draw: {
-        polygon: {
-          allowIntersection: false,
-          shapeOptions: { color: '#4CAF50', fillOpacity: 0.4 },
+    // Solo agregar herramientas de dibujo si puede escribir
+    if (puedeEscribir) {
+      const drawControl = new L.Control.Draw({
+        edit: false,
+        draw: {
+          polygon: {
+            allowIntersection: false,
+            shapeOptions: { color: '#4CAF50', fillOpacity: 0.4 },
+          },
+          rectangle: false,
+          circle: false,
+          marker: false,
+          polyline: false,
+          circlemarker: false,
         },
-        rectangle: {
-          shapeOptions: { color: '#4CAF50', fillOpacity: 0.4 },
-        },
-        circle: false,
-        marker: false,
-        polyline: false,
-        circlemarker: false,
-      },
-    });
-    map.addControl(drawControl);
+      });
+      map.addControl(drawControl);
 
-    map.on(L.Draw.Event.CREATED, async (e) => {
-      const layer = e.layer;
-      drawnItemsRef.current.addLayer(layer);
-      const geojson = layer.toGeoJSON();
-      await manejarNuevaZona(geojson.geometry);
-    });
+      map.on(L.Draw.Event.CREATED, async (e) => {
+        const layer = e.layer;
+        drawnItemsRef.current.addLayer(layer);
+        const geojson = layer.toGeoJSON();
+        await manejarNuevaZona(geojson.geometry);
+      });
+    }
 
     return () => {
       if (mapInstanceRef.current) {
@@ -126,7 +129,7 @@ const ZonasVerdes = () => {
         mapInstanceRef.current = null;
       }
     };
-  }, [loading, zonas.length]);
+  }, [loading, zonas.length, puedeEscribir]);
 
   useEffect(() => {
     if (!zonasLayerRef.current || !mapInstanceRef.current) return;
@@ -161,7 +164,7 @@ const ZonasVerdes = () => {
   }, [zonas]);
 
   const manejarNuevaZona = async (geom) => {
-    if (!campusActual) return;
+    if (!campusActual || !puedeEscribir) return;
 
     try {
       const nuevaZona = {
@@ -185,6 +188,7 @@ const ZonasVerdes = () => {
   };
 
   const manejarEliminar = async (zonaId) => {
+    if (!puedeEscribir) return;
     if (!window.confirm('¿Estás seguro de eliminar esta zona?')) return;
 
     try {
@@ -241,49 +245,67 @@ const ZonasVerdes = () => {
         </div>
       )}
 
-      <div className="zonas-toolbar">
-        <div>
-          <label style={{ marginRight: '10px', fontWeight: 'bold' }}>Tipo de zona:</label>
-          <select
-            value={tipoSeleccionado}
-            onChange={(e) => setTipoSeleccionado(e.target.value)}
-            style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
-          >
-            {Object.entries(NOMBRES_TIPO).map(([key, nombre]) => (
-              <option key={key} value={key}>{nombre}</option>
-            ))}
-          </select>
-        </div>
-
-        {tipoSeleccionado === 'bosque_academico' && (
+      {/* Toolbar - Solo Admin y Gestor */}
+      {puedeEscribir && (
+        <div className="zonas-toolbar">
           <div>
-            <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
-              <input
-                type="checkbox"
-                checked={usoAcademico}
-                onChange={(e) => setUsoAcademico(e.target.checked)}
-              />
-              🎓 Uso académico (cuenta para SI 2)
-            </label>
+            <label style={{ marginRight: '10px', fontWeight: 'bold' }}>Tipo de zona:</label>
+            <select
+              value={tipoSeleccionado}
+              onChange={(e) => setTipoSeleccionado(e.target.value)}
+              style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ccc' }}
+            >
+              {Object.entries(NOMBRES_TIPO).map(([key, nombre]) => (
+                <option key={key} value={key}>{nombre}</option>
+              ))}
+            </select>
           </div>
-        )}
 
-        <div style={{ marginLeft: 'auto', color: '#666' }}>
-          📏 Total: <strong>{zonas.length}</strong> zonas
+          {tipoSeleccionado === 'bosque_academico' && (
+            <div>
+              <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
+                <input
+                  type="checkbox"
+                  checked={usoAcademico}
+                  onChange={(e) => setUsoAcademico(e.target.checked)}
+                />
+                🎓 Uso académico (cuenta para SI 2)
+              </label>
+            </div>
+          )}
+
+          <div style={{ marginLeft: 'auto', color: '#666' }}>
+            📏 Total: <strong>{zonas.length}</strong> zonas
+          </div>
         </div>
-      </div>
+      )}
 
-      <div style={{
-        padding: '12px 20px',
-        marginBottom: '20px',
-        borderRadius: '6px',
-        background: '#e3f2fd',
-        color: '#1565c0',
-        fontSize: '0.95rem',
-      }}>
-        💡 <strong>Instrucciones:</strong> Usa las herramientas de dibujo en el mapa (esquina superior izquierda)
-        para crear una nueva zona. El tipo se selecciona arriba.
-      </div>
+      {/* Instrucciones - Solo Admin y Gestor */}
+      {puedeEscribir ? (
+        <div style={{
+          padding: '12px 20px',
+          marginBottom: '20px',
+          borderRadius: '6px',
+          background: '#e3f2fd',
+          color: '#1565c0',
+          fontSize: '0.95rem',
+        }}>
+          💡 <strong>Instrucciones:</strong> Usa las herramientas de dibujo en el mapa (esquina superior izquierda)
+          para crear una nueva zona. El tipo se selecciona arriba.
+        </div>
+      ) : (
+        <div style={{
+          padding: '12px 20px',
+          marginBottom: '20px',
+          borderRadius: '6px',
+          background: 'var(--accent-bg)',
+          color: 'var(--primary)',
+          fontSize: '0.95rem',
+          borderLeft: '4px solid var(--primary)',
+        }}>
+          👁️ <strong>Modo consulta:</strong> Puedes ver las zonas del campus, pero no puedes modificarlas.
+        </div>
+      )}
 
       <div className="zonas-content">
         <div className="zonas-mapa" style={{ position: 'relative' }}>
@@ -309,7 +331,7 @@ const ZonasVerdes = () => {
               color: '#666',
             }}>
               <p>No hay zonas registradas</p>
-              <small>Dibuja una en el mapa para empezar</small>
+              {puedeEscribir && <small>Dibuja una en el mapa para empezar</small>}
             </div>
           ) : (
             <div style={{ maxHeight: '600px', overflowY: 'auto' }}>
@@ -338,21 +360,23 @@ const ZonasVerdes = () => {
                       {zona.uso_academico && <span style={{ marginLeft: '8px', color: '#1B5E20' }}>🎓</span>}
                     </div>
                   </div>
-                  <button
-                    onClick={() => manejarEliminar(zona.id)}
-                    style={{
-                      background: '#f44336',
-                      color: 'white',
-                      border: 'none',
-                      borderRadius: '4px',
-                      padding: '8px 12px',
-                      cursor: 'pointer',
-                      fontSize: '1rem',
-                    }}
-                    title="Eliminar zona"
-                  >
-                    🗑️
-                  </button>
+                  {puedeEscribir && (
+                    <button
+                      onClick={() => manejarEliminar(zona.id)}
+                      style={{
+                        background: '#f44336',
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '4px',
+                        padding: '8px 12px',
+                        cursor: 'pointer',
+                        fontSize: '1rem',
+                      }}
+                      title="Eliminar zona"
+                    >
+                      🗑️
+                    </button>
+                  )}
                 </div>
               ))}
             </div>

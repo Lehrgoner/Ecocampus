@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useCampus } from '../context/CampusContext';
+import { usePermissions } from '../hooks/usePermissions';
 import { obtenerIndicadores } from '../services/indicadoresService';
 import { obtenerPerfil, actualizarPerfil } from '../services/perfilService';
 import { predecirRanking } from '../services/rankingService';
@@ -36,6 +37,7 @@ const CustomTooltip = ({ active, payload, datosTorta }) => {
 
 const Ranking = () => {
   const { campusActual, loading: loadingCampus } = useCampus();
+  const { puedeEscribir } = usePermissions();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [mensaje, setMensaje] = useState(null);
@@ -89,6 +91,7 @@ const Ranking = () => {
   }, [puntajes]);
 
   const handleCambioPuntaje = (categoria, valor) => {
+    if (!puedeEscribir) return;
     const valorLimpio = String(valor).replace(/^0+/, '') || '0';
     const numero = parseInt(valorLimpio, 10) || 0;
     const cat = CATEGORIAS.find(c => c.key === categoria);
@@ -114,7 +117,7 @@ const Ranking = () => {
   };
 
   const manejarGuardarPerfil = async () => {
-    if (!campusActual) return;
+    if (!campusActual || !puedeEscribir) return;
     try {
       await actualizarPerfil(campusActual.id, {
         energia_clima: puntajes.EC,
@@ -173,6 +176,20 @@ const Ranking = () => {
         </p>
       </div>
 
+      {/* Aviso para consultor */}
+      {!puedeEscribir && (
+        <div style={{
+          padding: '12px 20px',
+          marginBottom: '20px',
+          borderRadius: '6px',
+          background: 'var(--accent-bg)',
+          color: 'var(--primary)',
+          borderLeft: '4px solid var(--primary)',
+        }}>
+          👁️ <strong>Modo consulta:</strong> Puedes predecir el ranking, pero no modificar los puntajes base.
+        </div>
+      )}
+
       {mensaje && (
         <div style={{
           padding: '12px 20px', marginBottom: '20px', borderRadius: '6px',
@@ -204,6 +221,11 @@ const Ranking = () => {
                   className="form-input"
                   min="0"
                   max={cat.maximo}
+                  disabled={!puedeEscribir}
+                  style={{
+                    opacity: !puedeEscribir ? 0.7 : 1,
+                    cursor: !puedeEscribir ? 'not-allowed' : 'text',
+                  }}
                 />
                 <span>/{cat.maximo}</span>
               </div>
@@ -279,9 +301,13 @@ const Ranking = () => {
         >
           {prediciendo ? '⏳ Prediciendo...' : '🔮 Predecir Ranking'}
         </button>
-        <button className="btn-recalcular" onClick={manejarGuardarPerfil} style={{ background: '#4caf50' }}>
-          💾 Guardar puntajes
-        </button>
+
+        {/* Botón de guardar - Solo Admin y Gestor */}
+        {puedeEscribir && (
+          <button className="btn-recalcular" onClick={manejarGuardarPerfil} style={{ background: '#4caf50' }}>
+            💾 Guardar puntajes
+          </button>
+        )}
       </div>
     </div>
   );

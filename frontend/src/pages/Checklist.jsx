@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useCampus } from '../context/CampusContext';
+import { usePermissions } from '../hooks/usePermissions';
 import { obtenerChecklist, actualizarChecklist } from '../services/checklistService';
 import './Checklist.css';
 
@@ -117,6 +118,7 @@ const calcularPuntajePorNivel = (nivel) => {
 
 const Checklist = () => {
   const { campusActual, loading: loadingCampus } = useCampus();
+  const { puedeEscribir } = usePermissions();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [mensaje, setMensaje] = useState(null);
@@ -171,11 +173,12 @@ const Checklist = () => {
   }, [campusActual, loadingCampus]);
 
   const toggleItem = (key) => {
+    if (!puedeEscribir) return;
     setEstado(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
   const manejarGuardar = async () => {
-    if (!campusActual) return;
+    if (!campusActual || !puedeEscribir) return;
     try {
       setGuardando(true);
       setMensaje(null);
@@ -229,6 +232,20 @@ const Checklist = () => {
           automáticamente según los niveles alcanzados.
         </p>
       </div>
+
+      {/* Aviso para consultor */}
+      {!puedeEscribir && (
+        <div style={{
+          padding: '12px 20px',
+          marginBottom: '20px',
+          borderRadius: '6px',
+          background: 'var(--accent-bg)',
+          color: 'var(--primary)',
+          borderLeft: '4px solid var(--primary)',
+        }}>
+          👁️ <strong>Modo consulta:</strong> Solo lectura. No puedes modificar el checklist.
+        </div>
+      )}
 
       {mensaje && (
         <div style={{
@@ -317,14 +334,17 @@ const Checklist = () => {
                       padding: '8px 12px',
                       background: estado[item.key] ? '#e8f5e9' : 'white',
                       border: estado[item.key] ? '2px solid #4caf50' : '1px solid #ddd',
-                      borderRadius: '6px', cursor: 'pointer',
+                      borderRadius: '6px',
+                      cursor: puedeEscribir ? 'pointer' : 'not-allowed',
+                      opacity: puedeEscribir ? 1 : 0.7,
                     }}
                   >
                     <input
                       type="checkbox"
                       checked={estado[item.key]}
                       onChange={() => toggleItem(item.key)}
-                      style={{ width: '18px', height: '18px' }}
+                      disabled={!puedeEscribir}
+                      style={{ width: '18px', height: '18px', cursor: puedeEscribir ? 'pointer' : 'not-allowed' }}
                     />
                     <span style={{
                       fontWeight: estado[item.key] ? 'bold' : 'normal',
@@ -340,24 +360,27 @@ const Checklist = () => {
         );
       })}
 
-      <div className="checklist-actions" style={{ marginTop: '30px', textAlign: 'center' }}>
-        <button
-          className="btn-guardar"
-          onClick={manejarGuardar}
-          disabled={guardando}
-          style={{
-            padding: '15px 50px', fontSize: '1.1rem', fontWeight: 'bold',
-            background: guardadoExitoso
-              ? 'linear-gradient(135deg, #4caf50 0%, #1B5E20 100%)'
-              : guardando ? '#ccc' : 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
-            color: 'white', border: 'none', borderRadius: '10px',
-            cursor: guardando ? 'not-allowed' : 'pointer',
-            boxShadow: '0 4px 15px rgba(76, 175, 80, 0.3)',
-          }}
-        >
-          {guardando ? '⏳ Guardando...' : guardadoExitoso ? '✅ ¡Guardado exitosamente!' : '💾 Guardar cambios'}
-        </button>
-      </div>
+      {/* Botón de guardar - Solo Admin y Gestor */}
+      {puedeEscribir && (
+        <div className="checklist-actions" style={{ marginTop: '30px', textAlign: 'center' }}>
+          <button
+            className="btn-guardar"
+            onClick={manejarGuardar}
+            disabled={guardando}
+            style={{
+              padding: '15px 50px', fontSize: '1.1rem', fontWeight: 'bold',
+              background: guardadoExitoso
+                ? 'linear-gradient(135deg, #4caf50 0%, #1B5E20 100%)'
+                : guardando ? '#ccc' : 'linear-gradient(135deg, #4caf50 0%, #2e7d32 100%)',
+              color: 'white', border: 'none', borderRadius: '10px',
+              cursor: guardando ? 'not-allowed' : 'pointer',
+              boxShadow: '0 4px 15px rgba(76, 175, 80, 0.3)',
+            }}
+          >
+            {guardando ? '⏳ Guardando...' : guardadoExitoso ? '✅ ¡Guardado exitosamente!' : '💾 Guardar cambios'}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
