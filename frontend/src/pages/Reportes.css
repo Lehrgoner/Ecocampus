@@ -5,11 +5,12 @@
 }
 
 .reportes-header h1 {
-  color: #2e7d32;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
 .reportes-header p {
+  color: var(--text-secondary);
   margin-bottom: 30px;
 }
 
@@ -20,12 +21,13 @@
 }
 
 .reporte-card {
-  background: white;
+  background: var(--bg-card);
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s;
 }
 
 .reporte-icon {
@@ -35,28 +37,28 @@
 }
 
 .reporte-card h2 {
-  color: #2e7d32;
+  color: var(--primary);
   margin: 0 0 15px 0;
   font-size: 1.4rem;
   text-align: center;
 }
 
 .reporte-descripcion {
-  color: #666;
+  color: var(--text-secondary);
   text-align: center;
   margin-bottom: 25px;
   line-height: 1.5;
 }
 
 .reporte-contenido {
-  background: #f9f9f9;
+  background: var(--bg-tertiary);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 25px;
 }
 
 .reporte-contenido h3 {
-  color: #2e7d32;
+  color: var(--primary);
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1rem;
@@ -70,9 +72,9 @@
 
 .reporte-contenido li {
   padding: 8px 0;
-  color: #555;
+  color: var(--text-secondary);
   font-size: 0.95rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .reporte-contenido li:last-child {
@@ -87,7 +89,7 @@
 }
 
 .stat {
-  background: #e8f5e9;
+  background: var(--accent-bg);
   padding: 15px;
   border-radius: 8px;
   text-align: center;
@@ -96,13 +98,13 @@
 .stat-valor {
   font-size: 1.6rem;
   font-weight: bold;
-  color: #2e7d32;
+  color: var(--primary);
   margin-bottom: 5px;
 }
 
 .stat-label {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }

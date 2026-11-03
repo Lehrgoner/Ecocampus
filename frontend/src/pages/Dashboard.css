@@ -5,9 +5,14 @@
 }
 
 .dashboard-header h1 {
-  color: #2e7d32;
-  margin-bottom: 30px;
+  color: var(--primary);
+  margin-bottom: 10px;
   font-size: 2rem;
+}
+
+.dashboard-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
 }
 
 /* Grid de Puntajes */
@@ -19,12 +24,12 @@
 }
 
 .puntaje-card {
-  background: white;
+  background: var(--bg-card);
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 .puntaje-card:hover {
@@ -33,25 +38,25 @@
 
 .puntaje-card h3 {
   margin: 0 0 10px 0;
-  color: #555;
+  color: var(--text-secondary);
   font-size: 1.1rem;
 }
 
 .puntaje-valor {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #2e7d32;
+  color: var(--primary);
 }
 
 .puntaje-maximo {
-  color: #999;
+  color: var(--text-muted);
   margin-bottom: 10px;
 }
 
 .progress-bar {
   width: 100%;
   height: 8px;
-  background: #e0e0e0;
+  background: var(--border-color);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -71,20 +76,21 @@
 
 .radar-section,
 .ranking-section {
-  background: white;
+  background: var(--bg-card);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s;
 }
 
 .radar-section h2,
 .ranking-section h2 {
   margin-top: 0;
-  color: #2e7d32;
+  color: var(--primary);
 }
 
 .radar-chart-placeholder {
-  background: #f5f5f5;
+  background: var(--bg-tertiary);
   padding: 40px;
   border-radius: 8px;
   text-align: center;
@@ -98,7 +104,8 @@
 
 .radar-chart-placeholder li {
   padding: 8px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
 }
 
 .ranking-display {
@@ -109,7 +116,7 @@
 .ranking-numero {
   font-size: 4rem;
   font-weight: bold;
-  color: #ff9800;
+  color: var(--warning);
   margin: 20px 0;
 }
 
@@ -142,7 +149,7 @@
   .dashboard-content {
     grid-template-columns: 1fr;
   }
-  
+
   .puntajes-grid {
     grid-template-columns: repeat(2, 1fr);
   }

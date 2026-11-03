@@ -5,25 +5,26 @@
 }
 
 .checklist-header h1 {
-  color: #2e7d32;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
 .checklist-header p {
   margin-bottom: 25px;
+  color: var(--text-secondary);
 }
 
 .checklist-seccion {
-  background: white;
+  background: var(--bg-card);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s;
 }
 
 .checklist-seccion:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-md);
 }
 
 .checklist-header-seccion {
@@ -34,8 +35,12 @@
 }
 
 .checklist-header-seccion h3 {
-  color: #2e7d32;
+  color: var(--primary);
   font-size: 1.15rem;
+}
+
+.checklist-header-seccion p {
+  color: var(--text-secondary);
 }
 
 .checklist-progreso {
@@ -46,7 +51,7 @@
 .progress-bar {
   flex: 1;
   height: 8px;
-  background: #e0e0e0;
+  background: var(--border-color);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -56,9 +61,18 @@
   transition: width 0.5s ease, background-color 0.3s;
 }
 
+.checklist-item {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
 .checklist-item input[type="checkbox"] {
   cursor: pointer;
-  accent-color: #4caf50;
+  accent-color: var(--primary-light);
+}
+
+.checklist-item span {
+  color: var(--text-primary);
 }
 
 /* Responsive */

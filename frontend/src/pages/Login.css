@@ -1,6 +1,51 @@
-.login-card .form-group label {
-  color: #ffffff !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+.login-header {
+  position: relative;
+  background: var(--bg-header);
+  transition: background-color 0.3s;
+}
+
+.login-main {
+  background: var(--bg-primary);
+  transition: background-color 0.3s;
+}
+
+.login-card {
+  background: var(--bg-card);
+  transition: background-color 0.3s;
+}
+
+.login-card h2 {
+  color: var(--primary);
+}
+
+.form-input {
+  background: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--border-input);
+}
+
+.form-input:focus {
+  border-color: var(--primary-light);
+}
+
+.login-footer {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  transition: background-color 0.3s;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* Botón de tema en el login/register */
+.btn-theme-toggle:hover {
+  background: var(--accent-bg) !important;
+  border-color: var(--primary-light) !important;
+  color: var(--primary-light) !important;
+  transform: translateY(-50%) rotate(15deg) !important;
 }

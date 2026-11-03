@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCampus } from '../context/CampusContext';
+import { useTheme } from '../context/ThemeContext';
 import './Layout.css';
 
 const Layout = ({ children }) => {
@@ -9,6 +10,7 @@ const Layout = ({ children }) => {
   const navigate = useNavigate();
   const { user, logout } = useAuth();
   const { campusList, campusActual, cambiarCampus } = useCampus();
+  const { isDark, toggleTheme } = useTheme();
   const [sidebarAbierto, setSidebarAbierto] = useState(false);
 
   useEffect(() => {
@@ -48,7 +50,6 @@ const Layout = ({ children }) => {
     ? user.rol.charAt(0).toUpperCase() + user.rol.slice(1)
     : '';
 
-  // Mostrar selector si hay más de 1 campus (Admin)
   const mostrarSelectorCampus = campusList.length > 1;
 
   return (
@@ -95,7 +96,6 @@ const Layout = ({ children }) => {
             <i className="fas fa-bars"></i>
           </button>
 
-          {/* Selector de campus (solo si hay más de 1) */}
           {mostrarSelectorCampus && (
             <div className="campus-selector">
               <i className="fas fa-university"></i>
@@ -112,12 +112,21 @@ const Layout = ({ children }) => {
             </div>
           )}
 
+          {/* Botón de modo oscuro/claro */}
+          <button
+            className="btn-theme-toggle"
+            onClick={toggleTheme}
+            title={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+          >
+            <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
+          </button>
+
           <div className="user-info">
             <i className="fas fa-user-circle"></i>
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.2 }}>
               <span style={{ fontWeight: 'bold' }}>{nombreUsuario}</span>
               {rolUsuario && (
-                <span style={{ fontSize: '0.75rem', color: '#4CAF50' }}>
+                <span style={{ fontSize: '0.75rem', color: 'var(--primary-light)' }}>
                   {rolUsuario}
                 </span>
               )}

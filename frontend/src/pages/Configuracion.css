@@ -5,24 +5,26 @@
 }
 
 .config-header h1 {
-  color: #2e7d32;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
 .config-header p {
+  color: var(--text-secondary);
   margin-bottom: 30px;
 }
 
 .config-card {
-  background: white;
+  background: var(--bg-card);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
   margin-bottom: 25px;
+  transition: background-color 0.3s;
 }
 
 .config-card h2 {
-  color: #2e7d32;
+  color: var(--primary);
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -40,25 +42,25 @@
 
 .config-item label {
   font-weight: bold;
-  color: #555;
+  color: var(--text-secondary);
   margin-bottom: 8px;
   font-size: 0.95rem;
 }
 
 .config-item input {
   padding: 10px 12px;
-  border: 2px solid #ddd;
+  border: 2px solid var(--border-input);
   border-radius: 5px;
   font-size: 1rem;
-  color: #333;
-  background: #fff;
+  color: var(--text-primary);
+  background: var(--bg-input);
   font-family: inherit;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background-color 0.3s;
 }
 
 .config-item input:focus {
   outline: none;
-  border-color: #4caf50;
+  border-color: var(--primary-light);
   box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
 }
 
@@ -72,7 +74,7 @@
   padding: 12px 30px;
   font-size: 1rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
   color: white;
   border: none;
   border-radius: 8px;

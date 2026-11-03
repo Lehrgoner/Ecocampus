@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 import { loginUser } from "../services/authService";
 import '../App.css';
 import './Login.css';
@@ -13,6 +14,7 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
+  const { isDark, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -80,6 +82,33 @@ const Login = () => {
             className="logo-image"
           />
         </div>
+
+        {/* Botón de tema */}
+        <button
+          className="btn-theme-toggle"
+          onClick={toggleTheme}
+          title={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+          style={{
+            position: 'absolute',
+            right: '20px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'transparent',
+            border: '2px solid var(--border-color)',
+            borderRadius: '50%',
+            width: '40px',
+            height: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            color: 'var(--text-primary)',
+            fontSize: '1.1rem',
+            transition: 'all 0.3s ease',
+          }}
+        >
+          <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
+        </button>
       </header>
 
       {/* Contenido Principal */}

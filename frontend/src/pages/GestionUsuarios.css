@@ -14,13 +14,17 @@
 }
 
 .gestion-header h1 {
-  color: #2e7d32;
+  color: var(--primary);
   margin-bottom: 8px;
+}
+
+.gestion-header p {
+  color: var(--text-secondary);
 }
 
 .btn-crear-usuario {
   padding: 12px 24px;
-  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -40,7 +44,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .tab {
@@ -50,27 +54,28 @@
   border-bottom: 3px solid transparent;
   font-size: 1rem;
   font-weight: bold;
-  color: #666;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.3s;
   margin-bottom: -2px;
 }
 
 .tab:hover {
-  color: #2e7d32;
+  color: var(--primary);
 }
 
 .tab.active {
-  color: #2e7d32;
-  border-bottom-color: #4caf50;
+  color: var(--primary);
+  border-bottom-color: var(--primary-light);
 }
 
 /* Tabla */
 .tabla-container {
-  background: white;
+  background: var(--bg-card);
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
   overflow-x: auto;
+  transition: background-color 0.3s;
 }
 
 .usuarios-tabla {
@@ -79,25 +84,25 @@
 }
 
 .usuarios-tabla thead {
-  background: #f5f5f5;
+  background: var(--bg-tertiary);
 }
 
 .usuarios-tabla th {
   padding: 15px;
   text-align: left;
   font-weight: bold;
-  color: #333;
-  border-bottom: 2px solid #ddd;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .usuarios-tabla td {
   padding: 15px;
-  border-bottom: 1px solid #eee;
-  color: #555;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
 }
 
 .usuarios-tabla tbody tr:hover {
-  background: #f9f9f9;
+  background: var(--bg-tertiary);
 }
 
 /* Botones de acciones */
@@ -115,16 +120,16 @@
 }
 
 .btn-aprobar {
-  background: #4caf50;
+  background: var(--success);
   color: white;
 }
 
 .btn-aprobar:hover {
-  background: #2e7d32;
+  background: var(--primary-dark);
 }
 
 .btn-rechazar {
-  background: #f44336;
+  background: var(--error);
   color: white;
 }
 
@@ -133,7 +138,7 @@
 }
 
 .btn-eliminar {
-  background: #f44336;
+  background: var(--error);
   color: white;
   padding: 8px 12px;
 }
@@ -149,7 +154,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,20 +163,25 @@
 }
 
 .modal {
-  background: white;
+  background: var(--bg-card);
   border-radius: 12px;
   padding: 30px;
   max-width: 500px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
+  transition: background-color 0.3s;
 }
 
 .modal h2 {
-  color: #2e7d32;
+  color: var(--primary);
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+.modal p {
+  color: var(--text-secondary);
 }
 
 .modal-form {
@@ -183,20 +193,25 @@
 .modal-input,
 .modal-select {
   padding: 12px;
-  border: 2px solid #ddd;
+  border: 2px solid var(--border-input);
   border-radius: 6px;
   font-size: 1rem;
-  color: #333;
-  background: white;
+  color: var(--text-primary);
+  background: var(--bg-input);
   font-family: inherit;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background-color 0.3s;
 }
 
 .modal-input:focus,
 .modal-select:focus {
-  border-color: #4caf50;
+  border-color: var(--primary-light);
   box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.modal-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .btn-cancelar,
@@ -212,21 +227,21 @@
 }
 
 .btn-cancelar {
-  background: #e0e0e0;
-  color: #555;
+  background: var(--border-color);
+  color: var(--text-secondary);
 }
 
 .btn-cancelar:hover {
-  background: #bdbdbd;
+  background: var(--border-input);
 }
 
 .btn-confirmar {
-  background: #4caf50;
+  background: var(--success);
   color: white;
 }
 
 .btn-confirmar:hover:not(:disabled) {
-  background: #2e7d32;
+  background: var(--primary-dark);
 }
 
 .btn-confirmar:disabled {

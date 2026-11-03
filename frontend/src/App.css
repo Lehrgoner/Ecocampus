@@ -380,3 +380,71 @@ body, html {
     justify-content: center;
   }
 }
+
+/* ============================================
+   ESTILOS GLOBALES CON MODO OSCURO
+   ============================================ */
+
+/* El body ya usa variables por theme.css */
+#root {
+  min-height: 100vh;
+}
+
+/* Inputs globales */
+input,
+textarea,
+select {
+  background: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--border-input);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-light);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Botones */
+button {
+  font-family: inherit;
+}
+
+/* Enlaces */
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-light);
+}
+
+/* Textos comunes */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+/* Tarjetas genéricas */
+.card,
+.contenedor,
+.panel {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.app {
+  min-height: 100vh;
+  background-image: url('/images/tu-imagen.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

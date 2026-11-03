@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 import { registerUser } from '../services/authService';
 import '../App.css';
 
@@ -42,6 +43,7 @@ const Register = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [registroExitoso, setRegistroExitoso] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -152,6 +154,30 @@ const Register = () => {
           <div className="logo-container">
             <img src="/images/icon1.png" alt="Logo EcoCampus" className="logo-image" />
           </div>
+          <button
+            className="btn-theme-toggle"
+            onClick={toggleTheme}
+            title={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+            style={{
+              position: 'absolute',
+              right: '20px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'transparent',
+              border: '2px solid var(--border-color)',
+              borderRadius: '50%',
+              width: '40px',
+              height: '40px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              color: 'var(--text-primary)',
+              fontSize: '1.1rem',
+            }}
+          >
+            <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
+          </button>
         </header>
 
         <main className="login-main">
@@ -195,6 +221,30 @@ const Register = () => {
         <div className="logo-container">
           <img src="/images/icon1.png" alt="Logo EcoCampus" className="logo-image" />
         </div>
+        <button
+          className="btn-theme-toggle"
+          onClick={toggleTheme}
+          title={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+          style={{
+            position: 'absolute',
+            right: '20px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'transparent',
+            border: '2px solid var(--border-color)',
+            borderRadius: '50%',
+            width: '40px',
+            height: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            color: 'var(--text-primary)',
+            fontSize: '1.1rem',
+          }}
+        >
+          <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
+        </button>
       </header>
 
       <main className="login-main">
