@@ -113,7 +113,7 @@ const ResetPassword = () => {
 
           {step === 1 ? (
             <form className="login-form" onSubmit={handleRequestCode}>
-              <p style={{ textAlign: 'center', marginBottom: '15px', color: '#555' }}>
+              <p style={{ textAlign: 'center', marginBottom: '15px', color: '#faf5f5' }}>
                 Ingresa tu correo electrónico registrado para recibir el código de seguridad.
               </p>
               <div className="form-group">
@@ -134,10 +134,10 @@ const ResetPassword = () => {
             </form>
           ) : (
             <form className="login-form" onSubmit={handleResetPassword}>
-              <p style={{ textAlign: 'center', marginBottom: '15px', color: '#555' }}>
+              <p style={{ textAlign: 'center', marginBottom: '15px', color: '#faf5f5' }}>
                 Hemos enviado un código de 6 dígitos a <strong>{email}</strong>.
                 <br />
-                <small style={{ color: '#999' }}>Revisa tu bandeja de entrada y spam.</small>
+                <small style={{ color: '#faf5f5' }}>Revisa tu bandeja de entrada y spam.</small>
               </p>
 
               <div className="form-group">
@@ -205,7 +205,7 @@ const ResetPassword = () => {
                   style={{
                     background: 'transparent',
                     border: 'none',
-                    color: '#666',
+                    color: '#fbf6f6',
                     cursor: 'pointer',
                     textDecoration: 'underline',
                     fontSize: '0.9rem',

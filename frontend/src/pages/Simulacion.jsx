@@ -239,7 +239,7 @@ const Simulacion = () => {
     <div className="simulacion-container">
       <div className="simulacion-header">
         <h1>🧪 Simulación de Intervención - {campusActual?.nombre}</h1>
-        <p style={{ color: '#666' }}>
+        <p style={{ color: '#faf5f5' }}>
           Dibuja un polígono en el mapa, selecciona el tipo de intervención y presiona "Simular Impacto".
         </p>
       </div>

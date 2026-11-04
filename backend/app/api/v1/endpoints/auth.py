@@ -89,6 +89,7 @@ def login(datos: LoginRequest, db: Session = Depends(get_db)):
             "apellidos": usuario.apellidos,
             "email": usuario.email,
             "rol": usuario.rol,
+            "activo": usuario.activo,
             "campus_asignado_id": usuario.campus_asignado_id,
         },
     )
@@ -110,7 +111,6 @@ async def forgot_password(datos: ForgotPasswordRequest, db: Session = Depends(ge
     """
     usuario = db.query(Usuario).filter(Usuario.email == datos.email).first()
 
-    # Por seguridad, siempre devolver el mismo mensaje
     mensaje_generico = (
         "Si el email está registrado, recibirás un código de recuperación. "
         "Revisa tu bandeja de entrada (y spam)."
@@ -119,7 +119,6 @@ async def forgot_password(datos: ForgotPasswordRequest, db: Session = Depends(ge
     if not usuario:
         return ForgotPasswordResponse(mensaje=mensaje_generico)
 
-    # Generar código de 6 dígitos
     codigo = str(random.randint(100000, 999999))
     expiracion = datetime.now(timezone.utc) + timedelta(minutes=15)
 
@@ -127,7 +126,6 @@ async def forgot_password(datos: ForgotPasswordRequest, db: Session = Depends(ge
     usuario.reset_code_expires = expiracion
     db.commit()
 
-    # Enviar email
     from app.services.email_service import enviar_codigo_recuperacion
 
     email_enviado = await enviar_codigo_recuperacion(
@@ -160,14 +158,12 @@ def reset_password(datos: ResetPasswordRequest, db: Session = Depends(get_db)):
             detail="Código inválido o expirado",
         )
 
-    # Validar código
     if not usuario.reset_code or usuario.reset_code != datos.code:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Código inválido o expirado",
         )
 
-    # Validar expiración
     if usuario.reset_code_expires:
         expiracion = usuario.reset_code_expires
         if expiracion.tzinfo is None:
@@ -179,10 +175,7 @@ def reset_password(datos: ResetPasswordRequest, db: Session = Depends(get_db)):
                 detail="El código ha expirado. Solicita uno nuevo.",
             )
 
-    # Actualizar contraseña
     usuario.password_hash = hash_password(datos.new_password)
-
-    # Limpiar código
     usuario.reset_code = None
     usuario.reset_code_expires = None
 

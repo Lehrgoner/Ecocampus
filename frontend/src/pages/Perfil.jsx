@@ -1,13 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { getCurrentUser } from '../services/authService';
 import './Perfil.css';
 
 const Perfil = () => {
-  const { user } = useAuth();
+  const { user: userContext } = useAuth();
+  const [user, setUser] = useState(userContext);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const cargarUsuario = async () => {
+      try {
+        setLoading(true);
+        // Consultar el backend para obtener datos frescos
+        const usuarioActual = await getCurrentUser();
+        setUser(usuarioActual);
+        // Actualizar localStorage con datos frescos
+        localStorage.setItem('user', JSON.stringify(usuarioActual));
+        setLoading(false);
+      } catch (err) {
+        console.error('Error al cargar usuario:', err);
+        // Si falla, usar el del contexto como fallback
+        setUser(userContext);
+        setLoading(false);
+      }
+    };
+
+    cargarUsuario();
+  }, []);
 
   const nombreCompleto = user
     ? `${user.nombres || ''} ${user.apellidos || ''}`.trim()
     : 'Usuario';
+
+  if (loading) {
+    return (
+      <div className="perfil-container">
+        <div style={{ textAlign: 'center', padding: '60px' }}>
+          <h2>Cargando perfil...</h2>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="perfil-container">
@@ -49,7 +83,6 @@ const Perfil = () => {
         </div>
       </div>
 
-      {/* Info de roles */}
       <div className="perfil-info-card">
         <h3>ℹ️ Sobre los roles</h3>
         <ul>

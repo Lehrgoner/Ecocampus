@@ -90,7 +90,7 @@ const Reportes = () => {
         </div>
       )}
 
-      <div className="reportes-content">
+      <div className="reportes-content-single">
         <div className="reporte-card">
           <div className="reporte-icon">📊</div>
           <h2>Reporte Completo de Sostenibilidad</h2>
@@ -161,27 +161,6 @@ const Reportes = () => {
           <p style={{ fontSize: '0.85rem', color: '#999', marginTop: '15px' }}>
             💡 El PDF se genera con los datos más recientes de tu campus.
           </p>
-        </div>
-
-        <div className="reporte-card">
-          <div className="reporte-icon">📊</div>
-          <h2>Datos para Gráficos</h2>
-          <p className="reporte-descripcion">
-            Descarga los datos en formato JSON para análisis externo.
-          </p>
-
-          <pre style={{
-            background: '#f5f5f5', padding: '15px', borderRadius: '6px',
-            fontSize: '0.8rem', overflow: 'auto', maxHeight: '300px',
-          }}>
-{JSON.stringify({
-  indicadores: datos?.indicadores?.length || 0,
-  radar_categorias: Object.keys(datos?.radar_categorias || {}).length,
-  zonas_por_tipo: Object.keys(datos?.zonas_por_tipo || {}).length,
-  recomendaciones: datos?.recomendaciones?.length || 0,
-  simulaciones: datos?.simulaciones?.length || 0,
-}, null, 2)}
-          </pre>
         </div>
       </div>
     </div>
