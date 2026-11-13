@@ -259,7 +259,8 @@ const Checklist = () => {
       )}
 
       <div style={{
-        background: '#e8f5e9', padding: '20px', borderRadius: '10px',
+        background: 'var(--bg-secondary)',
+        padding: '20px', borderRadius: '10px',
         marginBottom: '25px', display: 'flex', justifyContent: 'space-between',
         flexWrap: 'wrap', gap: '15px',
       }}>
@@ -323,17 +324,15 @@ const Checklist = () => {
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
                 gap: '10px', marginTop: '15px', padding: '15px',
-                background: '#f9f9f9', borderRadius: '8px',
+                borderRadius: '8px',
               }}>
                 {seccion.items.map((item) => (
                   <label
                     key={item.key}
-                    className="checklist-item"
+                    className={`checklist-item ${estado[item.key] ? 'activo' : ''}`}
                     style={{
                       display: 'flex', alignItems: 'center', gap: '10px',
                       padding: '8px 12px',
-                      background: estado[item.key] ? '#e8f5e9' : 'white',
-                      border: estado[item.key] ? '2px solid #4caf50' : '1px solid #ddd',
                       borderRadius: '6px',
                       cursor: puedeEscribir ? 'pointer' : 'not-allowed',
                       opacity: puedeEscribir ? 1 : 0.7,
@@ -348,7 +347,6 @@ const Checklist = () => {
                     />
                     <span style={{
                       fontWeight: estado[item.key] ? 'bold' : 'normal',
-                      color: estado[item.key] ? '#2e7d32' : '#555',
                     }}>
                       {item.texto}
                     </span>

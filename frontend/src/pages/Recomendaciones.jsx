@@ -95,7 +95,7 @@ const Recomendaciones = () => {
   return (
     <div className="recomendaciones-container">
       <div className="recomendaciones-header">
-        <h1>💡 Recomendaciones - {campusActual?.nombre}</h1>
+        <h1> Recomendaciones - {campusActual?.nombre}</h1>
         <p style={{ color: '#666' }}>
           Estrategias óptimas para mejorar tu puntaje SI con el presupuesto disponible.
         </p>
@@ -190,7 +190,7 @@ const Recomendaciones = () => {
           {recomendaciones.map((rec, index) => (
             <div key={index} className="recomendacion-card">
               <div className="recomendacion-header">
-                <span className="recomendacion-emoji">{getEmoji(index)}</span>
+                {/*<span className="recomendacion-emoji">{getEmoji(index)}</span>*/}
                 <span className="recomendacion-puesto">#{index + 1}</span>
               </div>
               <h3>
@@ -208,7 +208,7 @@ const Recomendaciones = () => {
                 <p>💰 Costo estimado: <strong>${rec.costo_estimado_usd?.toLocaleString() || '0'} USD</strong></p>
                 <p style={{ fontSize: '0.9rem', color: '#888', fontStyle: 'italic' }}>{rec.descripcion}</p>
               </div>
-              <Link to="/simulacion" className="recomendacion-btn">🚀 Simular esta intervención</Link>
+              <Link to="/simulacion" className="recomendacion-btn"> Simular esta intervención</Link>
             </div>
           ))}
         </div>

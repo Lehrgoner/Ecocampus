@@ -88,7 +88,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        <h1>🏛️ Dashboard - {campusActual?.nombre}</h1>
+        <h1> Dashboard - {campusActual?.nombre}</h1>
         <p style={{ color: '#666', fontSize: '1.1rem' }}>
           Puntaje total SI: <strong>{puntajeTotal.toFixed(1)} / 1100 pts</strong>
         </p>
@@ -118,7 +118,7 @@ const Dashboard = () => {
 
       <div className="dashboard-content">
         <div className="radar-section">
-          <h2>📊 Indicadores SI 1-8</h2>
+          <h2> Indicadores SI 1-8</h2>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={indicadores.map(i => ({
               codigo: i.codigo,
@@ -137,7 +137,7 @@ const Dashboard = () => {
         </div>
 
         <div className="radar-section">
-          <h2>📊 Categorías GreenMetric</h2>
+          <h2> Categorías GreenMetric</h2>
           <ResponsiveContainer width="100%" height={300}>
             <RadarChart data={radarData}>
               <PolarGrid />
@@ -151,7 +151,7 @@ const Dashboard = () => {
       </div>
 
       <div className="ranking-section" style={{ marginTop: '30px' }}>
-        <h2>🏆 Ranking Global</h2>
+        <h2> Ranking Global</h2>
         <div className="ranking-display">
           <div className="ranking-numero">#{rankingEstimado || 'N/A'}</div>
           <p>Posición estimada</p>
@@ -160,7 +160,7 @@ const Dashboard = () => {
 
       <div className="dashboard-actions">
         <Link to="/simulacion" className="btn-nueva-simulacion">
-          🚀 Nueva Simulación
+           Nueva Simulación
         </Link>
       </div>
     </div>

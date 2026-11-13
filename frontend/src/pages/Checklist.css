@@ -61,9 +61,30 @@
   transition: width 0.5s ease, background-color 0.3s;
 }
 
+/* ---- Contenedor de ítems desplegados: fondo adaptable al tema ---- */
+.checklist-items {
+  background: var(--bg-secondary, #f9f9f9);
+}
+
+/* ---- Ítems del checklist ---- */
 .checklist-item {
-  background: var(--bg-card) !important;
-  border: 1px solid var(--border-color) !important;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.checklist-item:hover {
+  border-color: var(--primary-light);
+}
+
+/* Estado activo (marcado) */
+.checklist-item.activo {
+  background: var(--success-bg, #e8f5e9);
+  border: 2px solid var(--success, #4caf50);
+}
+
+.checklist-item.activo span {
+  color: var(--success-text, #2e7d32);
 }
 
 .checklist-item input[type="checkbox"] {

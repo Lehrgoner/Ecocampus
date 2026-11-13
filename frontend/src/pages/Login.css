@@ -1,13 +1,16 @@
+/* Header del Login/Register - SIEMPRE verde, en ambos modos */
 .login-header {
   position: relative;
-  background: var(--bg-header);
-  transition: background-color 0.3s;
+  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+  transition: background 0.3s;
 }
 
+/* Main sin fondo (la imagen viene de App.css) */
 .login-main {
   transition: background-color 0.3s;
 }
 
+/* Tarjeta del login - sin sobreescribir el fondo glassmorphism */
 .login-card {
   transition: background-color 0.3s;
 }
@@ -16,34 +19,40 @@
   color: var(--primary);
 }
 
+/* Inputs del login - mantener transparencia sobre el fondo oscuro */
 .form-input {
-  background: var(--bg-input);
-  color: var(--text-primary);
-  border-color: var(--border-input);
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
 .form-input:focus {
-  border-color: var(--primary-light);
+  border-color: #81C784 !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
+/* Footer */
 .login-footer {
-  background: var(--bg-tertiary);
-  color: var(--text-primary);
+  background: #1a1a1a;
+  color: white;
   transition: background-color 0.3s;
 }
 
 .footer-links a {
-  color: var(--text-secondary);
+  color: #ccc;
 }
 
 .footer-links a:hover {
-  color: var(--primary);
+  color: #4CAF50;
 }
 
-/* Botón de tema en el login/register */
+/* Botón de tema en el login/register - siempre visible sobre verde */
 .btn-theme-toggle:hover {
-  background: var(--accent-bg) !important;
-  border-color: var(--primary-light) !important;
-  color: var(--primary-light) !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: white !important;
+  color: white !important;
   transform: translateY(-50%) rotate(15deg) !important;
 }

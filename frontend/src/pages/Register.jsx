@@ -163,8 +163,8 @@ const Register = () => {
               right: '20px',
               top: '50%',
               transform: 'translateY(-50%)',
-              background: 'transparent',
-              border: '2px solid var(--border-color)',
+              background: 'rgba(255, 255, 255, 0.15)',
+              border: '2px solid rgba(255, 255, 255, 0.4)',
               borderRadius: '50%',
               width: '40px',
               height: '40px',
@@ -172,8 +172,9 @@ const Register = () => {
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
-              color: 'var(--text-primary)',
+              color: 'white',
               fontSize: '1.1rem',
+              transition: 'all 0.3s ease',
             }}
           >
             <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
@@ -183,21 +184,22 @@ const Register = () => {
         <main className="login-main">
           <div className="login-card" style={{ textAlign: 'center', padding: '50px' }}>
             <div style={{ fontSize: '4rem', marginBottom: '20px' }}>✅</div>
-            <h2 style={{ color: '#2e7d32', marginBottom: '15px' }}>
+            <h2 style={{ color: 'var(--primary)', marginBottom: '15px' }}>
               ¡Registro exitoso!
             </h2>
-            <p style={{ color: '#555', marginBottom: '25px', fontSize: '1.05rem' }}>
+            <p style={{ color: 'var(--text-primary)', marginBottom: '25px', fontSize: '1.05rem' }}>
               Tu cuenta ha sido creada correctamente.
               <br />
               Un administrador debe <strong>aprobar tu cuenta</strong> antes de que puedas iniciar sesión.
             </p>
             <div style={{
               padding: '15px',
-              background: '#e3f2fd',
+              background: 'var(--accent-bg)',
               borderRadius: '8px',
-              color: '#1565c0',
+              color: 'var(--primary)',
               fontSize: '0.95rem',
               marginBottom: '20px',
+              border: '1px solid var(--primary-light)',
             }}>
               ⏳ Serás redirigido al login en unos segundos...
             </div>
@@ -230,8 +232,8 @@ const Register = () => {
             right: '20px',
             top: '50%',
             transform: 'translateY(-50%)',
-            background: 'transparent',
-            border: '2px solid var(--border-color)',
+            background: 'rgba(255, 255, 255, 0.15)',
+            border: '2px solid rgba(255, 255, 255, 0.4)',
             borderRadius: '50%',
             width: '40px',
             height: '40px',
@@ -239,8 +241,9 @@ const Register = () => {
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            color: 'var(--text-primary)',
+            color: 'white',
             fontSize: '1.1rem',
+            transition: 'all 0.3s ease',
           }}
         >
           <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`}></i>
@@ -377,11 +380,12 @@ const Register = () => {
                 <div style={{
                   marginTop: '10px',
                   padding: '12px',
-                  background: '#f9f9f9',
+                  background: 'var(--bg-tertiary)',
                   borderRadius: '6px',
                   fontSize: '0.85rem',
+                  border: '1px solid var(--border-color)',
                 }}>
-                  <div style={{ marginBottom: '8px', fontWeight: 'bold', color: '#555' }}>
+                  <div style={{ marginBottom: '8px', fontWeight: 'bold', color: 'var(--text-secondary)' }}>
                     Requisitos de contraseña:
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>

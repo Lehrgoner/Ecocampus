@@ -72,7 +72,7 @@ const Reportes = () => {
   return (
     <div className="reportes-container">
       <div className="reportes-header">
-        <h1>📄 Reportes de Sostenibilidad - {campusActual?.nombre}</h1>
+        <h1> Reportes de Sostenibilidad - {campusActual?.nombre}</h1>
         <p style={{ color: '#666' }}>
           Genera un reporte PDF completo con todos los indicadores, gráficos,
           simulaciones y recomendaciones de tu campus.
@@ -92,7 +92,7 @@ const Reportes = () => {
 
       <div className="reportes-content-single">
         <div className="reporte-card">
-          <div className="reporte-icon">📊</div>
+          <div className="reporte-icon"></div>
           <h2>Reporte Completo de Sostenibilidad</h2>
           <p className="reporte-descripcion">
             Documento profesional en PDF con toda la información de tu campus.
@@ -154,12 +154,12 @@ const Reportes = () => {
                 Generando PDF... (puede tardar 10 seg)
               </>
             ) : (
-              <>📥 Descargar Reporte PDF</>
+              <>Descargar Reporte PDF</>
             )}
           </button>
 
           <p style={{ fontSize: '0.85rem', color: '#999', marginTop: '15px' }}>
-            💡 El PDF se genera con los datos más recientes de tu campus.
+             El PDF se genera con los datos más recientes de tu campus.
           </p>
         </div>
       </div>

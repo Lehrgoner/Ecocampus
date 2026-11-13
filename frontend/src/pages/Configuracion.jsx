@@ -164,7 +164,7 @@ const Configuracion = () => {
       )}
 
       <div className="config-card">
-        <h2>📋 Datos del Campus {campusActual && !modoCrear ? '' : '(Crear nuevo)'}</h2>
+        <h2> Datos del Campus {campusActual && !modoCrear ? '' : '(Crear nuevo)'}</h2>
 
         {campusList.length > 1 && (
           <p style={{ color: '#666', fontSize: '0.9rem', marginBottom: '15px' }}>
@@ -250,7 +250,7 @@ const Configuracion = () => {
             >
               {guardandoCampus ? '⏳ Guardando...'
                 : guardadoCampusExitoso ? '✅ ¡Guardado!'
-                : campusActual && !modoCrear ? '💾 Actualizar Campus'
+                : campusActual && !modoCrear ? ' Actualizar Campus'
                 : '➕ Crear Campus'}
             </button>
 
@@ -349,7 +349,7 @@ const Configuracion = () => {
             >
               {guardandoPerfil ? '⏳ Guardando...'
                 : guardadoPerfilExitoso ? '✅ ¡Perfil guardado!'
-                : '💾 Guardar Perfil'}
+                : ' Guardar Perfil'}
             </button>
           )}
         </div>

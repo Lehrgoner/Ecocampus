@@ -23,12 +23,12 @@ body, html {
    1. HEADER DEL LOGIN
    ========================================= */
 .login-header {
-  background-color: #4CAF50;
+  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
   padding: 0.8rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   z-index: 10;
   height: 70px;
   position: relative;
@@ -237,16 +237,16 @@ body, html {
 }
 
 .btn-register {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #4CAF50;
 }
 
 .btn-register:hover {
-  background-color: #ffffff;
-  color: #4CAF50;
+  background-color: #43A047;
+  border-color: #43A047;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
 }
 
 .btn-login:disabled,
